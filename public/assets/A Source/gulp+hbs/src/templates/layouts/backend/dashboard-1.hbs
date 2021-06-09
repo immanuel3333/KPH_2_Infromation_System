@@ -1,0 +1,35 @@
+{{!-- layouts/base.hbs --}}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>{{ appName }} | Responsive Bootstrap 4 Admin Dashboard Template</title>
+      {{> partials/backend/head }}
+      {{#block "head"}}
+        {{!-- External page head section--}}
+      {{/block}}
+  </head>
+  <body class=" {{bodyClass}} {{#compare dark '===' 'true'}} dark {{/compare}}">
+    <!-- loader Start -->
+    <div id="loading">
+      {{> partials/backend/loader }}
+    </div>
+    <!-- loader END -->
+    <!-- Wrapper Start -->
+    <div class="wrapper">
+      {{> partials/backend/sidebar }}
+      {{> partials/backend/header }}
+      <div class="content-page">
+        {{#block "content"}}
+        {{/block}}
+      </div>
+    </div>
+    <!-- Wrapper End-->
+    {{> partials/backend/footer }}
+    {{> partials/backend/scripts }}
+    {{#block "scripts"}}
+    {{/block}}
+  </body>
+</html>

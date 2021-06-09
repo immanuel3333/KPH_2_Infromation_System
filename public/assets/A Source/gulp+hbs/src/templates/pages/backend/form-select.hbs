@@ -1,0 +1,387 @@
+
+{{#extend layout title="form-select" active="form-select" bodyClass="color-light" path="../" }}
+    {{#content "content"}}
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-lg-12">
+               <div class="card">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="header-title">
+                        <h4 class="card-title">Basic select boxes</h4>
+                     </div>
+                  <div class="header-action">
+                           <i  type="button" data-toggle="collapse" data-target="#form-select-1" aria-expanded="false" aria-controls="alert-1">
+                              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                              </svg>
+                           </i>
+                        </div>
+                  </div>
+                  <div class="card-body">
+                     <div class="collapse" id="form-select-1">
+                           <div class="card"><kbd class="bg-dark"><pre id="basic-select-boxes" class="text-white"><code>
+&#x3C;select class=&#x22;form-control&#x22; id=&#x22;sel1&#x22; name=&#x22;sellist1&#x22;&#x3E;
+   &#x3C;option&#x3E;1&#x3C;/option&#x3E;
+   &#x3C;option&#x3E;2&#x3C;/option&#x3E;
+   &#x3C;option&#x3E;3&#x3C;/option&#x3E;
+   &#x3C;option&#x3E;4&#x3C;/option&#x3E;
+&#x3C;/select&#x3E;
+</code></pre></kbd></div>
+                        </div>
+                     <select class="form-control" id="sel1" name="sellist1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="header-title">
+                        <h4 class="card-title">Mutiple select</h4>
+                     </div>
+                  <div class="header-action">
+                           <i  type="button" data-toggle="collapse" data-target="#form-select-2" aria-expanded="false" aria-controls="alert-1">
+                              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                              </svg>
+                           </i>
+                        </div>
+                  </div>
+                  <div class="card-body">
+                     <div class="collapse" id="form-select-2">
+                           <div class="card"><kbd class="bg-dark"><pre id="multiple-select-boxes" class="text-white"><code>
+&#x3C;select multiple class=&#x22;form-control&#x22; id=&#x22;sel2&#x22; name=&#x22;sellist2&#x22;&#x3E;
+   &#x3C;option&#x3E;1&#x3C;/option&#x3E;
+   &#x3C;option&#x3E;2&#x3C;/option&#x3E;
+   &#x3C;option&#x3E;3&#x3C;/option&#x3E;
+   &#x3C;option&#x3E;4&#x3C;/option&#x3E;
+   &#x3C;option&#x3E;5&#x3C;/option&#x3E;
+&#x3C;/select&#x3E;
+</code></pre></kbd></div>
+                        </div>
+                     <select multiple class="form-control" id="sel2" name="sellist2">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="header-title">
+                        <h4 class="card-title">Basic Select with Input Group</h4>
+                     </div>
+                  <div class="header-action">
+                           <i  type="button" data-toggle="collapse" data-target="#form-select-3" aria-expanded="false" aria-controls="alert-1">
+                              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                              </svg>
+                           </i>
+                        </div>
+                  </div>
+                  <div class="card-body">
+                     <div class="collapse" id="form-select-3">
+                           <div class="card"><kbd class="bg-dark"><pre id="basic-select-with-input-group" class="text-white"><code>
+&#x3C;div class=&#x22;input-group mb-3&#x22;&#x3E;
+   &#x3C;div class=&#x22;input-group-prepend&#x22;&#x3E;
+      &#x3C;label class=&#x22;input-group-text&#x22; for=&#x22;inputGroupSelect01&#x22;&#x3E;Options&#x3C;/label&#x3E;
+   &#x3C;/div&#x3E;
+   &#x3C;select class=&#x22;form-control&#x22; id=&#x22;inputGroupSelect01&#x22;&#x3E;
+      &#x3C;option selected=&#x22;&#x22;&#x3E;Choose...&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;1&#x22;&#x3E;One&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;2&#x22;&#x3E;Two&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;3&#x22;&#x3E;Three&#x3C;/option&#x3E;
+   &#x3C;/select&#x3E;
+   &#x3C;/div&#x3E;
+   &#x3C;div class=&#x22;input-group&#x22;&#x3E;
+   &#x3C;select class=&#x22;form-control&#x22; id=&#x22;inputGroupSelect02&#x22;&#x3E;
+      &#x3C;option selected=&#x22;&#x22;&#x3E;Choose...&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;1&#x22;&#x3E;One&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;2&#x22;&#x3E;Two&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;3&#x22;&#x3E;Three&#x3C;/option&#x3E;
+   &#x3C;/select&#x3E;
+   &#x3C;div class=&#x22;input-group-append&#x22;&#x3E;
+      &#x3C;label class=&#x22;input-group-text&#x22; for=&#x22;inputGroupSelect02&#x22;&#x3E;Options&#x3C;/label&#x3E;
+   &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+</code></pre></kbd></div>
+                        </div>
+                     <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                           <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                        </div>
+                        <select class="form-control" id="inputGroupSelect01">
+                           <option selected="">Choose...</option>
+                           <option value="1">One</option>
+                           <option value="2">Two</option>
+                           <option value="3">Three</option>
+                        </select>
+                        </div>
+                        <div class="input-group">
+                        <select class="form-control" id="inputGroupSelect02">
+                           <option selected="">Choose...</option>
+                           <option value="1">One</option>
+                           <option value="2">Two</option>
+                           <option value="3">Three</option>
+                        </select>
+                        <div class="input-group-append">
+                           <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="header-title">
+                        <h4 class="card-title">Single Select2</h4>
+                     </div>
+                  <div class="header-action">
+                           <i  type="button" data-toggle="collapse" data-target="#form-select-4" aria-expanded="false" aria-controls="alert-1">
+                              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                              </svg>
+                           </i>
+                        </div>
+                  </div>
+                  <div class="card-body">
+                     <div class="collapse" id="form-select-4">
+                           <div class="card"><kbd class="bg-dark"><pre id="single-select" class="text-white"><code>
+&#x3C;div class=&#x22;form-group&#x22;&#x3E;
+   &#x3C;select class=&#x22;form-control &#x22;&#x3E;
+      &#x3C;option&#x3E;Java&#x3C;/option&#x3E;
+      &#x3C;option&#x3E;Javascript&#x3C;/option&#x3E;
+      &#x3C;option&#x3E;PHP&#x3C;/option&#x3E;
+      &#x3C;option&#x3E;Visual Basic&#x3C;/option&#x3E;
+   &#x3C;/select&#x3E;
+&#x3C;/div&#x3E;
+</code></pre></kbd></div>
+                        </div>
+                     <div class="form-group mb-0">
+                        <select class="form-control ">
+                           <option>Java</option>
+                           <option>Javascript</option>
+                           <option>PHP</option>
+                           <option>Visual Basic</option>
+                        </select>
+                     </div>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="header-title">
+                        <h4 class="card-title">Multiple Select2</h4>
+                     </div>
+                 <div class="header-action">
+                           <i  type="button" data-toggle="collapse" data-target="#form-select-5" aria-expanded="false" aria-controls="alert-1">
+                              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                              </svg>
+                           </i>
+                        </div>
+                  </div>
+                  <div class="card-body">
+                     <div class="collapse" id="form-select-5">
+                           <div class="card"><kbd class="bg-dark"><pre id="multiple-select" class="text-white"><code>
+&#x3C;select id=&#x22;multiple&#x22; class=&#x22;js-states form-control&#x22; multiple&#x3E;
+   &#x3C;option&#x3E;Red&#x3C;/option&#x3E;
+   &#x3C;option&#x3E;Green&#x3C;/option&#x3E;
+   &#x3C;option&#x3E;Blue&#x3C;/option&#x3E;
+   &#x3C;option&#x3E;Yellow&#x3C;/option&#x3E;
+&#x3C;/select&#x3E;
+</code></pre></kbd></div>
+                        </div>
+                     <select id="multiple" class="js-states form-control" multiple>
+                        <option>Red</option>
+                        <option>Green</option>
+                        <option>Blue</option>
+                        <option>Yellow</option>
+                     </select>
+                  </div>
+               </div>
+           
+               <div class="card">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="header-title">
+                        <h4 class="card-title">Custom Select</h4>
+                     </div>
+                  <div class="header-action">
+                           <i  type="button" data-toggle="collapse" data-target="#form-select-6" aria-expanded="false" aria-controls="alert-1">
+                              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                              </svg>
+                           </i>
+                        </div>
+                  </div>
+                  <div class="card-body">
+                     <div class="collapse" id="form-select-6">
+                           <div class="card"><kbd class="bg-dark"><pre id="custom-select" class="text-white"><code>
+&#x3C;select class=&#x22;custom-select form-control&#x22;&#x3E;
+   &#x3C;option selected=&#x22;&#x22;&#x3E;Open this menu&#x3C;/option&#x3E;
+   &#x3C;option value=&#x22;IT&#x22;&#x3E;IT&#x3C;/option&#x3E;
+   &#x3C;option value=&#x22;Blade Runner&#x22;&#x3E;Blade Runner&#x3C;/option&#x3E;
+   &#x3C;option value=&#x22;Thor Ragnarok&#x22;&#x3E;Thor Ragnarok&#x3C;/option&#x3E;
+&#x3C;/select&#x3E;
+</code></pre></kbd></div>
+                        </div>
+                     <select class="custom-select form-control">
+                        <option selected="">Open this menu</option>
+                        <option value="IT">IT</option>
+                        <option value="Blade Runner">Blade Runner</option>
+                        <option value="Thor Ragnarok">Thor Ragnarok</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="header-title">
+                        <h4 class="card-title">Disabled Select</h4>
+                     </div>
+                  <div class="header-action">
+                           <i  type="button" data-toggle="collapse" data-target="#form-select-7" aria-expanded="false" aria-controls="alert-1">
+                              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                              </svg>
+                           </i>
+                        </div>
+                  </div>
+                  <div class="card-body">
+                     <div class="collapse" id="form-select-7">
+                           <div class="card"><kbd class="bg-dark"><pre id="disabled-select" class="text-white"><code>
+&#x3C;select disabled=&#x22;disabled&#x22; id=&#x22;disabledSelect&#x22; class=&#x22;form-control&#x22;&#x3E;
+   &#x3C;option&#x3E;Disabled select&#x3C;/option&#x3E;
+   &#x3C;option&#x3E;1&#x3C;/option&#x3E;
+   &#x3C;option&#x3E;2&#x3C;/option&#x3E;
+   &#x3C;option&#x3E;3&#x3C;/option&#x3E;
+&#x3C;/select&#x3E;
+</code></pre></kbd></div>
+                        </div>
+                     <select disabled="disabled" id="disabledSelect" class="form-control">
+                        <option>Disabled select</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                     </select>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="header-title">
+                        <h4 class="card-title">Custome Select with Input Group</h4>
+                     </div>
+                  <div class="header-action">
+                           <i  type="button" data-toggle="collapse" data-target="#form-select-8" aria-expanded="false" aria-controls="alert-1">
+                              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                              </svg>
+                           </i>
+                        </div>
+                  </div>
+                  <div class="card-body">
+                     <div class="collapse" id="form-select-8">
+                           <div class="card"><kbd class="bg-dark"><pre id="custom-select-with-input-groups" class="text-white"><code>
+&#x3C;div class=&#x22;input-group mb-3&#x22;&#x3E;
+   &#x3C;div class=&#x22;input-group-prepend&#x22;&#x3E;
+      &#x3C;label class=&#x22;input-group-text&#x22; for=&#x22;inputGroupSelect03&#x22;&#x3E;Options&#x3C;/label&#x3E;
+   &#x3C;/div&#x3E;
+   &#x3C;select class=&#x22;custom-select&#x22; id=&#x22;inputGroupSelect03&#x22;&#x3E;
+      &#x3C;option selected&#x3E;Choose...&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;1&#x22;&#x3E;One&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;2&#x22;&#x3E;Two&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;3&#x22;&#x3E;Three&#x3C;/option&#x3E;
+   &#x3C;/select&#x3E;
+&#x3C;/div&#x3E;
+</code></pre></kbd></div>
+                        </div>
+                     <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                           <label class="input-group-text" for="inputGroupSelect03">Options</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect03">
+                           <option selected>Choose...</option>
+                           <option value="1">One</option>
+                           <option value="2">Two</option>
+                           <option value="3">Three</option>
+                        </select>
+                     </div>
+                     <div class="input-group">
+                        <select class="custom-select" id="inputGroupSelect04">
+                           <option selected>Choose...</option>
+                           <option value="1">One</option>
+                           <option value="2">Two</option>
+                           <option value="3">Three</option>
+                        </select>
+                        <div class="input-group-append">
+                           <label class="input-group-text" for="inputGroupSelect04">Options</label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="header-title">
+                        <h4 class="card-title">Custom Select Menu Sizing</h4>
+                     </div>
+                  <div class="header-action">
+                           <i  type="button" data-toggle="collapse" data-target="#form-select-9" aria-expanded="false" aria-controls="alert-1">
+                              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                              </svg>
+                           </i>
+                        </div>
+                  </div>
+                  <div class="card-body">
+                     <div class="collapse" id="form-select-9">
+                           <div class="card"><kbd class="bg-dark"><pre id="custom-select-menu-sizing" class="text-white"><code>
+&#x3C;form&#x3E;
+   &#x3C;select class=&#x22;custom-select custom-select-sm mb-3&#x22;&#x3E;
+      &#x3C;option selected&#x3E;Small Custom Select Menu&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;volvo&#x22;&#x3E;Volvo&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;fiat&#x22;&#x3E;Fiat&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;audi&#x22;&#x3E;Audi&#x3C;/option&#x3E;
+   &#x3C;/select&#x3E;
+   &#x3C;select name=&#x22;cars&#x22; class=&#x22;custom-select mb-3&#x22;&#x3E;
+      &#x3C;option selected&#x3E;Default Custom Select Menu&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;volvo&#x22;&#x3E;Volvo&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;fiat&#x22;&#x3E;Fiat&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;audi&#x22;&#x3E;Audi&#x3C;/option&#x3E;
+   &#x3C;/select&#x3E;
+   &#x3C;select name=&#x22;cars&#x22; class=&#x22;custom-select custom-select-lg mb-3&#x22;&#x3E;
+      &#x3C;option selected&#x3E;Large Custom Select Menu&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;volvo&#x22;&#x3E;Volvo&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;fiat&#x22;&#x3E;Fiat&#x3C;/option&#x3E;
+      &#x3C;option value=&#x22;audi&#x22;&#x3E;Audi&#x3C;/option&#x3E;
+   &#x3C;/select&#x3E;
+&#x3C;/form&#x3E;
+</code></pre></kbd></div>
+                        </div>
+                     <form>
+                        <select class="custom-select custom-select-sm mb-3">
+                           <option selected>Small Custom Select Menu</option>
+                           <option value="volvo">Volvo</option>
+                           <option value="fiat">Fiat</option>
+                           <option value="audi">Audi</option>
+                        </select>
+                        <select name="cars" class="custom-select mb-3">
+                           <option selected>Default Custom Select Menu</option>
+                           <option value="volvo">Volvo</option>
+                           <option value="fiat">Fiat</option>
+                           <option value="audi">Audi</option>
+                        </select>
+                        <select name="cars" class="custom-select custom-select-lg mb-0">
+                           <option selected>Large Custom Select Menu</option>
+                           <option value="volvo">Volvo</option>
+                           <option value="fiat">Fiat</option>
+                           <option value="audi">Audi</option>
+                        </select>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   {{/content}}
+{{/extend}}

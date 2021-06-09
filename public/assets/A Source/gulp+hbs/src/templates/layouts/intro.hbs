@@ -1,0 +1,49 @@
+{{!-- layouts/base.hbs --}}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ appName }} | Responsive Bootstrap 4 Admin Dashboard Template</title>
+  <!-- Favicon -->
+  {{#compare faviconName '!==' ''}}
+  <link rel="shortcut icon" href="./assets/images/{{faviconName}}" />
+  {{else}}
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" />
+  {{/compare}}
+  <link rel="stylesheet" href="./assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/intro.min.css?v={{version}}">
+</head>
+
+<body class="intro">
+  <div id="butter">
+    <!-- loader Start -->
+    <div id="loading">
+      {{> partials/backend/loader }}
+    </div>
+    <!-- loader END -->
+    {{#block "hero"}}
+
+    {{/block}}
+
+    <!-- Wrapper Start -->
+    <div class="wrapper">
+      <div class="content-page">
+        {{#block "content"}}
+        {{/block}}
+      </div>
+    </div>
+
+    {{#block "footer"}}
+
+    {{/block}}
+  </div>
+  <script src="./assets/js/intro-bundle.min.js"></script>
+
+  <script src="./assets/js/tilt.jquery.min.js"></script>
+  <script src="./assets/js/intro.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,502 @@
+
+{{#extend layout title="form-validation" active="form-validation" bodyClass="color-light" path="../" }}
+    {{#content "content"}}
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-sm-12 col-lg-12">
+               <div class="card">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="header-title">
+                        <h4 class="card-title"> Default Validation</h4>
+                     </div>
+                  <div class="header-action">
+                           <i  type="button" data-toggle="collapse" data-target="#form-validation-1" aria-expanded="false" aria-controls="alert-1">
+                              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                              </svg>
+                           </i>
+                        </div>
+                  </div>
+                  <div class="card-body">
+                     <div class="collapse" id="form-validation-1">
+                           <div class="card"><kbd class="bg-dark"><pre id="default-validation" class="text-white"><code>
+&#x3C;form&#x3E;
+   &#x3C;div class=&#x22;form-row&#x22;&#x3E;
+      &#x3C;div class=&#x22;col-md-6 mb-3&#x22;&#x3E;
+         &#x3C;label for=&#x22;validationDefault01&#x22;&#x3E;First name&#x3C;/label&#x3E;
+         &#x3C;input type=&#x22;text&#x22; class=&#x22;form-control&#x22; id=&#x22;validationDefault01&#x22; required&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;col-md-6 mb-3&#x22;&#x3E;
+         &#x3C;label for=&#x22;validationDefault02&#x22;&#x3E;Last name&#x3C;/label&#x3E;
+         &#x3C;input type=&#x22;text&#x22; class=&#x22;form-control&#x22; id=&#x22;validationDefault02&#x22; required&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;col-md-6 mb-3&#x22;&#x3E;
+         &#x3C;label for=&#x22;validationDefaultUsername&#x22;&#x3E;Username&#x3C;/label&#x3E;
+         &#x3C;div class=&#x22;input-group&#x22;&#x3E;
+            &#x3C;div class=&#x22;input-group-prepend&#x22;&#x3E;
+               &#x3C;span class=&#x22;input-group-text&#x22; id=&#x22;inputGroupPrepend2&#x22;&#x3E;@&#x3C;/span&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;input type=&#x22;text&#x22; class=&#x22;form-control&#x22; id=&#x22;validationDefaultUsername&#x22;  aria-describedby=&#x22;inputGroupPrepend2&#x22; required&#x3E;
+         &#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;col-md-6 mb-3&#x22;&#x3E;
+         &#x3C;label for=&#x22;validationDefault03&#x22;&#x3E;City&#x3C;/label&#x3E;
+         &#x3C;input type=&#x22;text&#x22; class=&#x22;form-control&#x22; id=&#x22;validationDefault03&#x22; required&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;col-md-6 mb-3&#x22;&#x3E;
+         &#x3C;label for=&#x22;validationDefault04&#x22;&#x3E;State&#x3C;/label&#x3E;
+         &#x3C;select class=&#x22;form-control&#x22; id=&#x22;validationDefault04&#x22; required&#x3E;
+            &#x3C;option selected disabled value=&#x22;&#x22;&#x3E;Choose...&#x3C;/option&#x3E;
+            &#x3C;option&#x3E;...&#x3C;/option&#x3E;
+         &#x3C;/select&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;col-md-6 mb-3&#x22;&#x3E;
+         &#x3C;label for=&#x22;validationDefault05&#x22;&#x3E;Zip&#x3C;/label&#x3E;
+         &#x3C;input type=&#x22;text&#x22; class=&#x22;form-control&#x22; id=&#x22;validationDefault05&#x22; required&#x3E;
+      &#x3C;/div&#x3E;
+   &#x3C;/div&#x3E;
+   &#x3C;div class=&#x22;form-group&#x22;&#x3E;
+      &#x3C;div class=&#x22;form-check&#x22;&#x3E;
+         &#x3C;input class=&#x22;form-check-input&#x22; type=&#x22;checkbox&#x22; value=&#x22;&#x22; id=&#x22;invalidCheck2&#x22; required&#x3E;
+         &#x3C;label class=&#x22;form-check-label&#x22; for=&#x22;invalidCheck2&#x22;&#x3E;
+         Agree to terms and conditions
+         &#x3C;/label&#x3E;
+      &#x3C;/div&#x3E;
+   &#x3C;/div&#x3E;
+   &#x3C;div class=&#x22;form-group&#x22;&#x3E;
+      &#x3C;button class=&#x22;btn btn-primary&#x22; type=&#x22;submit&#x22;&#x3E;Submit form&#x3C;/button&#x3E;
+   &#x3C;/div&#x3E;
+&#x3C;/form&#x3E;
+</code></pre></kbd></div>
+                        </div>
+                     <form>
+                        <div class="form-row">
+                           <div class="col-md-6 mb-3">
+                              <label for="validationDefault01">First name</label>
+                              <input type="text" class="form-control" id="validationDefault01" required>
+                           </div>
+                           <div class="col-md-6 mb-3">
+                              <label for="validationDefault02">Last name</label>
+                              <input type="text" class="form-control" id="validationDefault02" required>
+                           </div>
+                           <div class="col-md-6 mb-3">
+                              <label for="validationDefaultUsername">Username</label>
+                              <div class="input-group">
+                                 <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                                 </div>
+                                 <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+                              </div>
+                           </div>
+                           <div class="col-md-6 mb-3">
+                              <label for="validationDefault03">City</label>
+                              <input type="text" class="form-control" id="validationDefault03" required>
+                           </div>
+                           <div class="col-md-6 mb-3">
+                              <label for="validationDefault04">State</label>
+                              <select class="form-control" id="validationDefault04" required>
+                                 <option selected disabled value="">Choose...</option>
+                                 <option>...</option>
+                              </select>
+                           </div>
+                           <div class="col-md-6 mb-3">
+                              <label for="validationDefault05">Zip</label>
+                              <input type="text" class="form-control" id="validationDefault05" required>
+                           </div>
+                        </div>
+                        <div class="form-group">
+                           <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                              <label class="form-check-label" for="invalidCheck2">
+                              Agree to terms and conditions
+                              </label>
+                           </div>
+                        </div>
+                        <div class="form-group mb-0">
+                           <button class="btn btn-primary" type="submit">Submit form</button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="header-title">
+                        <h4 class="card-title"> Supported elements</h4>
+                     </div>
+                  <div class="header-action">
+                           <i  type="button" data-toggle="collapse" data-target="#form-validation-2" aria-expanded="false" aria-controls="alert-1">
+                              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                              </svg>
+                           </i>
+                        </div>
+                  </div>
+                  <div class="card-body">
+                     <div class="collapse" id="form-validation-2">
+                           <div class="card"><kbd class="bg-dark"><pre id="supported-elements" class="text-white"><code>
+&#x3C;form class=&#x22;was-validated&#x22;&#x3E;
+   &#x3C;div class=&#x22;mb-3&#x22;&#x3E;
+      &#x3C;label for=&#x22;validationTextarea&#x22;&#x3E;Textarea&#x3C;/label&#x3E;
+      &#x3C;textarea class=&#x22;form-control is-invalid&#x22; id=&#x22;validationTextarea&#x22; placeholder=&#x22;Required example textarea&#x22; required&#x3E;&#x3C;/textarea&#x3E;
+      &#x3C;div class=&#x22;invalid-feedback&#x22;&#x3E;
+         Please enter a message in the textarea.
+      &#x3C;/div&#x3E;
+   &#x3C;/div&#x3E;
+   &#x3C;div class=&#x22;custom-control custom-checkbox mb-3&#x22;&#x3E;
+      &#x3C;input type=&#x22;checkbox&#x22; class=&#x22;custom-control-input&#x22; id=&#x22;customControlValidation1&#x22; required&#x3E;
+      &#x3C;label class=&#x22;custom-control-label&#x22; for=&#x22;customControlValidation1&#x22;&#x3E;Check this custom checkbox&#x3C;/label&#x3E;
+      &#x3C;div class=&#x22;invalid-feedback&#x22;&#x3E;Example invalid feedback text&#x3C;/div&#x3E;
+   &#x3C;/div&#x3E;
+   &#x3C;div class=&#x22;custom-control custom-radio&#x22;&#x3E;
+      &#x3C;input type=&#x22;radio&#x22; class=&#x22;custom-control-input&#x22; id=&#x22;customControlValidation2&#x22; name=&#x22;radio-stacked&#x22; required&#x3E;
+      &#x3C;label class=&#x22;custom-control-label&#x22; for=&#x22;customControlValidation2&#x22;&#x3E;Toggle this custom radio&#x3C;/label&#x3E;
+   &#x3C;/div&#x3E;
+   &#x3C;div class=&#x22;custom-control custom-radio mb-3&#x22;&#x3E;
+      &#x3C;input type=&#x22;radio&#x22; class=&#x22;custom-control-input&#x22; id=&#x22;customControlValidation3&#x22; name=&#x22;radio-stacked&#x22; required&#x3E;
+      &#x3C;label class=&#x22;custom-control-label&#x22; for=&#x22;customControlValidation3&#x22;&#x3E;Or toggle this other custom radio&#x3C;/label&#x3E;
+      &#x3C;div class=&#x22;invalid-feedback&#x22;&#x3E;More example invalid feedback text&#x3C;/div&#x3E;
+   &#x3C;/div&#x3E;
+   &#x3C;div class=&#x22;form-group&#x22;&#x3E;
+      &#x3C;select class=&#x22;custom-select&#x22; required&#x3E;
+         &#x3C;option value=&#x22;&#x22;&#x3E;Open this select menu&#x3C;/option&#x3E;
+         &#x3C;option value=&#x22;1&#x22;&#x3E;One&#x3C;/option&#x3E;
+         &#x3C;option value=&#x22;2&#x22;&#x3E;Two&#x3C;/option&#x3E;
+         &#x3C;option value=&#x22;3&#x22;&#x3E;Three&#x3C;/option&#x3E;
+      &#x3C;/select&#x3E;
+      &#x3C;div class=&#x22;invalid-feedback&#x22;&#x3E;Example invalid custom select feedback&#x3C;/div&#x3E;
+   &#x3C;/div&#x3E;
+   &#x3C;div class=&#x22;custom-file&#x22;&#x3E;
+      &#x3C;input type=&#x22;file&#x22; class=&#x22;custom-file-input&#x22; id=&#x22;validatedCustomFile&#x22; required&#x3E;
+      &#x3C;label class=&#x22;custom-file-label&#x22; for=&#x22;validatedCustomFile&#x22;&#x3E;Choose file...&#x3C;/label&#x3E;
+      &#x3C;div class=&#x22;invalid-feedback&#x22;&#x3E;Example invalid custom file feedback&#x3C;/div&#x3E;
+   &#x3C;/div&#x3E;
+&#x3C;/form&#x3E;
+</code></pre></kbd></div>
+                        </div>
+                     <form class="was-validated">
+                        <div class="mb-3">
+                           <label for="validationTextarea">Textarea</label>
+                           <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+                           <div class="invalid-feedback">
+                              Please enter a message in the textarea.
+                           </div>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-3">
+                           <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+                           <label class="custom-control-label" for="customControlValidation1">Check this custom checkbox</label>
+                           <div class="invalid-feedback">Example invalid feedback text</div>
+                        </div>
+                        <div class="custom-control custom-radio">
+                           <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
+                           <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
+                        </div>
+                        <div class="custom-control custom-radio mb-3">
+                           <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
+                           <label class="custom-control-label" for="customControlValidation3">Or toggle this other custom radio</label>
+                           <div class="invalid-feedback">More example invalid feedback text</div>
+                        </div>
+                        <div class="form-group">
+                           <select class="custom-select" required>
+                              <option value="">Open this select menu</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                           </select>
+                           <div class="invalid-feedback">Example invalid custom select feedback</div>
+                        </div>
+                        <div class="custom-file">
+                           <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                           <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                           <div class="invalid-feedback">Example invalid custom file feedback</div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+           
+               <div class="card">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="header-title">
+                        <h4 class="card-title">Custom Validation</h4>
+                     </div>
+                  <div class="header-action">
+                           <i  type="button" data-toggle="collapse" data-target="#form-validation-3" aria-expanded="false" aria-controls="alert-1">
+                              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                              </svg>
+                           </i>
+                        </div>
+                  </div>
+                  <div class="card-body">
+                     <div class="collapse" id="form-validation-3">
+                           <div class="card"><kbd class="bg-dark"><pre id="custom-validation" class="text-white"><code>
+&#x3C;form class=&#x22;needs-validation&#x22; novalidate&#x3E;
+   &#x3C;div class=&#x22;form-row&#x22;&#x3E;
+      &#x3C;div class=&#x22;col-md-6 mb-3&#x22;&#x3E;
+         &#x3C;label for=&#x22;validationCustom01&#x22;&#x3E;First name&#x3C;/label&#x3E;
+         &#x3C;input type=&#x22;text&#x22; class=&#x22;form-control&#x22; id=&#x22;validationCustom01&#x22;  required&#x3E;
+         &#x3C;div class=&#x22;valid-feedback&#x22;&#x3E;
+            Looks good!
+         &#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;col-md-6 mb-3&#x22;&#x3E;
+         &#x3C;label for=&#x22;validationCustom02&#x22;&#x3E;Last name&#x3C;/label&#x3E;
+         &#x3C;input type=&#x22;text&#x22; class=&#x22;form-control&#x22; id=&#x22;validationCustom02&#x22;  required&#x3E;
+         &#x3C;div class=&#x22;valid-feedback&#x22;&#x3E;
+            Looks good!
+         &#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;col-md-6 mb-3&#x22;&#x3E;
+         &#x3C;label for=&#x22;validationCustomUsername&#x22;&#x3E;Username&#x3C;/label&#x3E;
+         &#x3C;div class=&#x22;input-group&#x22;&#x3E;
+            &#x3C;div class=&#x22;input-group-prepend&#x22;&#x3E;
+               &#x3C;span class=&#x22;input-group-text&#x22; id=&#x22;inputGroupPrepend&#x22;&#x3E;@&#x3C;/span&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;input type=&#x22;text&#x22; class=&#x22;form-control&#x22; id=&#x22;validationCustomUsername&#x22; aria-describedby=&#x22;inputGroupPrepend&#x22; required&#x3E;
+            &#x3C;div class=&#x22;invalid-feedback&#x22;&#x3E;
+               Please choose a username.
+            &#x3C;/div&#x3E;
+         &#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;col-md-6 mb-3&#x22;&#x3E;
+         &#x3C;label for=&#x22;validationCustom03&#x22;&#x3E;City&#x3C;/label&#x3E;
+         &#x3C;input type=&#x22;text&#x22; class=&#x22;form-control&#x22; id=&#x22;validationCustom03&#x22; required&#x3E;
+         &#x3C;div class=&#x22;invalid-feedback&#x22;&#x3E;
+            Please provide a valid city.
+         &#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;col-md-6 mb-3&#x22;&#x3E;
+         &#x3C;label for=&#x22;validationCustom04&#x22;&#x3E;State&#x3C;/label&#x3E;
+         &#x3C;select class=&#x22;form-control&#x22; id=&#x22;validationCustom04&#x22; required&#x3E;
+            &#x3C;option selected disabled value=&#x22;&#x22;&#x3E;Choose...&#x3C;/option&#x3E;
+            &#x3C;option&#x3E;...&#x3C;/option&#x3E;
+         &#x3C;/select&#x3E;
+         &#x3C;div class=&#x22;invalid-feedback&#x22;&#x3E;
+            Please select a valid state.
+         &#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;col-md-6 mb-3&#x22;&#x3E;
+         &#x3C;label for=&#x22;validationCustom05&#x22;&#x3E;Zip&#x3C;/label&#x3E;
+         &#x3C;input type=&#x22;text&#x22; class=&#x22;form-control&#x22; id=&#x22;validationCustom05&#x22; required&#x3E;
+         &#x3C;div class=&#x22;invalid-feedback&#x22;&#x3E;
+            Please provide a valid zip.
+         &#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+   &#x3C;/div&#x3E;
+   &#x3C;div class=&#x22;form-group&#x22;&#x3E;
+      &#x3C;div class=&#x22;form-check&#x22;&#x3E;
+         &#x3C;input class=&#x22;form-check-input&#x22; type=&#x22;checkbox&#x22; value=&#x22;&#x22; id=&#x22;invalidCheck&#x22; required&#x3E;
+         &#x3C;label class=&#x22;form-check-label&#x22; for=&#x22;invalidCheck&#x22;&#x3E;
+         Agree to terms and conditions
+         &#x3C;/label&#x3E;
+         &#x3C;div class=&#x22;invalid-feedback&#x22;&#x3E;
+            You must agree before submitting.
+         &#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+   &#x3C;/div&#x3E;
+   &#x3C;button class=&#x22;btn btn-primary&#x22; type=&#x22;submit&#x22;&#x3E;Submit form&#x3C;/button&#x3E;
+&#x3C;/form&#x3E;
+</code></pre></kbd></div>
+                        </div>
+                     <form class="needs-validation" novalidate>
+                        <div class="form-row">
+                           <div class="col-md-6 mb-3">
+                              <label for="validationCustom01">First name</label>
+                              <input type="text" class="form-control" id="validationCustom01"  required>
+                              <div class="valid-feedback">
+                                 Looks good!
+                              </div>
+                           </div>
+                           <div class="col-md-6 mb-3">
+                              <label for="validationCustom02">Last name</label>
+                              <input type="text" class="form-control" id="validationCustom02"  required>
+                              <div class="valid-feedback">
+                                 Looks good!
+                              </div>
+                           </div>
+                           <div class="col-md-6 mb-3">
+                              <label for="validationCustomUsername">Username</label>
+                              <div class="input-group">
+                                 <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                 </div>
+                                 <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                 <div class="invalid-feedback">
+                                    Please choose a username.
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6 mb-3">
+                              <label for="validationCustom03">City</label>
+                              <input type="text" class="form-control" id="validationCustom03" required>
+                              <div class="invalid-feedback">
+                                 Please provide a valid city.
+                              </div>
+                           </div>
+                           <div class="col-md-6 mb-3">
+                              <label for="validationCustom04">State</label>
+                              <select class="form-control" id="validationCustom04" required>
+                                 <option selected disabled value="">Choose...</option>
+                                 <option>...</option>
+                              </select>
+                              <div class="invalid-feedback">
+                                 Please select a valid state.
+                              </div>
+                           </div>
+                           <div class="col-md-6 mb-3">
+                              <label for="validationCustom05">Zip</label>
+                              <input type="text" class="form-control" id="validationCustom05" required>
+                              <div class="invalid-feedback">
+                                 Please provide a valid zip.
+                              </div>
+                           </div>
+                        </div>
+                        <div class="form-group">
+                           <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                              <label class="form-check-label" for="invalidCheck">
+                              Agree to terms and conditions
+                              </label>
+                              <div class="invalid-feedback">
+                                 You must agree before submitting.
+                              </div>
+                           </div>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Submit form</button>
+                     </form>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-header d-flex justify-content-between">
+                     <div class="header-title">
+                        <h4 class="card-title">Tooltips</h4>
+                     </div>
+                  <div class="header-action">
+                           <i  type="button" data-toggle="collapse" data-target="#form-validation-4" aria-expanded="false" aria-controls="alert-1">
+                              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                              </svg>
+                           </i>
+                        </div>
+                  </div>
+                  <div class="card-body">
+                     <div class="collapse" id="form-validation-4">
+                           <div class="card"><kbd class="bg-dark"><pre id="tooltip" class="text-white"><code>
+&#x3C;form class=&#x22;needs-validation&#x22; novalidate&#x3E;
+   &#x3C;div class=&#x22;form-row&#x22;&#x3E;
+      &#x3C;div class=&#x22;col-md-6 mb-3&#x22;&#x3E;
+         &#x3C;label for=&#x22;validationTooltip01&#x22;&#x3E;First name&#x3C;/label&#x3E;
+         &#x3C;input type=&#x22;text&#x22; class=&#x22;form-control&#x22; id=&#x22;validationTooltip01&#x22; value=&#x22;Mark&#x22; required&#x3E;
+         &#x3C;div class=&#x22;valid-tooltip&#x22;&#x3E;
+            Looks good!
+         &#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;col-md-6 mb-3&#x22;&#x3E;
+         &#x3C;label for=&#x22;validationTooltip02&#x22;&#x3E;Last name&#x3C;/label&#x3E;
+         &#x3C;input type=&#x22;text&#x22; class=&#x22;form-control&#x22; id=&#x22;validationTooltip02&#x22; value=&#x22;Tech&#x22; required&#x3E;
+         &#x3C;div class=&#x22;valid-tooltip&#x22;&#x3E;
+            Looks good!
+         &#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;col-md-6 mb-3&#x22;&#x3E;
+         &#x3C;label for=&#x22;validationTooltipUsername&#x22;&#x3E;Username&#x3C;/label&#x3E;
+         &#x3C;div class=&#x22;input-group&#x22;&#x3E;
+            &#x3C;div class=&#x22;input-group-prepend&#x22;&#x3E;
+               &#x3C;span class=&#x22;input-group-text&#x22; id=&#x22;validationTooltipUsernamePrepend&#x22;&#x3E;@&#x3C;/span&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;input type=&#x22;text&#x22; class=&#x22;form-control&#x22; id=&#x22;validationTooltipUsername&#x22; aria-describedby=&#x22;validationTooltipUsernamePrepend&#x22; required&#x3E;
+            &#x3C;div class=&#x22;invalid-tooltip&#x22;&#x3E;
+               Please choose a unique and valid username.
+            &#x3C;/div&#x3E;
+         &#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;col-md-6 mb-3&#x22;&#x3E;
+         &#x3C;label for=&#x22;validationTooltip03&#x22;&#x3E;City&#x3C;/label&#x3E;
+         &#x3C;input type=&#x22;text&#x22; class=&#x22;form-control&#x22; id=&#x22;validationTooltip03&#x22; required&#x3E;
+         &#x3C;div class=&#x22;invalid-tooltip&#x22;&#x3E;
+            Please provide a valid city.
+         &#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;col-md-6 mb-3&#x22;&#x3E;
+         &#x3C;label for=&#x22;validationTooltip04&#x22;&#x3E;State&#x3C;/label&#x3E;
+         &#x3C;select class=&#x22;form-control&#x22; id=&#x22;validationTooltip04&#x22; required&#x3E;
+            &#x3C;option selected disabled value=&#x22;&#x22;&#x3E;Choose...&#x3C;/option&#x3E;
+            &#x3C;option&#x3E;...&#x3C;/option&#x3E;
+         &#x3C;/select&#x3E;
+         &#x3C;div class=&#x22;invalid-tooltip&#x22;&#x3E;
+            Please select a valid state.
+         &#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div class=&#x22;col-md-6 mb-3&#x22;&#x3E;
+         &#x3C;label for=&#x22;validationTooltip05&#x22;&#x3E;Zip&#x3C;/label&#x3E;
+         &#x3C;input type=&#x22;text&#x22; class=&#x22;form-control&#x22; id=&#x22;validationTooltip05&#x22; required&#x3E;
+         &#x3C;div class=&#x22;invalid-tooltip&#x22;&#x3E;
+            Please provide a valid zip.
+         &#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+   &#x3C;/div&#x3E;
+   &#x3C;button class=&#x22;btn btn-primary&#x22; type=&#x22;submit&#x22;&#x3E;Submit form&#x3C;/button&#x3E;
+&#x3C;/form&#x3E;
+</code></pre></kbd></div>
+                        </div>
+                     <form class="needs-validation" novalidate>
+                        <div class="form-row">
+                           <div class="col-md-6 mb-3">
+                              <label for="validationTooltip01">First name</label>
+                              <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
+                              <div class="valid-tooltip">
+                                 Looks good!
+                              </div>
+                           </div>
+                           <div class="col-md-6 mb-3">
+                              <label for="validationTooltip02">Last name</label>
+                              <input type="text" class="form-control" id="validationTooltip02" value="Tech" required>
+                              <div class="valid-tooltip">
+                                 Looks good!
+                              </div>
+                           </div>
+                           <div class="col-md-6 mb-3">
+                              <label for="validationTooltipUsername">Username</label>
+                              <div class="input-group">
+                                 <div class="input-group-prepend">
+                                    <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                                 </div>
+                                 <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
+                                 <div class="invalid-tooltip">
+                                    Please choose a unique and valid username.
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6 mb-3">
+                              <label for="validationTooltip03">City</label>
+                              <input type="text" class="form-control" id="validationTooltip03" required>
+                              <div class="invalid-tooltip">
+                                 Please provide a valid city.
+                              </div>
+                           </div>
+                           <div class="col-md-6 mb-3">
+                              <label for="validationTooltip04">State</label>
+                              <select class="form-control" id="validationTooltip04" required>
+                                 <option selected disabled value="">Choose...</option>
+                                 <option>...</option>
+                              </select>
+                              <div class="invalid-tooltip">
+                                 Please select a valid state.
+                              </div>
+                           </div>
+                           <div class="col-md-6 mb-3">
+                              <label for="validationTooltip05">Zip</label>
+                              <input type="text" class="form-control" id="validationTooltip05" required>
+                              <div class="invalid-tooltip">
+                                 Please provide a valid zip.
+                              </div>
+                           </div>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Submit form</button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   {{/content}}
+{{/extend}}
