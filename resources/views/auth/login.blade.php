@@ -1,68 +1,60 @@
-@extends('layouts.app')
+@extends('layouts.login')
+
+@section('title')
+Login
+@endsection
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+<div class="card">
+    <div class="card-body">
+    <a href="{{ route('login') }}" class="auth-logo align-items-center">
+        <img src="{{ asset('img/logo.png') }}" class="img-fluid rounded-normal" alt="" style="width: 45px; height:45px;">
+        <h4 class="pl-2 font-weight-bold">UPT KPH Wilayah II</h4>
+    </a>
+    <h5 class="mb-1 text-center">Masuk</h2>
+    <p class="text-center" style="font-size: 12px;">Untuk melihat informasi, silahkan masuk terlebih dahulu.</p>
+    <form class="mx-2" method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label class="mb-0">Username</label>
+                                    <input name="email" class="form-control form-control-sm {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" type="email">
+                                    @if ($errors->has('email'))
+                                     <small class="text-danger">{{ $errors->first('email') }}</small>
+                                    @endif
                                 </div>
                             </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label class="mb-0">Kata Sandi</label>
+                                    <input name="password" class="form-control form-control-sm {{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" value="{{ old('password') }}" type="password">
+                                    @if ($errors->has('password'))
+                                        <small class="text-danger">{{ $errors->first('password') }}</small>
+                                    @endif
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input type="checkbox" class="custom-control-input" id="c-remember">
+                                    <label class="custom-control-label" for="c-remember">Ingat Saya</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <a href="{{ route('password.request') }}" class="text-primary float-right">Lupa Sandi?</a>
+                            </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
 
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
+
+                        <div class="d-flex justify-content-between align-items-center mt-5 mb-2">
+                            <span>Belum punya akun? Ayo <a href="{{ route('register') }}" class="text-primary">Daftar</a></span>
+                            <button type="submit" class="btn btn-sm btn-primary">Masuk</button>
                         </div>
                     </form>
                 </div>
