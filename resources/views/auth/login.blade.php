@@ -8,18 +8,18 @@ Login
 <div class="card">
     <div class="card-body">
     <a href="{{ route('login') }}" class="auth-logo align-items-center">
-        <img src="{{ asset('img/logo.png') }}" class="img-fluid rounded-normal" alt="" style="width: 45px; height:45px;">
-        <h4 class="pl-2 font-weight-bold">UPT KPH Wilayah II</h4>
+        <img src="{{ asset('img/Logo.png') }}" class="img-fluid rounded-normal" alt="" style="width: 90px; height:90px;">
+        <h4 class="pl-2 font-weight-bold text-center" style="font-size: 20px;">UPT. Kesatuan Pengelolaan Hutan Wilayah - II</h4>
     </a>
-    <h5 class="mb-1 text-center">Masuk</h2>
-    <p class="text-center" style="font-size: 12px;">Untuk melihat informasi, silahkan masuk terlebih dahulu.</p>
+    <h5 class="mb-1 text-center bold" style="font-size: 20px;">Masuk</h2>
+    <p class="text-center" style="font-size: 12px;"></p>
     <form class="mx-2" method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="form-group">
-                                    <label class="mb-0">Username</label>
+                                    <label class="mb-0">NIP</label>
                                     <input name="email" class="form-control form-control-sm {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" type="email">
                                     @if ($errors->has('email'))
                                      <small class="text-danger">{{ $errors->first('email') }}</small>
@@ -46,16 +46,17 @@ Login
                             </div>
 
                             <div class="col-lg-6">
-                                <a href="{{ route('password.request') }}" class="text-primary float-right">Lupa Sandi?</a>
+                                <a href="{{ route('password.request') }}" class="text-primary float-right">Lupa kata sandi?</a>
                             </div>
                         </div>
 
 
 
                         <div class="d-flex justify-content-between align-items-center mt-5 mb-2">
-                            <span>Belum punya akun? Ayo <a href="{{ route('register') }}" class="text-primary">Daftar</a></span>
+                            <span><!--Belum punya akun? Ayo <a href="" class="text-primary">Daftar--></a></span>
                             <button type="submit" class="btn btn-sm btn-primary">Masuk</button>
                         </div>
+
                     </form>
                 </div>
             </div>
