@@ -5,7 +5,7 @@
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <title>SimpleD | Responsive Bootstrap 4 Admin Dashboard Template</title>
-      
+
       <!-- Favicon -->
       <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" />
       <link rel="stylesheet" href="{{ asset('assets/css/backend-plugin.min.css') }}">
@@ -14,13 +14,14 @@
       <link rel="stylesheet" href="{{ asset('assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css') }}">
       <link rel="stylesheet" href="{{ asset('assets/vendor/remixicon/fonts/remixicon.css') }}">
       <link rel="stylesheet" href="{{ asset('assets/vendor/@icon/dripicons/dripicons.css') }}">
-      
+
       <link rel='stylesheet' href='{{ asset('assets/vendor/fullcalendar/core/main.css') }}' />
       <link rel='stylesheet' href='{{ asset('assets/vendor/fullcalendar/daygrid/main.css') }}' />
       <link rel='stylesheet' href='{{ asset('assets/vendor/fullcalendar/timegrid/main.css') }}' />
       <link rel='stylesheet' href='{{ asset('assets/vendor/fullcalendar/list/main.css') }}' />
-      <link rel="stylesheet" href="{{ asset('assets/vendor/mapbox/mapbox-gl.css') }}"> 
-    
+      <link rel="stylesheet" href="{{ asset('assets/vendor/mapbox/mapbox-gl.css') }}">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
       <link rel="stylesheet" href="{{ asset('css/cc.css') }}">
     </head>
   <body class="  ">
@@ -39,7 +40,7 @@
                   <img src="../assets/images/white-logo.png" class="img-fluid rounded-normal darkmode-logo" alt="logo">
               </a>
               <div>
-             
+
               </div>
               <div class="side-menu-bt-sidebar">
                   <i class="las la-bars wrapper-menu"></i>
@@ -57,9 +58,9 @@
                                           d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                                   </svg>
                               </i>
-      
+
                               <span class="ml-2">Beranda</span>
-      
+
                               <i class="las la-angle-right mm-arrow-right arrow-active"></i>
                               <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
                           </a>
@@ -91,7 +92,7 @@
                               <i class="las la-angle-right mm-arrow-right arrow-active"></i>
                               <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
                           </a>
-                          
+
                       </li>
                       <li class="">
                           <a href="#form" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
@@ -106,13 +107,13 @@
                               <i class="las la-angle-right mm-arrow-right arrow-active"></i>
                               <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
                           </a>
-                          
+
                       </li>
                   </ul>
               </nav>
               <div class="pt-5 pb-2"></div>
           </div>
-      </div>       
+      </div>
       <div class="mm-top-navbar">
           <div class="mm-navbar-custom">
               <nav class="navbar navbar-expand-lg navbar-light p-0">
@@ -165,11 +166,11 @@
                                       <form action="#" class="searchbox p-2">
                                           <div class="form-group mb-0 position-relative">
                                           <input type="text" class="text search-input font-size-12" placeholder="type here to search...">
-                                          <a href="#" class="search-link"><i class="las la-search"></i></a> 
+                                          <a href="#" class="search-link"><i class="las la-search"></i></a>
                                           </div>
                                       </form>
                                   </div>
-                              </li>                
+                              </li>
                               <li class="nav-item nav-icon dropdown">
                                   <a href="#" class="search-toggle dropdown-toggle" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <svg class="svg-icon  text-primary" id="mm-mail-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
@@ -245,7 +246,7 @@
                                       </div>
                                   </div>
                               </li>
-                              <li class="nav-item nav-icon dropdown"> 
+                              <li class="nav-item nav-icon dropdown">
                                   <a href="#" class="search-toggle dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                                       <svg class="svg-icon text-primary" id="mm-bell-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
                                       <span class="bg-primary "></span>
@@ -263,7 +264,7 @@
                                                       <img class="avatar-40 rounded-small" src="../assets/images/user/1.jpg" alt="01">
                                                       </div>
                                                       <div class="media-body ml-3">
-                                                      <h6 class="mb-0">Emma Watson Barry <small class="badge badge-success float-right">New</small></h6>                                             
+                                                      <h6 class="mb-0">Emma Watson Barry <small class="badge badge-success float-right">New</small></h6>
                                                       <p class="mb-0">95 MB</p>
                                                       </div>
                                                   </div>
@@ -285,7 +286,7 @@
                                                       <img class="avatar-40 rounded-small" src="../assets/images/user/3.jpg" alt="03">
                                                       </div>
                                                       <div class="media-body ml-3">
-                                                      <h6 class="mb-0 ">Two customer is left</h6>                                             
+                                                      <h6 class="mb-0 ">Two customer is left</h6>
                                                       <p class="mb-0">Cyst Barry</p>
                                                       </div>
                                                   </div>
@@ -296,7 +297,7 @@
                                                       <img class="avatar-40 rounded-small" src="../assets/images/user/4.jpg" alt="04">
                                                       </div>
                                                       <div class="media-body ml-3">
-                                                      <h6 class="mb-0 ">New Mail from Fenny <small class="badge badge-success float-right">New</small></h6>                                             
+                                                      <h6 class="mb-0 ">New Mail from Fenny <small class="badge badge-success float-right">New</small></h6>
                                                       <p class="mb-0">Cyst Barry</p>
                                                       </div>
                                                   </div>
@@ -304,11 +305,11 @@
                                           </div>
                                           <a class="d-flex justify-content-center p-2 card-footer" href="#" role="button">
                                               View All
-                                          </a>                                   
+                                          </a>
                                           </div>
                                       </div>
                                   </div>
-                              </li>                  
+                              </li>
                               <li class="nav-item nav-icon dropdown full-screen">
                                   <a href="#" class="nav-item nav-icon dropdown" id="btnFullscreen">
                                       <i class="max"><svg class="svg-icon  text-primary" id="d-3-max" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg></i>
@@ -353,13 +354,13 @@
                                       </li>
                                   </ul>
                               </li>
-                          </ul>                     
-                      </div> 
+                          </ul>
+                      </div>
                   </div>
               </nav>
           </div>
       </div>
-
+<section id="banner" class="banner">
     <div class="content-page">
         <div class="myBanner">
             <div class="col align-self-center">
@@ -409,8 +410,48 @@
             </div>
         </div>
   </div>
+</section>
 
-            
+<section id="artikel" class="artikel">
+    <div class="content-page">
+        <div class="row mb-3">
+            <div class="col-md">
+                <h2>Artikel</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 text-left">
+            <div class="card" >
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+        </div>
+     </div>
+</section>
+
+<section id="kegiatan" class="kegiatan">
+    <div class="content-page">
+        <div class="row mb-3">
+            <div class="col-md">
+                <h2>Kegiatan</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
         </div>
     </div>
 </div>
@@ -434,7 +475,7 @@
                 </div>
             </div>
         </div>
-    </footer>    
+    </footer>
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('assets/js/backend-bundle.min.js') }}"></script>
 
@@ -482,4 +523,4 @@
     <!-- app JavaScript -->
     <script src="{{ asset('assets/js/app.js') }}"></script>  </body>
 </html>
-	
+
