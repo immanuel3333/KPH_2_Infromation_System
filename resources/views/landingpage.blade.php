@@ -439,34 +439,87 @@
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                     </div>
-                     <!-- map  -->
+                    <div class="card">
+                         <!-- map  -->
                     <div id="mapid"></div>
                     </div>
+
+
                 </div>
-            </div>
+
+                <div class="third-content pt-3">
+                    <div class="kegiatan">
+                        <div class="row mb-3">
+                            <div class="col-md">
+                                <div class="card">
+                                    <img class="card-img-top" src="..." alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                             </div>
+                         </div>
+                         <div class="col-md">
+                                <div class="card">
+                                    <img class="card-img-top" src="..." alt="Card image cap">
+                                    <div class="card-body">
+                                         <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    </div>
+                                 </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="card">
+                                <img class="card-img-top" src="..." alt="Card image cap">
+                                <div class="card-body">
+                                     <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
         </div>
     </div>
     </div>
     </div>
 </div>
- 
+
 
     <!-- Wrapper End-->
     <footer class="mm-footer">
-        <div class="container-fluid">
+        <div class="container-fluid text-center">
             <div class="row">
-                <div class="col-lg-6">
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item"><a href="../backend/privacy-policy.html">Privacy Policy</a></li>
-                        <li class="list-inline-item"><a href="../backend/terms-of-service.html">Terms of Use</a></li>
-                    </ul>
+                <div class="col-lg-4 text-center">
+                    Kontak
                 </div>
-                <div class="col-lg-6 text-right">
+                <div class="col-lg-4 text-center">
+                    Medsos
+                </div>
+                <div class="col-lg-4 text-center">
+                    Alamat
+                </div>
+                <br>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
                     <span class="mr-1">
                         Copyright
-                        <script>document.write(new Date().getFullYear())</script>© <a href="#" class="">SimpleD</a>
+                        <script>document.write(new Date().getFullYear())</script>© <a href="#" class="">Tim Forest II KP IT Del</a>
                         All Rights Reserved.
                     </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+
                 </div>
             </div>
         </div>
