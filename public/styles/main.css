@@ -1,0 +1,40 @@
+.myBanner .title {
+    text-shadow: 2px 4px 3px black;
+    font-size: 20px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 640px){
+    .myBanner .title {
+        text-shadow: 2px 4px 3px black;
+        font-size: 20px;
+        text-align: justify;
+        margin-top: -100px;
+        
+    }
+}
+
+.second-content .title{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 640px){
+    .second-content .title{
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+.second-content .desc{
+    text-align: justify;
+    line-height: 30px;
+}
+
+@media screen and (max-width: 640px){
+    .second-content .desc{
+        text-align: justify;
+        font-size: 12px;
+        line-height: 15px;
+    }
+}

@@ -23,6 +23,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
       <link rel="stylesheet" href="{{ asset('css/cc.css') }}">
+      <link rel="stylesheet" href="{{ asset('styles/main.css') }}">
     </head>
   <body class="  ">
     <!-- loader Start -->
@@ -360,101 +361,91 @@
               </nav>
           </div>
       </div>
-<section id="banner" class="banner">
-    <div class="content-page">
-        <div class="myBanner">
-            <div class="col align-self-center">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                <div class="carousel-item active" style="height:300px">
-                    <a id="firsturl" href={{$firstUrl}}>
-                    <img id="firstimage" class="img-fluid d-block mx-auto" src="{{$firstImage}}" alt="..." style="width:1110px; height:500px;">
-                    </a>
-                    <div class="carousel-caption  d-md-block">
-                    <p class="title">{{$firstTitle}}</p>
+
+      <div>
+        <div class="content-page">
+            <div class="container">
+                <div class="myBanner">
+                    <div class="col align-self-center">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                        <div class="carousel-item active" style="height:300px">
+                            <a id="firsturl" href={{$firstUrl}}>
+                            <img id="firstimage" class="img-fluid d-block mx-auto" src="{{$firstImage}}" alt="..." style="width:1110px; height:500px;">
+                            </a>
+                            <div class="carousel-caption  d-md-block">
+                            <p class="title">{{$firstTitle}}</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" style="height:300px">
+                            <a id="secondurl" href={{$secondUrl}}>
+                            <img id="secondimage" class="img-fluid d-block mx-auto" src="{{$secondImage}}" alt="..." style="width:1110px; height:500px;">
+                            </a>
+                            <div class="carousel-caption  d-md-block">
+                            <p class="title">{{$secondTitle}}</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" style="height:300px">
+                            <a id="thirdurl" href={{$thirdUrl}}>
+                            <img id="thirdimage" class="img-fluid d-block mx-auto" src="{{$thirdImage}}" alt="..." style="width:1110px; height:500px;">
+                            </a>
+                            <div class="carousel-caption  d-md-block">
+                            <p class="title">{{$thirdTitle}}</p>
+                            </div>
+                        </div>
+                        </div>
+
+                        <a id="previous" class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a id="next" class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+
+            <div class="second-content pt-5">
+                <div class="card-group">
+                    <div class="card">
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="carousel-item" style="height:300px">
-                    <a id="secondurl" href={{$secondUrl}}>
-                    <img id="secondimage" class="img-fluid d-block mx-auto" src="{{$secondImage}}" alt="..." style="width:1110px; height:500px;">
-                    </a>
-                    <div class="carousel-caption  d-md-block">
-                    <p class="title">{{$secondTitle}}</p>
-                    </div>
-                </div>
-
-                <div class="carousel-item" style="height:300px">
-                    <a id="thirdurl" href={{$thirdUrl}}>
-                    <img id="thirdimage" class="img-fluid d-block mx-auto" src="{{$thirdImage}}" alt="..." style="width:1110px; height:500px;">
-                    </a>
-                    <div class="carousel-caption  d-md-block">
-                    <p class="title">{{$thirdTitle}}</p>
-                    </div>
-                </div>
-                </div>
-
-                <a id="previous" class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a id="next" class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+            
             </div>
-        </div>
-  </div>
-</section>
-
-<section id="artikel" class="artikel">
-    <div class="content-page">
-        <div class="row mb-3">
-            <div class="col-md">
-                <h2>Artikel</h2>
-            </div>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="col-lg-4 text-left">
-            <div class="card" >
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-        </div>
-     </div>
-</section>
-
-<section id="kegiatan" class="kegiatan">
-    <div class="content-page">
-        <div class="row mb-3">
-            <div class="col-md">
-                <h2>Kegiatan</h2>
-            </div>
-        </div>
-    </div>
-</section>
-
         </div>
     </div>
 </div>
+</div>
+</div>
+ 
 
     <!-- Wrapper End-->
     <footer class="mm-footer">
