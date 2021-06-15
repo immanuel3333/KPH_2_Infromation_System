@@ -34,6 +34,11 @@
         crossorigin="">
     </script>
 
+    <script src="https://unpkg.com/esri-leaflet@3.0.2/dist/esri-leaflet.js"
+        integrity="sha512-myckXhaJsP7Q7MZva03Tfme/MSF5a6HC2xryjAM4FxPLHGqlh5VALCbywHnzs2uPoF/4G/QVXyYDDSkp5nPfig=="
+        crossorigin="">
+    </script>
+
     </head>
   <body class="  ">
     <!-- loader Start -->
@@ -527,15 +532,67 @@
 
     <!-- script leaflet -->
     <script>
-        var mymap = L.map('mapid').setView([51.505, -0.09], 13);
-        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-		maxZoom: 18,
-		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-		id: 'mapbox/streets-v11',
-		tileSize: 512,
-		zoomOffset: -1
-	}).addTo(mymap);
+        var map = L.map('mapid').setView([2.951442, 99.057523], 25);
+
+        // L.esri.basemapLayer('ImageryFirefly').addTo(map);
+                googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
+            maxZoom: 20,
+            subdomains:['mt0','mt1','mt2','mt3']
+        }).addTo(map);
+
+        // googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
+        // maxZoom: 20,
+        // subdomains:['mt0','mt1','mt2','mt3']
+        // }).addTo(map);
+
+        //         googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
+        //     maxZoom: 20,
+        //     subdomains:['mt0','mt1','mt2','mt3']
+        // }).addTo(map);
+
+//         googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',{
+//     maxZoom: 20,
+//     subdomains:['mt0','mt1','mt2','mt3']
+// }).addTo(map);
+
+
+
+var greenIcon = L.icon({
+    iconUrl: 'img/kph2.png',
+    iconSize:     [50, 100], // size of the icon
+    shadowSize:   [50, 64], // size of the shadow
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+L.marker([2.9514596123305656, 99.05752741133092], {icon: greenIcon}).addTo(map);
+
+var LeafIcon = L.Icon.extend({
+    options: {
+        shadowUrl: 'img/kph2.png',
+        iconSize:     [38, 95],
+        shadowSize:   [50, 64],
+        iconAnchor:   [22, 94],
+        shadowAnchor: [4, 62],
+        popupAnchor:  [-3, -76]
+    }
+});
+
+// var greenIcon = new LeafIcon({iconUrl: 'img/kph2.png'});
+
+L.icon = function (options) {
+    return new L.Icon(options);
+};
+
+L.marker([2.9514596123305656, 99.05752741133092], {icon: greenIcon}).addTo(map).bindPopup("Kantor dinas kehutanan");
+
+
+
+
+
+
+       
     </script>
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('assets/js/backend-bundle.min.js') }}"></script>
