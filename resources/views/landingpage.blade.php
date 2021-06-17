@@ -40,7 +40,7 @@
         crossorigin="">
     </script>
 <style>
-blockquote {
+        blockquote {
             background: #f9f9f9;
             border-left: 10px solid #ccc;
             margin: 1.5em 10px;
