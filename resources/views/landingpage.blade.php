@@ -775,6 +775,15 @@
                                             <i class="min d-none"><svg class="svg-icon  text-primary" id="d-3-min" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minimize"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path></svg></i>
                                         </a>
                                     </li>
+
+                                    <!-- Login Button -->
+                                    <li class="nav-item nav-icon">
+                                        <a href="#" class="nav-item nav-icon" id="btnLogin">
+                                            <button type="submit" class="btn btn-primary">Login</button>
+                                        </a>
+                                    </li>
+                                    
+
                                     <li class="nav-item nav-icon dropdown">
                                         <a href="#" class="nav-item nav-icon dropdown-toggle pr-0 search-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                                             <img src="../assets/images/user/1.jpg" class="img-fluid avatar-rounded" alt="user">
