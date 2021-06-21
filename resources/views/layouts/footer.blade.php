@@ -1,14 +1,27 @@
-<footer class="mm-footer">
+</div>
+    </body>
+
+    <!-- Wrapper End-->
+    <footer class="mm-footer">
         <div class="container-fluid text-center">
             <div class="row">
-                <div class="col-lg-4 text-center">
+            <div class="col-lg-3 text-center">
                     Kontak
                 </div>
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-3 text-center">
                     Medsos
                 </div>
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-3 text-center">
                     Alamat
+                </div>
+                <div class="col-lg-3 text-center">
+                    <p>
+                        Total visitor :
+                        @foreach ($projects as $project)
+                        {{$project->views}}
+
+                        @endforeach
+                    <p>
                 </div>
                 <br>
             </div>

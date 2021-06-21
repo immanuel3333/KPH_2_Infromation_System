@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Comment;
+use App\counter;
 
 class HomeController extends Controller
 {
@@ -43,8 +44,9 @@ class HomeController extends Controller
         $secondTitle= $result->articles[1]->title;
         $thirdTitle = $result->articles[2]->title;
         $post = Post::with(['comments', 'comments.child'])->first();
-
-        return view('landingpage', compact('firstImage','secondImage','thirdImage','firstUrl','secondUrl','thirdUrl','firstTitle','secondTitle','thirdTitle','post'));
+        $projects = counter::latest()->paginate(5);
+        counter::increment('views');
+        return view('landingpage', compact('firstImage','secondImage','thirdImage','firstUrl','secondUrl','thirdUrl','firstTitle','secondTitle','thirdTitle','post','projects'));
     }
 
     public function comment(Request $request)
