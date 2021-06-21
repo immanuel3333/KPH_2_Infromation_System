@@ -39,35 +39,35 @@
         integrity="sha512-myckXhaJsP7Q7MZva03Tfme/MSF5a6HC2xryjAM4FxPLHGqlh5VALCbywHnzs2uPoF/4G/QVXyYDDSkp5nPfig=="
         crossorigin="">
     </script>
-    <style>
-            blockquote {
-                background: #f9f9f9;
-                border-left: 10px solid #ccc;
-                margin: 1.5em 10px;
-                padding: 0.5em 10px;
-                quotes: "\201C""\201D""\2018""\2019";
-            }
-            blockquote:before {
-                color: #ccc;
-                content: open-quote;
-                font-size: 4em;
-                line-height: 0.1em;
-                margin-right: 0.25em;
-                vertical-align: -0.4em;
-            }
-            blockquote p {
-                display: inline;
-                font-style: italic;
-            }
-            blockquote h6 {
-                font-weight: 700;
-                padding: 0;
-                margin: 0 0 .25rem;
-            }
-            .child-comment {
-                padding-left: 50px;
-            }
-    </style>
+<style>
+        blockquote {
+            background: #f9f9f9;
+            border-left: 10px solid #ccc;
+            margin: 1.5em 10px;
+            padding: 0.5em 10px;
+            quotes: "\201C""\201D""\2018""\2019";
+        }
+        blockquote:before {
+            color: #ccc;
+            content: open-quote;
+            font-size: 4em;
+            line-height: 0.1em;
+            margin-right: 0.25em;
+            vertical-align: -0.4em;
+        }
+        blockquote p {
+            display: inline;
+            font-style: italic;
+        }
+        blockquote h6 {
+            font-weight: 700;
+            padding: 0;
+            margin: 0 0 .25rem;
+        }
+        .child-comment {
+            padding-left: 50px;
+        }
+</style>
 
     </head>
     <body class="  ">
@@ -575,6 +575,7 @@
                     <div class="pt-5 pb-2"></div>
                 </div>
             </div>
+            </div>
 
             <div class="mm-top-navbar">
                 <div class="mm-navbar-custom">
@@ -775,15 +776,13 @@
                                             <i class="min d-none"><svg class="svg-icon  text-primary" id="d-3-min" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minimize"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path></svg></i>
                                         </a>
                                     </li>
-
                                     <!-- Login Button -->
                                     <li class="nav-item nav-icon">
-                                        <a href="#" class="nav-item nav-icon" id="btnLogin">
+                                        <a href="register" class="nav-item nav-icon" id="btnLogin">
                                             <button type="submit" class="btn btn-primary">Login</button>
                                         </a>
                                     </li>
                                     
-
                                     <li class="nav-item nav-icon dropdown">
                                         <a href="#" class="nav-item nav-icon dropdown-toggle pr-0 search-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                                             <img src="../assets/images/user/1.jpg" class="img-fluid avatar-rounded" alt="user">
@@ -834,95 +833,56 @@
                 <div class="container">
                     <div class="myBanner">
                         <div class="col align-self-center">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                            <div class="carousel-item active" style="height:300px">
-                                <a id="firsturl" href={{$firstUrl}}>
-                                <img id="firstimage" class="img-fluid d-block mx-auto" src="{{$firstImage}}" alt="..." style="width:1110px; height:500px;">
-                                </a>
-                                <div class="carousel-caption  d-md-block">
-                                <p class="title">{{$firstTitle}}</p>
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active" style="height:300px">
+                                        <a id="firsturl" href={{$firstUrl}}>
+                                        <img id="firstimage" class="img-fluid d-block mx-auto" src="{{$firstImage}}" alt="..." style="width:1110px; height:500px;">
+                                        </a>
+                                        <div class="carousel-caption  d-md-block">
+                                            <p class="title">{{$firstTitle}}</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="carousel-item" style="height:300px">
-                                <a id="secondurl" href={{$secondUrl}}>
-                                <img id="secondimage" class="img-fluid d-block mx-auto" src="{{$secondImage}}" alt="..." style="width:1110px; height:500px;">
-                                </a>
-                                <div class="carousel-caption  d-md-block">
-                                <p class="title">{{$secondTitle}}</p>
+                                <div class="carousel-item" style="height:300px">
+                                    <a id="secondurl" href={{$secondUrl}}>
+                                        <img id="secondimage" class="img-fluid d-block mx-auto" src="{{$secondImage}}" alt="..." style="width:1110px; height:500px;">
+                                    </a>
+                                    <div class="carousel-caption  d-md-block">
+                                        <p class="title">{{$secondTitle}}</p>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="carousel-item" style="height:300px">
-                                <a id="thirdurl" href={{$thirdUrl}}>
-                                <img id="thirdimage" class="img-fluid d-block mx-auto" src="{{$thirdImage}}" alt="..." style="width:1110px; height:500px;">
-                                </a>
-                                <div class="carousel-caption  d-md-block">
-                                <p class="title">{{$thirdTitle}}</p>
+                                <div class="carousel-item" style="height:300px">
+                                    <a id="thirdurl" href={{$thirdUrl}}>
+                                         <img id="thirdimage" class="img-fluid d-block mx-auto" src="{{$thirdImage}}" alt="..." style="width:1110px; height:500px;">
+                                    </a>
+                                    <div class="carousel-caption  d-md-block">
+                                        <p class="title">{{$thirdTitle}}</p>
+                                    </div>
                                 </div>
-                            </div>
-                            </div>
 
-                            <a id="previous" class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a id="next" class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                            </div>
+                                <a id="previous" class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a id="next" class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="kontenkiri">
-                            <div class="second-content pt-5">
-                                    <div class="card col-md">
-                                        <div class="row mb-3">
-                                            <div class="col-md">
-                                                <div class="card mt-3 ml-3">
-                                                    <img class="card-img-top" src="..." alt="Card image cap">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Card title</h5>
-                                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        <div class="col-md">
-                                                <div class="card mt-3">
-                                                    <img class="card-img-top" src="..." alt="Card image cap">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Card title</h5>
-                                                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                        <a href="#" class="card-link">Card link</a>
-                                                        <a href="#" class="card-link">Another link</a>
-                                                    </div>
-                                                </div>
-                                        </div>
-                                        <div class="col-md">
-                                            <div class="card mt-3 mr-3">
-                                                <div id="mapid"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <blockquote class="blockquote text-right mr-3">
-                                    <span ><a href="#" class="card-link">Card link</a> <a href="#" class="card-link">Another link</a></span>
-                                    </blockquote>
-                                    </div>
-                            </div>
 
-                            <div class="third-content pt-3">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="kontenkiri">
+                        <div class="second-content pt-5">
                                 <div class="card col-md">
                                     <div class="row mb-3">
                                         <div class="col-md">
@@ -949,104 +909,140 @@
                                     </div>
                                     <div class="col-md">
                                         <div class="card mt-3 mr-3">
-                                            <img class="card-img-top" src="..." alt="Card image cap">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                            </div>
+                                            <div id="mapid"></div>
                                         </div>
                                     </div>
-
                                 </div>
                                 <blockquote class="blockquote text-right mr-3">
                                 <span ><a href="#" class="card-link">Card link</a> <a href="#" class="card-link">Another link</a></span>
                                 </blockquote>
                                 </div>
-                                <div class="card col-md">
-                                        <div card></div>
-                                </div>
-                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-md-4">
-                        <div class="kontenkanan">
-                            <div class="card">
-                                <h2>About Me</h2>
-                                <div class="fakeimg" style="height:100px;">Image</div>
-                                <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-                            </div>
-                            <div class="card">
-                                <h3>Popular Post</h3>
-                                <div class="fakeimg"><p>Image</p></div>
-                                <div class="fakeimg"><p>Image</p></div>
-                                <div class="fakeimg"><p>Image</p></div>
-                            </div>
-                            <div class="card">
-                                <h3>Follow Me</h3>
-                                <p>Some text..</p>
-                            </div>
-                        </div>
-                    </div>
-
-         
-
-                    <!-- Fungsi komentar -->
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="card mt-3">
-                                    <div class="card-body">
-                                        <h5>Komentar</h5>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <form action="{{ url('/comment') }}" method="post">
-                                                    @csrf
-                                                    <input type="hidden" name="id" value="{{ $post->id }}" class="form-control">
-                                                    <input type="hidden" name="parent_id" id="parent_id" class="form-control">
-                                                    <div class="form-group">
-                                                        <label for="">Username</label>
-                                                        <input type="text" class="form-control" name="username">
-                                                        <p class="text-danger">{{ $errors->first('username') }}</p>
-                                                    </div>
-                                                    <div class="form-group" style="display: none" id="formReplyComment">
-                                                        <label for="">Balas Komentar</label>
-                                                        <input type="text" id="replyComment" class="form-control" readonly>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="">Komentar</label>
-                                                        <textarea name="comment" cols="30" rows="10" class="form-control"></textarea>
-                                                    </div>
-                                                    <button class="btn btn-primary btn-sm">Kirim</button>
-                                                </form>
-                                            </div>
-                                            <div class="col-md-6">
-                                                @foreach ($post->comments as $row)
-                                                    <blockquote>
-                                                        <h6>{{ $row->username }}</h6>
-                                                        <hr>
-                                                        <p>{{ $row->comment }}</p><br>
-                                                        <a href="javascript:void(0)" onclick="balasKomentar({{ $row->id }}, '{{ $row->comment }}')">Balas</a>
-                                                    </blockquote>
-                                                    @foreach ($row->child as $val)
-                                                        <div class="child-comment">
-                                                            <blockquote>
-                                                                <h6>{{ $val->username }}</h6>
-                                                                <hr>
-                                                                <p>{{ $val->comment }}</p><br>
-                                                            </blockquote>
-                                                        </div>
-                                                    @endforeach
-                                                @endforeach
+                        <div class="third-content pt-3">
+                            <div class="card col-md">
+                                <div class="row mb-3">
+                                    <div class="col-md">
+                                        <div class="card mt-3 ml-3">
+                                            <img class="card-img-top" src="..." alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                                             </div>
                                         </div>
+                                    </div>
+                                <div class="col-md">
+                                        <div class="card mt-3">
+                                            <img class="card-img-top" src="..." alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <a href="#" class="card-link">Card link</a>
+                                                <a href="#" class="card-link">Another link</a>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="card mt-3 mr-3">
+                                        <img class="card-img-top" src="..." alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <blockquote class="blockquote text-right mr-3">
+                            <span ><a href="#" class="card-link">Card link</a> <a href="#" class="card-link">Another link</a></span>
+                            </blockquote>
+                            </div>
+                            <div class="card col-md">
+                                    <div card></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="kontenkanan">
+                        <div class="card">
+                            <h2>About Me</h2>
+                            <div class="fakeimg" style="height:100px;">Image</div>
+                            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+                        </div>
+                        <div class="card">
+                            <h3>Popular Post</h3>
+                            <div class="fakeimg"><p>Image</p></div>
+                            <div class="fakeimg"><p>Image</p></div>
+                            <div class="fakeimg"><p>Image</p></div>
+                        </div>
+                        <div class="card">
+                            <h3>Follow Me</h3>
+                            <p>Some text..</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Fungsi komentar -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <h5>Komentar</h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <form action="{{ url('/comment') }}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="id" value="{{ $post->id }}" class="form-control">
+                                            <input type="hidden" name="parent_id" id="parent_id" class="form-control">
+                                            <div class="form-group">
+                                                <label for="">Username</label>
+                                                <input type="text" class="form-control" name="username">
+                                                <p class="text-danger">{{ $errors->first('username') }}</p>
+                                            </div>
+                                            <div class="form-group" style="display: none" id="formReplyComment">
+                                                <label for="">Balas Komentar</label>
+                                                <input type="text" id="replyComment" class="form-control" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">Komentar</label>
+                                                <textarea name="comment" cols="30" rows="10" class="form-control"></textarea>
+                                            </div>
+                                            <button class="btn btn-primary btn-sm">Kirim</button>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-6">
+                                        @foreach ($post->comments as $row)
+                                            <blockquote>
+                                                <h6>{{ $row->username }}</h6>
+                                                <hr>
+                                                <p>{{ $row->comment }}</p><br>
+                                                <a href="javascript:void(0)" onclick="balasKomentar({{ $row->id }}, '{{ $row->comment }}')">Balas</a>
+                                            </blockquote>
+                                            @foreach ($row->child as $val)
+                                                <div class="child-comment">
+                                                    <blockquote>
+                                                        <h6>{{ $val->username }}</h6>
+                                                        <hr>
+                                                        <p>{{ $val->comment }}</p><br>
+                                                    </blockquote>
+                                                </div>
+                                            @endforeach
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
 
             </div>
@@ -1089,12 +1085,15 @@
 
 
     <!-- script komentar -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script>
-        function balasKomentar(id, title) {
-            $('#formReplyComment').show();
-            $('#parent_id').val(id)
-            $('#replyComment').val(title)
-        }
+    function balasKomentar(id, title) {
+        $('#formReplyComment').show();
+        $('#parent_id').val(id)
+        $('#replyComment').val(title)
+    }
     </script>
 
 
