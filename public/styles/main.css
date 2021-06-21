@@ -10,7 +10,7 @@
         font-size: 20px;
         text-align: justify;
         margin-top: -100px;
-        
+
     }
 }
 
@@ -24,7 +24,7 @@
 }
 
 /* Left column */
-.leftcolumn {   
+.leftcolumn {
     float: left;
     width: 75%;
   }
@@ -38,7 +38,7 @@
   }
 
 @media screen and (max-width: 800px) {
-    .kontenkiri, .kontenkanan {   
+    .kontenkiri, .kontenkanan {
       width: 100%;
       padding: 0;
     }
@@ -65,7 +65,7 @@
 * {
     box-sizing: border-box;
   }
-  
+
 body {
     font-family: Arial;
     padding: 10px;
@@ -76,7 +76,7 @@ body {
     z-index : 100000;
   }
 
-  
+
 .center {
     display: block;
     margin-left: auto;

@@ -56,7 +56,7 @@ class HomeController extends Controller
                     'username' => 'required',
                     'comment' => 'required'
                 ]);
-            
+
                 Comment::create([
                     'post_id' => $request->id,
                     //JIKA PARENT ID TIDAK KOSONG, MAKA AKAN DISIMPAN IDNYA, SELAIN ITU NULL
@@ -66,10 +66,16 @@ class HomeController extends Controller
                 ]);
                 return redirect()->back()->with(['success' => 'Komentar Ditambahkan']);
        }
-        
-    
+
+       public function profilpegawai()
+       {
+           return view('profilpegawai');
+       }
+
     public function sejarah()
     {
         return view('sejarah');
     }
+
+
 }

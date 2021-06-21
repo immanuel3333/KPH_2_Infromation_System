@@ -51,7 +51,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="row">
                 <div class="pl-2">
                     <div class="card-deck">
@@ -96,7 +96,7 @@
                         </div>
                 </div>
 
-         
+
 
 
                     <!-- Fungsi komentar -->
