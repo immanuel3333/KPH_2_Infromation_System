@@ -63,5 +63,11 @@ class HomeController extends Controller
                     'comment' => $request->comment
                 ]);
                 return redirect()->back()->with(['success' => 'Komentar Ditambahkan']);
-            }
-        }
+       }
+        
+    
+    public function sejarah()
+    {
+        return view('sejarah');
+    }
+}

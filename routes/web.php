@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/landingpage', 'HomeController@banner')->name('landingpage');
+Route::get('/sejarah', 'HomeController@sejarah');
 Route::get('/', 'PostController@index');
 Route::post('/comment', 'PostController@comment');
 
