@@ -118,7 +118,7 @@
                                                 d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                                         </svg>
                                     </i>
-                                    <span class="ml-2">Profil Kantor</span>
+                                    <span class="ml-2">Profil UPT. KPH-II</span>
                                     <i class="las la-angle-right mm-arrow-right arrow-active"></i>
                                     <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
                                 </a>
@@ -217,7 +217,7 @@
                                             <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
                                         </a>
                                         <ul id="unit" class="submenu collapse" data-parent="#uker">
-                                            <li class="active">
+                                            <li class="">
                                                 <a href="../app/user-profile.html" class="svg-icon">
                                                     <i class="">
                                                         <svg class="svg-icon" id="mm-user-1-1" xmlns="http://www.w3.org/2000/svg"
@@ -288,7 +288,7 @@
                                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                                 d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                                                         </svg>
-                                                    </i><span class="">Kelompok Tani</span>
+                                                    </i><span class="">Perhutanan Sosal</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -309,7 +309,7 @@
                                             <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
                                         </a>
                                         <ul id="unit2" class="submenu collapse" data-parent="#uker">
-                                            <li class="active">
+                                            <li class="">
                                                 <a href="#" class="svg-icon">
                                                     <i class="">
                                                         <svg class="svg-icon" id="mm-user-1-1" xmlns="http://www.w3.org/2000/svg"
@@ -379,7 +379,7 @@
                                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                                 d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                                                         </svg>
-                                                    </i><span class="">Kelompok Tani</span>
+                                                    </i><span class="">Perhutanan Sosal</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -399,7 +399,7 @@
                                             <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
                                         </a>
                                         <ul id="unit3" class="submenu collapse" data-parent="#uker">
-                                            <li class="active">
+                                            <li class="">
                                                 <a href="../app/user-profile.html" class="svg-icon">
                                                     <i class="">
                                                         <svg class="svg-icon" id="mm-user-1-1" xmlns="http://www.w3.org/2000/svg"
@@ -469,7 +469,7 @@
                                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                                 d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                                                         </svg>
-                                                    </i><span class="">Kelompok Tani</span>
+                                                    </i><span class="">Perhutanan Sosal</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -489,7 +489,7 @@
                                             <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
                                         </a>
                                         <ul id="unit4" class="submenu collapse" data-parent="#uker">
-                                            <li class="active">
+                                            <li class="">
                                                 <a href="../app/user-profile.html" class="svg-icon">
                                                     <i class="">
                                                         <svg class="svg-icon" id="mm-user-1-1" xmlns="http://www.w3.org/2000/svg"
@@ -559,7 +559,7 @@
                                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                                 d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                                                         </svg>
-                                                    </i><span class="">Kelompok Tani</span>
+                                                    </i><span class="">Perhutanan Sosal</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -639,7 +639,7 @@
                                             <button type="submit" class="btn btn-primary">Login</button>
                                         </a>
                                     </li>
-                                    
+
                                 </ul>
                             </div>
                         </div>
@@ -647,4 +647,4 @@
                 </div>
             </div>
 
-        
+
