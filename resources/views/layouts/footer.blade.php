@@ -1,27 +1,27 @@
 </div>
 </body>
 <div class="bg-light text-muted" style="position:bottom;">
-            <section class="">
-                <div class="container text-center">
+            <section>
+                <div class="text-center" style="background-color:#0C3310;">
                     <div class="row">
-                        <div class="col-md ml-auto">
-                            <img src="img/logo1.png" style="padding-top:50px; padding-right:70px;" alt="">
+                        <div class="col-md">
+                            <img src="img/logo1.png" style="padding-top:50px; padding-left:70px;" alt="">
                         </div>
                         <div class="col-md-4" style="text-align:left;">
                             <div class="row">
                                 <div class="col-md">
-                                    <p style="font-family:Balthazar; font-size:25px;">Hubungi Kami</p>
+                                    <p style="font-family:Balthazar; font-size:25px; color:white;">Hubungi Kami</p>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md">
-                                    <p style="font-family:Balthazar; font-size:20px;">Telp : +62 0622-21216 </p>
+                                    <p style="font-family:Balthazar; font-size:20px; color:white;">Telp : +62 0622-21216 </p>
 
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md">
-                                    <p style="font-family:Balthazar; font-size:20px;">Email : uptkphwilayah2siantar@gmail.com </p>
+                                    <p style="font-family:Balthazar; font-size:20px; color:white;">Email : uptkphwilayah2siantar@gmail.com </p>
 
                                 </div>
                             </div>
@@ -29,7 +29,7 @@
                         <div class="col-md-3" style="text-align:left;">
                             <div class="row">
                                 <div class="col-md">
-                                    <p style="font-family:Balthazar; font-size:25px;">Media Sosial</p>
+                                    <p style="font-family:Balthazar; font-size:25px;color:white;">Media Sosial</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -41,12 +41,12 @@
                         <div class="col-md-3" style="text-align:left;">
                             <div class="row">
                                 <div class="col-md">
-                                    <p style="font-family:Balthazar; font-size:25px;">Alamat</p>
+                                    <p style="font-family:Balthazar; font-size:25px;color:white;">Alamat</p>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md">
-                                    <p style="font-family:Balthazar; font-size:20px;">Jln. Gunung Simanuk-manuk No.9 Pematangsiantar 
+                                    <p style="font-family:Balthazar; font-size:20px;color:white;">Jln. Gunung Simanuk-manuk No.9 Pematangsiantar 
 (dekat Siantar Zoo, depan Rumah Sakit Tentara Siantar) </p>
 
                                 </div>
@@ -55,7 +55,7 @@
                     </div>
                 </div>
             </section>
-            <div class="text-center" style="background-color: rgba(0, 0, 0, 0.05);">
+            <div class="text-center border border-white" style="background-color: #0C3310;">
                 © 2021 Copyright:
             </div>
 </div>
