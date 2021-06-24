@@ -1,47 +1,67 @@
 </div>
-    </body>
+</body>
+<div class="bg-light text-muted" style="position:bottom;">
+            <section class="">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-md ml-auto">
+                            <img src="img/logo1.png" style="padding-top:50px; padding-right:70px;" alt="">
+                        </div>
+                        <div class="col-md-4" style="text-align:left;">
+                            <div class="row">
+                                <div class="col-md">
+                                    <p style="font-family:Balthazar; font-size:25px;">Hubungi Kami</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md">
+                                    <p style="font-family:Balthazar; font-size:20px;">Telp : +62 0622-21216 </p>
 
-    <!-- Wrapper End-->
-    <footer class="mm-footer">
-        <div class="container-fluid text-center">
-            <div class="row">
-            <div class="col-lg-3 text-center">
-                    Kontak
-                </div>
-                <div class="col-lg-3 text-center">
-                    Medsos
-                </div>
-                <div class="col-lg-3 text-center">
-                    Alamat
-                </div>
-                <div class="col-lg-3 text-center">
-                    <p>
-                        Total visitor :
-                        @foreach ($projects as $project)
-                        {{$project->views}}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md">
+                                    <p style="font-family:Balthazar; font-size:20px;">Email : uptkphwilayah2siantar@gmail.com </p>
 
-                        @endforeach
-                    <p>
-                </div>
-                <br>
-            </div>
-        </div>
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <span class="mr-1">
-                        Copyright
-                        <script>document.write(new Date().getFullYear())</script>© <a href="#" class="">Tim Forest II KP IT Del</a>
-                        All Rights Reserved.
-                    </span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3" style="text-align:left;">
+                            <div class="row">
+                                <div class="col-md">
+                                    <p style="font-family:Balthazar; font-size:25px;">Media Sosial</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md">
+                                    <img src="img/fb.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3" style="text-align:left;">
+                            <div class="row">
+                                <div class="col-md">
+                                    <p style="font-family:Balthazar; font-size:25px;">Alamat</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md">
+                                    <p style="font-family:Balthazar; font-size:20px;">Jln. Gunung Simanuk-manuk No.9 Pematangsiantar 
+(dekat Siantar Zoo, depan Rumah Sakit Tentara Siantar) </p>
 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </section>
+            <div class="text-center" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2021 Copyright:
             </div>
-        </div>
-    </footer>
+</div>
+
+
+   
 
 
 

@@ -25,6 +25,13 @@
 
       <link rel="stylesheet" href="{{ asset('css/cc.css') }}">
       <link rel="stylesheet" href="{{ asset('styles/main.css')}}">
+      <link rel="stylesheet" href="{{ asset('styles/style.css')}}">
+      <link rel="stylesheet" href="{{ asset('styles/animate.min.css')}}">
+      <link rel="stylesheet" href="{{ asset('styles/font-awesome.min.css')}}">
+      <link rel="stylesheet" href="{{ asset('styles/lightbox.min.css')}}">
+      <link rel="stylesheet" href="{{ asset('styles/owl.carousel.min.css')}}">
+      <link rel="stylesheet" href="{{ asset('styles/ionicons/css/ionicons.min.css')}}">
+      
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
    crossorigin=""/>
@@ -79,7 +86,38 @@
         <!-- loader END -->
         <!-- Wrapper Start -->
         <div class="wrapper">
-            <div class="mm-sidebar  sidebar-default ">
+            <div class="navbar-static-top card" >
+                <div class="mm-navbar-custom">
+                    <div class="row">
+                        <div  class="col-md-2 col-sm-2" style="padding-left:150px;">
+                            <img src="img/logo1.png" alt="">
+                        </div>
+                        <div class="col-md-10 col-sm-10">
+                            <p class="text-center" style="font-family:Balthazar; font-size:35px; padding-right:100px;">UPT. KESATUAN PENGELOLAAN HUTAN WILAYAH-II</p>
+                        </div>
+                    </div>  
+                    <nav class="navbar navbar-expand-lg navbar-light p-0">
+                        <div class="mm-navbar-logo d-flex align-items-center justify-content-between">
+                            <i class="ri-menu-line wrapper-menu"></i>
+                        </div>
+                        <div class="ml-auto">
+                            <div id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto navbar-list align-items-center">
+                                    <!-- Login Button -->
+                                    <li class="nav-item nav-icon">
+                                        <a href="{{ route('login') }}" class="nav-item nav-icon" id="btnLogin">
+                                            <button type="submit" class="btn" style="background-color: #99F07A;">Masuk</button>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="mm-sidebar sidebar-default">
                 <div class="mm-sidebar-logo d-flex align-items-center justify-content-between">
                     <a href="../backend/index.html" class="header-logo">
                         <img src="{{ asset('img/newlogo.png') }}" class="img-fluid rounded-normal light-logo " alt="logo">
@@ -575,76 +613,6 @@
                     <div class="pt-5 pb-2"></div>
                 </div>
             </div>
-
-            <div class="mm-top-navbar">
-                <div class="mm-navbar-custom">
-                    <nav class="navbar navbar-expand-lg navbar-light p-0">
-                    <div class="mm-navbar-logo d-flex align-items-center justify-content-between">
-                        <i class="ri-menu-line wrapper-menu"></i>
-                        <a href="../backend/index.html" class="header-logo">
-                            <img class="logo"src="{{ asset('img/newlogo.png') }}" class="img-fluid rounded-normal" alt="logo">
-                            <h4 class="ml-1"><b>UPT. KPH Wilayah II</b></h4>
-                        </a>
-                    </div>
-                        <div class="mm-search-bar device-search m-auto">
-                            <form action="#" class="searchbox">
-                            <a class="search-link" href="#"><i class="ri-search-line"></i></a>
-                            <input type="text" class="text search-input" placeholder="Search here...">
-                            </form>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <div class="change-mode">
-                                <div class="custom-control custom-switch custom-switch-icon custom-control-inline">
-                                    <div class="custom-switch-inner">
-                                        <p class="mb-0"> </p>
-                                        <input type="checkbox" class="custom-control-input" id="dark-mode" data-active="true">
-                                        <label class="custom-control-label" for="dark-mode" data-mode="toggle">
-                                            <span class="switch-icon-left">
-                                                <svg class="svg-icon" id="h-moon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                                                </svg>
-                                            </span>
-                                            <span class="switch-icon-right">
-                                                <svg class="svg-icon" id="h-sun" height="20" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                                                </svg>
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"  aria-label="Toggle navigation">
-                            <i class="ri-menu-3-line"></i>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav ml-auto navbar-list align-items-center">
-                                    <li class="nav-item nav-icon search-content">
-                                        <a href="#" class="search-toggle rounded" id="dropdownSearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <svg class="svg-icon text-primary" id="h-suns" height="20" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                            </svg>
-                                        </a>
-                                        <div class="mm-search-bar mm-sub-dropdown dropdown-menu" aria-labelledby="dropdownSearch">
-                                            <form action="#" class="searchbox p-2">
-                                                <div class="form-group mb-0 position-relative">
-                                                <input type="text" class="text search-input font-size-12" placeholder="type here to search...">
-                                                <a href="#" class="search-link"><i class="las la-search"></i></a>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </li>
-                                    <!-- Login Button -->
-                                    <li class="nav-item nav-icon">
-                                        <a href="{{ route('login') }}" class="nav-item nav-icon" id="btnLogin">
-                                            <button type="submit" class="btn btn-primary">Login</button>
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
+  
 
 
