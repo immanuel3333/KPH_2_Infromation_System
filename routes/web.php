@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/landingpage', 'HomeController@banner')->name('landingpage');
 Route::get('/sejarah', 'HomeController@sejarah');
+Route::get('/strukturorg', 'HomeController@strukturorg');
 Route::get('/profilpegawai', 'HomeController@profilpegawai');
 Route::get('/', 'PostController@index');
 Route::post('/comment', 'PostController@comment');

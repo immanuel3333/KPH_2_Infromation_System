@@ -72,6 +72,11 @@ class HomeController extends Controller
            return view('profilpegawai');
        }
 
+       public function strukturorg()
+       {
+           return view('strukturorg');
+       }
+
     public function sejarah()
     {
         return view('sejarah');
