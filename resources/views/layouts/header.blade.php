@@ -31,7 +31,7 @@
       <link rel="stylesheet" href="{{ asset('styles/lightbox.min.css')}}">
       <link rel="stylesheet" href="{{ asset('styles/owl.carousel.min.css')}}">
       <link rel="stylesheet" href="{{ asset('styles/ionicons/css/ionicons.min.css')}}">
-      
+
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
    crossorigin=""/>
@@ -95,7 +95,7 @@
                         <div class="col-md-10 col-sm-10">
                             <p class="text-center" style="font-family:Balthazar; font-size:35px; padding-right:100px;color:white;">UPT. KESATUAN PENGELOLAAN HUTAN WILAYAH-II</p>
                         </div>
-                    </div>  
+                    </div>
                     <nav class="navbar navbar-expand-lg navbar-light p-0">
                         <div class="mm-navbar-logo d-flex align-items-center justify-content-between">
                             <i class="ri-menu-line wrapper-menu"></i>
@@ -121,7 +121,7 @@
                 <div class="mm-sidebar-logo d-flex align-items-center justify-content-between">
                     <a href="../backend/index.html" class="header-logo">
                         <img src="{{ asset('img/newlogo.png') }}" class="img-fluid rounded-normal light-logo " alt="logo">
-                        <img src="../assets/images/white-logo.png" class="img-fluid rounded-normal darkmode-logo" alt="logo">
+                        <img src="{{ asset('img/newlogo.png') }}" class="img-fluid rounded-normal darkmode-logo" alt="logo">
                     </a>
                     <div class="side-menu-bt-sidebar">
                         <i class="las la-bars wrapper-menu"></i>
@@ -133,11 +133,7 @@
                             <li class="">
                                 <a href="#Dashboards" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
                                     <i class="">
-                                        <svg class="svg-icon" id="mm-dash" width="20" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                                        </svg>
+                                        <img src="icon/home.png" alt="icon" width="20">
                                     </i>
 
                                     <span class="ml-2">Beranda</span>
@@ -150,11 +146,7 @@
                             <li class="">
                                 <a href="#app" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
                                     <i>
-                                        <svg class="svg-icon" id="mm-app-1" width="20" xmlns="http://www.w3.org/2000/svg"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                                        </svg>
+                                        <img src="icon/profil.png" alt="icon" width="20">
                                     </i>
                                     <span class="ml-2">Profil UPT. KPH-II</span>
                                     <i class="las la-angle-right mm-arrow-right arrow-active"></i>
@@ -164,77 +156,47 @@
                                     <li class="">
                                         <a href="#user" class="collapsed svg-icon">
                                             <i class="">
-                                                <svg class="svg-icon" id="mm-user-1" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                    viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                                </svg>
+                                                <img src="icon/visimisi.png" alt="icon" width="20">
                                             </i>
-                                            <span class="">Sejarah</span>
+                                            <span class="">Visi dan Misi</span>
                                         </a>
 
                                     </li>
                                     <li class="">
                                         <a href="../app/chat.html" class="svg-icon">
                                             <i class="">
-                                                <svg class="svg-icon" id="mm-chat-1" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                    viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                                                </svg>
-                                            </i><span class="">Struktur Organisasi</span>
+                                                <img src="icon/sejarah.png" alt="icon" width="20">
+                                            </i><span class="">Sejarah</span>
                                         </a>
                                     </li>
                                     <li class="">
-                                        <a href="../app/chat.html" class="svg-icon">
+                                        <a href="#strukturorg" class="svg-icon">
                                             <i class="">
-                                                <svg class="svg-icon" id="mm-chat-1" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                    viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                                                </svg>
-                                            </i><span class="">Visi dan Misi</span>
+                                                <img src="icon/struktur.png" alt="icon" width="20">
+                                            </i><span class="">Struktur Organisasi</span>
                                         </a>
                                     </li>
                                     <li class="">
                                         <a href="../app/todo.html" class="svg-icon">
                                             <i class="">
-                                                <svg class="svg-icon" id="mm-todo-1" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                    viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                                                </svg>
+                                                <img src="icon/tugas dan fungsi.png" alt="icon" width="20">
                                             </i><span class="">Tugas dan Fungsi</span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="svg-icon">
+                                            <i class="">
+                                                <img src="icon/data.png" alt="icon" width="20">
+                                            </i><span class="">Data SDM</span>
                                         </a>
                                     </li>
                                 </ol>
                             </li>
 
                             <li class="">
-                                <a href="#Dashboards" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
-                                    <i class="">
-                                        <svg class="svg-icon" id="mm-dash" width="20" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                                        </svg>
-                                    </i>
-
-                                    <span class="ml-2">Peraturan Perundangan</span>
-
-                                    <i class="las la-angle-right mm-arrow-right arrow-active"></i>
-                                    <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
-                                </a>
-                            </li>
-
-                            <li class="">
                                 <a href="#uker" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
                                     <i>
-                                        <svg class="svg-icon" id="mm-app-1" width="20" xmlns="http://www.w3.org/2000/svg"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                                        </svg>
+                                        <img src="icon/uker.png" alt="icon" width="20">
                                     </i>
                                     <span class="ml-2">Unit Kerja</span>
                                     <i class="las la-angle-right mm-arrow-right arrow-active"></i>
@@ -244,11 +206,7 @@
                                     <li class="">
                                         <a href="#unit" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
                                             <i class="">
-                                                <svg class="svg-icon" id="mm-user-1" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                    viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                                </svg>
+                                                <img src="icon/unit.png" alt="icon" width="20">
                                             </i>
                                             <span class="">Unit VI Simalungun</span>
                                             <i class="las la-angle-right mm-arrow-right arrow-active"></i>
@@ -258,75 +216,29 @@
                                             <li class="">
                                                 <a href="../app/user-profile.html" class="svg-icon">
                                                     <i class="">
-                                                        <svg class="svg-icon" id="mm-user-1-1" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                        </svg>
+                                                        <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Umum</span>
                                                 </a>
                                             </li>
                                             <li class="">
                                                 <a href="#" class="svg-icon">
                                                     <i class="">
-                                                        <svg class="svg-icon" id="mm-user-1-2" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-                                                        </svg>
+                                                        <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Ekonomi</span>
                                                 </a>
                                             </li>
                                             <li class="">
                                                 <a href="#" class="svg-icon">
                                                     <i class="">
-                                                        <svg class="svg-icon" id="mm-user-1-3" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                                                        </svg>
+                                                        <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Ekologi</span>
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#sdm1" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
-                                                    <i>
-                                                        <svg class="svg-icon" id="mm-app-1" width="20" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                                                        </svg>
-                                                    </i>
-                                                    <span class="ml-2">Data Sumber Daya Manusia</span>
-                                                    <i class="las la-angle-right mm-arrow-right arrow-active"></i>
-                                                    <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
-                                                </a>
-                                                <ol id="sdm1" class="submenu collapse" data-parent="#sdm1">
-                                                    <li class="">
-                                                        <a href="#user" class="collapsed svg-icon">
-                                                            <i class="">
-                                                                <svg class="svg-icon" id="mm-user-1" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                    viewBox="0 0 24 24" stroke="currentColor">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                                                </svg>
-                                                            </i>
-                                                            <span class="">Data Kepegawaian</span>
-                                                        </a>
-
-                                                    </li>
-                                                </ol>
-                                            </li>
-
-                                            <li class="">
                                                 <a href="#" class="svg-icon">
                                                     <i class="">
-                                                        <svg class="svg-icon" id="mm-user-1-3" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                                                        </svg>
-                                                    </i><span class="">Perhutanan Sosal</span>
+                                                        <img src="icon/data.png" alt="icon" width="20">
+                                                    </i><span class="">Data SDM</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -336,13 +248,9 @@
                                     <li class="">
                                         <a href="#unit2" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
                                             <i class="">
-                                                <svg class="svg-icon" id="mm-user-1" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                    viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                                </svg>
+                                                <img src="icon/unit.png" alt="icon" width="20">
                                             </i>
-                                            <span class="">Unit IX Serdang Bedagai</span>
+                                            <span class="">Unit IX Sergai</span>
                                             <i class="las la-angle-right mm-arrow-right arrow-active"></i>
                                             <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
                                         </a>
@@ -350,74 +258,29 @@
                                             <li class="">
                                                 <a href="#" class="svg-icon">
                                                     <i class="">
-                                                        <svg class="svg-icon" id="mm-user-1-1" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                        </svg>
+                                                        <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Umum</span>
                                                 </a>
                                             </li>
                                             <li class="">
                                                 <a href="#" class="svg-icon">
                                                     <i class="">
-                                                        <svg class="svg-icon" id="mm-user-1-2" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-                                                        </svg>
+                                                        <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Ekonomi</span>
                                                 </a>
                                             </li>
                                             <li class="">
                                                 <a href="#" class="svg-icon">
                                                     <i class="">
-                                                        <svg class="svg-icon" id="mm-user-1-3" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                                                        </svg>
+                                                        <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Ekologi</span>
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#sdm2" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
-                                                    <i>
-                                                        <svg class="svg-icon" id="mm-app-1" width="20" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                                                        </svg>
-                                                    </i>
-                                                    <span class="ml-2">Data Sumber Daya Manusia</span>
-                                                    <i class="las la-angle-right mm-arrow-right arrow-active"></i>
-                                                    <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
-                                                </a>
-                                                <ol id="sdm2" class="submenu collapse" data-parent="#sdm2">
-                                                    <li class="">
-                                                        <a href="#user" class="collapsed svg-icon">
-                                                            <i class="">
-                                                                <svg class="svg-icon" id="mm-user-1" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                    viewBox="0 0 24 24" stroke="currentColor">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                                                </svg>
-                                                            </i>
-                                                            <span class="">Data Kepegawaian</span>
-                                                        </a>
-
-                                                    </li>
-                                                </ol>
-                                            </li>
-                                            <li class="">
                                                 <a href="#" class="svg-icon">
                                                     <i class="">
-                                                        <svg class="svg-icon" id="mm-user-1-3" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                                                        </svg>
-                                                    </i><span class="">Perhutanan Sosal</span>
+                                                        <img src="icon/data.png" alt="icon" width="20">
+                                                    </i><span class="">Data SDM</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -426,11 +289,7 @@
                                     <li class="">
                                         <a href="#unit3" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
                                             <i class="">
-                                                <svg class="svg-icon" id="mm-user-1" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                    viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                                </svg>
+                                                <img src="icon/unit.png" alt="icon" width="20">
                                             </i>
                                             <span class="">Unit X Batubara</span>
                                             <i class="las la-angle-right mm-arrow-right arrow-active"></i>
@@ -440,74 +299,29 @@
                                             <li class="">
                                                 <a href="../app/user-profile.html" class="svg-icon">
                                                     <i class="">
-                                                        <svg class="svg-icon" id="mm-user-1-1" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                        </svg>
+                                                        <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Umum</span>
                                                 </a>
                                             </li>
                                             <li class="">
                                                 <a href="#" class="svg-icon">
                                                     <i class="">
-                                                        <svg class="svg-icon" id="mm-user-1-2" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-                                                        </svg>
+                                                        <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Ekonomi</span>
                                                 </a>
                                             </li>
                                             <li class="">
                                                 <a href="#" class="svg-icon">
                                                     <i class="">
-                                                        <svg class="svg-icon" id="mm-user-1-3" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                                                        </svg>
+                                                        <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Ekologi</span>
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#sdm3" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
-                                                    <i>
-                                                        <svg class="svg-icon" id="mm-app-1" width="20" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                                                        </svg>
-                                                    </i>
-                                                    <span class="ml-2">Data Sumber Daya Manusia</span>
-                                                    <i class="las la-angle-right mm-arrow-right arrow-active"></i>
-                                                    <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
-                                                </a>
-                                                <ol id="sdm3" class="submenu collapse" data-parent="#sdm3">
-                                                    <li class="">
-                                                        <a href="#user" class="collapsed svg-icon">
-                                                            <i class="">
-                                                                <svg class="svg-icon" id="mm-user-1" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                    viewBox="0 0 24 24" stroke="currentColor">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                                                </svg>
-                                                            </i>
-                                                            <span class="">Data Kepegawaian</span>
-                                                        </a>
-
-                                                    </li>
-                                                </ol>
-                                            </li>
-                                            <li class="">
                                                 <a href="#" class="svg-icon">
                                                     <i class="">
-                                                        <svg class="svg-icon" id="mm-user-1-3" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                                                        </svg>
-                                                    </i><span class="">Perhutanan Sosal</span>
+                                                        <img src="icon/data.png" alt="icon" width="20">
+                                                    </i><span class="">Data SDM</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -516,11 +330,7 @@
                                     <li class="">
                                         <a href="#unit4" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
                                             <i class="">
-                                                <svg class="svg-icon" id="mm-user-1" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                    viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                                </svg>
+                                                <img src="icon/unit.png" alt="icon" width="20">
                                             </i>
                                             <span class="">Unit XII Simalungun</span>
                                             <i class="las la-angle-right mm-arrow-right arrow-active"></i>
@@ -530,74 +340,29 @@
                                             <li class="">
                                                 <a href="../app/user-profile.html" class="svg-icon">
                                                     <i class="">
-                                                        <svg class="svg-icon" id="mm-user-1-1" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                        </svg>
+                                                        <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Umum</span>
                                                 </a>
                                             </li>
                                             <li class="">
                                                 <a href="#" class="svg-icon">
                                                     <i class="">
-                                                        <svg class="svg-icon" id="mm-user-1-2" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-                                                        </svg>
+                                                        <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Ekonomi</span>
                                                 </a>
                                             </li>
                                             <li class="">
                                                 <a href="#" class="svg-icon">
                                                     <i class="">
-                                                        <svg class="svg-icon" id="mm-user-1-3" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                                                        </svg>
+                                                        <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Ekologi</span>
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#sdm4" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
-                                                    <i>
-                                                        <svg class="svg-icon" id="mm-app-1" width="20" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                                                        </svg>
-                                                    </i>
-                                                    <span class="ml-2">Data Sumber Daya Manusia</span>
-                                                    <i class="las la-angle-right mm-arrow-right arrow-active"></i>
-                                                    <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
-                                                </a>
-                                                <ol id="sdm4" class="submenu collapse" data-parent="#sdm4">
-                                                    <li class="">
-                                                        <a href="#user" class="collapsed svg-icon">
-                                                            <i class="">
-                                                                <svg class="svg-icon" id="mm-user-1" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                    viewBox="0 0 24 24" stroke="currentColor">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                                                </svg>
-                                                            </i>
-                                                            <span class="">Data Kepegawaian</span>
-                                                        </a>
-
-                                                    </li>
-                                                </ol>
-                                            </li>
-                                            <li class="">
                                                 <a href="#" class="svg-icon">
                                                     <i class="">
-                                                        <svg class="svg-icon" id="mm-user-1-3" xmlns="http://www.w3.org/2000/svg"
-                                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                                                        </svg>
-                                                    </i><span class="">Perhutanan Sosal</span>
+                                                        <img src="icon/data.png" alt="icon" width="20">
+                                                    </i><span class="">Data SDM</span>
                                                 </a>
                                             </li>
                                         </ul>
@@ -606,6 +371,32 @@
                                 </ol>
                             </li>
 
+                            <li class="">
+                                <a href="#Dashboards" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
+                                    <i class="">
+                                        <img src="icon/sosial.png" alt="icon" width="20">
+                                    </i>
+
+                                    <span class="ml-2">Perhutanan Sosial</span>
+
+                                    <i class="las la-angle-right mm-arrow-right arrow-active"></i>
+                                    <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
+                                </a>
+                            </li>
+
+
+                            <li class="">
+                                <a href="#Dashboards" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
+                                    <i class="">
+                                        <img src="icon/peraturan.png" alt="icon" width="20">
+                                    </i>
+
+                                    <span class="ml-2">Peraturan Perundangan</span>
+
+                                    <i class="las la-angle-right mm-arrow-right arrow-active"></i>
+                                    <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
+                                </a>
+                            </li>
                         </ul>
 
 
@@ -613,6 +404,6 @@
                     <div class="pt-5 pb-2"></div>
                 </div>
             </div>
-  
+
 
 
