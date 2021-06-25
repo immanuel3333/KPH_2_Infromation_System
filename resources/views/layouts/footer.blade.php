@@ -1,27 +1,28 @@
 </div>
-</body>
 <div class="bg-light text-muted" style="position:bottom;">
             <section>
                 <div class="text-center" style="background-color:#0C3310;">
                     <div class="row">
-                        <div class="col-md">
-                            <img src="img/logo1.png" style="padding-top:50px; padding-left:70px;" alt="">
+                        <div class="col-md-3">
+                            <img src="img/logo1.png" style="padding-top:50px; padding-leftpx:10px;" alt="" height="200" width="200">
                         </div>
-                        <div class="col-md-4" style="text-align:left;">
+                        <div class="col-md-3" style="text-align:left;">
                             <div class="row">
                                 <div class="col-md">
-                                    <p style="font-family:Balthazar; font-size:25px; color:white;">Hubungi Kami</p>
+                                    <p style="font-family:Balthazar; font-size:25px; color:white;">Kontak Kami</p>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md">
-                                    <p style="font-family:Balthazar; font-size:20px; color:white;">Telp : +62 0622-21216 </p>
+                                <div class="col-md" style="line-height:1px;">
+                                    <p style="font-family:Balthazar; font-size:20px; color:#878181;">Nomor Telepon </p>
+                                    <p style="font-family:Balthazar; font-size:15px; color:white;">+62 0622-21216 </p>
 
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md">
-                                    <p style="font-family:Balthazar; font-size:20px; color:white;">Email : uptkphwilayah2siantar@gmail.com </p>
+                                <div class="col-md" style="line-height:0.5px;">
+                                    <p style="font-family:Balthazar; font-size:20px; color:#878181;">Email </p>
+                                    <p style="font-family:Balthazar; font-size:15px; color:white; height:auto;">uptkphwilayah2siantar@gmail.com </p>
 
                                 </div>
                             </div>
@@ -34,14 +35,16 @@
                             </div>
                             <div class="row">
                                 <div class="col-md">
-                                    <img src="img/fb.png" alt="">
+                                    <img src="img/fb.png" style="padding-left:50px;" alt="">
+                                    <br>
+                                    <p class="pl-4" style="font-family:Balthazar; font-size:18px; color:white; padding-top:25px;">Kph Pematangsiantar</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3" style="text-align:left;">
                             <div class="row">
                                 <div class="col-md">
-                                    <p style="font-family:Balthazar; font-size:25px;color:white;">Alamat</p>
+                                    <p style="font-family:Balthazar; font-size:25px;color:white;">Lokasi</p>
                                 </div>
                             </div>
                             <div class="row">

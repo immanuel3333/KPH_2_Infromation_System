@@ -90,10 +90,10 @@
                 <div class="mm-navbar-custom">
                     <div class="row">
                         <div  class="col-md-2 col-sm-2" style="padding-left:150px;">
-                            <img src="img/logo1.png" alt="">
+                        <img src="img/logo1.png" alt="" height="200" width="200">
                         </div>
                         <div class="col-md-10 col-sm-10">
-                            <p class="text-center" style="font-family:Balthazar; font-size:35px; padding-right:100px;color:white;">UPT. KESATUAN PENGELOLAAN HUTAN WILAYAH-II</p>
+                        <p class="text-center pt-5" style="font-family:Balthazar; font-size:35px; padding-right:100px ;color:white;">UPT. KESATUAN PENGELOLAAN HUTAN WILAYAH-II</p> 
                         </div>
                     </div>
                     <nav class="navbar navbar-expand-lg navbar-light p-0">
@@ -120,7 +120,7 @@
             <div class="mm-sidebar sidebar-default" style="float:left; position:fixed;">
                 <div class="mm-sidebar-logo d-flex align-items-center justify-content-between">
                     <a href="../backend/index.html" class="header-logo">
-                        <img src="{{ asset('img/newlogo.png') }}" class="img-fluid rounded-normal light-logo " alt="logo">
+                    <img src="{{ asset('img/logokph.png') }}" class="img-fluid rounded-normal light-logo " alt="logo" width="500">
                         <img src="{{ asset('img/newlogo.png') }}" class="img-fluid rounded-normal darkmode-logo" alt="logo">
                     </a>
                     <div class="side-menu-bt-sidebar">

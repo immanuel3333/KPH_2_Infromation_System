@@ -21,7 +21,12 @@
       <link rel="stylesheet" href="{{ asset('assets/vendor/mapbox/mapbox-gl.css') }}">
 
       <link rel="stylesheet" href="{{ asset('css/cc.css') }}">
-
+      <style>
+         body{
+            background: url('img/bg1.jpeg');
+            background-size:cover;
+         }
+      </style>
       </head>
   <body class="bg">
       <div class="wrapper">

@@ -121,7 +121,8 @@
 
                 
                 </section><!-- #portfolio -->
-
+                <div class="card" id="mapid" style="width:100%;">
+                </div>
 
 
 
