@@ -2,21 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\VisiMisi;
 use Illuminate\Http\Request;
-use App\Post;
-use App\Comment;
-use App\counter;
-use App\User;
-use Illuminate\Support\Facades\Auth;
 
-class AdminController extends Controller
+class VisiMisiController extends Controller
 {
-    public function home()
-    {
-        $user = Auth::user();
-        $post = Post::with(['comments', 'comments.child'])->first();
-        return view('berandaadminupt',['user'=> $user],compact('post'));
-    }
 
     public function inputvisimisi()
     {
@@ -29,4 +19,9 @@ class AdminController extends Controller
         $misi = $req->misi;
         return view('showvisimisi', ['var_visi'=>$visi, 'var_misi'=>$misi]);
     }
+
 }
+
+
+
+
