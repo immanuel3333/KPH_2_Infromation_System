@@ -20,9 +20,9 @@ Login
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label class="mb-0">NIP</label>
-                                            <input name="email" class="form-control form-control-sm {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" type="email">
-                                            @if ($errors->has('email'))
-                                            <small class="text-danger">{{ $errors->first('email') }}</small>
+                                            <input name="nip" class="form-control form-control-sm {{ $errors->has('nip') ? ' is-invalid' : '' }}" name="nip" value="{{ old('nip') }}" type="nip">
+                                            @if ($errors->has('nip'))
+                                            <small class="text-danger">{{ $errors->first('nip') }}</small>
                                             @endif
                                         </div>
                                     </div>
