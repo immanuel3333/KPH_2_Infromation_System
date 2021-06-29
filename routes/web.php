@@ -21,6 +21,7 @@ Route::get('/profilpegawai', 'HomeController@profilpegawai');
 Route::get('/', 'PostController@index');
 Route::post('/comment', 'PostController@comment');
 Route::get('/home', 'AdminController@home')->name('home');
+Route::get('/home/{id}/delete', 'AdminController@delete');
 
 Route::get('/inputvisimisi', 'AdminController@inputvisimisi')->name('inputvisimisi');
 Route::post('/showvisimisi', 'AdminController@showvisimisi')->name('showvisimisi');

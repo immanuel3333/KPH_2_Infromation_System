@@ -44,6 +44,9 @@
                                                         <hr>
                                                         <p>{{ $row->comment }}</p><br>
                                                         <a href="javascript:void(0)" onclick="balasKomentar({{ $row->id }}, '{{ $row->comment }}')"data-toggle="modal" data-target="#exampleModalCenter">Balas</a>
+                                                        <a href="{{url('/home')}}/{{ $row->id }}/delete" class="pl-3">Delete</a>    
+                                                     
+                            
 
 
 

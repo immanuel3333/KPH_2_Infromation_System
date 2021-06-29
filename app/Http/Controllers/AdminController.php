@@ -16,7 +16,19 @@ class AdminController extends Controller
         $user = Auth::user();
         $post = Post::with(['comments', 'comments.child'])->first();
         return view('berandaadminupt',['user'=> $user],compact('post'));
+
+        
     }
+    public function delete($id)
+     {
+         
+        $row = Comment::find($id);
+        $row->delete();
+        User::find(Auth::id())->update([
+            'id'=> null,
+        ]);
+        return redirect('/home');
+     }
 
     public function inputvisimisi()
     {
