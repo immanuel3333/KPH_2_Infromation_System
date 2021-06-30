@@ -36,7 +36,7 @@ class AdminController extends Controller
     public function inputvisimisi()
     {
         return view ('/inputvisimisi');
-       
+
     }
     public function store(Request $request)
     {
@@ -46,12 +46,19 @@ class AdminController extends Controller
             'misi'=> $request->misi
         ]);
         return redirect('/showvisimisi');
-       
+
     }
 
     public function showvisimisi(Request $request)
     {
         $visimisi = DB::table('visimisi')->get();
         return view('showvisimisi',['visimisi' => $visimisi]);
+    }
+
+    public function editvisimisi($id)
+    {
+        $vm = VisiMisi::findorfail($id);
+        return view ('/editvisimisi', compact('vm'));
+
     }
 }

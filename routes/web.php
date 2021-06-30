@@ -27,6 +27,7 @@ Route::get('/inputvisimisi', 'AdminController@inputvisimisi')->name('inputvisimi
 Route::post('/simpan-visimisi', 'AdminController@store')->name('simpan-visimisi');
 Route::get('/showvisimisi', 'AdminController@showvisimisi')->name('showvisimisi');
 
+Route::get('/editvisimisi/{id}', 'AdminController@editvisimisi')->name('editvisimisi');
 
 
 

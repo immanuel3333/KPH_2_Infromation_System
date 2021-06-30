@@ -21,7 +21,7 @@
             <br>
         <div class="row">
             <div class="col-md-4">
-
+                <a href="{{route('editvisimisi',$vm->id)}}"button type="button" class="btn btn-dark">Edit</a>
             </div>
             <div class="col-md-4">
 
