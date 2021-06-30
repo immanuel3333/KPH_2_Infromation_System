@@ -9,6 +9,7 @@ use App\counter;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\VisiMisi;
 
 
 class AdminController extends Controller
@@ -34,10 +35,21 @@ class AdminController extends Controller
 
     public function inputvisimisi()
     {
-        return view('inputvisimisi');
+        return view ('/inputvisimisi');
+       
+    }
+    public function store(Request $request)
+    {
+        // dd($request->all());
+        VisiMisi::create([
+            'visi'=> $request->visi,
+            'misi'=> $request->misi
+        ]);
+        return redirect('/showvisimisi');
+       
     }
 
-    public function showvisimisi(Request $req)
+    public function showvisimisi(Request $request)
     {
         $visimisi = DB::table('visimisi')->get();
         return view('showvisimisi',['visimisi' => $visimisi]);

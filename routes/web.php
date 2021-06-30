@@ -23,7 +23,8 @@ Route::post('/comment', 'PostController@comment');
 Route::get('/home', 'AdminController@home')->name('home');
 Route::get('/home/{id}/delete', 'AdminController@delete');
 
-Route::post('/inputvisimisi', 'AdminController@inputvisimisi')->name('inputvisimisi');
+Route::get('/inputvisimisi', 'AdminController@inputvisimisi')->name('inputvisimisi');
+Route::post('/simpan-visimisi', 'AdminController@store')->name('simpan-visimisi');
 Route::get('/showvisimisi', 'AdminController@showvisimisi')->name('showvisimisi');
 
 
