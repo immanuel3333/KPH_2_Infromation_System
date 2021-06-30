@@ -17,8 +17,6 @@
                 <textarea class="form-control" id="visi" name="visi"></textarea>
                 <script>CKEDITOR.replace('visi');</script>
             <br>
-
-
                 <label>MISI :</label>
                 <textarea class="form-control" id="misi" name="misi"></textarea>
                 <script>CKEDITOR.replace('misi');</script>

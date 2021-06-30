@@ -9,13 +9,14 @@
     <div class="container-fluid ">
      <div class="card col-12">
         <p ><b> Visi dan Misi </p><br>
+            @foreach($visimisi as $vm)
         <p ><b> VISI : </p><br>
             <p>
-                {{$var_visi}}
+                {{ $vm->visi }}
             </p>
         <p ><b> MISI : </p><br>
             <p>
-                {{$var_misi}}
+                {{ $vm->misi }}
             </p>
             <br>
         <div class="row">
@@ -29,6 +30,7 @@
                 <a href="{{route('inputvisimisi')}}"button type="button" class="btn btn-dark">Atur</a>
             </div>
         </div>
+        @endforeach
      </div>
     </div>
 

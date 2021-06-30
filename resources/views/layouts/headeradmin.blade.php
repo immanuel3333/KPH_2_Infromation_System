@@ -377,24 +377,10 @@
                             <li class="">
                                 <a href="#Dashboards" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
                                     <i class="">
-                                        <img src="icon/sosial.png" alt="icon" width="20">
-                                    </i>
-
-                                    <span class="ml-2">Perhutanan Sosial</span>
-
-                                    <i class="las la-angle-right mm-arrow-right arrow-active"></i>
-                                    <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
-                                </a>
-                            </li>
-
-
-                            <li class="">
-                                <a href="#Dashboards" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
-                                    <i class="">
                                         <img src="icon/peraturan.png" alt="icon" width="20">
                                     </i>
 
-                                    <span class="ml-2">Peraturan Perundangan</span>
+                                    <span class="ml-2">Kelola Peraturan </span>
 
                                     <i class="las la-angle-right mm-arrow-right arrow-active"></i>
                                     <i class="las la-angle-down mm-arrow-right arrow-hover"></i>

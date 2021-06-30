@@ -8,6 +8,8 @@ use App\Comment;
 use App\counter;
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 
 class AdminController extends Controller
 {
@@ -17,11 +19,11 @@ class AdminController extends Controller
         $post = Post::with(['comments', 'comments.child'])->first();
         return view('berandaadminupt',['user'=> $user],compact('post'));
 
-        
+
     }
     public function delete($id)
      {
-         
+
         $row = Comment::find($id);
         $row->delete();
         User::find(Auth::id())->update([
@@ -37,8 +39,7 @@ class AdminController extends Controller
 
     public function showvisimisi(Request $req)
     {
-        $visi = $req->visi;
-        $misi = $req->misi;
-        return view('showvisimisi', ['var_visi'=>$visi, 'var_misi'=>$misi]);
+        $visimisi = DB::table('visimisi')->get();
+        return view('showvisimisi',['visimisi' => $visimisi]);
     }
 }
