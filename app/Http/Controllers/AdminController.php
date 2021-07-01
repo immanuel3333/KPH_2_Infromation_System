@@ -10,6 +10,7 @@ use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\VisiMisi;
+use App\TugasFungsi;
 
 
 class AdminController extends Controller
@@ -61,4 +62,46 @@ class AdminController extends Controller
         return view ('/editvisimisi', compact('vm'));
 
     }
+
+    public function inputtugasfungsi()
+    {
+        return view ('/inputtugasfungsi');
+
+    }
+    public function store2(Request $request)
+    {
+        // dd($request->all());
+        TugasFungsi::create([
+            'tugas'=> $request->tugas,
+            'fungsi'=> $request->fungsi
+        ]);
+        return redirect('/showtugasfungsi');
+
+    }
+
+    public function showtugasfungsi(Request $request)
+    {
+        $tugasfungsi = DB::table('tugas_fungsi')->get();
+        return view('showtugasfungsi',['tugasfungsi' => $tugasfungsi]);
+    }
+
+   
+    public function edittugasfungsi($id)
+    {
+        $tf = TugasFungsi::find($id);
+        return view ('/edittugasfungsi',['tugasfungsi'=>$tf]);
+
+    }
+    public function update2(Request $request, $id)
+    {
+        $tf=TugasFungsi::find($id);
+        $tf->update([
+            'tugas'=>$request->tugas,
+            'fungsi'=>$request->fungsi
+        ]);
+        return redirect('/showtugasfungsi');
+    }
+    
+
+
 }
