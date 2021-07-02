@@ -33,8 +33,8 @@ Route::get('/inputtugasfungsi', 'AdminController@inputtugasfungsi')->name('input
 Route::post('/simpan-tugasfungsi', 'AdminController@store2')->name('simpan-tugasfungsi');
 Route::get('/showtugasfungsi', 'AdminController@showtugasfungsi')->name('showtugasfungsi');
 
-Route::get('/edittugasfungsi/{id}', 'AdminController@edittugasfungsi')->name('edittugasfungsi');
 Route::post('/update-tugasfungsi/{id}', 'AdminController@update2')->name('update-tugasfungsi');
+Route::get('/view/{id}', 'AdminController@view');
 
 
 

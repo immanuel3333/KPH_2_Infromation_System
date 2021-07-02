@@ -9,7 +9,7 @@
     <div class="container-fluid ">
      <div class="card col-12">
         <p ><b> Visi dan Misi </p><br>
-            @foreach($tugasfungsi as $tf)
+            @foreach($tf as $tf)
         <p ><b> Tugas : </p><br>
             <p>
                 {{ $tf->tugas }}
@@ -21,7 +21,7 @@
             <br>
         <div class="row">
             <div class="col-md-4">
-            <a href="{{route('edittugasfungsi',$tf->id)}}"button type="button" class="btn btn-dark">Edit</a>
+            <a href="{{url('/view')}}/{{$tf->id}}"button type="button" class="btn btn-dark">Edit</a>
             </div>
             <div class="col-md-4">
 

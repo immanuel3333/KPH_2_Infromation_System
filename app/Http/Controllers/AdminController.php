@@ -81,17 +81,10 @@ class AdminController extends Controller
 
     public function showtugasfungsi(Request $request)
     {
-        $tugasfungsi = DB::table('tugas_fungsi')->get();
-        return view('showtugasfungsi',['tugasfungsi' => $tugasfungsi]);
+        $tf = DB::table('tugas_fungsi')->get();
+        return view('showtugasfungsi', compact('tf'));
     }
 
-   
-    public function edittugasfungsi($id)
-    {
-        $tf = TugasFungsi::find($id);
-        return view ('/edittugasfungsi',['tugasfungsi'=>$tf]);
-
-    }
     public function update2(Request $request, $id)
     {
         $tf=TugasFungsi::find($id);
@@ -99,7 +92,14 @@ class AdminController extends Controller
             'tugas'=>$request->tugas,
             'fungsi'=>$request->fungsi
         ]);
-        return redirect('/showtugasfungsi');
+        return redirect('showtugasfungsi');
+        
+    }
+
+    public function view()
+    {
+        $tf = DB::table('tugas_fungsi')->get();
+      return view('edittugasfungsi', compact('tf'));
     }
     
 

@@ -30,5 +30,3 @@
 
     @include('layouts.footer')
 
-    <script>CKEDITOR.replace('misi');</script>
-
