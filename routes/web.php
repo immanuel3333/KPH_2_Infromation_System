@@ -17,7 +17,7 @@ Auth::routes(['verify' => true]);
 Route::get('/landingpage', 'HomeController@banner')->name('landingpage');
 Route::get('/sejarah', 'HomeController@sejarah');
 Route::get('/strukturorg', 'HomeController@strukturorg')->name('strukturorg');
-Route::get('/profilpegawai', 'HomeController@profilpegawai');   
+Route::get('/profilpegawai', 'HomeController@profilpegawai');
 Route::get('/', 'PostController@index');
 Route::post('/comment', 'PostController@comment');
 Route::get('/home', 'AdminController@home')->name('home');
@@ -36,6 +36,6 @@ Route::get('/showtugasfungsi', 'AdminController@showtugasfungsi')->name('showtug
 Route::get('/edittugasfungsi/{id}', 'AdminController@edittugasfungsi')->name('edittugasfungsi');
 Route::post('/update-tugasfungsi/{id}', 'AdminController@update2')->name('update-tugasfungsi');
 
-
+Route::resource('strukturs', StrukturController::class);
 
 
