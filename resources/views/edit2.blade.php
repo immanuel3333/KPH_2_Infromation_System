@@ -3,8 +3,7 @@
 
 <div class="content-page">
     <div class="card">
-        <p>Profil</p><br>
-        <a>Visi dan Misi</a>
+        <h1>Tugas dan Fungsi</h1>
     </div>
     <div class="container-fluid ">
      <div class="card col-12">
@@ -14,12 +13,12 @@
         @endforeach
     
             <div class="form-group">
-                <textarea name="tugas" id="tugas" cols="150" placeholder="visi" rows="20" value="">
+                <textarea name="tugas" id="tugas" cols="150" placeholder="visi" rows="20">{{$tf->tugas}}
                 </textarea>
                 <script>CKEDITOR.replace('tugas');</script>
             </div>
             <div class="form-group">
-                <textarea name="fungsi" id="fungsi" cols="150" placeholder="fungsi" rows="20" value="">
+                <textarea name="fungsi" id="fungsi" cols="150" placeholder="fungsi" rows="20">{{$tf->fungsi}}
                 </textarea>
                 <script>CKEDITOR.replace('fungsi');</script>
             </div>
@@ -32,5 +31,3 @@
     </div>
 
     @include('layouts.footer')
-    
-

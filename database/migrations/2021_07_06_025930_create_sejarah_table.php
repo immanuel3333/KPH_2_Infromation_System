@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVisiMisisTable extends Migration
+class CreateSejarahTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateVisiMisisTable extends Migration
      */
     public function up()
     {
-        Schema::create('visimisi', function (Blueprint $table) {
+        Schema::create('sejarah', function (Blueprint $table) {
             $table->id();
-            $table->mediumText('visi');
-            $table->mediumText('misi');
+            $table->mediumText('sejarah');
+            $table->string('gambar')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateVisiMisisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('visi_misi');
+        Schema::dropIfExists('sejarah');
     }
 }

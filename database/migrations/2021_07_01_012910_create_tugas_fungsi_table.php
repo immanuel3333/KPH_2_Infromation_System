@@ -15,8 +15,8 @@ class CreateTugasFungsiTable extends Migration
     {
         Schema::create('tugas_fungsi', function (Blueprint $table) {
             $table->id();
-            $table->string('tugas', 500);
-            $table->string('fungsi', 500);
+            $table->mediumText('tugas');
+            $table->mediumText('fungsi');
             $table->timestamps();
         });
     }
