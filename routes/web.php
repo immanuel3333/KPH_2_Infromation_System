@@ -49,4 +49,3 @@ Route::get('/view3/{id}', 'AdminController@view3');
 
 Route::resource('strukturs', StrukturController::class);
 
-

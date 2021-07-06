@@ -71,9 +71,9 @@ class StrukturController extends Controller
      * @param  mixed $blog
      * @return void
      */
-    public function edit(Struktur $blog)
+    public function edit(Struktur $id)
     {
-        return view('strukturs.edit', compact('blog'));
+        return view('strukturs.edit', compact('strukturs'));
     }
 
     /**
@@ -83,10 +83,10 @@ class StrukturController extends Controller
      * @param  mixed $blog
      * @return void
      */
-    public function update(Request $request, Struktur $blog)
+    public function update(Request $request, $id)
     {
         //get data Blog by ID
-        $blog = Struktur::findOrFail($blog->id);
+        $blog = Struktur::findorfail($id);
 
         if($request->file('image') == "") {
 
