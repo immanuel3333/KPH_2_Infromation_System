@@ -4,7 +4,7 @@
                 <div class="text-center" style="background-color:#0C3310;">
                     <div class="row">
                         <div class="col-md-3">
-                            <img src="img/logo1.png" style="padding-top:50px; padding-leftpx:10px;" alt="" height="200" width="200">
+                            <img src="{{ asset('img/logo1.png')}}" style="padding-top:50px; padding-leftpx:10px;" alt="" height="200" width="200">
                         </div>
                         <div class="col-md-3" style="text-align:left;">
                             <div class="row">

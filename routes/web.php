@@ -27,14 +27,25 @@ Route::get('/inputvisimisi', 'AdminController@inputvisimisi')->name('inputvisimi
 Route::post('/simpan-visimisi', 'AdminController@store')->name('simpan-visimisi');
 Route::get('/showvisimisi', 'AdminController@showvisimisi')->name('showvisimisi');
 
-Route::get('/editvisimisi/{id}', 'AdminController@editvisimisi')->name('editvisimisi');
+Route::post('/update-visimisi/{id}', 'AdminController@update1')->name('update-visimisi');
+Route::get('/view1/{id}', 'AdminController@view1');
+
 
 Route::get('/inputtugasfungsi', 'AdminController@inputtugasfungsi')->name('inputtugasfungsi');
 Route::post('/simpan-tugasfungsi', 'AdminController@store2')->name('simpan-tugasfungsi');
 Route::get('/showtugasfungsi', 'AdminController@showtugasfungsi')->name('showtugasfungsi');
 
-Route::get('/edittugasfungsi/{id}', 'AdminController@edittugasfungsi')->name('edittugasfungsi');
 Route::post('/update-tugasfungsi/{id}', 'AdminController@update2')->name('update-tugasfungsi');
+Route::get('/view2/{id}', 'AdminController@view2');
+
+
+Route::get('/inputsejarah', 'AdminController@inputsejarah')->name('inputsejarah');
+Route::post('/simpan-sejarah', 'AdminController@store3')->name('simpan-sejarah');
+Route::get('/showsejarah', 'AdminController@showsejarah')->name('showsejarah');
+
+Route::post('/update-sejarah/{id}', 'AdminController@update3')->name('update-sejarah');
+Route::get('/view3/{id}', 'AdminController@view3');
+
 
 Route::resource('strukturs', StrukturController::class);
 

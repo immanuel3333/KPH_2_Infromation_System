@@ -14,7 +14,7 @@
       <link rel="stylesheet" href="{{ asset('assets/vendor/remixicon/fonts/remixicon.css') }}">
       <link rel="stylesheet" href="{{ asset('assets/vendor/@icon/dripicons/dripicons.css') }}">
 
-      <link rel='stylesheet' href='{{ asset('assets/vendor/fullcalendar/core/main.css') }}' />
+      <link rel='stylesheet' href="{{ asset('assets/vendor/fullcalendar/core/main.css') }}" />
       <link rel='stylesheet' href='{{ asset('assets/vendor/fullcalendar/daygrid/main.css') }}' />
       <link rel='stylesheet' href='{{ asset('assets/vendor/fullcalendar/timegrid/main.css') }}' />
       <link rel='stylesheet' href='{{ asset('assets/vendor/fullcalendar/list/main.css') }}' />
@@ -23,7 +23,7 @@
       <link rel="stylesheet" href="{{ asset('css/cc.css') }}">
       <style>
          body{
-            background: url('img/bg1.jpeg');
+            background: url('{{ asset('img/bg1.jpeg') }}');
             background-size:cover;
          }
       </style>
