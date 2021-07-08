@@ -14,11 +14,12 @@
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <form action="{{ route('strukturs.update') }}" method="POST" enctype="multipart/form-data">
+                    @foreach($strukturs as $st)
+                        <form action="{{ route('strukturs.update', $st->id) }}" method="POST" enctype="multipart/form-data">
 
                             @csrf
                             @method('PUT')
-
+                    @endforeach
                             <div class="form-group">
                                 <label class="font-weight-bold">GAMBAR</label>
                                 <input type="file" class="form-control" name="image">

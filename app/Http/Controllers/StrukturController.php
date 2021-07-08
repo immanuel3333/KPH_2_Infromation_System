@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Struktur;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use DB;
+use File;
 
 class StrukturController extends Controller
 {
@@ -15,8 +17,14 @@ class StrukturController extends Controller
      */
     public function index()
     {
+
         $blogs = Struktur::latest()->paginate(1);
         return view('strukturs.index', compact('blogs'));
+    }
+    public function show()
+    {
+        $blogs = Struktur::latest()->paginate(1);
+        return view('strukturs.show', compact('blogs'));
     }
 
     /**
@@ -71,8 +79,8 @@ class StrukturController extends Controller
      * @param  mixed $blog
      * @return void
      */
-    public function edit(Struktur $id)
-    {
+    public function edit()
+    {   $strukturs= DB::table('strukturs')->get();
         return view('strukturs.edit', compact('strukturs'));
     }
 
@@ -85,38 +93,37 @@ class StrukturController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //get data Blog by ID
-        $blog = Struktur::findorfail($id);
-
-        if($request->file('image') == "") {
-
-            $request->file('image2') == "";
-        } else {
-
-            //hapus old image
-            Storage::disk('local')->delete('public/strukturorg/'.$blog->image);
-            Storage::disk('local')->delete('public/strukturorg/'.$blog->image2);
-
-            //upload new image
-            $image = $request->file('image');
-            $image2 = $request->file('image2');
-            $image->storeAs('public/strukturorg', $image->hashName());
-            $image2->storeAs('public/strukturorg', $image2->hashName());
+        // get data Blog by ID
+            $blog = Struktur::find($id);
+            File::delete($blog->image);
+            File::delete($blog->image2);
+            $file = $request->file('image');
+            $file2 = $request->file('image2');
+            $file->move('public/struktororg/',$file->getClientOriginalName());
+            $file2->move('public/struktororg/',$file2->getClientOriginalName());
 
             $blog->update([
-                'image'     => $image->hashName(),
-                'image2'     => $image2->hashName()
-            ]);
+                 'image'=>'public/struktororg/'.$file->getClientOriginalName(),
+                 'image2'=>'public/struktororg/'.$file2->getClientOriginalName(),
 
-        }
+             ]);
+            
+                return redirect()->route('strukturs.index');
+                // dd($blog);
+            
+            
+                // $blog = Struktur::findorfail($id);
 
-        if($blog){
-            //redirect dengan pesan sukses
-            return redirect()->route('strukturs.index')->with(['success' => 'Data Berhasil Diupdate!']);
-        }else{
-            //redirect dengan pesan error
-            return redirect()->route('strukturs.index')->with(['error' => 'Data Gagal Diupdate!']);
-        }
+                // $blog->update([
+                //     'image'=>'public/struktororg/'.$file->getClientOriginalName(),
+                //     'image2'=>'public/struktororg/'.$file->getClientOriginalName(),
+                // ]);
+                // $request->image->move(public_path().'public/struktororg/', $awal);
+                // $request->image->move(public_path().'public/struktororg/', $awal2);
+                // $ubah->update($blog);
+                // return redirect()->route('strukturs.index');
+                
+          
     }
 
     /**

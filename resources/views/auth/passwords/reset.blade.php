@@ -20,7 +20,7 @@ Password baru
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <label class="mb-0">Sandi</label>
+                                <label class="mb-0">Kata Sandi Baru</label>
                                 <input id="password" type="password" class="form-control form-control-sm @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')

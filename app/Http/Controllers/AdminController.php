@@ -85,9 +85,11 @@ class AdminController extends Controller
     public function store2(Request $request)
     {
         // dd($request->all());
+        $up=substr($request->tugas, 3,-4);
+        $down=substr($request->tugas, 3,-4);
         TugasFungsi::create([
-            'tugas'=> $request->tugas,
-            'fungsi'=> $request->fungsi
+            'tugas'=> $up,
+            'fungsi'=> $down
         ]);
         return redirect('/showtugasfungsi');
 
@@ -102,9 +104,11 @@ class AdminController extends Controller
     public function update2(Request $request, $id)
     {
         $tf=TugasFungsi::find($id);
+        $up=substr($request->tugas, 3,-4);
+        $down=substr($request->tugas, 3,-4);
         $tf->update([
-            'tugas'=>$request->tugas,
-            'fungsi'=>$request->fungsi
+            'tugas'=>$up,
+            'fungsi'=>$down
         ]);
         return redirect('showtugasfungsi');
         
