@@ -1,5 +1,5 @@
 
-@include('layouts.header')
+@include('layouts.headeradmin')
     <div class="content-page " >
     <h1>Selamat Datang di Halaman Pengaturan</h1>
         <div class="card-deck">
@@ -44,9 +44,9 @@
                                                         <hr>
                                                         <p>{{ $row->comment }}</p><br>
                                                         <a href="javascript:void(0)" onclick="balasKomentar({{ $row->id }}, '{{ $row->comment }}')"data-toggle="modal" data-target="#exampleModalCenter">Balas</a>
-                                                        <a href="{{url('/home')}}/{{ $row->id }}/delete" class="pl-3">Delete</a>    
-                                                     
-                            
+                                                        <a href="{{url('/home')}}/{{ $row->id }}/delete" class="pl-3">Delete</a>
+
+
 
 
 
@@ -74,7 +74,7 @@
                                                                 <div class="form-group">
                                                                     <label for="">Nama</label>
                                                                     <input type="text" class="form-control" name="username" value='{{$user->name}}' >
-                                                                    
+
                                                                 </div>
                                                                 <div class="form-group" style="display: none" id="formReplyComment">
                                                                     <label for="">Balas Komentar</label>
@@ -83,7 +83,7 @@
                                                                 <div class="form-group">
                                                                     <label for="">Masukkan Komentar</label>
                                                                     <textarea name="comment" cols="30" rows="10" class="form-control"></textarea>
-                                                                </div>  
+                                                                </div>
 
                                                         </div>
 
@@ -92,7 +92,7 @@
                                                         </div>
                                                         </div>
                                                     </form>
-                                                            
+
                                                         </div>
                                                         </div>
 
@@ -120,6 +120,6 @@
 
 
 
-                  
+
     </div>
 @include('layouts.footer')

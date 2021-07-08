@@ -23,7 +23,7 @@
       <link rel='stylesheet' href="{{ asset('assets/vendor/fullcalendar/timegrid/main.css') }}" />
       <link rel='stylesheet' href="{{ asset('assets/vendor/fullcalendar/list/main.css') }}" />
       <link rel="stylesheet" href="{{ asset('assets/vendor/mapbox/mapbox-gl.css') }}">
-   
+
 
       <link rel="stylesheet" href="{{ asset('css/cc.css') }}">
       <link rel="stylesheet" href="{{ asset('styles/main.css')}}">
@@ -50,7 +50,7 @@
     </script>
 
     <script src="{{ asset('ckeditor/ckeditor.js')}}"></script>
-    
+
 
     <style>
             blockquote {
@@ -106,7 +106,7 @@
                     <div class="row">
                         <div  class="col-md-2 col-sm-2" style="padding-left:150px;">
                             <img src="{{ asset('img/logo1.png')}}" alt="">
-                          
+
                         </div>
                         <div class="col-md-10 col-sm-10">
                             <p class="text-center" style="font-family:Balthazar; font-size:35px; padding-right:100px;color:white;">UPT. KESATUAN PENGELOLAAN HUTAN WILAYAH-II</p>
@@ -116,26 +116,13 @@
                         <div class="mm-navbar-logo d-flex align-items-center justify-content-between">
                             <i class="ri-menu-line wrapper-menu"></i>
                         </div>
-                        <div class="ml-auto">
-                            <div id="navbarSupportedContent">
-                                <ul class="navbar-nav ml-auto navbar-list align-items-center">
-                                    <!-- Login Button -->
-                                    <li class="nav-item nav-icon">
-                                        <a href="{{ route('login') }}" class="nav-item nav-icon" id="btnLogin">
-                                            <button type="submit" class="btn" style="background-color: #99F07A;">Masuk</button>
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
                     </nav>
                 </div>
             </div>
 
             <div class="mm-sidebar sidebar-default" style="fixed-left">
                 <div class="mm-sidebar-logo d-flex align-items-center justify-content-between">
-                    <a href="../backend/index.html" class="header-logo">
+                    <a href="#home" class="header-logo">
                         <img src="{{ asset('img/newlogo.png') }}" class="img-fluid rounded-normal light-logo " alt="logo">
                         <img src="{{ asset('img/newlogo.png') }}" class="img-fluid rounded-normal darkmode-logo" alt="logo">
                     </a>
@@ -147,7 +134,7 @@
                     <nav class="mm-sidebar-menu">
                         <ul id="mm-sidebar-toggle" class="side-menu">
                             <li class="">
-                                <a href="#Dashboards" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
+                                <a href="{{ route('home') }}" class="collapsed svg-icon">
                                     <i class="">
                                         <img src="{{ asset('icon/home.png') }}" alt="icon" width="20">
                                     </i>
@@ -170,7 +157,7 @@
                                 </a>
                                 <ol id="app" class="submenu collapse" data-parent="#mm-sidebar-toggle">
                                     <li class="">
-                                        <a href="#user" class="collapsed svg-icon">
+                                        <a href="{{ route('showvisimisi') }}" class="collapsed svg-icon">
                                             <i class="">
                                                 <img src="{{ asset('icon/visimisi.png')}}" alt="icon" width="20">
                                             </i>
@@ -179,21 +166,21 @@
 
                                     </li>
                                     <li class="">
-                                        <a href="../app/chat.html" class="svg-icon">
+                                        <a href="{{ route('showsejarah') }}" class="svg-icon">
                                             <i class="">
                                                 <img src="{{ asset('icon/sejarah.png')}}" alt="icon" width="20">
                                             </i><span class="">Sejarah</span>
                                         </a>
                                     </li>
                                     <li class="">
-                                        <a href="#strukturorg" class="svg-icon">
+                                        <a href="{{ route('strukturs.index') }}" class="svg-icon">
                                             <i class="">
                                                 <img src="{{ asset('icon/struktur.png')}}" alt="icon" width="20">
                                             </i><span class="">Struktur Organisasi</span>
                                         </a>
                                     </li>
                                     <li class="">
-                                        <a href="../app/todo.html" class="svg-icon">
+                                        <a href="{{ route('showtugasfungsi') }}" class="svg-icon">
                                             <i class="">
                                                 <img src="{{ asset('icon/tugas dan fungsi.png')}}" alt="icon" width="20">
                                             </i><span class="">Tugas dan Fungsi</span>
