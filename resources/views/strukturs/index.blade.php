@@ -1,22 +1,18 @@
 @include('layouts.headeradmin')
 </div>
-<div class="content-page"  style="background: url('{{ asset('img/backgroundadmin.png') }}');background-size:850px;background-repeat: repeat-y;background-position:center ;">
+<div class="content-page" style="background: url('{{ asset('img/backgroundadmin.png') }}');background-size:850px;background-repeat: repeat-y;background-position:center ;">
     <div class="container-fluid ">
-                      <center>
-                        <!-- <a href="{{ route('strukturs.create') }}" class="btn btn-md btn-success mb-3">TAMBAH BLOG</a> -->
+                        <center>
+                        <a href="{{ route('strukturs.create') }}" class="btn btn-md btn-success mb-3">TAMBAH BLOG</a>
                         <p style="font-size:50px; font-family:balthazar;"><b> Struktur Organisasi </p><br>
                               @forelse ($blogs as $blog)
                                         <p><img src="{{ asset( $blog->image ) }}" width="592px" height="438px"></p><br>
                                         <p><img src="{{ asset( $blog->image2 ) }}" width="592px" height="391px"></p><br>
-                        </center>
                                         <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('strukturs.destroy', $blog->id) }}" method="POST">
-                                        <br>
-                                            <a href="{{ route('strukturs.edit', $blog->id) }}" class="float-right">
-                                            <button type="submit" class="btn" style="background-color: #99F07A;">Edit</button>
-                                            </a>
+                                            <a href="{{ route('strukturs.edit', $blog->id) }}" class="btn btn-sm btn-primary">EDIT</a>
                                             @csrf
-                                            <!-- @method('DELETE')
-                                            <button type="submit" class="btn btn-sm btn-danger">HAPUS</button> -->
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
                                         </form>
                               @empty
                                   <div class="alert alert-danger">
@@ -24,8 +20,9 @@
                                   </div>
                               @endforelse
                           {{ $blogs->links() }}
-
-    </div>
+                        </center>
+                    </div>
+                </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
