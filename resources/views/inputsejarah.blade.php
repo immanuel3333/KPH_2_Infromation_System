@@ -8,8 +8,11 @@
     </div>
     <div class="container-fluid ">
      <div class="card col-12">
-       <form action="{{ route('simpan-sejarah')}}" method="post">
+       <form action="{{ route('simpan-sejarah')}}" method="post" enctype="multipart/form-data">
       @csrf
+             <div class="form-group">
+                <input type="file" id="gambar" name="gambar">
+            </div>
             <div class="form-group">
                 <textarea name="sejarah" id="sejarah" cols="150" rows="20">
                 </textarea>

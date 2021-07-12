@@ -15,7 +15,7 @@ class CreateGaleriuptTable extends Migration
     {
         Schema::create('galeriupt', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('tanggal');
+            $table->date('tanggal');
             $table->mediumText('keterangan');
             $table->string('gambar')->nullable();
             $table->timestamps();

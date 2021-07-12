@@ -49,3 +49,12 @@ Route::get('/view3/{id}', 'AdminController@view3');
 
 Route::resource('strukturs', StrukturController::class);
 
+Route::get('/inputgaleriupt', 'AdminController@inputgaleriupt')->name('inputgaleriupt');
+Route::post('/simpan-galeriupt', 'AdminController@store4')->name('simpan-galeriupt');
+Route::get('/showgaleriupt', 'AdminController@showgaleriupt')->name('showgaleriupt');
+
+Route::post('/update-galeriupt/{id}', 'AdminController@update4')->name('update-galeriupt');
+Route::get('/view4/{id}', 'AdminController@view4');
+Route::get('/destroy4/{id}', 'AdminController@destroy4')->name('delete-galeriupt');
+
+

@@ -181,5 +181,47 @@ L.marker([2.9514596123305656, 99.05752741133092], {icon: greenIcon}).addTo(map).
     <script src="{{ asset('assets/vendor/emoji-picker-element/index.js') }}" type="module"></script>
 
     <!-- app JavaScript -->
-    <script src="{{ asset('assets/js/app.js') }}"></script>  </body>
+    <script src="{{ asset('assets/js/app.js') }}"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        var halaman=getCookie("halaman");
+        if (halaman == "") {
+            setCookie("halaman", "home.php", 30);
+            $('.halaman-menu').load(getCookie("halaman"));
+        } else {
+            $('.halaman-menu').load(getCookie("halaman"));
+        }
+ 
+        $('.nav-menu').click(function(){
+            var menu = $(this).attr('id');
+            setCookie("halaman", menu + ".php", 30);
+            $('.halaman-menu').load(getCookie("halaman"));
+        });
+    });
+ 
+    function setCookie(cname,cvalue,exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (30*24*60*60*1000));
+      var expires = "expires=" + d.toGMTString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+ 
+    function getCookie(cname) {
+      var name = cname + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+</script>
+
+</body>
 </html>

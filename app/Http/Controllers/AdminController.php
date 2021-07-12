@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\DB;
 use App\VisiMisi;
 use App\TugasFungsi;
 use App\Sejarah;
+use App\Galeriupt;
+use File;
 
 
 class AdminController extends Controller
@@ -129,12 +131,19 @@ class AdminController extends Controller
     }
     public function store3(Request $request)
     {
-        // dd($request->all());
-        Sejarah::create([
-            'sejarah'=> $request->sejarah,
-            'gambar' => $request->gambar
+         
+        $image = $request->gambar;
+        $new_image = time().$image->getClientOriginalName();
+        $up=substr($request->sejarah, 3,-4);
+        $sj = Sejarah::create([
+            'sejarah' => $up,
+            'gambar' => 'public/struktororg/'.$new_image
         ]);
-        return redirect('/showsejarah');
+
+        $image->move('public/struktororg/', $new_image);
+
+        return redirect('showsejarah');
+
 
     }
 
@@ -147,18 +156,98 @@ class AdminController extends Controller
     public function update3(Request $request, $id)
     {
         $sj=Sejarah::find($id);
+        $up=substr($request->sejarah, 3,-4);
+        File::delete($sj->image);
+        $file = $request->file('gambar');
+        $file->move('public/struktororg/',$file->getClientOriginalName());
         $sj->update([
-            'sejarah'=>$request->sejarah,
-            'gambar'=>$request->gambar
+            'sejarah' => $up,
+            'gambar' => 'public/struktororg/'.$file->getClientOriginalName(),
         ]);
         return redirect('showsejarah');
+
+       
         
     }
     public function view3()
     {
         $sj = DB::table('sejarah')->get();
       return view('edit3', compact('sj'));
-    }   
+    }
+    
+    //galeriupt
+    public function inputgaleriupt()
+    {
+        $gl = Galeriupt::latest()->get();
+        return view('inputgaleriupt');
+    }
+
+    public function store4(Request $request)
+    {
+        // dd($request->all());
+        $image = $request->gambar;
+        $new_image = time().$image->getClientOriginalName();
+        $up=substr($request->keterangan, 3,-4);
+        $gl = Galeriupt::create([
+            'tanggal'=> $request->tanggal,
+            'keterangan' => $up,
+            'gambar' => 'public/struktororg/'.$new_image
+        ]);
+
+        $image->move('public/struktororg/', $new_image);
+
+        return redirect('inputgaleriupt');
+    }
+
+    public function showgaleriupt(Request $request)
+    {
+        $gl = DB::table('galeriupt')->get();
+        return view('showgaleriupt', compact('gl'));
+    }
+
+    public function view4($id)
+    {
+        $gl=Galeriupt::find($id);
+        return view('edit4',compact('gl'));
+    }
+
+    public function update4(Request $request, $id)
+    {
+        $gl=Galeriupt::find($id);
+        $up=substr($request->keterangan, 3,-4);
+        File::delete($gl->gambar);
+        $file = $request->file('gambar');
+        $file->move('public/struktororg/',$file->getClientOriginalName());
+        $gl->update([
+            'tanggal' => $request->tanggal,
+            'keterangan' => $up,
+            'gambar' => 'public/struktororg/'.$file->getClientOriginalName(),
+        ]);
+        return redirect('showgaleriupt');
+
+    }
+
+    
+    public function destroy4($id)
+    {
+        // dd($id);
+        $hapus = Galeriupt::findorfail($id);
+
+        $file = public_path('public/struktororg/').$hapus->gambar;
+        if (file_exists($file)){
+            @unlink($file);
+        }
+
+        $hapus->delete();
+        return back();
+    }
+
+
+   
+
+
+
+
 
 
 }

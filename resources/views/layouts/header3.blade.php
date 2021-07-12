@@ -35,8 +35,13 @@
       <link rel="stylesheet" href="{{ asset('styles/ionicons/css/ionicons.min.css')}}">
 
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
    crossorigin=""/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 <!-- leaflet -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
@@ -82,13 +87,6 @@
                 padding-left: 50px;
             }
 
-            /* body{
-            background: url('img/backgroundadmin.png');
-            background-size:500px;
-            background-repeat: repeat-y;
-            background-position:800px ; */
-
-
          }
     </style>
 
@@ -120,6 +118,30 @@
                     </nav>
                 </div>
             </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-primary mb-5 text-white">
+            <a class="navbar-brand nav-menu" id="home">Dewan Komputer</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link nav-menu text-white" id="home">Home</a></li>
+                <li class="nav-item"><a class="nav-link nav-menu text-white" id="tentang_kami">Tentang Kami</a></li>
+                <li class="nav-item"><a class="nav-link nav-menu text-white" id="hubungi_kami">Hubungi Kami</a></li>
+                <li class="nav-item"><a class="nav-link nav-menu text-white" id="produk">Produk</a></li>
+                <li class="nav-item"><a class="nav-link nav-menu text-white" id="blog">Blog</a></li>
+                </ul>
+            </div>
+            </nav>
+            
+            <div class="container">
+                <div class="halaman-menu"></div>
+            </div>
+ 
+<div class="p-2 bg-secondary text-white text-center fixed-bottom">© <?php echo date('Y'); ?> Copyright:
+  <a href="https://dewankomputer.com/"> Dewan Komputer</a>
+</div>
 
             <div class="mm-sidebar sidebar-default" style="fixed-left">
                 <div class="mm-sidebar-logo d-flex align-items-center justify-content-between">
