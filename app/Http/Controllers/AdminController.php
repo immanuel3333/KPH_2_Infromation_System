@@ -14,6 +14,7 @@ use App\TugasFungsi;
 use App\Sejarah;
 use App\Galeriupt;
 use File;
+use App\PotensiEkonomi1;
 
 
 class AdminController extends Controller
@@ -175,6 +176,10 @@ class AdminController extends Controller
       return view('edit3', compact('sj'));
     }
     
+
+
+
+
     //galeriupt
     public function inputgaleriupt()
     {
@@ -241,6 +246,68 @@ class AdminController extends Controller
         $hapus->delete();
         return back();
     }
+
+
+
+    //Potensi Ekonomi
+
+    public function inputpotensiekonomi1()
+    {
+        $pe = PotensiEkonomi1::latest()->get();
+        return view('inputpotensiekonomi1');
+    }
+
+    public function store5(Request $request)
+    {
+        // dd($request->all());
+        $up1=substr($request->kayu, 3,-4);
+        $up2=substr($request->nonkayu, 3,-4);
+        // $up3=substr($request->jasalingkungan,);
+        // $up4=substr($request->bisnis, );
+        $up5=substr($request->donor, 3,-4);
+        $pe = PotensiEkonomi1::create([
+            'kayu' => $up1,
+            'nonkayu' => $up2,
+            'jasalingkungan' => $request->jasalingkungan,
+            'bisnis' => $request->bisnis,
+            'donor' => $up5,
+        ]);
+
+        return redirect('showpotensiekonomi1');
+    }
+
+    public function showpotensiekonomi1(Request $request)
+    {
+        $pe = DB::table('potensiekonomi1')->get();
+        return view('showpotensiekonomi1', compact('pe'));
+    }
+
+    public function view5($id)
+    {
+        $pe=PotensiEkonomi1::find($id);
+        return view('editpotensiekonomi1',compact('pe'));
+    }
+
+    public function update5(Request $request, $id)
+    {
+        $pe=PotensiEkonomi1::find($id);
+        $up1=substr($request->kayu, 3,-4);
+        $up2=substr($request->nonkayu, 3,-4);
+        $up5=substr($request->donor, 3,-4);
+        $pe->update([
+            'kayu' => $up1,
+            'nonkayu' => $up2,
+            'jasalingkungan' => $request->jasalingkungan,
+            'bisnis' => $request->bisnis,
+            'donor' => $up5,
+        ]);
+        return redirect('showpotensiekonomi1');
+
+    }
+
+    
+
+  
 
 
    

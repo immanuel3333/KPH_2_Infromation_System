@@ -58,3 +58,14 @@ Route::get('/view4/{id}', 'AdminController@view4');
 Route::get('/destroy4/{id}', 'AdminController@destroy4')->name('delete-galeriupt');
 
 
+//Data Ekonomi
+Route::get('/inputpotensiekonomi1', 'AdminController@inputpotensiekonomi1')->name('inputpotensiekonomi1');
+Route::post('/simpan-potensiekonomi1', 'AdminController@store5')->name('simpan-potensiekonomi1');
+Route::get('/showpotensiekonomi1', 'AdminController@showpotensiekonomi1')->name('showpotensiekonomi1');
+
+Route::post('/update-potensiekonomi1/{id}', 'AdminController@update5')->name('update-potensiekonomi1');
+Route::get('/view5/{id}', 'AdminController@view5');
+
+
+
+
