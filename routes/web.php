@@ -58,3 +58,11 @@ Route::get('/view4/{id}', 'AdminController@view4');
 Route::get('/destroy4/{id}', 'AdminController@destroy4')->name('delete-galeriupt');
 
 
+Route::resource('peraturans', PeraturanController::class);
+
+Route::get('/show-dataumum', 'DataUmumController@index')->name('show-dataumum');
+Route::get('/homes', 'DataUmumController@home')->name('homes');
+Route::get('/kepalakphs', 'DataUmumController@kepalakph')->name('kepalakphs');
+Route::get('/fasilitass', 'DataUmumController@fasilitas')->name('fasilitass');
+Route::get('/lembagas', 'DataUmumController@lembaga')->name('lembagas');
+Route::get('/rphjps', 'DataUmumController@rphjp')->name('rphjps');
