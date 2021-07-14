@@ -58,7 +58,6 @@ Route::get('/view4/{id}', 'AdminController@view4');
 Route::get('/destroy4/{id}', 'AdminController@destroy4')->name('delete-galeriupt');
 
 
-<<<<<<< HEAD
 //Data Ekonomi
 Route::get('/inputpotensiekonomi1', 'AdminController@inputpotensiekonomi1')->name('inputpotensiekonomi1');
 Route::post('/simpan-potensiekonomi1', 'AdminController@store5')->name('simpan-potensiekonomi1');
@@ -70,13 +69,16 @@ Route::get('/view5/{id}', 'AdminController@view5');
 
 
 
-=======
 Route::resource('peraturans', PeraturanController::class);
 
+Route::get('/inputidentitas', 'DataUmumController@inputidentitas')->name('inputidentitas');
+Route::post('/simpan-identitas', 'DataUmumController@storeidentitas')->name('simpan-identitas');
 Route::get('/show-dataumum', 'DataUmumController@index')->name('show-dataumum');
+Route::post('/update-identitas/{id}', 'DataUmumController@updateidentitas')->name('update-identitas');
+Route::get('/viewidentitas/{id}', 'DataUmumController@viewidentitas');
+
 Route::get('/homes', 'DataUmumController@home')->name('homes');
 Route::get('/kepalakphs', 'DataUmumController@kepalakph')->name('kepalakphs');
 Route::get('/fasilitass', 'DataUmumController@fasilitas')->name('fasilitass');
 Route::get('/lembagas', 'DataUmumController@lembaga')->name('lembagas');
 Route::get('/rphjps', 'DataUmumController@rphjp')->name('rphjps');
->>>>>>> 1733e5cdb997878cd8669ce6af0fe48f7253b86c
