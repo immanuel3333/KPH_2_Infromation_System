@@ -15,6 +15,7 @@ use App\Sejarah;
 use App\Galeriupt;
 use File;
 use App\PotensiEkonomi1;
+use App\JasaLingkungan1;
 
 
 class AdminController extends Controller
@@ -304,6 +305,80 @@ class AdminController extends Controller
         return redirect('showpotensiekonomi1');
 
     }
+
+    public function ajaxekonomi1(){
+        $pe = DB::table('potensiekonomi1')->get();
+        return view('ajaxekonomi1',compact('pe'));
+
+    }
+
+
+
+
+    
+    //Jasa Lingkungan1
+    public function inputjasalingkungan1()
+    {
+        $jl = JasaLingkungan1::latest()->get();
+        return view('inputjasalingkungan1');
+    }
+
+    public function store6(Request $request)
+    {
+        // dd($request->all());
+        $up1=substr($request->kayu, 3,-4);
+        $up2=substr($request->nonkayu, 3,-4);
+        // $up3=substr($request->jasalingkungan,);
+        // $up4=substr($request->bisnis, );
+        $up5=substr($request->donor, 3,-4);
+        $pe = PotensiEkonomi1::create([
+            'kayu' => $up1,
+            'nonkayu' => $up2,
+            'jasalingkungan' => $request->jasalingkungan,
+            'bisnis' => $request->bisnis,
+            'donor' => $up5,
+        ]);
+
+        return redirect('showpjasalingkungan1');
+    }
+
+    public function update6(Request $request, $id)
+    {
+        $pe=PotensiEkonomi1::find($id);
+        $up1=substr($request->kayu, 3,-4);
+        $up2=substr($request->nonkayu, 3,-4);
+        $up5=substr($request->donor, 3,-4);
+        $pe->update([
+            'kayu' => $up1,
+            'nonkayu' => $up2,
+            'jasalingkungan' => $request->jasalingkungan,
+            'bisnis' => $request->bisnis,
+            'donor' => $up5,
+        ]);
+        return redirect('showjasalingkungan1');
+
+    }
+
+
+    public function showjasalingkungan1(){
+        $jl = DB::table('jasalingkungan1')->get();
+        return view('showjasalingkungan1',compact('jl'));
+
+    }
+
+    public function view6()
+    {
+        $jl=JenisLatihan1::all();
+        foreach($jl as $jl)
+        {
+            $jl->action='<a href="edit/'.$latihan->id.'" class="btn btn-warning btn-sm" id="update'.$latihan->id.'">Edit</a>
+            <a href="delete/'.$latihan->id.'" class="btn btn-danger btn-sm" id="'.$latihan->id.'" >Delete</a>';
+        }
+        
+        return response()->json($jl,200);
+
+    }
+
 
     
 

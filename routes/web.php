@@ -58,19 +58,16 @@ Route::get('/view4/{id}', 'AdminController@view4');
 Route::get('/destroy4/{id}', 'AdminController@destroy4')->name('delete-galeriupt');
 
 
-<<<<<<< HEAD
 //Data Ekonomi
 Route::get('/inputpotensiekonomi1', 'AdminController@inputpotensiekonomi1')->name('inputpotensiekonomi1');
 Route::post('/simpan-potensiekonomi1', 'AdminController@store5')->name('simpan-potensiekonomi1');
 Route::get('/showpotensiekonomi1', 'AdminController@showpotensiekonomi1')->name('showpotensiekonomi1');
+Route::get('/ajaxekonomi1', 'AdminController@ajaxekonomi1')->name('ajaxekonomi1');
 
 Route::post('/update-potensiekonomi1/{id}', 'AdminController@update5')->name('update-potensiekonomi1');
 Route::get('/view5/{id}', 'AdminController@view5');
 
-
-
-
-=======
+//peraturan
 Route::resource('peraturans', PeraturanController::class);
 
 Route::get('/show-dataumum', 'DataUmumController@index')->name('show-dataumum');
@@ -79,4 +76,19 @@ Route::get('/kepalakphs', 'DataUmumController@kepalakph')->name('kepalakphs');
 Route::get('/fasilitass', 'DataUmumController@fasilitas')->name('fasilitass');
 Route::get('/lembagas', 'DataUmumController@lembaga')->name('lembagas');
 Route::get('/rphjps', 'DataUmumController@rphjp')->name('rphjps');
->>>>>>> 1733e5cdb997878cd8669ce6af0fe48f7253b86c
+
+//JasaLingkungan
+Route::get('/inputjasalingkungan1', 'AdminController@inputjasalingkungan1')->name('inputjasalingkungan1');
+Route::post('/simpan-jasalingkungan1', 'AdminController@store6')->name('simpan-jasalingkungan1');
+Route::get('/showjasalingkungan1', 'AdminController@showjasalingkungan1')->name('showjasalingkungan1');
+
+Route::post('/update-jasalingkungan1/{id}', 'AdminController@update6')->name('update-jasalingkungan1');
+Route::get('/destroy4/{id}', 'AdminController@destroy4')->name('delete-galeriupt');
+Route::get('/view5', 'AdminController@view5');
+
+
+
+
+
+
+

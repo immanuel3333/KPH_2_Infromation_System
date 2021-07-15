@@ -117,31 +117,7 @@
                         </div>
                     </nav>
                 </div>
-            </div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-primary mb-5 text-white">
-            <a class="navbar-brand nav-menu" id="home">Dewan Komputer</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse justify-content-end">
-                <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link nav-menu text-white" id="home">Home</a></li>
-                <li class="nav-item"><a class="nav-link nav-menu text-white" id="tentang_kami">Tentang Kami</a></li>
-                <li class="nav-item"><a class="nav-link nav-menu text-white" id="hubungi_kami">Hubungi Kami</a></li>
-                <li class="nav-item"><a class="nav-link nav-menu text-white" id="produk">Produk</a></li>
-                <li class="nav-item"><a class="nav-link nav-menu text-white" id="blog">Blog</a></li>
-                </ul>
-            </div>
-            </nav>
-            
-            <div class="container">
-                <div class="halaman-menu"></div>
-            </div>
- 
-<div class="p-2 bg-secondary text-white text-center fixed-bottom">© <?php echo date('Y'); ?> Copyright:
-  <a href="https://dewankomputer.com/"> Dewan Komputer</a>
-</div>
+            </div>     
 
             <div class="mm-sidebar sidebar-default" style="fixed-left">
                 <div class="mm-sidebar-logo d-flex align-items-center justify-content-between">

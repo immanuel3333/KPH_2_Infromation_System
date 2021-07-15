@@ -28,6 +28,6 @@ class CreateVisiMisisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('visi_misi');
+        Schema::dropIfExists('visimisi');
     }
 }

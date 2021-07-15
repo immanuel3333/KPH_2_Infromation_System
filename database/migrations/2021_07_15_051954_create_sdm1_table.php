@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSejarahTable extends Migration
+class CreateSdm1Table extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateSejarahTable extends Migration
      */
     public function up()
     {
-        Schema::create('sejarah', function (Blueprint $table) {
+        Schema::create('sdm1', function (Blueprint $table) {
             $table->id();
-            $table->mediumText('description');
-            $table->string('images')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ class CreateSejarahTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sejarah');
+        Schema::dropIfExists('sdm1');
     }
 }
