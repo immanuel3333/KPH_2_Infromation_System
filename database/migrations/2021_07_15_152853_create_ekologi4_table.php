@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSejarahTable extends Migration
+class CreateEkologi4Table extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateSejarahTable extends Migration
      */
     public function up()
     {
-        Schema::create('sejarah', function (Blueprint $table) {
+        Schema::create('ekologi4', function (Blueprint $table) {
             $table->id();
-            $table->mediumText('sejarah');
-            $table->string('gambar')->nullable();
+            $table->string('jenis_tanah');
+            $table->string('jenis_kayu');
+            $table->string('fauna_satwa');
+            $table->string('kelerengan');
+            $table->string('DAS');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ class CreateSejarahTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sejarah');
+        Schema::dropIfExists('ekologi4');
     }
 }

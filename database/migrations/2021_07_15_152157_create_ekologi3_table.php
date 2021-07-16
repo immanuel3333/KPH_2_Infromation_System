@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVisiMisisTable extends Migration
+class CreateEkologi3Table extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateVisiMisisTable extends Migration
      */
     public function up()
     {
-        Schema::create('visimisi', function (Blueprint $table) {
+        Schema::create('ekologi3', function (Blueprint $table) {
             $table->id();
-            $table->mediumText('visi');
-            $table->mediumText('misi');
+            $table->string('jenis_tanah');
+            $table->string('jenis_kayu');
+            $table->string('fauna_satwa');
+            $table->string('kelerengan');
+            $table->string('DAS');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ class CreateVisiMisisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('visimisi');
+        Schema::dropIfExists('ekologi3');
     }
 }

@@ -15,36 +15,36 @@
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td>Potensi Kayu</td>
-                    <td> {!! $pe->kayu !!} </td>
+                    <td>Jenis Tanah</td>
+                    <td> {!! $pe->jenis_tanah !!} </td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
-                    <td>Potensi Non-Kayu</td>
-                    <td> {!! $pe->nonkayu !!} </td>
+                    <td>Jenis Kayu</td>
+                    <td> {!! $pe->jenis_kayu !!} </td>
                 </tr>
 
                 <tr>
                     <th scope="row">3</th>
-                    <td>Potensi Jasa Lingkungan</td>
-                    <td> {!! $pe->jasalingkungan !!} </td>
+                    <td>Fauna/Satwa</td>
+                    <td> {!! $pe->fauna_satwa !!} </td>
                 </tr>
                 <tr>
                     <th scope="row">4</th>
-                    <td>Rencana Bisnis</td>
-                    <td> {!! $pe->bisnis !!} </td>
+                    <td>Kelerengan</td>
+                    <td> {!! $pe->kelerengan !!} </td>
                 </tr>
                 <tr>
                     <th scope="row">5</th>
-                    <td>Dukungan Donor</td>
-                    <td> {!! $pe->donor !!} </td>
+                    <td>DAS</td>
+                    <td> {!! $pe->DAS !!} </td>
                 </tr>
             </tbody>
         </table>
         @endforeach
 
     
-        <a href="{{url('/view5')}}/{{$pe->id}}" class="ml-auto">
+        <a href="{{url('/viewekologi2')}}/{{$pe->id}}" class="ml-auto">
         <button type="submit" class="btn" style="background-color: #99F07A;">Edit</button>  
     </div>
     

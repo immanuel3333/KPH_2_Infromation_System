@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGaleriuptTable extends Migration
+class CreateEkologi2Table extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateGaleriuptTable extends Migration
      */
     public function up()
     {
-        Schema::create('galeriupt', function (Blueprint $table) {
+        Schema::create('ekologi2', function (Blueprint $table) {
             $table->id();
-            $table->date('tanggal');
-            $table->mediumText('keterangan');
-            $table->string('gambar')->nullable();
+            $table->string('jenis_tanah');
+            $table->string('jenis_kayu');
+            $table->string('fauna_satwa');
+            $table->string('kelerengan');
+            $table->string('DAS');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateGaleriuptTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('galeriupt');
+        Schema::dropIfExists('ekologi2');
     }
 }
