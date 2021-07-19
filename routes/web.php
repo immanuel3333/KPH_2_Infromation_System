@@ -67,16 +67,28 @@ Route::get('/ajaxekonomi1', 'AdminController@ajaxekonomi1')->name('ajaxekonomi1'
 Route::post('/update-potensiekonomi1/{id}', 'AdminController@update5')->name('update-potensiekonomi1');
 Route::get('/view5/{id}', 'AdminController@view5');
 
+<<<<<<< HEAD
 //peraturan
+=======
+
+
+
+>>>>>>> 061ad90be7399dfc10c64661970791b1f5a56e03
 Route::resource('peraturans', PeraturanController::class);
 
+Route::get('/inputidentitas', 'DataUmumController@inputidentitas')->name('inputidentitas');
+Route::post('/simpan-identitas', 'DataUmumController@storeidentitas')->name('simpan-identitas');
 Route::get('/show-dataumum', 'DataUmumController@index')->name('show-dataumum');
+Route::post('/update-identitas/{id}', 'DataUmumController@updateidentitas')->name('update-identitas');
+Route::get('/viewidentitas/{id}', 'DataUmumController@viewidentitas');
+
 Route::get('/homes', 'DataUmumController@home')->name('homes');
 Route::get('/kepalakphs', 'DataUmumController@kepalakph')->name('kepalakphs');
 Route::get('/fasilitass', 'DataUmumController@fasilitas')->name('fasilitass');
 Route::get('/lembagas', 'DataUmumController@lembaga')->name('lembagas');
 Route::get('/rphjps', 'DataUmumController@rphjp')->name('rphjps');
 
+<<<<<<< HEAD
 //JasaLingkungan
 Route::get('/inputjasalingkungan1', 'AdminController@inputjasalingkungan1')->name('inputjasalingkungan1');
 Route::post('/simpan-jasalingkungan1', 'AdminController@store6')->name('simpan-jasalingkungan1');
@@ -101,3 +113,37 @@ Route::get('/viewsdm1/{id}', 'AdminController@viewsdm1');
 
 
 
+=======
+
+//ekologi
+Route::get('/inputekologi', 'AdminController@inputekologi')->name('inputekologi');
+Route::post('/simpan-ekologi', 'AdminController@storeekologi')->name('simpan-ekologi');
+Route::get('/showekologi', 'AdminController@showekologi')->name('showekologi');
+
+Route::post('/update-ekologi/{id}', 'AdminController@updateekologi')->name('update-ekologi');
+Route::get('/viewekologi/{id}', 'AdminController@viewekologi');
+
+//ekologi2
+Route::get('/inputekologi2', 'AdminController@inputekologi2')->name('inputekologi2');
+Route::post('/simpan-ekologi2', 'AdminController@storeekologi2')->name('simpan-ekologi2');
+Route::get('/showekologi2', 'AdminController@showekologi2')->name('showekologi2');
+
+Route::post('/update-ekologi2/{id}', 'AdminController@updateekologi2')->name('update-ekologi2');
+Route::get('/viewekologi2/{id}', 'AdminController@viewekologi2');
+
+//ekologi3
+Route::get('/inputekologi3', 'AdminController@inputekologi3')->name('inputekologi3');
+Route::post('/simpan-ekologi3', 'AdminController@storeekologi3')->name('simpan-ekologi3');
+Route::get('/showekologi3', 'AdminController@showekologi3')->name('showekologi3');
+
+Route::post('/update-ekologi3/{id}', 'AdminController@updateekologi3')->name('update-ekologi3');
+Route::get('/viewekologi3/{id}', 'AdminController@viewekologi3');
+
+//ekologi4
+Route::get('/inputekologi4', 'AdminController@inputekologi4')->name('inputekologi4');
+Route::post('/simpan-ekologi4', 'AdminController@storeekologi4')->name('simpan-ekologi4');
+Route::get('/showekologi4', 'AdminController@showekologi4')->name('showekologi4');
+
+Route::post('/update-ekologi4/{id}', 'AdminController@updateekologi4')->name('update-ekologi4');
+Route::get('/viewekologi4/{id}', 'AdminController@viewekologi4');
+>>>>>>> 061ad90be7399dfc10c64661970791b1f5a56e03
