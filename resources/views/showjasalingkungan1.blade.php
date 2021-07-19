@@ -8,11 +8,13 @@
                 <th>Jenis Jasa Lingkungan</th>
                 <th>Satuan</th>
                 <th>Keunggulan</th>
-                <th>Lokasi</th>
+                <th>Lintang</th>
+                <th>Bujur</th>
                 <th>Pengembangan</th>
                 <th>Tahapan</th>
                 <th>Periode</th>
                 <th>Hasil</th>
+                <th>Action</th>
 
             </tr>
          </thead>
@@ -23,10 +25,10 @@
 <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js" ></script>
 <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js" ></script>
 <script>
-    $(document).ready(function(){
+$(document).ready(function(){
 		$('#jasalingkungan-table').DataTable({
             "ajax": {
-            "url": "{{url('/view5')}}",
+            "url": "{{url('/jasalingkungan1')}}",
             "dataSrc": ""    
         },
             dom: 'Bfrtip',
@@ -43,16 +45,18 @@
 				{ data: 'jenis_jasa_lingkungan', name: 'jenis_jasa_lingkungan', orderable: false },
 				{ data: 'satuan', name: 'satuan', orderable: false },
 				{ data: 'keunggulan', name: 'keunggulan', orderable: false },
-				{ data: 'lokasi', name: 'lokasi', orderable: false },
+				{ data: 'lintang', name: 'lintang', orderable: false },
+                { data: 'bujur', name: 'bujur', orderable: false },
                 { data: 'pengembangan', name: 'pengembangan', orderable: false },
                 { data: 'tahapan', name: 'tahapan', orderable: false },
                 { data: 'periode', name: 'periode', orderable: false },
-                { data: 'hasil', name: 'hasil', orderable: false }
+                { data: 'hasil', name: 'hasil', orderable: false },
+                { data: 'action', name: 'action', orderable: false }
 			]
 		});
 	});
 </script>
-@include('layouts.footer')
+@include('layouts.footeradmin')
 
 
 

@@ -19,7 +19,8 @@ class CreateJasalingkungan1Table extends Migration
             $table->string('jenis_jasa_lingkungan');
             $table->string('satuan');
             $table->string('keunggulan');
-            $table->string('lokasi');
+            $table->string('lintang');
+            $table->string('bujur');
             $table->string('pengembangan');
             $table->string('tahapan');
             $table->string('periode');

@@ -84,7 +84,16 @@ Route::get('/showjasalingkungan1', 'AdminController@showjasalingkungan1')->name(
 
 Route::post('/update-jasalingkungan1/{id}', 'AdminController@update6')->name('update-jasalingkungan1');
 Route::get('/destroy4/{id}', 'AdminController@destroy4')->name('delete-galeriupt');
-Route::get('/view5', 'AdminController@view5');
+Route::get('/jasalingkungan1', 'AdminController@view6');
+
+//sdm1
+Route::get('/inputsdm1', 'AdminController@inputsdm1')->name('inputsdm1');
+Route::post('/simpan-sdm1', 'AdminController@storesdm1')->name('simpan-sdm1');
+Route::get('/showsdm1', 'AdminController@showsdm1')->name('showsdm1');
+Route::get('/ajaxekonomi1', 'AdminController@ajaxekonomi1')->name('ajaxekonomi1');
+
+Route::post('/update-sdm1/{id}', 'AdminController@updatesdm1')->name('update-sdm1');
+Route::get('/viewsdm1/{id}', 'AdminController@viewsdm1');
 
 
 

@@ -16,6 +16,9 @@ use App\Galeriupt;
 use File;
 use App\PotensiEkonomi1;
 use App\JasaLingkungan1;
+use App\SDM1;
+
+
 
 
 class AdminController extends Controller
@@ -326,20 +329,21 @@ class AdminController extends Controller
     public function store6(Request $request)
     {
         // dd($request->all());
-        $up1=substr($request->kayu, 3,-4);
-        $up2=substr($request->nonkayu, 3,-4);
-        // $up3=substr($request->jasalingkungan,);
-        // $up4=substr($request->bisnis, );
-        $up5=substr($request->donor, 3,-4);
-        $pe = PotensiEkonomi1::create([
-            'kayu' => $up1,
-            'nonkayu' => $up2,
-            'jasalingkungan' => $request->jasalingkungan,
-            'bisnis' => $request->bisnis,
-            'donor' => $up5,
+        $jl = JasaLingkungan1::create([
+            'provinsi' => $request->provinsi,
+            'jenis_jasa_lingkungan'  => $request->jenis_jasa_lingkungan,
+            'satuan' => $request->satuan,
+            'keunggulan' => $request->keunggulan,
+            'lintang'  => $request->lintang,
+            'bujur' => $request->bujur,
+            'pengembangan' => $request->pengembangan,
+            'tahapan' => $request->tahapan,
+            'periode' => $request->periode,
+            'hasil' => $request->hasil,
+
         ]);
 
-        return redirect('showpjasalingkungan1');
+        return redirect('showjasalingkungan1');
     }
 
     public function update6(Request $request, $id)
@@ -368,17 +372,90 @@ class AdminController extends Controller
 
     public function view6()
     {
-        $jl=JenisLatihan1::all();
+        $jl=JasaLingkungan1::all();
         foreach($jl as $jl)
         {
-            $jl->action='<a href="edit/'.$latihan->id.'" class="btn btn-warning btn-sm" id="update'.$latihan->id.'">Edit</a>
-            <a href="delete/'.$latihan->id.'" class="btn btn-danger btn-sm" id="'.$latihan->id.'" >Delete</a>';
+            $jl->action='<a href="edit/'.$jl->id.'" class="btn btn-warning btn-sm" id="update'.$jl->id.'">Edit</a>
+            <a href="delete/'.$jl->id.'" class="btn btn-danger btn-sm" id="'.$jl->id.'" >Delete</a>';
         }
         
         return response()->json($jl,200);
 
     }
 
+
+
+    //SDM1
+
+    public function inputsdm1()
+    {
+        $pe = SDM1::latest()->get();
+        return view('inputsdm1');
+    }
+
+    public function storesdm1(Request $request)
+    {
+        // dd($request->all());
+        $pe = SDM1::create([
+            'kkph' => $request->kkph,
+            'kepala_seksi' => $request->kepala_seksi,
+            'tata_usaha' => $request->tata_usaha,
+            'kepala_resort' => $request->kepala_resort,
+            'staf_pns' => $request->staf_pns,
+            'staf_honorer' => $request->staf_honorer,
+            'tenaga_kontrak' => $request->tenaga_kontrak,
+            'tenaga_brigdalkarhutlapns' => $request->tenaga_brigdalkarhutlapns,
+            'tenaga_brigdalkarhutlanonpns' => $request->tenaga_brigdalkarhutlanonpns,
+            'pamhut' => $request->pamhut,
+            'sdm_pemda' => $request->sdm_pemda,
+            'bukti_rimbawa_sebelum_2015' => $request->bukti_rimbawa_sebelum_2015,
+            'bakti_rimbawa_2015' => $request->bakti_rimbawa_2015,
+            'bakti_rimbawa_2016' => $request->bakti_rimbawa_2016,
+            'bakti_rimbawa_2017' => $request->bakti_rimbawa_2017,
+            'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
+            'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
+        ]);
+
+        return redirect('showsdm1');
+    }
+
+    public function showsdm1(Request $request)
+    {
+        $pe = DB::table('sdm1')->get();
+        return view('showsdm1', compact('pe'));
+    }
+
+    public function viewsdm1($id)
+    {
+        $pe=SDM1::find($id);
+        return view('editsdm1',compact('pe'));
+    }
+
+    public function updatesdm1(Request $request, $id)
+    {
+        $pe=SDM1::find($id);
+        $pe->update([
+            'kkph' => $request->kkph,
+            'kepala_seksi' => $request->kepala_seksi,
+            'tata_usaha' => $request->tata_usaha,
+            'kepala_resort' => $request->kepala_resort,
+            'staf_pns' => $request->staf_pns,
+            'staf_honorer' => $request->staf_honorer,
+            'tenaga_kontrak' => $request->tenaga_kontrak,
+            'tenaga_brigdalkarhutlapns' => $request->tenaga_brigdalkarhutlapns,
+            'tenaga_brigdalkarhutlanonpns' => $request->tenaga_brigdalkarhutlanonpns,
+            'pamhut' => $request->pamhut,
+            'sdm_pemda' => $request->sdm_pemda,
+            'bukti_rimbawa_sebelum_2015' => $request->bukti_rimbawa_sebelum_2015,
+            'bakti_rimbawa_2015' => $request->bakti_rimbawa_2015,
+            'bakti_rimbawa_2016' => $request->bakti_rimbawa_2016,
+            'bakti_rimbawa_2017' => $request->bakti_rimbawa_2017,
+            'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
+            'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
+        ]);
+        return redirect('showsdm1');
+
+    }
 
     
 

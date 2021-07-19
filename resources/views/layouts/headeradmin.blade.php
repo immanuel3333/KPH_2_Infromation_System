@@ -23,9 +23,7 @@
       <link rel='stylesheet' href="{{ asset('assets/vendor/fullcalendar/timegrid/main.css') }}" />
       <link rel='stylesheet' href="{{ asset('assets/vendor/fullcalendar/list/main.css') }}" />
       <link rel="stylesheet" href="{{ asset('assets/vendor/mapbox/mapbox-gl.css') }}">
-
-
-      <link rel="stylesheet" href="{{ asset('css/cc.css') }}">
+      
       <link rel="stylesheet" href="{{ asset('styles/main.css')}}">
       <link rel="stylesheet" href="{{ asset('styles/style.css')}}">
       <link rel="stylesheet" href="{{ asset('styles/animate.min.css')}}">
