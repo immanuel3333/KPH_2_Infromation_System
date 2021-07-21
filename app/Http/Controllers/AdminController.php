@@ -15,13 +15,18 @@ use App\Sejarah;
 use App\Galeriupt;
 use File;
 use App\PotensiEkonomi1;
-<<<<<<< HEAD
-use App\JasaLingkungan1;
+
+
 use App\SDM1;
+<<<<<<< HEAD
 =======
 
 
 use App\SDM1;
+
+
+>>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
+=======
 
 
 >>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
@@ -30,7 +35,11 @@ use App\Ekologi2;
 use App\Ekologi3;
 use App\Ekologi4;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+use App\JasaLingkungan1;
+>>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
 =======
 use App\JasaLingkungan1;
 >>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
@@ -336,6 +345,9 @@ class AdminController extends Controller
 
 
 
+<<<<<<< HEAD
+>>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
+=======
 >>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
     //Jasa Lingkungan1
     public function inputjasalingkungan1()

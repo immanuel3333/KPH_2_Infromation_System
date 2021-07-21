@@ -67,12 +67,12 @@ Route::get('/ajaxekonomi1', 'AdminController@ajaxekonomi1')->name('ajaxekonomi1'
 Route::post('/update-potensiekonomi1/{id}', 'AdminController@update5')->name('update-potensiekonomi1');
 Route::get('/view5/{id}', 'AdminController@view5');
 
+
+
+
 <<<<<<< HEAD
-//peraturan
+>>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
 =======
-
-
-
 >>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
 Route::resource('peraturans', PeraturanController::class);
 //data umum
@@ -99,6 +99,7 @@ Route::get('/lembagas', 'DataUmumController@lembaga')->name('lembagas');
 Route::get('/rphjps', 'DataUmumController@rphjp')->name('rphjps');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //JasaLingkungan
 Route::get('/inputjasalingkungan1', 'AdminController@inputjasalingkungan1')->name('inputjasalingkungan1');
 Route::post('/simpan-jasalingkungan1', 'AdminController@store6')->name('simpan-jasalingkungan1');
@@ -119,6 +120,8 @@ Route::get('/ajaxekonomi1', 'AdminController@ajaxekonomi1')->name('ajaxekonomi1'
 Route::post('/update-sdm1/{id}', 'AdminController@updatesdm1')->name('update-sdm1');
 Route::get('/viewsdm1/{id}', 'AdminController@viewsdm1');
 
+=======
+>>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
 =======
 >>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
 
@@ -154,7 +157,10 @@ Route::get('/showekologi4', 'AdminController@showekologi4')->name('showekologi4'
 Route::post('/update-ekologi4/{id}', 'AdminController@updateekologi4')->name('update-ekologi4');
 Route::get('/viewekologi4/{id}', 'AdminController@viewekologi4');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
 
 
 //JasaLingkungan
@@ -181,4 +187,7 @@ Route::get('/viewsdm1/{id}', 'AdminController@viewsdm1');
 
 
 
+<<<<<<< HEAD
+>>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
+=======
 >>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
