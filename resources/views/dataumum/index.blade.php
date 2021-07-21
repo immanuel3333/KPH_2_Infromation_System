@@ -29,7 +29,7 @@
                 });
             }
             function kepalakph(){
-                $.get("{{url('kepalakphs')}}", function(data2) {
+                $.get("{{url('kepalakph')}}", function(data2) {
                 $("#konten").html(data2);
                 });
             }

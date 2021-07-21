@@ -1,5 +1,3 @@
-
-<h1>Hallo</h1>
 <center>
     <div class="col-md-9 ">
         <table class="table table-bordered-2">
@@ -66,7 +64,7 @@
               <tr>
                 <th scope="row">11</th>
                 <td>Aksesibilitas</td>
-                <td>{{$idn->aksesibiitas}}</td>
+                <td>{{$idn->aksesibilitas}}</td>
               </tr>
               <tr>
                 <th scope="row">12</th>

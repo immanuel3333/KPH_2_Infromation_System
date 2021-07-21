@@ -15,13 +15,25 @@ use App\Sejarah;
 use App\Galeriupt;
 use File;
 use App\PotensiEkonomi1;
+<<<<<<< HEAD
 use App\JasaLingkungan1;
 use App\SDM1;
+=======
+
+
+use App\SDM1;
+
+
+>>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
 use App\Ekologi;
 use App\Ekologi2;
 use App\Ekologi3;
 use App\Ekologi4;
+<<<<<<< HEAD
 
+=======
+use App\JasaLingkungan1;
+>>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
 
 
 class AdminController extends Controller
@@ -75,7 +87,7 @@ class AdminController extends Controller
             'misi'=>$request->misi
         ]);
         return redirect('showvisimisi');
-        
+
     }
 
     public function view1()
@@ -121,7 +133,7 @@ class AdminController extends Controller
             'fungsi'=>$down
         ]);
         return redirect('showtugasfungsi');
-        
+
     }
     public function view2()
     {
@@ -138,7 +150,7 @@ class AdminController extends Controller
     }
     public function store3(Request $request)
     {
-         
+
         $image = $request->gambar;
         $new_image = time().$image->getClientOriginalName();
         $up=substr($request->sejarah, 3,-4);
@@ -173,15 +185,15 @@ class AdminController extends Controller
         ]);
         return redirect('showsejarah');
 
-       
-        
+
+
     }
     public function view3()
     {
         $sj = DB::table('sejarah')->get();
       return view('edit3', compact('sj'));
     }
-    
+
 
 
 
@@ -238,7 +250,7 @@ class AdminController extends Controller
 
     }
 
-    
+
     public function destroy4($id)
     {
         // dd($id);
@@ -317,7 +329,14 @@ class AdminController extends Controller
 
     }
 
+<<<<<<< HEAD
     
+=======
+
+
+
+
+>>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
     //Jasa Lingkungan1
     public function inputjasalingkungan1()
     {
@@ -379,7 +398,7 @@ class AdminController extends Controller
             $jl2->action='<a href="view65/'.$jl2->id.'" class="btn btn-warning btn-sm" id="update'.$jl2->id.'">Edit</a>
             <a href="delete/'.$jl2->id.'" class="btn btn-danger btn-sm" id="'.$jl2->id.'" >Delete</a>';
         }
-        
+
         return response()->json($jl,200);
         // return dd($jl);
 
@@ -465,7 +484,7 @@ class AdminController extends Controller
 
     }
 
-    
+
 //ekologi
 
 public function inputekologi()
@@ -522,7 +541,7 @@ public function inputekologi()
         ]);
         return redirect('showekologi');
 
-    } 
+    }
 
 //ekologi2
 
@@ -580,7 +599,7 @@ public function inputekologi2()
         ]);
         return redirect('showekologi2');
 
-    } 
+    }
 
 //ekologi3
 public function inputekologi3()
@@ -696,7 +715,7 @@ public function inputekologi4()
         ]);
         return redirect('showekologi4');
 
-    } 
+    }
 
 
 }
