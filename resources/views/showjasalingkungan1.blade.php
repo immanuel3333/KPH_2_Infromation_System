@@ -23,7 +23,8 @@
 
 <script src="{{asset('js/jquery-3.5.1.min.js')}}" ></script>
 <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js" ></script>
-<script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js" ></script>
+<script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js" defer ></script>
+<!-- defer itu untuk menjalankan secara asinkronus -->
 <script>
 $(document).ready(function(){
 		$('#jasalingkungan-table').DataTable({
@@ -36,7 +37,7 @@ $(document).ready(function(){
                 {
                     text: 'Create',
                     action: function ( e, dt, node, config ) {
-                        window.location = "{{url('/create2')}}";
+                        window.location = "{{url('/inputjasalingkungan1')}}";
                     }
                 }
             ],

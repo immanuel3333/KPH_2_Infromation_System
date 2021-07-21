@@ -15,16 +15,12 @@ use App\Sejarah;
 use App\Galeriupt;
 use File;
 use App\PotensiEkonomi1;
-<<<<<<< HEAD
 use App\JasaLingkungan1;
 use App\SDM1;
-
-=======
 use App\Ekologi;
 use App\Ekologi2;
 use App\Ekologi3;
 use App\Ekologi4;
->>>>>>> 061ad90be7399dfc10c64661970791b1f5a56e03
 
 
 
@@ -139,7 +135,6 @@ class AdminController extends Controller
     public function inputsejarah()
     {
         return view ('/inputsejarah');
-
     }
     public function store3(Request $request)
     {
@@ -322,9 +317,6 @@ class AdminController extends Controller
 
     }
 
-
-
-
     
     //Jasa Lingkungan1
     public function inputjasalingkungan1()
@@ -355,16 +347,18 @@ class AdminController extends Controller
 
     public function update6(Request $request, $id)
     {
-        $pe=PotensiEkonomi1::find($id);
-        $up1=substr($request->kayu, 3,-4);
-        $up2=substr($request->nonkayu, 3,-4);
-        $up5=substr($request->donor, 3,-4);
-        $pe->update([
-            'kayu' => $up1,
-            'nonkayu' => $up2,
-            'jasalingkungan' => $request->jasalingkungan,
-            'bisnis' => $request->bisnis,
-            'donor' => $up5,
+        $jl=JasaLingkungan1::find($id);
+        $jl->update([
+            'provinsi' => $request->provinsi,
+            'jenis_jasa_lingkungan' => $request->jenis_jasa_lingkungan,
+            'satuan' => $request->satuan,
+            'keunggulan' => $request->keunggulan,
+            'lintang'  => $request->lintang,
+            'bujur' => $request->bujur,
+            'pengembangan' => $request->pengembangan,
+            'tahapan' => $request->tahapan,
+            'periode' => $request->periode,
+            'hasil' => $request->hasil,
         ]);
         return redirect('showjasalingkungan1');
 
@@ -380,15 +374,22 @@ class AdminController extends Controller
     public function view6()
     {
         $jl=JasaLingkungan1::all();
-        foreach($jl as $jl)
+        foreach($jl as $jl2)
         {
-            $jl->action='<a href="edit/'.$jl->id.'" class="btn btn-warning btn-sm" id="update'.$jl->id.'">Edit</a>
-            <a href="delete/'.$jl->id.'" class="btn btn-danger btn-sm" id="'.$jl->id.'" >Delete</a>';
+            $jl2->action='<a href="view65/'.$jl2->id.'" class="btn btn-warning btn-sm" id="update'.$jl2->id.'">Edit</a>
+            <a href="delete/'.$jl2->id.'" class="btn btn-danger btn-sm" id="'.$jl2->id.'" >Delete</a>';
         }
         
         return response()->json($jl,200);
+        // return dd($jl);
 
     }
+    public function view65($id)
+    {
+        $jl=JasaLingkungan1::find($id);
+        return view('editjasalingkungan1',compact('jl'));
+    }
+
 
 
 
