@@ -15,17 +15,16 @@ use App\Sejarah;
 use App\Galeriupt;
 use File;
 use App\PotensiEkonomi1;
-<<<<<<< HEAD
-use App\JasaLingkungan1;
+
+
 use App\SDM1;
 
-=======
+
 use App\Ekologi;
 use App\Ekologi2;
 use App\Ekologi3;
 use App\Ekologi4;
->>>>>>> 061ad90be7399dfc10c64661970791b1f5a56e03
-
+use App\JasaLingkungan1;
 
 
 class AdminController extends Controller
@@ -79,7 +78,7 @@ class AdminController extends Controller
             'misi'=>$request->misi
         ]);
         return redirect('showvisimisi');
-        
+
     }
 
     public function view1()
@@ -125,7 +124,7 @@ class AdminController extends Controller
             'fungsi'=>$down
         ]);
         return redirect('showtugasfungsi');
-        
+
     }
     public function view2()
     {
@@ -143,7 +142,7 @@ class AdminController extends Controller
     }
     public function store3(Request $request)
     {
-         
+
         $image = $request->gambar;
         $new_image = time().$image->getClientOriginalName();
         $up=substr($request->sejarah, 3,-4);
@@ -178,15 +177,15 @@ class AdminController extends Controller
         ]);
         return redirect('showsejarah');
 
-       
-        
+
+
     }
     public function view3()
     {
         $sj = DB::table('sejarah')->get();
       return view('edit3', compact('sj'));
     }
-    
+
 
 
 
@@ -243,7 +242,7 @@ class AdminController extends Controller
 
     }
 
-    
+
     public function destroy4($id)
     {
         // dd($id);
@@ -325,7 +324,7 @@ class AdminController extends Controller
 
 
 
-    
+
     //Jasa Lingkungan1
     public function inputjasalingkungan1()
     {
@@ -385,7 +384,7 @@ class AdminController extends Controller
             $jl->action='<a href="edit/'.$jl->id.'" class="btn btn-warning btn-sm" id="update'.$jl->id.'">Edit</a>
             <a href="delete/'.$jl->id.'" class="btn btn-danger btn-sm" id="'.$jl->id.'" >Delete</a>';
         }
-        
+
         return response()->json($jl,200);
 
     }
@@ -464,7 +463,7 @@ class AdminController extends Controller
 
     }
 
-    
+
 //ekologi
 
 public function inputekologi()
@@ -521,7 +520,7 @@ public function inputekologi()
         ]);
         return redirect('showekologi');
 
-    } 
+    }
 
 //ekologi2
 
@@ -579,7 +578,7 @@ public function inputekologi2()
         ]);
         return redirect('showekologi2');
 
-    } 
+    }
 
 //ekologi3
 public function inputekologi3()
@@ -695,7 +694,7 @@ public function inputekologi4()
         ]);
         return redirect('showekologi4');
 
-    } 
+    }
 
 
 }

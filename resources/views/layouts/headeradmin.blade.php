@@ -23,7 +23,7 @@
       <link rel='stylesheet' href="{{ asset('assets/vendor/fullcalendar/timegrid/main.css') }}" />
       <link rel='stylesheet' href="{{ asset('assets/vendor/fullcalendar/list/main.css') }}" />
       <link rel="stylesheet" href="{{ asset('assets/vendor/mapbox/mapbox-gl.css') }}">
-      
+
       <link rel="stylesheet" href="{{ asset('styles/main.css')}}">
       <link rel="stylesheet" href="{{ asset('styles/style.css')}}">
       <link rel="stylesheet" href="{{ asset('styles/animate.min.css')}}">
@@ -50,7 +50,7 @@
     </script>
 
     <script src="{{ asset('ckeditor/ckeditor.js')}}"></script>
-    
+
 
 
     <style>
@@ -218,7 +218,7 @@
                                         </a>
                                         <ul id="unit" class="submenu collapse" data-parent="#uker">
                                             <li class="">
-                                                <a href="../app/user-profile.html" class="svg-icon">
+                                                <a href="{{ route('show-dataumum') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src=" {{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data Umum</span>

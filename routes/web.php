@@ -67,53 +67,33 @@ Route::get('/ajaxekonomi1', 'AdminController@ajaxekonomi1')->name('ajaxekonomi1'
 Route::post('/update-potensiekonomi1/{id}', 'AdminController@update5')->name('update-potensiekonomi1');
 Route::get('/view5/{id}', 'AdminController@view5');
 
-<<<<<<< HEAD
-//peraturan
-=======
 
 
 
->>>>>>> 061ad90be7399dfc10c64661970791b1f5a56e03
 Route::resource('peraturans', PeraturanController::class);
-
+//data umum
 Route::get('/inputidentitas', 'DataUmumController@inputidentitas')->name('inputidentitas');
 Route::post('/simpan-identitas', 'DataUmumController@storeidentitas')->name('simpan-identitas');
 Route::get('/show-dataumum', 'DataUmumController@index')->name('show-dataumum');
 Route::post('/update-identitas/{id}', 'DataUmumController@updateidentitas')->name('update-identitas');
 Route::get('/viewidentitas/{id}', 'DataUmumController@viewidentitas');
 
+Route::get('/inputkepalakph', 'DataUmumController@inputkepalakph')->name('inputkepalakph');
+Route::post('/simpan-kepalakph', 'DataUmumController@storekepalakph')->name('simpan-kepalakph');
+Route::post('/update-kepalakph/{id}', 'DataUmumController@updatekepalakph')->name('update-kepalakph');
+Route::get('/viewkepalakph/{id}', 'DataUmumController@viewkepalakph');
+
+Route::get('/inputrphjp', 'DataUmumController@inputrphjp')->name('inputrphjp');
+Route::post('/simpan-rphjp', 'DataUmumController@storerphjp')->name('simpan-rphjp');
+Route::post('/update-rphjp/{id}', 'DataUmumController@updaterphjp')->name('update-rphjp');
+Route::get('/viewrphjp/{id}', 'DataUmumController@viewrphjp');
+
 Route::get('/homes', 'DataUmumController@home')->name('homes');
-Route::get('/kepalakphs', 'DataUmumController@kepalakph')->name('kepalakphs');
+Route::get('/kepalakph', 'DataUmumController@kepalakph')->name('kepalakph');
 Route::get('/fasilitass', 'DataUmumController@fasilitas')->name('fasilitass');
 Route::get('/lembagas', 'DataUmumController@lembaga')->name('lembagas');
 Route::get('/rphjps', 'DataUmumController@rphjp')->name('rphjps');
 
-<<<<<<< HEAD
-//JasaLingkungan
-Route::get('/inputjasalingkungan1', 'AdminController@inputjasalingkungan1')->name('inputjasalingkungan1');
-Route::post('/simpan-jasalingkungan1', 'AdminController@store6')->name('simpan-jasalingkungan1');
-Route::get('/showjasalingkungan1', 'AdminController@showjasalingkungan1')->name('showjasalingkungan1');
-
-Route::post('/update-jasalingkungan1/{id}', 'AdminController@update6')->name('update-jasalingkungan1');
-Route::get('/destroy4/{id}', 'AdminController@destroy4')->name('delete-galeriupt');
-Route::get('/jasalingkungan1', 'AdminController@view6');
-
-//sdm1
-Route::get('/inputsdm1', 'AdminController@inputsdm1')->name('inputsdm1');
-Route::post('/simpan-sdm1', 'AdminController@storesdm1')->name('simpan-sdm1');
-Route::get('/showsdm1', 'AdminController@showsdm1')->name('showsdm1');
-Route::get('/ajaxekonomi1', 'AdminController@ajaxekonomi1')->name('ajaxekonomi1');
-
-Route::post('/update-sdm1/{id}', 'AdminController@updatesdm1')->name('update-sdm1');
-Route::get('/viewsdm1/{id}', 'AdminController@viewsdm1');
-
-
-
-
-
-
-
-=======
 
 //ekologi
 Route::get('/inputekologi', 'AdminController@inputekologi')->name('inputekologi');
@@ -146,4 +126,29 @@ Route::get('/showekologi4', 'AdminController@showekologi4')->name('showekologi4'
 
 Route::post('/update-ekologi4/{id}', 'AdminController@updateekologi4')->name('update-ekologi4');
 Route::get('/viewekologi4/{id}', 'AdminController@viewekologi4');
->>>>>>> 061ad90be7399dfc10c64661970791b1f5a56e03
+
+
+//JasaLingkungan
+Route::get('/inputjasalingkungan1', 'AdminController@inputjasalingkungan1')->name('inputjasalingkungan1');
+Route::post('/simpan-jasalingkungan1', 'AdminController@store6')->name('simpan-jasalingkungan1');
+Route::get('/showjasalingkungan1', 'AdminController@showjasalingkungan1')->name('showjasalingkungan1');
+
+Route::post('/update-jasalingkungan1/{id}', 'AdminController@update6')->name('update-jasalingkungan1');
+Route::get('/destroy4/{id}', 'AdminController@destroy4')->name('delete-galeriupt');
+Route::get('/jasalingkungan1', 'AdminController@view6');
+
+//sdm1
+Route::get('/inputsdm1', 'AdminController@inputsdm1')->name('inputsdm1');
+Route::post('/simpan-sdm1', 'AdminController@storesdm1')->name('simpan-sdm1');
+Route::get('/showsdm1', 'AdminController@showsdm1')->name('showsdm1');
+Route::get('/ajaxekonomi1', 'AdminController@ajaxekonomi1')->name('ajaxekonomi1');
+
+Route::post('/update-sdm1/{id}', 'AdminController@updatesdm1')->name('update-sdm1');
+Route::get('/viewsdm1/{id}', 'AdminController@viewsdm1');
+
+
+
+
+
+
+
