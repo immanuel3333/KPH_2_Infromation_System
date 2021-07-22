@@ -13,13 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get('/',function(){
+    return redirect('login');
+});
+
 Auth::routes(['verify' => true]);
+
 Route::get('/landingpage', 'HomeController@banner')->name('landingpage');
-Route::get('/sejarah', 'HomeController@sejarah');
-Route::get('/strukturorg', 'HomeController@strukturorg')->name('strukturorg');
 Route::get('/profilpegawai', 'HomeController@profilpegawai');
-Route::get('/', 'PostController@index');
+Route::get('/tes', 'PostController@index');
 Route::post('/comment', 'PostController@comment');
+
+
 Route::get('/home', 'AdminController@home')->name('home');
 Route::get('/home/{id}/delete', 'AdminController@delete');
 
@@ -49,6 +55,7 @@ Route::get('/view3/{id}', 'AdminController@view3');
 
 Route::resource('strukturs', StrukturController::class);
 
+//Galeri UPT
 Route::get('/inputgaleriupt', 'AdminController@inputgaleriupt')->name('inputgaleriupt');
 Route::post('/simpan-galeriupt', 'AdminController@store4')->name('simpan-galeriupt');
 Route::get('/showgaleriupt', 'AdminController@showgaleriupt')->name('showgaleriupt');
@@ -68,13 +75,9 @@ Route::post('/update-potensiekonomi1/{id}', 'AdminController@update5')->name('up
 Route::get('/view5/{id}', 'AdminController@view5');
 
 
-
-
-<<<<<<< HEAD
->>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
-=======
->>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
 Route::resource('peraturans', PeraturanController::class);
+
+
 //data umum
 Route::get('/inputidentitas', 'DataUmumController@inputidentitas')->name('inputidentitas');
 Route::post('/simpan-identitas', 'DataUmumController@storeidentitas')->name('simpan-identitas');
@@ -98,8 +101,6 @@ Route::get('/fasilitass', 'DataUmumController@fasilitas')->name('fasilitass');
 Route::get('/lembagas', 'DataUmumController@lembaga')->name('lembagas');
 Route::get('/rphjps', 'DataUmumController@rphjp')->name('rphjps');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 //JasaLingkungan
 Route::get('/inputjasalingkungan1', 'AdminController@inputjasalingkungan1')->name('inputjasalingkungan1');
 Route::post('/simpan-jasalingkungan1', 'AdminController@store6')->name('simpan-jasalingkungan1');
@@ -109,6 +110,9 @@ Route::post('/update-jasalingkungan1/{id}', 'AdminController@update6')->name('up
 Route::get('/destroy4/{id}', 'AdminController@destroy4')->name('delete-galeriupt');
 Route::get('/jasalingkungan1', 'AdminController@view6');
 Route::get('/view65/{id}', 'AdminController@view65');
+Route::get('/delete2/{id}', 'AdminController@delete2');
+
+
 
 
 //sdm1
@@ -119,11 +123,6 @@ Route::get('/ajaxekonomi1', 'AdminController@ajaxekonomi1')->name('ajaxekonomi1'
 
 Route::post('/update-sdm1/{id}', 'AdminController@updatesdm1')->name('update-sdm1');
 Route::get('/viewsdm1/{id}', 'AdminController@viewsdm1');
-
-=======
->>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
-=======
->>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
 
 //ekologi
 Route::get('/inputekologi', 'AdminController@inputekologi')->name('inputekologi');
@@ -156,38 +155,29 @@ Route::get('/showekologi4', 'AdminController@showekologi4')->name('showekologi4'
 
 Route::post('/update-ekologi4/{id}', 'AdminController@updateekologi4')->name('update-ekologi4');
 Route::get('/viewekologi4/{id}', 'AdminController@viewekologi4');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
 
+//Unit kerja
+Route::get('/home2', 'Admin2Controller@home')->name('home');
 
-//JasaLingkungan
-Route::get('/inputjasalingkungan1', 'AdminController@inputjasalingkungan1')->name('inputjasalingkungan1');
-Route::post('/simpan-jasalingkungan1', 'AdminController@store6')->name('simpan-jasalingkungan1');
-Route::get('/showjasalingkungan1', 'AdminController@showjasalingkungan1')->name('showjasalingkungan1');
+//Galeri Unit kerja
+Route::get('/inputgaleriunitkerja', 'Admin2Controller@inputgaleriunitkerja')->name('inputgaleriunitkerja');
+Route::post('/simpan-galeriunitkerja', 'Admin2Controller@storegaleriunitkerja')->name('simpan-galeriunitkerja');
+Route::get('/showgaleriunitkerja', 'Admin2Controller@showgaleriunitkerja')->name('showgaleriunitkerja');
 
-Route::post('/update-jasalingkungan1/{id}', 'AdminController@update6')->name('update-jasalingkungan1');
-Route::get('/destroy4/{id}', 'AdminController@destroy4')->name('delete-galeriupt');
-Route::get('/jasalingkungan1', 'AdminController@view6');
+Route::post('/update-galeriunitkerja/{id}', 'Admin2Controller@updategaleriunitkerja')->name('update-galeriunitkerja');
+Route::get('/viewgaleriunitkerja/{id}', 'Admin2Controller@viewgaleriunitkerja');
+Route::get('/destroygaleriunitkerja/{id}', 'Admin2Controller@destroygaleriunitkerja')->name('delete-galeriunitkerja');
 
-//sdm1
-Route::get('/inputsdm1', 'AdminController@inputsdm1')->name('inputsdm1');
-Route::post('/simpan-sdm1', 'AdminController@storesdm1')->name('simpan-sdm1');
-Route::get('/showsdm1', 'AdminController@showsdm1')->name('showsdm1');
-Route::get('/ajaxekonomi1', 'AdminController@ajaxekonomi1')->name('ajaxekonomi1');
+//gabungan potensiekonomi dan jasalingkungan
+Route::get('/showkeloladataekonomi1', 'AdminController@showkeloladataekonomi1')->name('show-dataumum');
 
-Route::post('/update-sdm1/{id}', 'AdminController@updatesdm1')->name('update-sdm1');
-Route::get('/viewsdm1/{id}', 'AdminController@viewsdm1');
+//NKK
+Route::get('/inputnkk', 'Admin2Controller@inputnkk')->name('inputnkk');
+Route::post('/simpan-nkk', 'Admin2Controller@storenkk')->name('simpan-nkk');
+Route::get('/shownkk', 'Admin2Controller@shownkk')->name('shownkk');
 
-
-
-
-
-
-
-<<<<<<< HEAD
->>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
-=======
->>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
+Route::post('/update-nkk/{id}', 'Admin2Controller@updatenkk')->name('update-nkk');
+Route::get('/destroynkk/{id}', 'Admin2Controller@destroynkk')->name('delete-nkk');
+Route::get('/nkk', 'Admin2Controller@viewnkk');
+Route::get('/viewnkk2/{id}', 'Admin2Controller@viewnkk2');
+Route::get('/deletenkk/{id}', 'Admin2Controller@deletenkk');

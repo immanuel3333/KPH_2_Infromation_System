@@ -15,35 +15,12 @@ use App\Sejarah;
 use App\Galeriupt;
 use File;
 use App\PotensiEkonomi1;
-
-
 use App\SDM1;
-<<<<<<< HEAD
-=======
-
-
-use App\SDM1;
-
-
->>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
-=======
-
-
->>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
 use App\Ekologi;
 use App\Ekologi2;
 use App\Ekologi3;
 use App\Ekologi4;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 use App\JasaLingkungan1;
->>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
-=======
-use App\JasaLingkungan1;
->>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
-
 
 class AdminController extends Controller
 {
@@ -104,8 +81,6 @@ class AdminController extends Controller
         $vm = DB::table('visimisi')->get();
       return view('edit1', compact('vm'));
     }
-
-
 
 
     public function inputtugasfungsi()
@@ -228,7 +203,7 @@ class AdminController extends Controller
 
         $image->move('public/struktororg/', $new_image);
 
-        return redirect('inputgaleriupt');
+        return redirect('showgaleriupt');
     }
 
     public function showgaleriupt(Request $request)
@@ -338,17 +313,6 @@ class AdminController extends Controller
 
     }
 
-<<<<<<< HEAD
-    
-=======
-
-
-
-
-<<<<<<< HEAD
->>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
-=======
->>>>>>> df77ed493d8464ad6d0e35ce149a4ede4d5be496
     //Jasa Lingkungan1
     public function inputjasalingkungan1()
     {
@@ -408,7 +372,7 @@ class AdminController extends Controller
         foreach($jl as $jl2)
         {
             $jl2->action='<a href="view65/'.$jl2->id.'" class="btn btn-warning btn-sm" id="update'.$jl2->id.'">Edit</a>
-            <a href="delete/'.$jl2->id.'" class="btn btn-danger btn-sm" id="'.$jl2->id.'" >Delete</a>';
+            <a href="delete2/'.$jl2->id.'" class="btn btn-danger btn-sm" id="'.$jl2->id.'" >Delete</a>';
         }
 
         return response()->json($jl,200);
@@ -419,6 +383,13 @@ class AdminController extends Controller
     {
         $jl=JasaLingkungan1::find($id);
         return view('editjasalingkungan1',compact('jl'));
+    }
+
+    public function delete2($id)
+    {
+        $jl=JasaLingkungan1::find($id);
+        $jl->delete();
+        return redirect('/showjasalingkungan1');
     }
 
 
@@ -728,6 +699,12 @@ public function inputekologi4()
         return redirect('showekologi4');
 
     }
+
+    //gabungan potensiekonomi dan jasalingkungan
+    public function showkeloladataekonomi1()
+       {
+           return view('indexdataekonomi1');
+       }
 
 
 }

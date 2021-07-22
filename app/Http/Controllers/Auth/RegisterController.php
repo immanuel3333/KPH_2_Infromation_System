@@ -55,6 +55,7 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'nip' => ['required', 'numeric', 'unique:users'],
             'nomorhp' => ['required', 'numeric'],
+            'status' => ['required', 'string', 'max:255'],
         ]);
     }
 
@@ -86,6 +87,7 @@ class RegisterController extends Controller
             'nip' => $data['nip'],
             'nomorhp' => $data['nomorhp'],
             'image' => $path,
+            'status' => $data['status'],
         ]);
     }
 }

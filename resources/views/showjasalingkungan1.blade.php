@@ -1,4 +1,4 @@
-@include('layouts.headeradmin')
+
 
 <div class="container" style="padding-bottom:50px;">
     <table class="table table-striped table-hover" id="jasalingkungan-table">
@@ -57,7 +57,7 @@ $(document).ready(function(){
 		});
 	});
 </script>
-@include('layouts.footeradmin')
+    
 
 
 

@@ -77,7 +77,7 @@ class DataUmumController extends Controller
             'longitude'=> $request->longitude,
             'latitude'=> $request->latitude
            ]);
-           return view('dataumum.index');
+           return redirect('/show-dataumum');
 
        }
 
@@ -158,7 +158,7 @@ class DataUmumController extends Controller
             'tanggalselesai' => $request->tanggalselesai,
             'gambar' => 'public/kepalakph/'.$file->getClientOriginalName(),
         ]);
-        return redirect('/show-dataumum');
+        return redirect('show-dataumum');
 
     }
 
@@ -209,7 +209,7 @@ class DataUmumController extends Controller
             'kendala'=> $request->kendala,
             'progres'=> $request->progres
            ]);
-           return view('/show-dataumum');
+           return redirect('show-dataumum');
 
        }
 

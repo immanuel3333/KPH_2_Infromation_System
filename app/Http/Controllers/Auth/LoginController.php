@@ -53,6 +53,35 @@ class LoginController extends Controller
         ]);
   
         $fieldType = filter_var($request->nip, FILTER_VALIDATE_EMAIL) ? 'email' : 'nip';
+
+        if (method_exists($this, 'hasTooManyLoginAttempts') &&
+        $this->hasTooManyLoginAttempts($request)) {
+        $this->fireLockoutEvent($request);
+
+        return $this->sendLockoutResponse($request);
+    }
+
+    if ($this->attemptLogin($request)) {
+        if(Auth::user()->status=='admin1')
+        {
+            return redirect('/home');
+        }
+        else{
+            return $this->sendLoginResponse($request);
+        }
+        
+    }
+    if ($this->attemptLogin($request)) {
+        if(Auth::user()->status=='admin')
+        {
+            return redirect('/home2');
+        }
+        else{
+            return $this->sendLoginResponse($request);
+        }
+        
+    }
+
         if(auth()->attempt(array($fieldType => $input['nip'], 'password' => $input['password'])))
         {
             return redirect()->route('home');

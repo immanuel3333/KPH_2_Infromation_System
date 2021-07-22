@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table-> bigInteger('nomorHP');
             $table->string('password');
             $table->string('image')->nullable();
+            $table->string('status');
             $table->rememberToken();
             $table->timestamps();
         });
