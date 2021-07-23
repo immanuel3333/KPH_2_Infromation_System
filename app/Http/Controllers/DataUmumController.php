@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 use App\Identitas;
 use App\Kepalakph;
 use App\Rphjp;
+use App\Fasilitas;
+use App\Lembaga;
 use Illuminate\Support\Facades\DB;
-use Symfony\Component\HttpFoundation\File\File;
+use File;
 
 class DataUmumController extends Controller
 {
@@ -77,7 +79,7 @@ class DataUmumController extends Controller
             'longitude'=> $request->longitude,
             'latitude'=> $request->latitude
            ]);
-           return redirect('/show-dataumum');
+           return view('dataumum.index');
 
        }
 
@@ -136,7 +138,7 @@ class DataUmumController extends Controller
         ]);
         $image->move('public/kepalakph/', $new_image);
 
-        return view('dataumum.index');
+        return redirect('show-dataumum');
     }
 
     public function updatekepalakph(Request $request, $id)
@@ -158,7 +160,7 @@ class DataUmumController extends Controller
             'tanggalselesai' => $request->tanggalselesai,
             'gambar' => 'public/kepalakph/'.$file->getClientOriginalName(),
         ]);
-        return redirect('show-dataumum');
+        return view('dataumum.index');
 
     }
 
@@ -170,15 +172,98 @@ class DataUmumController extends Controller
 //akhir dataumum kepalakph
 
 
-       public function fasilitas()
-       {
-           return view('dataumum.fasilitas');
-       }
+//dataumum dataumum lembaga
        public function lembaga()
        {
-           return view('dataumum.lembaga');
+        $lm = DB::table('lembaga')->get();
+           return view('dataumum.lembaga',compact('lm'));
        }
-//dataumum rphjp
+       public function inputlembaga()
+        {
+         $lm = Lembaga::latest()->get();
+         return view('dataumum.inputlembaga',compact('lm'));
+        }
+
+    public function storelembaga(Request $request)
+    {
+        // dd($request->all());
+        $this->validate($request, [
+            'unit' => 'required',
+            'provinsi' => 'required',
+            'jenislembaga' => 'required',
+            'kepseksi' => 'required',
+            'petugaskph' => 'required',
+            'teleponpetugas' => 'required',
+            'emailpetugas' => 'required',
+            'sklembaga' => 'required',
+            'tglsklembaga' => 'required',
+            'doksklembaga' => 'required',
+            'statblud' => 'required',
+            'skblud' => 'required',
+            'dokskblud'=> 'required'
+        ]);
+    //upload image
+        $doksklembaga = $request->doksklembaga;
+        $dokskblud = $request->dokskblud;
+        $new_file = time().$doksklembaga->getClientOriginalName();
+        $new_file2 = time().$dokskblud->getClientOriginalName();
+
+        $lm = Lembaga::create([
+            'unit' => $request->unit,
+            'provinsi' => $request->provinsi,
+            'jenislembaga'  => $request->jenislembaga,
+            'kepseksi' => $request->kepseksi,
+            'petugaskph' => $request->petugaskph,
+            'teleponpetugas'  => $request->teleponpetugas,
+            'emailpetugas' => $request->emailpetugas,
+            'sklembaga' => $request->sklembaga,
+            'tglsklembaga' => $request->tglsklembaga,
+            'doksklembaga' => $new_file,
+            'statblud' => $request->statblud,
+            'skblud' => $request->skblud,
+            'dokskblud' => $new_file2
+        ]);
+
+
+        return redirect('show-dataumum');
+    }
+
+    public function updatelembaga(Request $request, $id)
+    {
+        $lm = Lembaga::find($id);
+            File::delete($lm->doksklembaga);
+            File::delete($lm->dokskblud);
+            $file = $request->file('doksklembaga');
+            $file2 = $request->file('dokskblud');
+
+            $lm->update([
+                'unit' => $request->unit,
+                'provinsi' => $request->provinsi,
+                'jenislembaga'  => $request->jenislembaga,
+                'kepseksi' => $request->kepseksi,
+                'petugaskph' => $request->petugaskph,
+                'teleponpetugas'  => $request->teleponpetugas,
+                'emailpetugas' => $request->emailpetugas,
+                'sklembaga' => $request->sklembaga,
+                'tglsklembaga' => $request->tglsklembaga,
+                'doksklembaga' => $file->getClientOriginalName(),
+                'statblud' => $request->statblud,
+                'skblud' => $request->skblud,
+                'dokskblud' => $file2->getClientOriginalName()
+        ]);
+        return redirect('show-dataumum');
+
+    }
+
+    public function viewlembaga($id)
+       {
+        $lm=Lembaga::find($id);
+        return view('dataumum.editlembaga',compact('lm'));
+       }
+//akhir dataumum lembaga
+
+
+//dataumum dataumum rphjp
        public function rphjp()
        {
            $rp = DB::table('rphjp')->get();
@@ -197,7 +282,7 @@ class DataUmumController extends Controller
                'kendala'=> $request->kendala,
                'progres'=> $request->progres
            ]);
-           return view('dataumum.index');
+           return redirect('show-dataumum');
 
        }
 
@@ -219,4 +304,67 @@ class DataUmumController extends Controller
         return view('dataumum.editrphjp',compact('rp'));
        }
 //akhir dataumum rphjp
+
+//awal fasilitas
+public function inputfasilitas()
+    {
+        $fs = Fasilitas::latest()->get();
+        return view('dataumum.inputfasilitas');
+    }
+
+    public function storefasilitas(Request $request)
+    {
+        // dd($request->all());
+        $fs = Fasilitas::create([
+            'aspek' => $request->aspek,
+            'jumlah' => $request->jumlah,
+            'kondisi' => $request->kondisi,
+            'status' => $request->status,
+            'sumberdana' => $request->sumberdana,
+
+        ]);
+        return redirect('show-dataumum');
+    }
+
+    public function updatefasilitas(Request $request, $id)
+    {
+        $fs=Fasilitas::find($id);
+        $fs->update([
+            'aspek' => $request->aspek,
+            'jumlah' => $request->jumlah,
+            'kondisi' => $request->kondisi,
+            'status' => $request->status,
+            'sumberdana' => $request->sumberdana,
+
+        ]);
+        return redirect('show-dataumum');
+
+    }
+
+    public function fasilitas()
+       {
+           $fs = DB::table('fasilitas')->get();
+           return view('dataumum.fasilitas',compact('fs'));
+       }
+
+    public function viewfasilitas1()
+    {
+        $fs=Fasilitas::all();
+        foreach($fs as $fs2)
+        {
+            $fs2->action='<a href="viewfasilitas12/'.$fs2->id.'" class="btn btn-warning btn-sm" id="update'.$fs2->id.'">Edit</a>
+            <a href="delete/'.$fs2->id.'" class="btn btn-danger btn-sm" id="'.$fs2->id.'" >Delete</a>';
+        }
+
+        return response()->json($fs,200);
+        // return dd($jl);
+
+    }
+
+    public function viewfasilitas12($id)
+       {
+        $fs=Fasilitas::find($id);
+        return view('dataumum.editfasilitas',compact('fs'));
+       }
+//akhir dataumum fasilitas
 }

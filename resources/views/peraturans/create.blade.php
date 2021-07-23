@@ -1,3 +1,4 @@
+@include('layouts.headeradmin')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +15,7 @@
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <form action="{{ route('peraturans.store') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('simpan-peraturan') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label>Judul</label>
@@ -48,3 +49,4 @@
 </script>
 </body>
 </html>
+@include('layouts.footeradmin')

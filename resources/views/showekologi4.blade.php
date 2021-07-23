@@ -1,4 +1,4 @@
-@include('layouts.header3')
+@include('layouts.headeradmin')
 </div>
 <div class="content-page">
     <div class="container-fluid">

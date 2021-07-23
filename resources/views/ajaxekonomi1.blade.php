@@ -9,7 +9,7 @@
             <a class="nav-link" href="javascript:void()" onclick="potensiekonomi()">Jasa Lingkungan</a>
           </nav>
 
-		<div id="konten">
+		<div class="konten" id="konten">
 
 		</div>
 		 <script>
@@ -19,12 +19,14 @@
                 });
             }
             function potensiekonomi(){
-                $.get("{{url('showpotensiekonomi1')}}", function(data2) {
+                $.get("{{url('showjasalingkungan1')}}", function(data2) {
                 $("#konten").html(data2);
                 });
             }
+
+
 		 </script>
 
-         
-        
+
+
 @include('layouts.footer')

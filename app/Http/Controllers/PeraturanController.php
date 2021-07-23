@@ -6,123 +6,80 @@ use App\Peraturan;
 use Illuminate\Http\Request;
 use DB;
 use File;
-
 class PeraturanController extends Controller
 {
-    public function index()
+    public function inputperaturan()
     {
-
-        $blogs = Peraturan::latest()->paginate(1);
-        return view('peraturans.index', compact('blogs'));
-    }
-    public function show()
-    {
-        $blogs = Peraturan::latest()->paginate(1);
-        return view('peraturans.show', compact('blogs'));
-    }
-
-    /**
-     * create
-     *
-     * @return void
-     */
-    public function create()
-    {
+        $law = Peraturan::latest()->get();
         return view('peraturans.create');
     }
 
-    /**
-     * store
-     *
-     * @param  mixed $request
-     * @return void
-     */
-    public function store(Request $request)
+    public function storeperaturan(Request $request)
     {
-        $this->validate($request, [
-            'judul' => 'required',
-            'keterangan' => 'required',
-            'file' => 'required'
-        ]);
-
-        //upload image
+        // dd($request->all());
         $file = $request->file;
         $new_file = time().$file->getClientOriginalName();
-
-        $blogs = Peraturan::create([
+        $law = Peraturan::create([
             'judul' => $request->judul,
-            'keterangan' =>  $request->keterangan,
-            'file' => 'public/peraturan/'.$new_file,
+            'keterangan' => $request->keterangan,
+            'file' => $new_file
+
         ]);
-
-        $file->move('public/peraturan/', $new_file);
-
-        if($blogs){
-            //redirect dengan pesan sukses
-            return redirect()->route('peraturans.index')->with(['success' => 'Data Berhasil Disimpan!']);
-        }else{
-            //redirect dengan pesan error
-            return redirect()->route('peraturans.index')->with(['error' => 'Data Gagal Disimpan!']);
-        }
+        return redirect('peraturans');
     }
 
-    /**
-     * edit
-     *
-     * @param  mixed $blog
-     * @return void
-     */
-    public function edit()
-    {   $blogs= DB::table('peraturan')->get();
-        return view('peraturans.edit', compact('blogs'));
-    }
-
-    /**
-     * update
-     *
-     * @param  mixed $request
-     * @param  mixed $blog
-     * @return void
-     */
-    public function update(Request $request, $id)
+    public function updateperaturan(Request $request, $id)
     {
-        $this->validate($request, [
-            'judul' => 'required',
-            'keterangan' => 'required'
-         ]);
-        // get data Blog by ID
-        $blogs = Peraturans::find($id);
-        File::delete($blogs->file);
+        $law=Peraturan::find($id);
+        File::delete($lm->file);
         $file = $request->file('file');
-        $file->move('public/peraturan/',$file->getClientOriginalName());
+        $law->update([
+            'judul' => $request->judul,
+            'keterangan' => $request->keterangan,
+            'file' => $file->getClientOriginalName()
 
-        $blogs->update([
-             'file'=>'public/peraturan/'.$file->getClientOriginalName(),
-
-         ]);
-
-            return redirect()->route('peraturans.index');
+        ]);
+        return redirect('peraturans.index');
 
     }
 
-    /**
-     * destroy
-     *
-     * @param  mixed $id
-     * @return void
-     */
-    public function destroy($id)
+    public function peraturan()
+       {
+           $law = DB::table('peraturan')->get();
+           return view('peraturans.index',compact('law'));
+       }
+
+    public function viewperaturan1()
     {
-        $blogs = Peraturan::findOrFail($id);
-        $blogs->delete();
-
-        if($blogs){
-            //redirect dengan pesan sukses
-            return redirect()->route('peraturans.index')->with(['success' => 'Data Berhasil Dihapus!']);
-        }else{
-            //redirect dengan pesan error
-            return redirect()->route('peraturans.index')->with(['error' => 'Data Gagal Dihapus!']);
+        $law=Peraturan::all();
+        foreach($law as $law2)
+        {
+            $law2->action='<a href="viewfasilitas12/'.$law2->id.'" class="btn btn-warning btn-sm" id="update'.$law2->id.'">Edit</a>
+            <a href="delete/'.$law2->id.'" class="btn btn-danger btn-sm" id="'.$law2->id.'" >Delete</a>';
         }
+
+        return response()->json($law,200);
+        // return dd($jl);
+
     }
 
+    public function viewperaturan12($id)
+       {
+        $law=Peraturan::find($id);
+        return view('peraturans.edit',compact('law'));
+       }
+
+       public function destroy($id)
+       {
+           $law = Peraturan::findorfail($id);
+           $law->delete();
+
+           return redirect()->back()->with('success','Post Berhasil Dihapus (Silahkan cek trashed post)');
+       }
+       public function kill($id){
+        $law = Peraturan::withTrashed()->where('id', $id)->first();
+        $law->forceDelete();
+
+        return redirect()->back()->with('success','Post Berhasil Dihapus Secara Permanen');
+    }
 }

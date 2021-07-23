@@ -75,8 +75,13 @@ Route::post('/update-potensiekonomi1/{id}', 'AdminController@update5')->name('up
 Route::get('/view5/{id}', 'AdminController@view5');
 
 
-Route::resource('peraturans', PeraturanController::class);
-
+Route::get('/inputperaturan', 'PeraturanController@inputperaturan')->name('inputperaturan');
+Route::post('/simpan-peraturan', 'PeraturanController@storeperaturan')->name('simpan-peraturan');
+Route::post('/update-peraturan/{id}', 'PeraturanController@updateperaturan')->name('update-peraturan');
+Route::post('/destroyperaturan/{id}', 'PeraturanController@destroy')->name('delete-peraturan');
+Route::get('/peraturan', 'PeraturanController@viewperaturan1');
+Route::get('/viewperaturan12/{id}', 'PeraturanController@viewperaturan12');
+Route::get('/peraturans', 'PeraturanController@peraturan')->name('peraturans');
 
 //data umum
 Route::get('/inputidentitas', 'DataUmumController@inputidentitas')->name('inputidentitas');
@@ -94,6 +99,18 @@ Route::get('/inputrphjp', 'DataUmumController@inputrphjp')->name('inputrphjp');
 Route::post('/simpan-rphjp', 'DataUmumController@storerphjp')->name('simpan-rphjp');
 Route::post('/update-rphjp/{id}', 'DataUmumController@updaterphjp')->name('update-rphjp');
 Route::get('/viewrphjp/{id}', 'DataUmumController@viewrphjp');
+
+Route::get('/inputlembaga', 'DataUmumController@inputlembaga')->name('inputlembaga');
+Route::post('/simpan-lembaga', 'DataUmumController@storelembaga')->name('simpan-lembaga');
+Route::post('/update-lembaga/{id}', 'DataUmumController@updatelembaga')->name('update-lembaga');
+Route::get('/viewlembaga/{id}', 'DataUmumController@viewlembaga');
+
+Route::get('/inputfasilitas', 'DataUmumController@inputfasilitas')->name('inputfasilitas');
+Route::post('/simpan-fasilitas', 'DataUmumController@storefasilitas')->name('simpan-fasilitas');
+Route::post('/update-fasilitas/{id}', 'DataUmumController@updatefasilitas')->name('update-fasilitas');
+Route::get('/destroyfasilitas/{id}', 'DataUmumController@destroyfasilitas')->name('delete-fasilitas');
+Route::get('/fasilitas', 'DataUmumController@viewfasilitas1');
+Route::get('/viewfasilitas12/{id}', 'DataUmumController@viewfasilitas12');
 
 Route::get('/homes', 'DataUmumController@home')->name('homes');
 Route::get('/kepalakph', 'DataUmumController@kepalakph')->name('kepalakph');
@@ -157,7 +174,7 @@ Route::post('/update-ekologi4/{id}', 'AdminController@updateekologi4')->name('up
 Route::get('/viewekologi4/{id}', 'AdminController@viewekologi4');
 
 //Unit kerja
-Route::get('/home2', 'Admin2Controller@home')->name('home');
+Route::get('/home2', 'Admin2Controller@home')->name('home2');
 
 //Galeri Unit kerja
 Route::get('/inputgaleriunitkerja', 'Admin2Controller@inputgaleriunitkerja')->name('inputgaleriunitkerja');
@@ -169,7 +186,7 @@ Route::get('/viewgaleriunitkerja/{id}', 'Admin2Controller@viewgaleriunitkerja');
 Route::get('/destroygaleriunitkerja/{id}', 'Admin2Controller@destroygaleriunitkerja')->name('delete-galeriunitkerja');
 
 //gabungan potensiekonomi dan jasalingkungan
-Route::get('/showkeloladataekonomi1', 'AdminController@showkeloladataekonomi1')->name('show-dataumum');
+Route::get('/showkeloladataekonomi1', 'AdminController@showkeloladataekonomi1')->name('show-dataekonomi');
 
 //NKK
 Route::get('/inputnkk', 'Admin2Controller@inputnkk')->name('inputnkk');

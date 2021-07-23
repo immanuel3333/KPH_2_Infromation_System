@@ -123,7 +123,7 @@
 
             <div class="mm-sidebar sidebar-default" style="fixed-left">
                 <div class="mm-sidebar-logo d-flex align-items-center justify-content-between">
-                    <a href="#home" class="header-logo">
+                    <a href="{{ route('home2') }}" class="header-logo">
                         <img src="{{ asset('img/newlogo.png') }}" class="img-fluid rounded-normal light-logo " alt="logo">
                         <img src="{{ asset('img/newlogo.png') }}" class="img-fluid rounded-normal darkmode-logo" alt="logo">
                     </a>
@@ -135,7 +135,7 @@
                     <nav class="mm-sidebar-menu">
                         <ul id="mm-sidebar-toggle" class="side-menu">
                             <li class="">
-                                <a href="{{ route('home') }}" class="collapsed svg-icon">
+                                <a href="{{ route('home2') }}" class="collapsed svg-icon">
                                     <i class="">
                                         <img src="{{ asset('icon/home.png') }}" alt="icon" width="20">
                                     </i>
@@ -156,7 +156,7 @@
                                     <i class="las la-angle-right mm-arrow-right arrow-active"></i>
                                     <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
                                 </a>
-                                <ol id="app" class="submenu collapse" data-parent="#mm-sidebar-toggle">
+                                <ul id="app" class="submenu collapse" data-parent="#mm-sidebar-toggle">
                                     <li class="">
                                         <a href="{{ route('showvisimisi') }}" class="collapsed svg-icon">
                                             <i class="">
@@ -188,13 +188,13 @@
                                         </a>
                                     </li>
                                     <li class="">
-                                        <a href="#" class="svg-icon">
+                                        <a href="{{ route('showgaleriupt') }}" class="svg-icon">
                                             <i class="">
                                                 <img src=" {{ asset('icon/data.png')}}" alt="icon" width="20">
                                             </i><span class="">Galeri UPT</span>
                                         </a>
                                     </li>
-                                </ol>
+                                </ul>
                             </li>
 
                             <li class="">
@@ -206,7 +206,7 @@
                                     <i class="las la-angle-right mm-arrow-right arrow-active"></i>
                                     <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
                                 </a>
-                                <ol id="uker" class="submenu collapse" data-parent="#mm-sidebar-toggle">
+                                <ul id="uker" class="submenu collapse" data-parent="#mm-sidebar-toggle">
                                     <li class="">
                                         <a href="#unit" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
                                             <i class="">
@@ -216,36 +216,36 @@
                                             <i class="las la-angle-right mm-arrow-right arrow-active"></i>
                                             <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
                                         </a>
-                                        <ul id="unit" class="submenu collapse" data-parent="#uker">
+                                        <ol id="unit" class="submenu collapse" data-parent="#uker">
                                             <li class="">
-                                                <a href="{{ route('show-dataumum') }}" class="svg-icon">
+                                                <a href="{{route('show-dataumum')}}" class="svg-icon">
                                                     <i class="">
                                                         <img src=" {{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data Umum</span>
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{ route('showpotensiekonomi1') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src=" {{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data Ekonomi</span>
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{ route('showekologi') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="{{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data Ekologi</span>
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{route('showsdm1')}}" class="svg-icon">
                                                     <i class="">
                                                         <img src="{{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data SDM</span>
                                                 </a>
                                             </li>
-                                        </ul>
+                                        </ol>
 
                                     </li>
 
@@ -274,7 +274,7 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{ route('showekologi2') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="{{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data Ekologi</span>
@@ -315,7 +315,7 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{ route('showekologi3') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="{{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data Ekologi</span>
@@ -356,7 +356,7 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{ route('showekologi4') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="{{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data Ekologi</span>
@@ -372,11 +372,11 @@
                                         </ul>
                                     </li>
 
-                                </ol>
+                                </ul>
                             </li>
 
                             <li class="">
-                                <a href="#Dashboards" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
+                                <a href="{{ route('peraturans') }}" class="collapsed svg-icon">
                                     <i class="">
                                         <img src="{{ asset('icon/peraturan.png')}}" alt="icon" width="20">
                                     </i>
