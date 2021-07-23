@@ -21,7 +21,7 @@
                 <td>{{ $hasil->keterangan }}</td>
                 <td>{{ $hasil->file }}</td>
 				<td>
-                    <a href="{{url('/viewperaturan1')}}/{{$hasil->id}}" class="btn btn-sm btn-primary pl-10">EDIT</a>
+                    <a href="{{url('/viewperaturan12')}}/{{$hasil->id}}" class="btn btn-sm btn-primary pl-10">EDIT</a>
 				</td>
 			</tr>
 			@endforeach

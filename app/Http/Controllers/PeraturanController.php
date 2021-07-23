@@ -31,7 +31,7 @@ class PeraturanController extends Controller
     public function updateperaturan(Request $request, $id)
     {
         $law=Peraturan::find($id);
-        File::delete($lm->file);
+        File::delete($law->file);
         $file = $request->file('file');
         $law->update([
             'judul' => $request->judul,
@@ -39,7 +39,7 @@ class PeraturanController extends Controller
             'file' => $file->getClientOriginalName()
 
         ]);
-        return redirect('peraturans.index');
+        return redirect('peraturans');
 
     }
 

@@ -225,7 +225,7 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="{{ route('showpotensiekonomi1') }}" class="svg-icon">
+                                                <a href="{{ route('show-dataekonomi') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src=" {{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data Ekonomi</span>

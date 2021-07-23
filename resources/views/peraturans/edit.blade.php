@@ -14,23 +14,19 @@
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                    @foreach($blogs as $law)
-                        <form action="{{ route('peraturans.update', $law->id) }}" method="POST" enctype="multipart/form-data">
-
+                    <form method="POST" action="{{ route('update-peraturan', $law->id) }}" enctype="multipart/form-data">
                             @csrf
-                            @method('PUT')
-                    @endforeach
                             <div class="form-group">
                                 <label>Judul</label>
-                                <input type="text" class="form-control" name="judul">
+                                <input type="text" class="form-control" name="judul" value="{{$law->judul}}">
                             </div>
                             <div class="form-group">
                                 <label>Keterangan</label>
-                                <textarea class="form-control" name="keterangan" id="keterangan"></textarea>
+                                <textarea class="form-control" name="keterangan" value="{{$law->keterangan}}"></textarea>
                             </div>
                             <div class="form-group">
                                 <label class="font-weight-bold">FILE</label>
-                                <input type="file" class="form-control" name="file">
+                                <input type="file" class="form-control" name="file" value="{{$law->file}}">
                             </div>
                             <button type="submit" class="btn btn-md btn-primary">UPDATE</button>
                             <button type="reset" class="btn btn-md btn-warning">RESET</button>
