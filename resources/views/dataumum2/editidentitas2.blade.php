@@ -9,7 +9,7 @@
               <div class="card-header">
                 <p>Test</p>
               <div class="card-body">
-                  <form method="POST" action="{{ route('update-identitas', $idn->id) }}" enctype="multipart/form-data">
+                  <form method="POST" action="{{ route('update-identitas2', $idn->id) }}" enctype="multipart/form-data">
                       @csrf
                       <div class="row">
                           <div class="col-md-12 ">

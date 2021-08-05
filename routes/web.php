@@ -198,3 +198,97 @@ Route::get('/destroynkk/{id}', 'Admin2Controller@destroynkk')->name('delete-nkk'
 Route::get('/nkk', 'Admin2Controller@viewnkk');
 Route::get('/viewnkk2/{id}', 'Admin2Controller@viewnkk2');
 Route::get('/deletenkk/{id}', 'Admin2Controller@deletenkk');
+
+//dataumum2
+Route::get('/inputidentitas2', 'DataUmumController@inputidentitas2')->name('inputidentitas2');
+Route::post('/simpan-identitas2', 'DataUmumController@storeidentitas2')->name('simpan-identitas2');
+Route::get('/show-dataumum2', 'DataUmumController@index')->name('show-dataumum2');
+Route::post('/update-identitas2/{id}', 'DataUmumController@updateidentitas2')->name('update-identitas2');
+Route::get('/viewidentitas2/{id}', 'DataUmumController@viewidentitas2');
+
+Route::get('/inputkepalakph2', 'DataUmumController@inputkepalakph2')->name('inputkepalakph2');
+Route::post('/simpan-kepalakph2', 'DataUmumController@storekepalakph2')->name('simpan-kepalakph2');
+Route::post('/update-kepalakph2/{id}', 'DataUmumController@updatekepalakph2')->name('update-kepalakph2');
+Route::get('/viewkepalakph2/{id}', 'DataUmumController@viewkepalakph2');
+
+Route::get('/inputlembaga2', 'DataUmumController@inputlembaga2')->name('inputlembaga2');
+Route::post('/simpan-lembaga2', 'DataUmumController@storelembaga2')->name('simpan-lembaga2');
+Route::post('/update-lembaga2/{id}', 'DataUmumController@updatelembaga2')->name('update-lembaga2');
+Route::get('/viewlembaga2/{id}', 'DataUmumController@viewlembaga2');
+
+Route::get('/inputrphjp2', 'DataUmumController@inputrphjp2')->name('inputrphjp2');
+Route::post('/simpan-rphjp2', 'DataUmumController@storerphjp2')->name('simpan-rphjp2');
+Route::post('/update-rphjp2/{id}', 'DataUmumController@updaterphjp2')->name('update-rphjp2');
+Route::get('/viewrphjp2/{id}', 'DataUmumController@viewrphjp2');
+
+//dataumum3
+Route::get('/inputidentitas3', 'DataUmumController@inputidentitas3')->name('inputidentitas3');
+Route::post('/simpan-identitas3', 'DataUmumController@storeidentitas3')->name('simpan-identitas3');
+Route::get('/show-dataumum3', 'DataUmumController@index')->name('show-dataumum3');
+Route::post('/update-identitas3/{id}', 'DataUmumController@updateidentitas3')->name('update-identitas3');
+Route::get('/viewidentitas3/{id}', 'DataUmumController@viewidentitas3');
+
+Route::get('/inputkepalakph3', 'DataUmumController@inputkepalakph3')->name('inputkepalakph3');
+Route::post('/simpan-kepalakph3', 'DataUmumController@storekepalakph3')->name('simpan-kepalakph3');
+Route::post('/update-kepalakph3/{id}', 'DataUmumController@updatekepalakph3')->name('update-kepalakph3');
+Route::get('/viewkepalakph3/{id}', 'DataUmumController@viewkepalakph3');
+
+Route::get('/inputlembaga3', 'DataUmumController@inputlembaga3')->name('inputlembaga3');
+Route::post('/simpan-lembaga3', 'DataUmumController@storelembaga3')->name('simpan-lembaga3');
+Route::post('/update-lembaga3/{id}', 'DataUmumController@updatelembaga3')->name('update-lembaga3');
+Route::get('/viewlembaga3/{id}', 'DataUmumController@viewlembaga3');
+
+Route::get('/inputrphjp3', 'DataUmumController@inputrphjp3')->name('inputrphjp3');
+Route::post('/simpan-rphjp3', 'DataUmumController@storerphjp3')->name('simpan-rphjp3');
+Route::post('/update-rphjp3/{id}', 'DataUmumController@updaterphjp3')->name('update-rphjp3');
+Route::get('/viewrphjp3/{id}', 'DataUmumController@viewrphjp3');
+
+
+//dataumum4
+Route::get('/inputidentitas4', 'DataUmumController@inputidentitas4')->name('inputidentitas4');
+Route::post('/simpan-identitas4', 'DataUmumController@storeidentitas4')->name('simpan-identitas4');
+Route::get('/show-dataumum4', 'DataUmumController@index')->name('show-dataumum4');
+Route::post('/update-identitas4/{id}', 'DataUmumController@updateidentitas4')->name('update-identitas4');
+Route::get('/viewidentitas4/{id}', 'DataUmumController@viewidentitas4');
+
+Route::get('/inputkepalakph4', 'DataUmumController@inputkepalakph4')->name('inputkepalakph4');
+Route::post('/simpan-kepalakph4', 'DataUmumController@storekepalakph4')->name('simpan-kepalakph4');
+Route::post('/update-kepalakph4/{id}', 'DataUmumController@updatekepalakph4')->name('update-kepalakph4');
+Route::get('/viewkepalakph4/{id}', 'DataUmumController@viewkepalakph4');
+
+Route::get('/inputlembaga4', 'DataUmumController@inputlembaga4')->name('inputlembaga4');
+Route::post('/simpan-lembaga4', 'DataUmumController@storelembaga4')->name('simpan-lembaga4');
+Route::post('/update-lembaga4/{id}', 'DataUmumController@updatelembaga4')->name('update-lembaga4');
+Route::get('/viewlembaga4/{id}', 'DataUmumController@viewlembaga4');
+
+Route::get('/inputrphjp4', 'DataUmumController@inputrphjp4')->name('inputrphjp4');
+Route::post('/simpan-rphjp4', 'DataUmumController@storerphjp4')->name('simpan-rphjp4');
+Route::post('/update-rphjp4/{id}', 'DataUmumController@updaterphjp4')->name('update-rphjp4');
+Route::get('/viewrphjp4/{id}', 'DataUmumController@viewrphjp4');
+
+//Data Ekonomi 2
+Route::get('/inputpotensiekonomi2', 'AdminController@inputpotensiekonomi2')->name('inputpotensiekonomi2');
+Route::post('/simpan-potensiekonomi2', 'AdminController@storepotensiekonomi2')->name('simpan-potensiekonomi2');
+Route::get('/showpotensiekonomi2', 'AdminController@showpotensiekonomi2')->name('showpotensiekonomi2');
+Route::get('/ajaxekonomi2', 'AdminController@ajaxekonomi2')->name('ajaxekonomi2');
+
+Route::post('/update-potensiekonomi2/{id}', 'AdminController@updatepotensiekonomi2')->name('update-potensiekonomi2');
+Route::get('/viewpotensiekonomi2/{id}', 'AdminController@viewpotensiekonomi2');
+
+//Data Ekonomi 3
+Route::get('/inputpotensiekonomi3', 'AdminController@inputpotensiekonomi3')->name('inputpotensiekonomi3');
+Route::post('/simpan-potensiekonomi3', 'AdminController@storepotensiekonomi3')->name('simpan-potensiekonomi3');
+Route::get('/showpotensiekonomi3', 'AdminController@showpotensiekonomi3')->name('showpotensiekonomi3');
+Route::get('/ajaxekonomi3', 'AdminController@ajaxekonomi3')->name('ajaxekonomi3');
+
+Route::post('/update-potensiekonomi3/{id}', 'AdminController@updatepotensiekonomi3')->name('update-potensiekonomi3');
+Route::get('/viewpotensiekonomi3/{id}', 'AdminController@viewpotensiekonomi3');
+
+//Data Ekonomi 4
+Route::get('/inputpotensiekonomi4', 'AdminController@inputpotensiekonomi4')->name('inputpotensiekonomi4');
+Route::post('/simpan-potensiekonomi4', 'AdminController@storepotensiekonomi4')->name('simpan-potensiekonomi4');
+Route::get('/showpotensiekonomi4', 'AdminController@showpotensiekonomi4')->name('showpotensiekonomi4');
+Route::get('/ajaxekonomi4', 'AdminController@ajaxekonomi4')->name('ajaxekonomi4');
+
+Route::post('/update-potensiekonomi4/{id}', 'AdminController@updatepotensiekonomi4')->name('update-potensiekonomi4');
+Route::get('/viewpotensiekonomi4/{id}', 'AdminController@viewpotensiekonomi4');

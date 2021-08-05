@@ -21,6 +21,10 @@ use App\Ekologi2;
 use App\Ekologi3;
 use App\Ekologi4;
 use App\JasaLingkungan1;
+use App\PotensiEkonomi2;
+use App\PotensiEkonomi3;
+use App\PotensiEkonomi4;
+
 
 class AdminController extends Controller
 {
@@ -707,4 +711,194 @@ public function inputekologi4()
        }
 
 
+       //Potensi Ekonomi 2
+
+    public function inputpotensiekonomi2()
+    {
+        $pe = PotensiEkonomi2::latest()->get();
+        return view('inputpotensiekonomi2');
+    }
+
+    public function storepotensiekonomi2(Request $request)
+    {
+        // dd($request->all());
+        $up1=substr($request->kayu, 3,-4);
+        $up2=substr($request->nonkayu, 3,-4);
+        // $up3=substr($request->jasalingkungan,);
+        // $up4=substr($request->bisnis, );
+        $up5=substr($request->donor, 3,-4);
+        $pe = PotensiEkonomi2::create([
+            'kayu' => $up1,
+            'nonkayu' => $up2,
+            'jasalingkungan' => $request->jasalingkungan,
+            'bisnis' => $request->bisnis,
+            'donor' => $up5,
+        ]);
+
+        return redirect('showpotensiekonomi2');
+    }
+
+    public function showpotensiekonomi2(Request $request)
+    {
+        $pe = DB::table('potensiekonomi2')->get();
+        return view('showpotensiekonomi2', compact('pe'));
+    }
+
+    public function viewpotensiekonomi2($id)
+    {
+        $pe=PotensiEkonomi2::find($id);
+        return view('editpotensiekonomi2',compact('pe'));
+    }
+
+    public function updatepotensiekonomi2(Request $request, $id)
+    {
+        $pe=PotensiEkonomi2::find($id);
+        $up1=substr($request->kayu, 3,-4);
+        $up2=substr($request->nonkayu, 3,-4);
+        $up5=substr($request->donor, 3,-4);
+        $pe->update([
+            'kayu' => $up1,
+            'nonkayu' => $up2,
+            'jasalingkungan' => $request->jasalingkungan,
+            'bisnis' => $request->bisnis,
+            'donor' => $up5,
+        ]);
+        return redirect('showpotensiekonomi2');
+
+    }
+
+    public function ajaxekonomi2(){
+        $pe = DB::table('potensiekonomi2')->get();
+        return view('ajaxekonomi2',compact('pe'));
+
+    }
+
+//Potensi Ekonomi 3
+
+public function inputpotensiekonomi3()
+{
+    $pe = PotensiEkonomi3::latest()->get();
+    return view('inputpotensiekonomi3');
 }
+
+public function storepotensiekonomi3(Request $request)
+{
+    // dd($request->all());
+    $up1=substr($request->kayu, 3,-4);
+    $up2=substr($request->nonkayu, 3,-4);
+    // $up3=substr($request->jasalingkungan,);
+    // $up4=substr($request->bisnis, );
+    $up5=substr($request->donor, 3,-4);
+    $pe = PotensiEkonomi3::create([
+        'kayu' => $up1,
+        'nonkayu' => $up2,
+        'jasalingkungan' => $request->jasalingkungan,
+        'bisnis' => $request->bisnis,
+        'donor' => $up5,
+    ]);
+
+    return redirect('showpotensiekonomi3');
+}
+
+public function showpotensiekonomi3(Request $request)
+{
+    $pe = DB::table('potensiekonomi3')->get();
+    return view('showpotensiekonomi3', compact('pe'));
+}
+
+public function viewpotensiekonomi3($id)
+{
+    $pe=PotensiEkonomi3::find($id);
+    return view('editpotensiekonomi3',compact('pe'));
+}
+
+public function updatepotensiekonomi3(Request $request, $id)
+{
+    $pe=PotensiEkonomi3::find($id);
+    $up1=substr($request->kayu, 3,-4);
+    $up2=substr($request->nonkayu, 3,-4);
+    $up5=substr($request->donor, 3,-4);
+    $pe->update([
+        'kayu' => $up1,
+        'nonkayu' => $up2,
+        'jasalingkungan' => $request->jasalingkungan,
+        'bisnis' => $request->bisnis,
+        'donor' => $up5,
+    ]);
+    return redirect('showpotensiekonomi3');
+
+}
+
+public function ajaxekonomi3(){
+    $pe = DB::table('potensiekonomi3')->get();
+    return view('ajaxekonomi3',compact('pe'));
+
+}
+
+//Potensi Ekonomi 4
+
+public function inputpotensiekonomi4()
+{
+    $pe = PotensiEkonomi4::latest()->get();
+    return view('inputpotensiekonomi4');
+}
+
+public function storepotensiekonomi4(Request $request)
+{
+    // dd($request->all());
+    $up1=substr($request->kayu, 3,-4);
+    $up2=substr($request->nonkayu, 3,-4);
+    // $up3=substr($request->jasalingkungan,);
+    // $up4=substr($request->bisnis, );
+    $up5=substr($request->donor, 3,-4);
+    $pe = PotensiEkonomi4::create([
+        'kayu' => $up1,
+        'nonkayu' => $up2,
+        'jasalingkungan' => $request->jasalingkungan,
+        'bisnis' => $request->bisnis,
+        'donor' => $up5,
+    ]);
+
+    return redirect('showpotensiekonomi4');
+}
+
+public function showpotensiekonomi4(Request $request)
+{
+    $pe = DB::table('potensiekonomi4')->get();
+    return view('showpotensiekonomi4', compact('pe'));
+}
+
+public function viewpotensiekonomi4($id)
+{
+    $pe=PotensiEkonomi4::find($id);
+    return view('editpotensiekonomi4',compact('pe'));
+}
+
+public function updatepotensiekonomi4(Request $request, $id)
+{
+    $pe=PotensiEkonomi4::find($id);
+    $up1=substr($request->kayu, 3,-4);
+    $up2=substr($request->nonkayu, 3,-4);
+    $up5=substr($request->donor, 3,-4);
+    $pe->update([
+        'kayu' => $up1,
+        'nonkayu' => $up2,
+        'jasalingkungan' => $request->jasalingkungan,
+        'bisnis' => $request->bisnis,
+        'donor' => $up5,
+    ]);
+    return redirect('showpotensiekonomi4');
+
+}
+
+public function ajaxekonomi4(){
+    $pe = DB::table('potensiekonomi4')->get();
+    return view('ajaxekonomi4',compact('pe'));
+
+}
+
+
+
+}
+
+
