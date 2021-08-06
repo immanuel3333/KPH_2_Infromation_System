@@ -58,20 +58,80 @@ class HomeController extends Controller
                 return redirect()->back()->with(['success' => 'Komentar Ditambahkan']);
        }
 
-       public function profilpegawai()
+       public function article()
        {
-           return view('profilpegawai');
+           $art = DB::table('artikel')->get();
+           return view ('artikel.index', compact('art'));
+       }
+       public function inputartikel()
+            {
+                $art = Artikel::latest()->get();
+                return view('artikel.inputartikel');
+            }
+
+       public function storeartikel(Request $request)
+       {
+
+           $image = $request->gambar;
+           $new_image = time().$image->getClientOriginalName();
+           $up=substr($request->artikel, 3,-4);
+           $art = Artikel::create([
+               'judul' => $request->judul,
+               'artikel' => $up,
+               'gambar' => 'public/artikel/'.$new_image
+           ]);
+
+           $image->move('public/artikel/', $new_image);
+
+
+           return redirect('indexartikel');
+
+
        }
 
-       public function strukturorg()
+       public function showartikel()
        {
-           return view('strukturorg');
+
+        $art = DB::table('artikel')->get();
+        return view('artikel.showartikel', compact('art'));
        }
 
-    public function sejarah()
-    {
-        return view('sejarah');
-    }
+       public function updateartikel(Request $request, $id)
+       {
+           $art=Artikel::find($id);
+           $up=substr($request->artikel, 3,-4);
+           File::delete($art->image);
+           $file = $request->file('gambar');
+           $file->move('public/artikel/',$file->getClientOriginalName());
+           $art->update([
+               'judul' => $request->judul,
+               'artikel' => $up,
+               'gambar' => 'public/artikel/'.$file->getClientOriginalName(),
+           ]);
+           return redirect('indexartikel');
+
+
+
+       }
+       public function getartikel(Request $request, $id)
+           {
+               $art=Artikel::find($id);
+               $up=substr($request->artikel, 3,-4);
+               $file = $request->file('gambar');
+               $file->get('public/artikel/',$file);
+               $art->get([
+                   'judul' => $request->judul,
+                   'artikel' => $up,
+                   'gambar' => 'public/artikel/'.$file,
+               ]);
+               return redirect('showartikel');
+
+           }
+       public function viewartikel()
+       {
+           $art = DB::table('artikel')->get();
+         return view('artikel.editartikel', compact('art'));
+       }
 
 
 }

@@ -1,4 +1,3 @@
-
 @include('layouts.header')
             <div class="content-page " >
                 <div class="container">
@@ -56,7 +55,7 @@
                 Portfolio Section
                 ============================-->
                 <section id="portfolio"  class="section-bg" >
-              
+
                     <div class="row portfolio-container">
                         <div class="col-lg-3 col-md-6 portfolio-item filter-app wow fadeInUp">
                             <div class="portfolio-wrap">
@@ -119,7 +118,7 @@
                         </div>
                     </div>
 
-                
+
                 </section><!-- #portfolio -->
                 <div class="card" id="mapid" style="width:100%;">
                 </div>
@@ -136,7 +135,7 @@
                                             <div class="col-md-6">
                                                 <form action="{{ url('/comment') }}" method="post">
                                                     @csrf
-                                
+
                                                     <div class="form-group">
                                                         <label for="">Nama</label>
                                                         <input type="text" class="form-control" name="username">
@@ -164,7 +163,7 @@
                                                 <h4>No Comments</h4>
                                             @endforelse
                                         </ol>
-                                          
+
                                         </div>
                                     </div>
                                 </div>

@@ -1,4 +1,3 @@
-
 @include('layouts.headeradmin')
     <div class="content-page " >
     <h1>Selamat Datang di Halaman Pengaturan</h1>
@@ -49,11 +48,11 @@
         <td>
               <form action="{{url('/toggle-approve')}}" method="POST">
                   {{csrf_field()}}
-                  <input <?php if($comment->approve == 1){echo "checked";}?>  type="checkbox" name='approve'>       
-                     
-                     <input type="hidden" name="commentId" value="{{$comment->id}}">    
+                  <input <?php if($comment->approve == 1){echo "checked";}?>  type="checkbox" name='approve'>
+
+                     <input type="hidden" name="commentId" value="{{$comment->id}}">
                   <input class="btn btn-primary" type="submit" value="Done">
-                  
+
               </form>
         </td>
       </tr>

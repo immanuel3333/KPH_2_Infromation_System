@@ -18,10 +18,9 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table-> bigInteger('nip');
             $table->string('email')->unique();
-            $table-> bigInteger('nomorHP');
+            $table-> timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('image')->nullable();
-            $table->string('status');
+            $table->string('level');
             $table->rememberToken();
             $table->timestamps();
         });

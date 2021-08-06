@@ -13,16 +13,16 @@ Login
                 <h4 class="pl-2 font-weight-bold text-center" style="font-size: 20px;">UPT. Kesatuan Pengelolaan Hutan Wilayah - II</h4>
             </div>
             <h5 class="mb-1 text-center bold" style="font-size: 20px;">Masuk</h2>
-                            <form class="mx-2" method="POST" action="{{ route('login') }}">
+                            <form class="mx-2" method="POST" action="{{ route('proses_login') }}" id="logForm">
                                 @csrf
 
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form-group">
-                                            <label class="mb-0">NIP</label>
-                                            <input name="nip" class="form-control form-control-sm {{ $errors->has('nip') ? ' is-invalid' : '' }}" name="nip" value="{{ old('nip') }}" type="nip">
-                                            @if ($errors->has('nip'))
-                                            <small class="text-danger">{{ $errors->first('nip') }}</small>
+                                            <label class="mb-0">Username</label>
+                                            <input name="name" class="form-control form-control-sm {{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" type="name">
+                                            @if ($errors->has('name'))
+                                            <small class="text-danger">{{ $errors->first('name') }}</small>
                                             @endif
                                         </div>
                                     </div>
@@ -45,9 +45,9 @@ Login
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-6">
+                                    {{-- <div class="col-lg-6">
                                         <a href="{{ route('password.request') }}" class="text-primary float-right">Lupa kata sandi?</a>
-                                    </div>
+                                    </div> --}}
                                 </div>
 
 
