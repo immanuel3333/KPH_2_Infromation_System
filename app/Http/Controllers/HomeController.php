@@ -43,24 +43,15 @@ class HomeController extends Controller
         $firstTitle = $result->articles[0]->title;
         $secondTitle= $result->articles[1]->title;
         $thirdTitle = $result->articles[2]->title;
-        $post = Post::with(['comments', 'comments.child'])->first();
+        $comments = Comment::where('approve','1')->get();
         $projects = counter::latest()->paginate(5);
         counter::increment('views');
-        return view('landingpage', compact('firstImage','secondImage','thirdImage','firstUrl','secondUrl','thirdUrl','firstTitle','secondTitle','thirdTitle','post','projects'));
+        return view('landingpage', compact('firstImage','secondImage','thirdImage','firstUrl','secondUrl','thirdUrl','firstTitle','secondTitle','thirdTitle','comments','projects'));
     }
 
     public function comment(Request $request)
         {
-                //VALIDASI DATA YANG DITERIMA
-                $this->validate($request, [
-                    'username' => 'required',
-                    'comment' => 'required'
-                ]);
-
                 Comment::create([
-                    'post_id' => $request->id,
-                    //JIKA PARENT ID TIDAK KOSONG, MAKA AKAN DISIMPAN IDNYA, SELAIN ITU NULL
-                    'parent_id' => $request->parent_id != '' ? $request->parent_id:NULL,
                     'username' => $request->username,
                     'comment' => $request->comment
                 ]);

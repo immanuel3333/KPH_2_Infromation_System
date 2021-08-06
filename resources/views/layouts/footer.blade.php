@@ -1,6 +1,6 @@
 </div>
 <div class="bg-light text-muted" style="position:bottom;">
-            <section>
+            <section class="col-md-12 col-sm-12">
                 <div class="text-center" style="background-color:#0C3310;">
                     <div class="row">
                         <div class="col-md-3">
@@ -222,6 +222,6 @@ L.marker([2.9514596123305656, 99.05752741133092], {icon: greenIcon}).addTo(map).
       return "";
     }
 </script>
-
+@include('sweetalert::alert')
 </body>
 </html>

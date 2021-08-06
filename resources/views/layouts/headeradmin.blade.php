@@ -22,7 +22,6 @@
       <link rel='stylesheet' href="{{ asset('assets/vendor/fullcalendar/daygrid/main.css') }}" />
       <link rel='stylesheet' href="{{ asset('assets/vendor/fullcalendar/timegrid/main.css') }}" />
       <link rel='stylesheet' href="{{ asset('assets/vendor/fullcalendar/list/main.css') }}" />
-      <link rel="stylesheet" href="{{ asset('assets/vendor/mapbox/mapbox-gl.css') }}">
 
       <link rel="stylesheet" href="{{ asset('styles/main.css')}}">
       <link rel="stylesheet" href="{{ asset('styles/style.css')}}">
@@ -31,23 +30,9 @@
       <link rel="stylesheet" href="{{ asset('styles/lightbox.min.css')}}">
       <link rel="stylesheet" href="{{ asset('styles/owl.carousel.min.css')}}">
       <link rel="stylesheet" href="{{ asset('styles/ionicons/css/ionicons.min.css')}}">
-
-      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-   crossorigin=""/>
+      
    <link rel="stylesheet" href="{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')}}" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script type="text/javascript" src="{{ asset('https://code.jquery.com/jquery-3.1.1.min.js')}}"></script>
-
-<!-- leaflet -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-        crossorigin="">
-    </script>
-
-    <script src="https://unpkg.com/esri-leaflet@3.0.2/dist/esri-leaflet.js"
-        integrity="sha512-myckXhaJsP7Q7MZva03Tfme/MSF5a6HC2xryjAM4FxPLHGqlh5VALCbywHnzs2uPoF/4G/QVXyYDDSkp5nPfig=="
-        crossorigin="">
-    </script>
+   <script src="{{asset('js/jquery-3.5.1.min.js')}}" ></script>
 
     <script src="{{ asset('ckeditor/ckeditor.js')}}"></script>
 
@@ -102,14 +87,14 @@
         <!-- loader END -->
         <!-- Wrapper Start -->
         <div class="wrapper">
-            <div class="navbar-static-top card " style="background-color:#0C3310; " >
+            <div class="navbar-static-top card col-md-12 col-sm-12" style="background-color:#0C3310; " >
                 <div class="mm-navbar-custom">
                     <div class="row">
-                        <div  class="col-md-2 col-sm-2" style="padding-left:150px;">
+                        <div  class="col-md-12 col-sm-12" style="padding-left:150px;">
                             <img src="{{ asset('img/logo1.png')}}" alt="">
 
                         </div>
-                        <div class="col-md-10 col-sm-10">
+                        <div class="col-md-12 col-sm-12">
                             <p class="text-center" style="font-family:Balthazar; font-size:35px; padding-right:100px;color:white;">UPT. KESATUAN PENGELOLAAN HUTAN WILAYAH-II</p>
                         </div>
                     </div>

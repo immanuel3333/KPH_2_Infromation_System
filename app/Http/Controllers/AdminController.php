@@ -14,28 +14,37 @@ use App\TugasFungsi;
 use App\Sejarah;
 use App\Galeriupt;
 use File;
-use App\PotensiEkonomi1;
 use App\SDM1;
-use App\Ekologi;
-use App\Ekologi2;
-use App\Ekologi3;
-use App\Ekologi4;
-use App\JasaLingkungan1;
-use App\PotensiEkonomi2;
-use App\PotensiEkonomi3;
-use App\PotensiEkonomi4;
+
 
 
 class AdminController extends Controller
 {
     public function home()
     {
-        $user = Auth::user();
-        $post = Post::with(['comments', 'comments.child'])->first();
-        return view('berandaadminupt',['user'=> $user],compact('post'));
-
+        $comments = Comment::all();
+        return view('berandaadminupt',compact('comments'));
 
     }
+
+    public function approval(Request $request)
+    {
+
+    	$comment= Comment::find($request->commentId);
+    	$approveVal=$request->approve;
+    	if($approveVal=='on'){
+    		$approveVal=1;
+    	}else{
+    		$approveVal=0;
+    	}
+
+    	$comment->approve=$approveVal;
+    	$comment->save();
+
+    	return back();
+    }
+
+
     public function delete($id)
      {
 
@@ -47,19 +56,27 @@ class AdminController extends Controller
         return redirect('/home');
      }
 
+     //visimisi
+
     public function inputvisimisi()
     {
         return view ('/inputvisimisi');
 
     }
-    public function store(Request $request)
+    public function storevisimisi(Request $request)
     {
+
+        $this->validate($request, [
+            'visi' => 'required|min:3',
+            'misi' => 'required|min:3',
+        ]);
         // dd($request->all());
         VisiMisi::create([
             'visi'=> $request->visi,
             'misi'=> $request->misi
         ]);
-        return redirect('/showvisimisi');
+        return redirect('/showvisimisi')->with('success', 'Visi dan Misi berhasil ditambahkan!');
+
 
     }
 
@@ -69,31 +86,40 @@ class AdminController extends Controller
         return view('showvisimisi', compact('vm'));
     }
 
-    public function update1(Request $request, $id)
+    public function updatevisimisi(Request $request, $id)
     {
+        $this->validate($request, [
+            'visi' => 'required|min:3',
+            'misi' => 'required|min:3',
+        ]);
         $vm=VisiMisi::find($id);
         $vm->update([
             'visi'=>$request->visi,
             'misi'=>$request->misi
         ]);
-        return redirect('showvisimisi');
+        return redirect('showvisimisi')->with('success', 'Visi dan Misi berhasil diubah!');
 
     }
 
-    public function view1()
+    public function viewvisimisi()
     {
         $vm = DB::table('visimisi')->get();
-      return view('edit1', compact('vm'));
+      return view('editvisimisi', compact('vm'));
     }
 
+    //Tugasfungsi
 
     public function inputtugasfungsi()
     {
         return view ('/inputtugasfungsi');
 
     }
-    public function store2(Request $request)
+    public function storetugasfungsi(Request $request)
     {
+        $this->validate($request, [
+            'tugas' => 'required|min:3',
+            'fungsi' => 'required|min:3',
+        ]);
         // dd($request->all());
         $up=substr($request->tugas, 3,-4);
         $down=substr($request->tugas, 3,-4);
@@ -101,7 +127,7 @@ class AdminController extends Controller
             'tugas'=> $up,
             'fungsi'=> $down
         ]);
-        return redirect('/showtugasfungsi');
+        return redirect('/showtugasfungsi')->with('success', 'Tugas dan Fungsi berhasil ditambahkan!');
 
     }
 
@@ -111,22 +137,26 @@ class AdminController extends Controller
         return view('showtugasfungsi', compact('tf'));
     }
 
-    public function update2(Request $request, $id)
+    public function updatetugasfungsi(Request $request, $id)
     {
+        $this->validate($request, [
+            'tugas' => 'required|min:3',
+            'fungsi' => 'required|min:3',
+        ]);        
         $tf=TugasFungsi::find($id);
         $up=substr($request->tugas, 3,-4);
-        $down=substr($request->tugas, 3,-4);
+        $down=substr($request->fungsi, 3,-4);
         $tf->update([
             'tugas'=>$up,
             'fungsi'=>$down
         ]);
-        return redirect('showtugasfungsi');
+        return redirect('showtugasfungsi')->with('success', 'Visi dan Misi berhasil diubah!');
 
     }
     public function view2()
     {
         $tf = DB::table('tugas_fungsi')->get();
-      return view('edit2', compact('tf'));
+      return view('edittugasfungsi', compact('tf'));
     }
 
 
@@ -138,6 +168,10 @@ class AdminController extends Controller
     }
     public function store3(Request $request)
     {
+        $this->validate($request, [
+            'sejarah' => 'required|min:3',
+            'gambar' => 'required'
+        ]);
 
         $image = $request->gambar;
         $new_image = time().$image->getClientOriginalName();
@@ -149,7 +183,7 @@ class AdminController extends Controller
 
         $image->move('public/struktororg/', $new_image);
 
-        return redirect('showsejarah');
+        return redirect('showsejarah')->with('success', 'Sejarah berhasil ditambahkan!');
 
 
     }
@@ -162,6 +196,11 @@ class AdminController extends Controller
 
     public function update3(Request $request, $id)
     {
+        $this->validate($request, [
+            'sejarah' => 'required|min:3',
+            'gambar' => 'required'
+        ]);
+
         $sj=Sejarah::find($id);
         $up=substr($request->sejarah, 3,-4);
         File::delete($sj->image);
@@ -171,7 +210,7 @@ class AdminController extends Controller
             'sejarah' => $up,
             'gambar' => 'public/struktororg/'.$file->getClientOriginalName(),
         ]);
-        return redirect('showsejarah');
+        return redirect('showsejarah')->with('success', 'Sejarah berhasil diubah!');
 
 
 
@@ -179,11 +218,8 @@ class AdminController extends Controller
     public function view3()
     {
         $sj = DB::table('sejarah')->get();
-      return view('edit3', compact('sj'));
+      return view('editsejarah', compact('sj'));
     }
-
-
-
 
 
     //galeriupt
@@ -195,6 +231,11 @@ class AdminController extends Controller
 
     public function store4(Request $request)
     {
+        $this->validate($request, [
+            'tanggal' => 'required',
+            'keterangan' => 'required',
+            'gambar' => 'required',
+        ]);
         // dd($request->all());
         $image = $request->gambar;
         $new_image = time().$image->getClientOriginalName();
@@ -207,7 +248,7 @@ class AdminController extends Controller
 
         $image->move('public/struktororg/', $new_image);
 
-        return redirect('showgaleriupt');
+        return redirect('showgaleriupt')->with('success', 'Galeri berhasil ditambahkan!');
     }
 
     public function showgaleriupt(Request $request)
@@ -219,11 +260,16 @@ class AdminController extends Controller
     public function view4($id)
     {
         $gl=Galeriupt::find($id);
-        return view('edit4',compact('gl'));
+        return view('editgaleriupt',compact('gl'));
     }
 
     public function update4(Request $request, $id)
     {
+        $this->validate($request, [
+            'tanggal' => 'required',
+            'keterangan' => 'required',
+            'gambar' => 'required',
+        ]);
         $gl=Galeriupt::find($id);
         $up=substr($request->keterangan, 3,-4);
         File::delete($gl->gambar);
@@ -234,7 +280,7 @@ class AdminController extends Controller
             'keterangan' => $up,
             'gambar' => 'public/struktororg/'.$file->getClientOriginalName(),
         ]);
-        return redirect('showgaleriupt');
+        return redirect('showgaleriupt')->with('success', 'Galeri berhasil diubah!');;
 
     }
 
@@ -253,649 +299,79 @@ class AdminController extends Controller
         return back();
     }
 
+//SDM1
 
-
-    //Potensi Ekonomi
-
-    public function inputpotensiekonomi1()
-    {
-        $pe = PotensiEkonomi1::latest()->get();
-        return view('inputpotensiekonomi1');
-    }
-
-    public function store5(Request $request)
-    {
-        // dd($request->all());
-        $up1=substr($request->kayu, 3,-4);
-        $up2=substr($request->nonkayu, 3,-4);
-        // $up3=substr($request->jasalingkungan,);
-        // $up4=substr($request->bisnis, );
-        $up5=substr($request->donor, 3,-4);
-        $pe = PotensiEkonomi1::create([
-            'kayu' => $up1,
-            'nonkayu' => $up2,
-            'jasalingkungan' => $request->jasalingkungan,
-            'bisnis' => $request->bisnis,
-            'donor' => $up5,
-        ]);
-
-        return redirect('showpotensiekonomi1');
-    }
-
-    public function showpotensiekonomi1(Request $request)
-    {
-        $pe = DB::table('potensiekonomi1')->get();
-        return view('showpotensiekonomi1', compact('pe'));
-    }
-
-    public function view5($id)
-    {
-        $pe=PotensiEkonomi1::find($id);
-        return view('editpotensiekonomi1',compact('pe'));
-    }
-
-    public function update5(Request $request, $id)
-    {
-        $pe=PotensiEkonomi1::find($id);
-        $up1=substr($request->kayu, 3,-4);
-        $up2=substr($request->nonkayu, 3,-4);
-        $up5=substr($request->donor, 3,-4);
-        $pe->update([
-            'kayu' => $up1,
-            'nonkayu' => $up2,
-            'jasalingkungan' => $request->jasalingkungan,
-            'bisnis' => $request->bisnis,
-            'donor' => $up5,
-        ]);
-        return redirect('showpotensiekonomi1');
-
-    }
-
-    public function ajaxekonomi1(){
-        $pe = DB::table('potensiekonomi1')->get();
-        return view('ajaxekonomi1',compact('pe'));
-
-    }
-
-    //Jasa Lingkungan1
-    public function inputjasalingkungan1()
-    {
-        $jl = JasaLingkungan1::latest()->get();
-        return view('inputjasalingkungan1');
-    }
-
-    public function store6(Request $request)
-    {
-        // dd($request->all());
-        $jl = JasaLingkungan1::create([
-            'provinsi' => $request->provinsi,
-            'jenis_jasa_lingkungan'  => $request->jenis_jasa_lingkungan,
-            'satuan' => $request->satuan,
-            'keunggulan' => $request->keunggulan,
-            'lintang'  => $request->lintang,
-            'bujur' => $request->bujur,
-            'pengembangan' => $request->pengembangan,
-            'tahapan' => $request->tahapan,
-            'periode' => $request->periode,
-            'hasil' => $request->hasil,
-
-        ]);
-
-        return redirect('showjasalingkungan1');
-    }
-
-    public function update6(Request $request, $id)
-    {
-        $jl=JasaLingkungan1::find($id);
-        $jl->update([
-            'provinsi' => $request->provinsi,
-            'jenis_jasa_lingkungan' => $request->jenis_jasa_lingkungan,
-            'satuan' => $request->satuan,
-            'keunggulan' => $request->keunggulan,
-            'lintang'  => $request->lintang,
-            'bujur' => $request->bujur,
-            'pengembangan' => $request->pengembangan,
-            'tahapan' => $request->tahapan,
-            'periode' => $request->periode,
-            'hasil' => $request->hasil,
-        ]);
-        return redirect('showjasalingkungan1');
-
-    }
-
-
-    public function showjasalingkungan1(){
-        $jl = DB::table('jasalingkungan1')->get();
-        return view('showjasalingkungan1',compact('jl'));
-
-    }
-
-    public function view6()
-    {
-        $jl=JasaLingkungan1::all();
-        foreach($jl as $jl2)
-        {
-            $jl2->action='<a href="view65/'.$jl2->id.'" class="btn btn-warning btn-sm" id="update'.$jl2->id.'">Edit</a>
-            <a href="delete2/'.$jl2->id.'" class="btn btn-danger btn-sm" id="'.$jl2->id.'" >Delete</a>';
-        }
-
-        return response()->json($jl,200);
-        // return dd($jl);
-
-    }
-    public function view65($id)
-    {
-        $jl=JasaLingkungan1::find($id);
-        return view('editjasalingkungan1',compact('jl'));
-    }
-
-    public function delete2($id)
-    {
-        $jl=JasaLingkungan1::find($id);
-        $jl->delete();
-        return redirect('/showjasalingkungan1');
-    }
-
-
-
-
-    //SDM1
-
-    public function inputsdm1()
-    {
-        $pe = SDM1::latest()->get();
-        return view('inputsdm1');
-    }
-
-    public function storesdm1(Request $request)
-    {
-        // dd($request->all());
-        $pe = SDM1::create([
-            'kkph' => $request->kkph,
-            'kepala_seksi' => $request->kepala_seksi,
-            'tata_usaha' => $request->tata_usaha,
-            'kepala_resort' => $request->kepala_resort,
-            'staf_pns' => $request->staf_pns,
-            'staf_honorer' => $request->staf_honorer,
-            'tenaga_kontrak' => $request->tenaga_kontrak,
-            'tenaga_brigdalkarhutlapns' => $request->tenaga_brigdalkarhutlapns,
-            'tenaga_brigdalkarhutlanonpns' => $request->tenaga_brigdalkarhutlanonpns,
-            'pamhut' => $request->pamhut,
-            'sdm_pemda' => $request->sdm_pemda,
-            'bukti_rimbawa_sebelum_2015' => $request->bukti_rimbawa_sebelum_2015,
-            'bakti_rimbawa_2015' => $request->bakti_rimbawa_2015,
-            'bakti_rimbawa_2016' => $request->bakti_rimbawa_2016,
-            'bakti_rimbawa_2017' => $request->bakti_rimbawa_2017,
-            'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
-            'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
-        ]);
-
-        return redirect('showsdm1');
-    }
-
-    public function showsdm1(Request $request)
-    {
-        $pe = DB::table('sdm1')->get();
-        return view('showsdm1', compact('pe'));
-    }
-
-    public function viewsdm1($id)
-    {
-        $pe=SDM1::find($id);
-        return view('editsdm1',compact('pe'));
-    }
-
-    public function updatesdm1(Request $request, $id)
-    {
-        $pe=SDM1::find($id);
-        $pe->update([
-            'kkph' => $request->kkph,
-            'kepala_seksi' => $request->kepala_seksi,
-            'tata_usaha' => $request->tata_usaha,
-            'kepala_resort' => $request->kepala_resort,
-            'staf_pns' => $request->staf_pns,
-            'staf_honorer' => $request->staf_honorer,
-            'tenaga_kontrak' => $request->tenaga_kontrak,
-            'tenaga_brigdalkarhutlapns' => $request->tenaga_brigdalkarhutlapns,
-            'tenaga_brigdalkarhutlanonpns' => $request->tenaga_brigdalkarhutlanonpns,
-            'pamhut' => $request->pamhut,
-            'sdm_pemda' => $request->sdm_pemda,
-            'bukti_rimbawa_sebelum_2015' => $request->bukti_rimbawa_sebelum_2015,
-            'bakti_rimbawa_2015' => $request->bakti_rimbawa_2015,
-            'bakti_rimbawa_2016' => $request->bakti_rimbawa_2016,
-            'bakti_rimbawa_2017' => $request->bakti_rimbawa_2017,
-            'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
-            'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
-        ]);
-        return redirect('showsdm1');
-
-    }
-
-
-//ekologi
-
-public function inputekologi()
-    {
-        $pe = Ekologi::latest()->get();
-        return view('inputekologi');
-    }
-
-    public function storeekologi(Request $request)
-    {
-        // dd($request->all());
-        $up1=substr($request->jenis_tanah, 3,-4);
-        $up2=substr($request->jenis_kayu, 3,-4);
-        $up3=substr($request->fauna_satwa, 3,-4);
-        $up4=substr($request->kelerengan, 3,-4);
-        $up5=substr($request->DAS, 3,-4);
-        $pe = Ekologi::create([
-            'jenis_tanah' => $up1,
-            'jenis_kayu' => $up2,
-            'fauna_satwa' => $up3,
-            'kelerengan' => $up4,
-            'DAS' => $up5,
-        ]);
-
-        return redirect('showekologi');
-    }
-
-    public function showekologi(Request $request)
-    {
-        $pe = DB::table('ekologi')->get();
-        return view('showekologi', compact('pe'));
-    }
-
-    public function viewekologi($id)
-    {
-        $pe=Ekologi::find($id);
-        return view('editekologi',compact('pe'));
-    }
-
-    public function updateekologi(Request $request, $id)
-    {
-        $pe=Ekologi::find($id);
-        $up1=substr($request->jenis_tanah, 3,-4);
-        $up2=substr($request->jenis_kayu, 3,-4);
-        $up3=substr($request->fauna_satwa, 3,-4);
-        $up4=substr($request->kelerengan, 3,-4);
-        $up5=substr($request->DAS, 3,-4);
-        $pe->update([
-            'jenis_tanah' => $up1,
-            'jenis_kayu' => $up2,
-            'fauna_satwa' => $up3,
-            'kelerengan' => $up4,
-            'DAS' => $up5,
-        ]);
-        return redirect('showekologi');
-
-    }
-
-//ekologi2
-
-public function inputekologi2()
-    {
-        $pe = Ekologi2::latest()->get();
-        return view('inputekologi2');
-    }
-
-    public function storeekologi2(Request $request)
-    {
-        // dd($request->all());
-        $up1=substr($request->jenis_tanah, 3,-4);
-        $up2=substr($request->jenis_kayu, 3,-4);
-        $up3=substr($request->fauna_satwa, 3,-4);
-        $up4=substr($request->kelerengan, 3,-4);
-        $up5=substr($request->DAS, 3,-4);
-        $pe = Ekologi2::create([
-            'jenis_tanah' => $up1,
-            'jenis_kayu' => $up2,
-            'fauna_satwa' => $up3,
-            'kelerengan' => $up4,
-            'DAS' => $up5,
-        ]);
-
-        return redirect('showekologi2');
-    }
-
-    public function showekologi2(Request $request)
-    {
-        $pe = DB::table('ekologi2')->get();
-        return view('showekologi2', compact('pe'));
-    }
-
-    public function viewekologi2($id)
-    {
-        $pe=Ekologi2::find($id);
-        return view('editekologi2',compact('pe'));
-    }
-
-    public function updateekologi2(Request $request, $id)
-    {
-        $pe=Ekologi2::find($id);
-        $up1=substr($request->jenis_tanah, 3,-4);
-        $up2=substr($request->jenis_kayu, 3,-4);
-        $up3=substr($request->fauna_satwa, 3,-4);
-        $up4=substr($request->kelerengan, 3,-4);
-        $up5=substr($request->DAS, 3,-4);
-        $pe->update([
-            'jenis_tanah' => $up1,
-            'jenis_kayu' => $up2,
-            'fauna_satwa' => $up3,
-            'kelerengan' => $up4,
-            'DAS' => $up5,
-        ]);
-        return redirect('showekologi2');
-
-    }
-
-//ekologi3
-public function inputekologi3()
-    {
-        $pe = Ekologi3::latest()->get();
-        return view('inputekologi3');
-    }
-
-    public function storeekologi3(Request $request)
-    {
-        // dd($request->all());
-        $up1=substr($request->jenis_tanah, 3,-4);
-        $up2=substr($request->jenis_kayu, 3,-4);
-        $up3=substr($request->fauna_satwa, 3,-4);
-        $up4=substr($request->kelerengan, 3,-4);
-        $up5=substr($request->DAS, 3,-4);
-        $pe = Ekologi3::create([
-            'jenis_tanah' => $up1,
-            'jenis_kayu' => $up2,
-            'fauna_satwa' => $up3,
-            'kelerengan' => $up4,
-            'DAS' => $up5,
-        ]);
-
-        return redirect('showekologi3');
-    }
-
-    public function showekologi3(Request $request)
-    {
-        $pe = DB::table('ekologi3')->get();
-        return view('showekologi3', compact('pe'));
-    }
-
-    public function viewekologi3($id)
-    {
-        $pe=Ekologi3::find($id);
-        return view('editekologi3',compact('pe'));
-    }
-
-    public function updateekologi3(Request $request, $id)
-    {
-        $pe=Ekologi3::find($id);
-        $up1=substr($request->jenis_tanah, 3,-4);
-        $up2=substr($request->jenis_kayu, 3,-4);
-        $up3=substr($request->fauna_satwa, 3,-4);
-        $up4=substr($request->kelerengan, 3,-4);
-        $up5=substr($request->DAS, 3,-4);
-        $pe->update([
-            'jenis_tanah' => $up1,
-            'jenis_kayu' => $up2,
-            'fauna_satwa' => $up3,
-            'kelerengan' => $up4,
-            'DAS' => $up5,
-        ]);
-        return redirect('showekologi3');
-
-    }
-
-
-//ekologi4
-
-public function inputekologi4()
-    {
-        $pe = Ekologi4::latest()->get();
-        return view('inputekologi4');
-    }
-
-    public function storeekologi4(Request $request)
-    {
-        // dd($request->all());
-        $up1=substr($request->jenis_tanah, 3,-4);
-        $up2=substr($request->jenis_kayu, 3,-4);
-        $up3=substr($request->fauna_satwa, 3,-4);
-        $up4=substr($request->kelerengan, 3,-4);
-        $up5=substr($request->DAS, 3,-4);
-        $pe = Ekologi4::create([
-            'jenis_tanah' => $up1,
-            'jenis_kayu' => $up2,
-            'fauna_satwa' => $up3,
-            'kelerengan' => $up4,
-            'DAS' => $up5,
-        ]);
-
-        return redirect('showekologi4');
-    }
-
-    public function showekologi4(Request $request)
-    {
-        $pe = DB::table('ekologi4')->get();
-        return view('showekologi4', compact('pe'));
-    }
-
-    public function viewekologi4($id)
-    {
-        $pe=Ekologi4::find($id);
-        return view('editekologi4',compact('pe'));
-    }
-
-    public function updateekologi4(Request $request, $id)
-    {
-        $pe=Ekologi4::find($id);
-        $up1=substr($request->jenis_tanah, 3,-4);
-        $up2=substr($request->jenis_kayu, 3,-4);
-        $up3=substr($request->fauna_satwa, 3,-4);
-        $up4=substr($request->kelerengan, 3,-4);
-        $up5=substr($request->DAS, 3,-4);
-        $pe->update([
-            'jenis_tanah' => $up1,
-            'jenis_kayu' => $up2,
-            'fauna_satwa' => $up3,
-            'kelerengan' => $up4,
-            'DAS' => $up5,
-        ]);
-        return redirect('showekologi4');
-
-    }
-
-    //gabungan potensiekonomi dan jasalingkungan
-    public function showkeloladataekonomi1()
-       {
-           return view('indexdataekonomi1');
-       }
-
-
-       //Potensi Ekonomi 2
-
-    public function inputpotensiekonomi2()
-    {
-        $pe = PotensiEkonomi2::latest()->get();
-        return view('inputpotensiekonomi2');
-    }
-
-    public function storepotensiekonomi2(Request $request)
-    {
-        // dd($request->all());
-        $up1=substr($request->kayu, 3,-4);
-        $up2=substr($request->nonkayu, 3,-4);
-        // $up3=substr($request->jasalingkungan,);
-        // $up4=substr($request->bisnis, );
-        $up5=substr($request->donor, 3,-4);
-        $pe = PotensiEkonomi2::create([
-            'kayu' => $up1,
-            'nonkayu' => $up2,
-            'jasalingkungan' => $request->jasalingkungan,
-            'bisnis' => $request->bisnis,
-            'donor' => $up5,
-        ]);
-
-        return redirect('showpotensiekonomi2');
-    }
-
-    public function showpotensiekonomi2(Request $request)
-    {
-        $pe = DB::table('potensiekonomi2')->get();
-        return view('showpotensiekonomi2', compact('pe'));
-    }
-
-    public function viewpotensiekonomi2($id)
-    {
-        $pe=PotensiEkonomi2::find($id);
-        return view('editpotensiekonomi2',compact('pe'));
-    }
-
-    public function updatepotensiekonomi2(Request $request, $id)
-    {
-        $pe=PotensiEkonomi2::find($id);
-        $up1=substr($request->kayu, 3,-4);
-        $up2=substr($request->nonkayu, 3,-4);
-        $up5=substr($request->donor, 3,-4);
-        $pe->update([
-            'kayu' => $up1,
-            'nonkayu' => $up2,
-            'jasalingkungan' => $request->jasalingkungan,
-            'bisnis' => $request->bisnis,
-            'donor' => $up5,
-        ]);
-        return redirect('showpotensiekonomi2');
-
-    }
-
-    public function ajaxekonomi2(){
-        $pe = DB::table('potensiekonomi2')->get();
-        return view('ajaxekonomi2',compact('pe'));
-
-    }
-
-//Potensi Ekonomi 3
-
-public function inputpotensiekonomi3()
+public function inputsdm1()
 {
-    $pe = PotensiEkonomi3::latest()->get();
-    return view('inputpotensiekonomi3');
+    $pe = SDM1::latest()->get();
+    return view('inputsdm1');
 }
 
-public function storepotensiekonomi3(Request $request)
+public function storesdm1(Request $request)
 {
     // dd($request->all());
-    $up1=substr($request->kayu, 3,-4);
-    $up2=substr($request->nonkayu, 3,-4);
-    // $up3=substr($request->jasalingkungan,);
-    // $up4=substr($request->bisnis, );
-    $up5=substr($request->donor, 3,-4);
-    $pe = PotensiEkonomi3::create([
-        'kayu' => $up1,
-        'nonkayu' => $up2,
-        'jasalingkungan' => $request->jasalingkungan,
-        'bisnis' => $request->bisnis,
-        'donor' => $up5,
+    $pe = SDM1::create([
+        'kkph' => $request->kkph,
+        'kepala_seksi' => $request->kepala_seksi,
+        'tata_usaha' => $request->tata_usaha,
+        'kepala_resort' => $request->kepala_resort,
+        'staf_pns' => $request->staf_pns,
+        'staf_honorer' => $request->staf_honorer,
+        'tenaga_kontrak' => $request->tenaga_kontrak,
+        'tenaga_brigdalkarhutlapns' => $request->tenaga_brigdalkarhutlapns,
+        'tenaga_brigdalkarhutlanonpns' => $request->tenaga_brigdalkarhutlanonpns,
+        'pamhut' => $request->pamhut,
+        'sdm_pemda' => $request->sdm_pemda,
+        'bukti_rimbawa_sebelum_2015' => $request->bukti_rimbawa_sebelum_2015,
+        'bakti_rimbawa_2015' => $request->bakti_rimbawa_2015,
+        'bakti_rimbawa_2016' => $request->bakti_rimbawa_2016,
+        'bakti_rimbawa_2017' => $request->bakti_rimbawa_2017,
+        'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
+        'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
     ]);
 
-    return redirect('showpotensiekonomi3');
+    return redirect('showsdm1');
 }
 
-public function showpotensiekonomi3(Request $request)
+public function showsdm1(Request $request)
 {
-    $pe = DB::table('potensiekonomi3')->get();
-    return view('showpotensiekonomi3', compact('pe'));
+    $pe = DB::table('sdm1')->get();
+    return view('showsdm1', compact('pe'));
 }
 
-public function viewpotensiekonomi3($id)
+public function viewsdm1($id)
 {
-    $pe=PotensiEkonomi3::find($id);
-    return view('editpotensiekonomi3',compact('pe'));
+    $pe=SDM1::find($id);
+    return view('editsdm1',compact('pe'));
 }
 
-public function updatepotensiekonomi3(Request $request, $id)
+public function updatesdm1(Request $request, $id)
 {
-    $pe=PotensiEkonomi3::find($id);
-    $up1=substr($request->kayu, 3,-4);
-    $up2=substr($request->nonkayu, 3,-4);
-    $up5=substr($request->donor, 3,-4);
+    $pe=SDM1::find($id);
     $pe->update([
-        'kayu' => $up1,
-        'nonkayu' => $up2,
-        'jasalingkungan' => $request->jasalingkungan,
-        'bisnis' => $request->bisnis,
-        'donor' => $up5,
+        'kkph' => $request->kkph,
+        'kepala_seksi' => $request->kepala_seksi,
+        'tata_usaha' => $request->tata_usaha,
+        'kepala_resort' => $request->kepala_resort,
+        'staf_pns' => $request->staf_pns,
+        'staf_honorer' => $request->staf_honorer,
+        'tenaga_kontrak' => $request->tenaga_kontrak,
+        'tenaga_brigdalkarhutlapns' => $request->tenaga_brigdalkarhutlapns,
+        'tenaga_brigdalkarhutlanonpns' => $request->tenaga_brigdalkarhutlanonpns,
+        'pamhut' => $request->pamhut,
+        'sdm_pemda' => $request->sdm_pemda,
+        'bukti_rimbawa_sebelum_2015' => $request->bukti_rimbawa_sebelum_2015,
+        'bakti_rimbawa_2015' => $request->bakti_rimbawa_2015,
+        'bakti_rimbawa_2016' => $request->bakti_rimbawa_2016,
+        'bakti_rimbawa_2017' => $request->bakti_rimbawa_2017,
+        'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
+        'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
     ]);
-    return redirect('showpotensiekonomi3');
+    return redirect('showsdm1');
 
 }
 
-public function ajaxekonomi3(){
-    $pe = DB::table('potensiekonomi3')->get();
-    return view('ajaxekonomi3',compact('pe'));
-
-}
-
-//Potensi Ekonomi 4
-
-public function inputpotensiekonomi4()
-{
-    $pe = PotensiEkonomi4::latest()->get();
-    return view('inputpotensiekonomi4');
-}
-
-public function storepotensiekonomi4(Request $request)
-{
-    // dd($request->all());
-    $up1=substr($request->kayu, 3,-4);
-    $up2=substr($request->nonkayu, 3,-4);
-    // $up3=substr($request->jasalingkungan,);
-    // $up4=substr($request->bisnis, );
-    $up5=substr($request->donor, 3,-4);
-    $pe = PotensiEkonomi4::create([
-        'kayu' => $up1,
-        'nonkayu' => $up2,
-        'jasalingkungan' => $request->jasalingkungan,
-        'bisnis' => $request->bisnis,
-        'donor' => $up5,
-    ]);
-
-    return redirect('showpotensiekonomi4');
-}
-
-public function showpotensiekonomi4(Request $request)
-{
-    $pe = DB::table('potensiekonomi4')->get();
-    return view('showpotensiekonomi4', compact('pe'));
-}
-
-public function viewpotensiekonomi4($id)
-{
-    $pe=PotensiEkonomi4::find($id);
-    return view('editpotensiekonomi4',compact('pe'));
-}
-
-public function updatepotensiekonomi4(Request $request, $id)
-{
-    $pe=PotensiEkonomi4::find($id);
-    $up1=substr($request->kayu, 3,-4);
-    $up2=substr($request->nonkayu, 3,-4);
-    $up5=substr($request->donor, 3,-4);
-    $pe->update([
-        'kayu' => $up1,
-        'nonkayu' => $up2,
-        'jasalingkungan' => $request->jasalingkungan,
-        'bisnis' => $request->bisnis,
-        'donor' => $up5,
-    ]);
-    return redirect('showpotensiekonomi4');
-
-}
-
-public function ajaxekonomi4(){
-    $pe = DB::table('potensiekonomi4')->get();
-    return view('ajaxekonomi4',compact('pe'));
-
-}
+    
 
 
 

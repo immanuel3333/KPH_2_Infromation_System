@@ -17,7 +17,7 @@
                 <p class="card-text text-justify">Anda dapat mengelola daftar NKK/Kulin dari kelompok tani yang sekarang sedang berlaku.  </p>
                 </div>
             </div>
-        </div>e2
+        </div>
 
     </div>
 @include('layouts.footer')

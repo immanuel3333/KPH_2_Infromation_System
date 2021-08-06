@@ -136,8 +136,7 @@
                                             <div class="col-md-6">
                                                 <form action="{{ url('/comment') }}" method="post">
                                                     @csrf
-                                                    <input type="hidden" name="id" value="{{ $post->id }}" class="form-control">
-                                                    <input type="hidden" name="parent_id" id="parent_id" class="form-control">
+                                
                                                     <div class="form-group">
                                                         <label for="">Nama</label>
                                                         <input type="text" class="form-control" name="username">
@@ -154,25 +153,18 @@
                                                     <button class="btn btn-primary btn-sm">Kirim</button>
                                                 </form>
                                             </div>
-                                            <div class="col-md-6">
-                                                @foreach ($post->comments as $row)
-                                                    <blockquote>
-                                                        <h6>{{ $row->username }}</h6>
-                                                        <hr>
-                                                        <p>{{ $row->comment }}</p><br>
-                                                        <a href="javascript:void(0)" onclick="balasKomentar({{ $row->id }}, '{{ $row->comment }}')">Balas</a>
-                                                    </blockquote>
-                                                    @foreach ($row->child as $val)
-                                                        <div class="child-comment">
-                                                            <blockquote>
-                                                                <h6>{{ $val->username }}</h6>
-                                                                <hr>
-                                                                <p>{{ $val->comment }}</p><br>
-                                                            </blockquote>
-                                                        </div>
-                                                    @endforeach
-                                                @endforeach
-                                            </div>
+                                            <br>
+                                            <h5>List of Comments</h5>
+                                        <hr>
+                                        <ol>
+
+                                            @forelse($comments as $comment)
+                                                <li class="lead">{{$comment->comment}}</li>
+                                            @empty
+                                                <h4>No Comments</h4>
+                                            @endforelse
+                                        </ol>
+                                          
                                         </div>
                                     </div>
                                 </div>

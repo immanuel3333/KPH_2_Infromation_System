@@ -12,7 +12,7 @@
         <p style="font-size:40px; font-family:Balthazar;"> Misi : </p><br>
                 {!! $vm->misi !!}
             <br>
-            <a href="{{url('/view1')}}/{{$vm->id}}" class="ml-auto">
+            <a href="{{url('/viewvisimisi')}}/{{$vm->id}}" class="ml-auto">
             <button type="submit" class="btn" style="background-color: #99F07A;">Edit</button>  
             </a>
                             

@@ -35,4 +35,4 @@
 
 		 </script>
 
-@include('layouts.footer')
+@include('layouts.footeradmin')

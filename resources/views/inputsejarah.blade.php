@@ -1,4 +1,17 @@
 @include('layouts.headeradmin')
+@if(count($errors)>0)
+  	@foreach($errors->all() as $error)
+  	<div class="alert alert-danger" style="padding-left:100px;" role="alert">
+      {{ $error }}
+	</div>  		
+  	@endforeach
+  @endif
+
+  @if(Session::has('success'))
+  	<div class="alert alert-success" role="alert">
+      {{ Session('success') }}
+	</div> 
+  @endif
 </div>
 
 <div class="content-page">
@@ -19,12 +32,12 @@
                 <script>CKEDITOR.replace('sejarah');</script>
             </div>
             <button type="submit" class="btn btn-success ml-auto">Simpan</button>
-
-
+           
+            
        </form>
-
      </div>
     </div>
+ 
 
     @include('layouts.footer')
 

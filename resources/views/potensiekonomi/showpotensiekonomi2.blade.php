@@ -1,4 +1,4 @@
-@include('layouts.headeradmin')
+
 </div>
 <div class="content-page">
     <div class="container-fluid">
@@ -51,4 +51,3 @@
     
     </div>
 
-    @include('layouts.footer')

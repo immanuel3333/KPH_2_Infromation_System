@@ -1,6 +1,6 @@
 </div>
 <div class="bg-light text-muted" style="position:bottom;">
-            <section>
+            <section class="col-md-12 col-sm-12">
                 <div class="text-center" style="background-color:#0C3310;">
                     <div class="row">
                         <div class="col-md-3">
@@ -62,11 +62,6 @@
                 © 2021 Copyright:
             </div>
 </div>
-
-
-   
-
-
 
     <!-- script komentar -->
     <script>

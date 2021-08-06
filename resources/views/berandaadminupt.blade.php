@@ -34,92 +34,38 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="card mt-3">
-                                    <div class="card-body">
-                                        <h5>Komentar</h5>
-                                        <div class="row auto">
-                                            <div class="card col-md-8">
-                                                @foreach ($post->comments as $row)
-                                                    <blockquote>
-                                                        <h6>{{ $row->username }}</h6>
-                                                        <hr>
-                                                        <p>{{ $row->comment }}</p><br>
-                                                        <a href="javascript:void(0)" onclick="balasKomentar({{ $row->id }}, '{{ $row->comment }}')"data-toggle="modal" data-target="#exampleModalCenter">Balas</a>
-                                                        <a href="{{url('/home')}}/{{ $row->id }}/delete" class="pl-3">Delete</a>
+                                <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Comments</th>
+        <th>Approval</th>
+      </tr>
+    </thead>
 
-
-
-
-
-                                                        <!-- pop up -->
-                                                        <!-- Button trigger modal -->
-                                                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                                                        Balas
-                                                        </button> -->
-
-                                                        <!-- Modal -->
-                                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                                            <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLongTitle">Balas Komentar</h5>
-                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                                </button>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                            <form action="{{ url('/comment') }}" method="post">
-                                                                @csrf
-                                                                <input type="hidden" name="id" value="{{ $post->id }}" class="form-control">
-                                                                <input type="hidden" name="parent_id" id="parent_id" class="form-control">
-                                                                <div class="form-group">
-                                                                    <label for="">Nama</label>
-                                                                    <input type="text" class="form-control" name="username" value='{{$user->name}}' >
-
-                                                                </div>
-                                                                <div class="form-group" style="display: none" id="formReplyComment">
-                                                                    <label for="">Balas Komentar</label>
-                                                                    <input type="text" id="replyComment" class="form-control" readonly>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="">Masukkan Komentar</label>
-                                                                    <textarea name="comment" cols="30" rows="10" class="form-control"></textarea>
-                                                                </div>
-
-                                                        </div>
-
-                                                        <div class="modal-footer">
-                                                            <button class="btn btn-primary">Kirim</button>
-                                                        </div>
-                                                        </div>
-                                                    </form>
-
-                                                        </div>
-                                                        </div>
-
-
-
-                                                    </blockquote>
-                                                    @foreach ($row->child as $val)
-                                                        <div class="child-comment">
-                                                            <blockquote>
-                                                                <h6>{{ $val->username }}</h6>
-                                                                <hr>
-                                                                <p>{{ $val->comment }}</p><br>
-                                                            </blockquote>
-                                                        </div>
-                                                    @endforeach
-                                                @endforeach
-                                            </div>
-                                        </div>
-                                    </div>
+    <tbody>
+    @forelse($comments as $comment)
+      <tr>
+        <td>{{$comment->comment}}</td>
+        <td>
+              <form action="{{url('/toggle-approve')}}" method="POST">
+                  {{csrf_field()}}
+                  <input <?php if($comment->approve == 1){echo "checked";}?>  type="checkbox" name='approve'>       
+                     
+                     <input type="hidden" name="commentId" value="{{$comment->id}}">    
+                  <input class="btn btn-primary" type="submit" value="Done">
+                  
+              </form>
+        </td>
+      </tr>
+      @empty
+      <h4>No Data</h4>
+      @endforelse
+    </tbody>
+  </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
-
     </div>
 @include('layouts.footer')
