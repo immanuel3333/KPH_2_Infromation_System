@@ -30,6 +30,7 @@ class CreateIdentitas2Table extends Migration
             $table-> bigInteger('telepon');
             $table->string('longitude');
             $table->string('latitude');
+            $table->timestamps();
         });
     }
 

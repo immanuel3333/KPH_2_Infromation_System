@@ -23,8 +23,8 @@
     </div>
 		 <script type="text/javascript">
 
-			function klikhome(){
-                $.get("{{url('homes')}}", function(data) {
+                function klikhome(){
+                $.get("{{url('identitas')}}", function(data) {
                 $("#konten").html(data);
                 });
             }
@@ -34,22 +34,22 @@
                 });
             }
             function fasilitas(){
-                $.get("{{url('fasilitass')}}", function(data3) {
+                $.get("{{url('fasilitas')}}", function(data3) {
                 $("#konten").html(data3);
                 });
             }
             function lembaga(){
-                $.get("{{url('lembagas')}}", function(data4) {
+                $.get("{{url('lembaga')}}", function(data4) {
                 $("#konten").html(data4);
                 });
             }
             function rphjp(){
-                $.get("{{url('rphjps')}}", function(data5) {
+                $.get("{{url('rphjp')}}", function(data5) {
                 $("#konten").html(data5);
                 });
             }
 
-            $('.konten').load("{{url('homes')}}");
+            $('.konten').load("{{url('identitas')}}");
 
 
 		 </script>

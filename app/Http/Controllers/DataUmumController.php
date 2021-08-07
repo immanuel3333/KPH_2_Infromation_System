@@ -7,6 +7,9 @@ use App\Identitas;
 use App\Kepalakph;
 use App\Rphjp;
 use App\Fasilitas;
+use App\Fasilitas2;
+use App\Fasilitas3;
+use App\Fasilitas4;
 use App\Lembaga;
 use Illuminate\Support\Facades\DB;
 use File;
@@ -29,11 +32,23 @@ class DataUmumController extends Controller
        {
            return view('dataumum.index');
        }
+       public function index2()
+       {
+           return view('dataumum2.index2');
+       }
+       public function index3()
+       {
+           return view('dataumum3.index3');
+       }
+       public function index4()
+       {
+           return view('dataumum4.index4');
+       }
 //data umum identitas
-       public function home()
+       public function identitas()
        {
            $idn = Identitas::latest()->get();
-           return view('dataumum.home', compact('idn'));
+           return view('dataumum.identitas', compact('idn'));
        }
 
        public function inputidentitas()
@@ -61,7 +76,7 @@ class DataUmumController extends Controller
                'longitude'=> $request->longitude,
                'latitude'=> $request->latitude
            ]);
-           return redirect('dataumum.home', compact('idn'));
+           return redirect('show-dataumum')->with('success', 'Identitas berhasil ditambahkan!');
 
        }
 
@@ -91,7 +106,7 @@ class DataUmumController extends Controller
             'longitude'=> $request->longitude,
             'latitude'=> $request->latitude
            ]);
-           return view('dataumum.index');
+           return redirect('show-dataumum')->with('success', 'Identitas berhasil diubah!');
 
        }
 
@@ -150,7 +165,7 @@ class DataUmumController extends Controller
         ]);
         $image->move('public/kepalakph/', $new_image);
 
-        return redirect('show-dataumum');
+        return redirect('show-dataumum')->with('success', 'Kepala KPH berhasil ditambahkan!');
     }
 
     public function updatekepalakph(Request $request, $id)
@@ -172,7 +187,7 @@ class DataUmumController extends Controller
             'tanggalselesai' => $request->tanggalselesai,
             'gambar' => 'public/kepalakph/'.$file->getClientOriginalName(),
         ]);
-        return view('dataumum.index');
+        return redirect('show-dataumum')->with('success', 'Kepala KPH berhasil diubah!');
 
     }
 
@@ -237,7 +252,7 @@ class DataUmumController extends Controller
         ]);
 
 
-        return redirect('show-dataumum');
+        return redirect('show-dataumum')->with('success', 'Lembaga berhasil ditambahkan!');
     }
 
     public function updatelembaga(Request $request, $id)
@@ -263,7 +278,7 @@ class DataUmumController extends Controller
                 'skblud' => $request->skblud,
                 'dokskblud' => $file2->getClientOriginalName()
         ]);
-        return redirect('show-dataumum');
+        return redirect('show-dataumum')->with('success', 'Lembaga berhasil diubah!');
 
     }
 
@@ -294,7 +309,7 @@ class DataUmumController extends Controller
                'kendala'=> $request->kendala,
                'progres'=> $request->progres
            ]);
-           return redirect('show-dataumum');
+           return redirect('show-dataumum')->with('success', 'RPHJP berhasil ditambahkan!');
 
        }
 
@@ -306,7 +321,7 @@ class DataUmumController extends Controller
             'kendala'=> $request->kendala,
             'progres'=> $request->progres
            ]);
-           return redirect('show-dataumum');
+           return redirect('show-dataumum')->with('success', 'RPHJP berhasil diubah!');
 
        }
 
@@ -335,7 +350,7 @@ public function inputfasilitas()
             'sumberdana' => $request->sumberdana,
 
         ]);
-        return redirect('show-dataumum');
+        return redirect('show-dataumum')->with('success', 'Fasilitas berhasil ditambahkan!');
     }
 
     public function updatefasilitas(Request $request, $id)
@@ -349,7 +364,7 @@ public function inputfasilitas()
             'sumberdana' => $request->sumberdana,
 
         ]);
-        return redirect('show-dataumum');
+        return redirect('show-dataumum')->with('success', 'Fasilitas berhasil diubah!');
 
     }
 
@@ -381,11 +396,14 @@ public function inputfasilitas()
 //akhir dataumum fasilitas
 
 
+
+
+
 //data umum identitas 2
-public function homeidentitas2()
+public function identitas2()
 {
     $idn = Identitas2::latest()->get();
-    return view('dataumum2.home', compact('idn'));
+    return view('dataumum2.identitas2', compact('idn'));
 }
 
 public function inputidentitas2()
@@ -413,7 +431,7 @@ public function storeidentitas2(Request $request)
         'longitude'=> $request->longitude,
         'latitude'=> $request->latitude
     ]);
-    return redirect('dataumum2.home', compact('idn'));
+    return redirect('show-dataumum2')->with('success', 'Identitas berhasil ditambahkan!');
 
 }
 
@@ -443,7 +461,7 @@ public function updateidentitas2(Request $request, $id)
      'longitude'=> $request->longitude,
      'latitude'=> $request->latitude
     ]);
-    return view('dataumum2.index');
+    return redirect('show-dataumum2')->with('success', 'Identitas berhasil diubah!');
 
 }
 
@@ -503,7 +521,7 @@ public function storekepalakph2(Request $request)
  ]);
  $image->move('public/kepalakph/', $new_image);
 
- return redirect('show-dataumum2');
+ return redirect('show-dataumum2')->with('success', 'Kepala KPH berhasil ditambahkan!');
 }
 
 public function updatekepalakph2(Request $request, $id)
@@ -525,7 +543,7 @@ public function updatekepalakph2(Request $request, $id)
      'tanggalselesai' => $request->tanggalselesai,
      'gambar' => 'public/kepalakph2/'.$file->getClientOriginalName(),
  ]);
- return view('dataumum2.index');
+ return redirect('show-dataumum2')->with('success', 'Kepala KPH berhasil diubah!');
 
 }
 
@@ -589,7 +607,7 @@ public function storelembaga2(Request $request)
  ]);
 
 
- return redirect('show-dataumum2');
+ return redirect('show-dataumum2')->with('success', 'Lembaga berhasil ditambahkan!');
 }
 
 public function updatelembaga2(Request $request, $id)
@@ -615,7 +633,7 @@ public function updatelembaga2(Request $request, $id)
          'skblud' => $request->skblud,
          'dokskblud' => $file2->getClientOriginalName()
  ]);
- return redirect('show-dataumum2');
+ return redirect('show-dataumum2')->with('success', 'Lembaga berhasil diubah!');
 
 }
 
@@ -645,7 +663,7 @@ public function storerphjp2(Request $request)
         'kendala'=> $request->kendala,
         'progres'=> $request->progres
     ]);
-    return redirect('show-dataumum2');
+    return redirect('show-dataumum2')->with('success', 'RPHJP berhasil ditambahkan!');
 
 }
 
@@ -657,7 +675,7 @@ public function updaterphjp2(Request $request, $id)
      'kendala'=> $request->kendala,
      'progres'=> $request->progres
     ]);
-    return redirect('show-dataumum2');
+    return redirect('show-dataumum2')->with('success', 'RPHJP berhasil diubah!');
 
 }
 
@@ -668,11 +686,76 @@ public function viewrphjp2($id)
 }
 //akhir dataumum rphjp 2
 
+//awal fasilitas2
+public function inputfasilitas2()
+    {
+        $fs = Fasilitas2::latest()->get();
+        return view('dataumum2.inputfasilitas2');
+    }
+
+    public function storefasilitas2(Request $request)
+    {
+        // dd($request->all());
+        $fs = Fasilitas2::create([
+            'aspek' => $request->aspek,
+            'jumlah' => $request->jumlah,
+            'kondisi' => $request->kondisi,
+            'status' => $request->status,
+            'sumberdana' => $request->sumberdana,
+
+        ]);
+        return redirect('show-dataumum2')->with('success', 'Fasilitas berhasil ditambahkan!');
+    }
+
+    public function updatefasilitas2(Request $request, $id)
+    {
+        $fs=Fasilitas2::find($id);
+        $fs->update([
+            'aspek' => $request->aspek,
+            'jumlah' => $request->jumlah,
+            'kondisi' => $request->kondisi,
+            'status' => $request->status,
+            'sumberdana' => $request->sumberdana,
+
+        ]);
+        return redirect('show-dataumum2')->with('success', 'Fasilitas berhasil diubah!');
+
+    }
+
+    public function fasilitas2()
+       {
+           $fs = DB::table('fasilitas2')->get();
+           return view('dataumum2.fasilitas2',compact('fs'));
+       }
+
+    public function viewfasilitas2()
+    {
+        $fs=Fasilitas::all();
+        foreach($fs as $fs2)
+        {
+            $fs2->action='<a href="viewfasilitas122/'.$fs2->id.'" class="btn btn-warning btn-sm" id="update'.$fs2->id.'">Edit</a>
+            <a href="delete/'.$fs2->id.'" class="btn btn-danger btn-sm" id="'.$fs2->id.'" >Delete</a>';
+        }
+
+        return response()->json($fs,200);
+        // return dd($jl);
+
+    }
+
+    public function viewfasilitas122($id)
+       {
+        $fs=Fasilitas::find($id);
+        return view('dataumum2.editfasilitas2',compact('fs'));
+       }
+//akhir dataumum fasilitas2
+
+
+
 //data umum identitas 3
-public function homeidentitas3()
+public function identitas3()
 {
     $idn = Identitas3::latest()->get();
-    return view('dataumum3.home', compact('idn'));
+    return view('dataumum3.identitas3', compact('idn'));
 }
 
 public function inputidentitas3()
@@ -700,7 +783,7 @@ public function storeidentitas3(Request $request)
         'longitude'=> $request->longitude,
         'latitude'=> $request->latitude
     ]);
-    return redirect('dataumum3.home', compact('idn'));
+    return redirect('show-dataumum3')->with('success', 'Identitas berhasil ditambahkan!');
 
 }
 
@@ -730,7 +813,7 @@ public function updateidentitas3(Request $request, $id)
      'longitude'=> $request->longitude,
      'latitude'=> $request->latitude
     ]);
-    return view('dataumum3.index');
+    return redirect('show-dataumum3')->with('success', 'Identitas berhasil diubah!');
 
 }
 
@@ -789,7 +872,7 @@ public function storekepalakph3(Request $request)
  ]);
  $image->move('public/kepalakph/', $new_image);
 
- return redirect('show-dataumum2');
+ return redirect('show-dataumum3')->with('success', 'Kepala KPH berhasil ditambahkan!');
 }
 
 public function updatekepalakph3(Request $request, $id)
@@ -811,7 +894,7 @@ public function updatekepalakph3(Request $request, $id)
      'tanggalselesai' => $request->tanggalselesai,
      'gambar' => 'public/kepalakph3/'.$file->getClientOriginalName(),
  ]);
- return view('dataumum3.index');
+ return redirect('show-dataumum3')->with('success', 'Kepala KPH berhasil diubah!');
 
 }
 
@@ -875,7 +958,7 @@ public function storelembaga3(Request $request)
  ]);
 
 
- return redirect('show-dataumum3');
+ return redirect('show-dataumum3')->with('success', 'Lembaga berhasil ditambahkan!');
 }
 
 public function updatelembaga3(Request $request, $id)
@@ -901,7 +984,7 @@ public function updatelembaga3(Request $request, $id)
          'skblud' => $request->skblud,
          'dokskblud' => $file2->getClientOriginalName()
  ]);
- return redirect('show-dataumum3');
+ return redirect('show-dataumum3')->with('success', 'Lembaga berhasil diubah!');
 
 }
 
@@ -931,7 +1014,7 @@ public function storerphjp3(Request $request)
         'kendala'=> $request->kendala,
         'progres'=> $request->progres
     ]);
-    return redirect('show-dataumum3');
+    return redirect('show-dataumum3')->with('success', 'RPHJP berhasil ditambahkan!');
 
 }
 
@@ -943,7 +1026,7 @@ public function updaterphjp3(Request $request, $id)
      'kendala'=> $request->kendala,
      'progres'=> $request->progres
     ]);
-    return redirect('show-dataumum3');
+    return redirect('show-dataumum3')->with('success', 'RPHJP berhasil diubah!');
 
 }
 
@@ -954,25 +1037,75 @@ public function viewrphjp3($id)
 }
 //akhir dataumum rphjp 3
 
+//awal fasilitas3
+public function inputfasilitas3()
+    {
+        $fs = Fasilitas3::latest()->get();
+        return view('dataumum3.inputfasilitas3');
+    }
 
+    public function storefasilitas3(Request $request)
+    {
+        // dd($request->all());
+        $fs = Fasilitas3::create([
+            'aspek' => $request->aspek,
+            'jumlah' => $request->jumlah,
+            'kondisi' => $request->kondisi,
+            'status' => $request->status,
+            'sumberdana' => $request->sumberdana,
 
+        ]);
+        return redirect('show-dataumum3')->with('success', 'Fasilitas berhasil ditambahkan!');
+    }
 
+    public function updatefasilitas3(Request $request, $id)
+    {
+        $fs=Fasilitas3::find($id);
+        $fs->update([
+            'aspek' => $request->aspek,
+            'jumlah' => $request->jumlah,
+            'kondisi' => $request->kondisi,
+            'status' => $request->status,
+            'sumberdana' => $request->sumberdana,
 
+        ]);
+        return redirect('show-dataumum3')->with('success', 'Fasilitas berhasil diubah!');
 
+    }
 
+    public function fasilitas3()
+       {
+           $fs = DB::table('fasilitas3')->get();
+           return view('dataumum3.fasilitas3',compact('fs'));
+       }
 
+    public function viewfasilitas3()
+    {
+        $fs=Fasilitas3::all();
+        foreach($fs as $fs2)
+        {
+            $fs2->action='<a href="viewfasilitas123/'.$fs2->id.'" class="btn btn-warning btn-sm" id="update'.$fs2->id.'">Edit</a>
+            <a href="delete/'.$fs2->id.'" class="btn btn-danger btn-sm" id="'.$fs2->id.'" >Delete</a>';
+        }
 
+        return response()->json($fs,200);
+        // return dd($jl);
 
+    }
 
-
-
+    public function viewfasilitas123($id)
+       {
+        $fs=Fasilitas3::find($id);
+        return view('dataumum3.editfasilitas3',compact('fs'));
+       }
+//akhir dataumum fasilitas3
 
 
 //data umum identitas 4
-public function homeidentitas4()
+public function identitas4()
 {
     $idn = Identitas4::latest()->get();
-    return view('dataumum4.home', compact('idn'));
+    return view('dataumum4.identitas4', compact('idn'));
 }
 
 public function inputidentitas4()
@@ -1000,7 +1133,7 @@ public function storeidentitas4(Request $request)
         'longitude'=> $request->longitude,
         'latitude'=> $request->latitude
     ]);
-    return redirect('dataumum4.home', compact('idn'));
+    return redirect('show-dataumum4')->with('success', 'Identitas berhasil ditambahkan!');
 
 }
 
@@ -1030,7 +1163,7 @@ public function updateidentitas4(Request $request, $id)
      'longitude'=> $request->longitude,
      'latitude'=> $request->latitude
     ]);
-    return view('dataumum4.index');
+    return redirect('show-dataumum4')->with('success', 'Identitas berhasil diubah!');
 
 }
 
@@ -1089,7 +1222,7 @@ public function storekepalakph4(Request $request)
  ]);
  $image->move('public/kepalakph/', $new_image);
 
- return redirect('show-dataumum4');
+ return redirect('show-dataumum4')->with('success', 'Kepala KPH berhasil ditambahkan!');
 }
 
 public function updatekepalakph4(Request $request, $id)
@@ -1111,7 +1244,7 @@ public function updatekepalakph4(Request $request, $id)
      'tanggalselesai' => $request->tanggalselesai,
      'gambar' => 'public/kepalakph4/'.$file->getClientOriginalName(),
  ]);
- return view('dataumum4.index');
+ return redirect('show-dataumum3')->with('success', 'Kepala KPH berhasil diubah!');
 
 }
 
@@ -1175,7 +1308,7 @@ public function storelembaga4(Request $request)
  ]);
 
 
- return redirect('show-dataumum4');
+ return redirect('show-dataumum4')->with('success', 'Lembaga berhasil ditambahkan!');
 }
 
 public function updatelembaga4(Request $request, $id)
@@ -1201,7 +1334,7 @@ public function updatelembaga4(Request $request, $id)
          'skblud' => $request->skblud,
          'dokskblud' => $file2->getClientOriginalName()
  ]);
- return redirect('show-dataumum4');
+ return redirect('show-dataumum4')->with('success', 'Lembaga berhasil diubah!');
 
 }
 
@@ -1231,7 +1364,7 @@ public function storerphjp4(Request $request)
         'kendala'=> $request->kendala,
         'progres'=> $request->progres
     ]);
-    return redirect('show-dataumum4');
+    return redirect('show-dataumum4')->with('success', 'RPHJP berhasil ditambahkan!');
 
 }
 
@@ -1243,7 +1376,7 @@ public function updaterphjp4(Request $request, $id)
      'kendala'=> $request->kendala,
      'progres'=> $request->progres
     ]);
-    return redirect('show-dataumum4');
+    return redirect('show-dataumum4')->with('success', 'RPHJP berhasil diubah!');
 
 }
 
@@ -1254,6 +1387,68 @@ public function viewrphjp4($id)
 }
 //akhir dataumum rphjp 4
 
+//awal fasilitas4
+public function inputfasilitas4()
+    {
+        $fs = Fasilitas4::latest()->get();
+        return view('dataumum4.inputfasilitas4');
+    }
+
+    public function storefasilitas4(Request $request)
+    {
+        // dd($request->all());
+        $fs = Fasilitas4::create([
+            'aspek' => $request->aspek,
+            'jumlah' => $request->jumlah,
+            'kondisi' => $request->kondisi,
+            'status' => $request->status,
+            'sumberdana' => $request->sumberdana,
+
+        ]);
+        return redirect('show-dataumum4')->with('success', 'Fasilitas berhasil ditambahkan!');
+    }
+
+    public function updatefasilitas4(Request $request, $id)
+    {
+        $fs=Fasilitas4::find($id);
+        $fs->update([
+            'aspek' => $request->aspek,
+            'jumlah' => $request->jumlah,
+            'kondisi' => $request->kondisi,
+            'status' => $request->status,
+            'sumberdana' => $request->sumberdana,
+
+        ]);
+        return redirect('show-dataumum4')->with('success', 'Fasilitas berhasil diubah!');
+
+    }
+
+    public function fasilitas4()
+       {
+           $fs = DB::table('fasilitas4')->get();
+           return view('dataumum4.fasilitas4',compact('fs'));
+       }
+
+    public function viewfasilitas4()
+    {
+        $fs=Fasilitas4::all();
+        foreach($fs as $fs2)
+        {
+            $fs2->action='<a href="viewfasilitas124/'.$fs2->id.'" class="btn btn-warning btn-sm" id="update'.$fs2->id.'">Edit</a>
+            <a href="delete/'.$fs2->id.'" class="btn btn-danger btn-sm" id="'.$fs2->id.'" >Delete</a>';
+        }
+
+        return response()->json($fs,200);
+        // return dd($jl);
+
+    }
+
+    public function viewfasilitas124($id)
+       {
+        $fs=Fasilitas4::find($id);
+        return view('dataumum4.editfasilitas4',compact('fs'));
+       }
+//akhir dataumum fasilitas4
 
 
 

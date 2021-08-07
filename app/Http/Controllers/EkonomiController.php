@@ -40,7 +40,7 @@ public function store6(Request $request)
 
     ]);
 
-    return redirect('showjasalingkungan1')->with('success', 'Jasa Lingkungan berhasil ditambahkan!');;
+    return redirect('showkeloladataekonomi1')->with('success', 'Jasa Lingkungan berhasil ditambahkan!');
 }
 
 public function update6(Request $request, $id)
@@ -58,7 +58,7 @@ public function update6(Request $request, $id)
         'periode' => $request->periode,
         'hasil' => $request->hasil,
     ]);
-    return redirect('showjasalingkungan1')->with('success', 'Jasa Lingkungan berhasil diubah!');
+    return redirect('showkeloladataekonomi1')->with('success', 'Jasa Lingkungan berhasil diubah!');
 
 }
 
@@ -92,10 +92,8 @@ public function delete2($id)
 {
     $jl=JasaLingkungan1::find($id);
     $jl->delete();
-    return redirect('/showjasalingkungan1');
+    return redirect('showkeloladataekonomi1');
 }
-
-
 
 //JasaLingkungan2
 
@@ -122,7 +120,7 @@ public function store62(Request $request)
 
     ]);
 
-    return redirect('showjasalingkungan2');
+    return redirect('showkeloladataekonomi2')->with('success', 'Jasa Lingkungan berhasil ditambahkan!');;
 }
 
 public function update62(Request $request, $id)
@@ -140,7 +138,7 @@ public function update62(Request $request, $id)
         'periode' => $request->periode,
         'hasil' => $request->hasil,
     ]);
-    return redirect('showjasalingkungan2');
+    return redirect('showkeloladataekonomi2')->with('success', 'Jasa Lingkungan berhasil diubah!');
 
 }
 
@@ -174,7 +172,7 @@ public function delete22($id)
 {
     $jl=JasaLingkungan2::find($id);
     $jl->delete();
-    return redirect('/showjasalingkungan2');
+    return redirect('showkeloladataekonomi2');
 }
 
 
@@ -204,7 +202,7 @@ public function store63(Request $request)
 
     ]);
 
-    return redirect('showjasalingkungan3');
+    return redirect('showkeloladataekonomi3')->with('success', 'Jasa Lingkungan berhasil ditambahkan!');;
 }
 
 public function update63(Request $request, $id)
@@ -222,7 +220,7 @@ public function update63(Request $request, $id)
         'periode' => $request->periode,
         'hasil' => $request->hasil,
     ]);
-    return redirect('showjasalingkungan3');
+    return redirect('showkeloladataekonomi3')->with('success', 'Jasa Lingkungan berhasil diubah!');
 
 }
 
@@ -256,7 +254,7 @@ public function delete23($id)
 {
     $jl=JasaLingkungan3::find($id);
     $jl->delete();
-    return redirect('showjasalingkungan3');
+    return redirect('showkeloladataekonomi3');
 }
 
 
@@ -285,7 +283,7 @@ public function store64(Request $request)
 
     ]);
 
-    return redirect('showjasalingkungan4');
+    return redirect('showkeloladataekonomi4')->with('success', 'Jasa Lingkungan berhasil ditambahkan!');;
 }
 
 public function update64(Request $request, $id)
@@ -303,7 +301,7 @@ public function update64(Request $request, $id)
         'periode' => $request->periode,
         'hasil' => $request->hasil,
     ]);
-    return redirect('showjasalingkungan4');
+    return redirect('showkeloladataekonomi4')->with('success', 'Jasa Lingkungan berhasil diubah!');
 
 }
 
@@ -337,7 +335,7 @@ public function delete24($id)
 {
     $jl=JasaLingkungan4::find($id);
     $jl->delete();
-    return redirect('/showjasalingkungan4');
+    return redirect('showkeloladataekonomi4');
 }
 
     //Potensi Ekonomi
@@ -364,7 +362,7 @@ public function delete24($id)
             'donor' => $up5,
         ]);
 
-        return redirect('showpotensiekonomi1');
+        return redirect('showkeloladataekonomi1')->with('success', 'Potensi berhasil ditambahkan!');;
     }
 
     public function showpotensiekonomi1(Request $request)
@@ -392,7 +390,7 @@ public function delete24($id)
             'bisnis' => $request->bisnis,
             'donor' => $up5,
         ]);
-        return redirect('showpotensiekonomi1');
+        return redirect('showkeloladataekonomi1')->with('success', 'Potensi berhasil diubah!');
 
     }
     public function ajaxekonomi1(){
@@ -434,7 +432,7 @@ public function delete24($id)
             'donor' => $up5,
         ]);
 
-        return redirect('showpotensiekonomi2');
+        return redirect('showkeloladataekonomi2')->with('success', 'Potensi berhasil ditambahkan!');;
     }
 
     public function showpotensiekonomi2(Request $request)
@@ -446,7 +444,7 @@ public function delete24($id)
     public function viewpotensiekonomi2($id)
     {
         $pe=PotensiEkonomi2::find($id);
-        return view('editpotensiekonomi2',compact('pe'));
+        return view('potensiekonomi.editpotensiekonomi2',compact('pe'));
     }
 
     public function updatepotensiekonomi2(Request $request, $id)
@@ -462,7 +460,7 @@ public function delete24($id)
             'bisnis' => $request->bisnis,
             'donor' => $up5,
         ]);
-        return redirect('showpotensiekonomi2');
+        return redirect('showkeloladataekonomi2')->with('success', 'Potensi berhasil diubah!');
 
     }
     public function ajaxekonomi2(){
@@ -500,7 +498,7 @@ public function storepotensiekonomi3(Request $request)
         'donor' => $up5,
     ]);
 
-    return redirect('showpotensiekonomi3');
+    return redirect('showkeloladataekonomi3')->with('success', 'Potensi berhasil ditambahkan!');;
 }
 
 public function showpotensiekonomi3(Request $request)
@@ -512,7 +510,7 @@ public function showpotensiekonomi3(Request $request)
 public function viewpotensiekonomi3($id)
 {
     $pe=PotensiEkonomi3::find($id);
-    return view('editpotensiekonomi3',compact('pe'));
+    return view('potensiekonomi.editpotensiekonomi3',compact('pe'));
 }
 
 public function updatepotensiekonomi3(Request $request, $id)
@@ -528,7 +526,7 @@ public function updatepotensiekonomi3(Request $request, $id)
         'bisnis' => $request->bisnis,
         'donor' => $up5,
     ]);
-    return redirect('showpotensiekonomi3');
+    return redirect('showkeloladataekonomi3')->with('success', 'Potensi berhasil diubah!');
 
 }
 public function ajaxekonomi3(){
@@ -567,7 +565,7 @@ public function storepotensiekonomi4(Request $request)
         'donor' => $up5,
     ]);
 
-    return redirect('showpotensiekonomi4');
+    return redirect('showkeloladataekonomi4')->with('success', 'Potensi berhasil ditambahkan!');
 }
 
 public function showpotensiekonomi4(Request $request)
@@ -579,7 +577,7 @@ public function showpotensiekonomi4(Request $request)
 public function viewpotensiekonomi4($id)
 {
     $pe=PotensiEkonomi4::find($id);
-    return view('editpotensiekonomi4',compact('pe'));
+    return view('potensiekonomi.editpotensiekonomi4',compact('pe'));
 }
 
 public function updatepotensiekonomi4(Request $request, $id)
@@ -595,7 +593,7 @@ public function updatepotensiekonomi4(Request $request, $id)
         'bisnis' => $request->bisnis,
         'donor' => $up5,
     ]);
-    return redirect('showpotensiekonomi4');
+    return redirect('showkeloladataekonomi4')->with('success', 'Potensi berhasil diubah!');
 }
 
 public function ajaxekonomi4(){

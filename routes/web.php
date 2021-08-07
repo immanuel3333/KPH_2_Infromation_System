@@ -114,11 +114,11 @@ Route::group(['middleware' => ['auth']], function(){
         Route::get('/fasilitas', 'DataUmumController@viewfasilitas1');
         Route::get('/viewfasilitas12/{id}', 'DataUmumController@viewfasilitas12');
 
-        Route::get('/homes', 'DataUmumController@home')->name('homes');
+        Route::get('/identitas', 'DataUmumController@identitas')->name('homes');
         Route::get('/kepalakph', 'DataUmumController@kepalakph')->name('kepalakph');
-        Route::get('/fasilitass', 'DataUmumController@fasilitas')->name('fasilitass');
-        Route::get('/lembagas', 'DataUmumController@lembaga')->name('lembagas');
-        Route::get('/rphjps', 'DataUmumController@rphjp')->name('rphjps');
+        Route::get('/fasilitas', 'DataUmumController@fasilitas')->name('fasilitass');
+        Route::get('/lembaga', 'DataUmumController@lembaga')->name('lembagas');
+        Route::get('/rphjp', 'DataUmumController@rphjp')->name('rphjps');
 
        //JasaLingkungan1
         Route::get('/inputjasalingkungan1', 'EkonomiController@inputjasalingkungan1')->name('inputjasalingkungan1');
@@ -209,7 +209,7 @@ Route::group(['middleware' => ['auth']], function(){
        //dataumum2
         Route::get('/inputidentitas2', 'DataUmumController@inputidentitas2')->name('inputidentitas2');
         Route::post('/simpan-identitas2', 'DataUmumController@storeidentitas2')->name('simpan-identitas2');
-        Route::get('/show-dataumum2', 'DataUmumController@index')->name('show-dataumum2');
+        Route::get('/show-dataumum2', 'DataUmumController@index2')->name('show-dataumum2');
         Route::post('/update-identitas2/{id}', 'DataUmumController@updateidentitas2')->name('update-identitas2');
         Route::get('/viewidentitas2/{id}', 'DataUmumController@viewidentitas2');
 
@@ -228,10 +228,16 @@ Route::group(['middleware' => ['auth']], function(){
         Route::post('/update-rphjp2/{id}', 'DataUmumController@updaterphjp2')->name('update-rphjp2');
         Route::get('/viewrphjp2/{id}', 'DataUmumController@viewrphjp2');
 
+        Route::get('/identitas2', 'DataUmumController@identitas2')->name('homes');
+        Route::get('/kepalakph2', 'DataUmumController@kepalakph2')->name('kepalakph');
+        Route::get('/fasilitas2', 'DataUmumController@fasilitas2')->name('fasilitass');
+        Route::get('/lembaga2', 'DataUmumController@lembaga2')->name('lembagas');
+        Route::get('/rphjp2', 'DataUmumController@rphjp2')->name('rphjps');
+
         //dataumum3
         Route::get('/inputidentitas3', 'DataUmumController@inputidentitas3')->name('inputidentitas3');
         Route::post('/simpan-identitas3', 'DataUmumController@storeidentitas3')->name('simpan-identitas3');
-        Route::get('/show-dataumum3', 'DataUmumController@index')->name('show-dataumum3');
+        Route::get('/show-dataumum3', 'DataUmumController@index3')->name('show-dataumum3');
         Route::post('/update-identitas3/{id}', 'DataUmumController@updateidentitas3')->name('update-identitas3');
         Route::get('/viewidentitas3/{id}', 'DataUmumController@viewidentitas3');
 
@@ -250,11 +256,17 @@ Route::group(['middleware' => ['auth']], function(){
         Route::post('/update-rphjp3/{id}', 'DataUmumController@updaterphjp3')->name('update-rphjp3');
         Route::get('/viewrphjp3/{id}', 'DataUmumController@viewrphjp3');
 
+        Route::get('/identitas3', 'DataUmumController@identitas3')->name('homes');
+        Route::get('/kepalakph3', 'DataUmumController@kepalakph3')->name('kepalakph');
+        Route::get('/fasilitas3', 'DataUmumController@fasilitas3')->name('fasilitass');
+        Route::get('/lembaga3', 'DataUmumController@lembaga3')->name('lembagas');
+        Route::get('/rphjp3', 'DataUmumController@rphjp3')->name('rphjps');
+
 
         //dataumum4
         Route::get('/inputidentitas4', 'DataUmumController@inputidentitas4')->name('inputidentitas4');
         Route::post('/simpan-identitas4', 'DataUmumController@storeidentitas4')->name('simpan-identitas4');
-        Route::get('/show-dataumum4', 'DataUmumController@index')->name('show-dataumum4');
+        Route::get('/show-dataumum4', 'DataUmumController@index4')->name('show-dataumum4');
         Route::post('/update-identitas4/{id}', 'DataUmumController@updateidentitas4')->name('update-identitas4');
         Route::get('/viewidentitas4/{id}', 'DataUmumController@viewidentitas4');
 
