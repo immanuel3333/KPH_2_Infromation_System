@@ -26,6 +26,27 @@ class AkunSeeder extends Seeder
                 'email' => 'josemarchelsitumorang@gmail.com',
                 'password' => bcrypt('123456789'),
                 'level' => 'adminunit'
+            ],
+            [
+                'name' => 'adminunit2',
+                'nip' => '123456782',
+                'email' => 'adminunitbatubara@gmail.com',
+                'password' => bcrypt('123456782'),
+                'level' => 'adminunit2'
+            ],
+            [
+                'name' => 'adminunit3',
+                'nip' => '123456783',
+                'email' => 'adminunitsergai@gmail.com',
+                'password' => bcrypt('123456783'),
+                'level' => 'adminunit3'
+            ],
+            [
+                'name' => 'adminunit4',
+                'nip' => '123456784',
+                'email' => 'adminunit12simalungun@gmail.com',
+                'password' => bcrypt('123456784'),
+                'level' => 'adminunit4'
             ]
 
             ];

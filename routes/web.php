@@ -42,7 +42,7 @@ Route::group(['middleware' => ['auth']], function(){
 
         //VISIMISI
         Route::get('/inputvisimisi', 'AdminController@inputvisimisi')->name('inputvisimisi');
-        Route::post('/simpan-visimisi', 'AdminController@store')->name('simpan-visimisi');
+        Route::post('/simpan-visimisi', 'AdminController@storevisimisi')->name('simpan-visimisi');
         Route::get('/showvisimisi', 'AdminController@showvisimisi')->name('showvisimisi');
 
         Route::post('/update-visimisi/{id}', 'AdminController@update1')->name('update-visimisi');
@@ -357,4 +357,59 @@ Route::group(['middleware' => ['auth']], function(){
        Route::get('/deletenkk/{id}', 'Admin2Controller@deletenkk');
 
    });
+
+   Route::group(['middleware' => ['ceklogin:adminunit2']], function(){
+        //Unit kerja
+        Route::get('home3', 'Admin3Controller@home')->name('home3');
+        //Galeri Unit kerja
+        Route::get('/inputgaleriunitkerja2', 'Admin3Controller@inputgaleriunitkerja2')->name('inputgaleriunitkerja2');
+        Route::post('/simpan-galeriunitkerja2', 'Admin3Controller@storegaleriunitkerja2')->name('simpan-galeriunitkerja2');
+        Route::get('/showgaleriunitkerja2', 'Admin3Controller@showgaleriunitkerja2')->name('showgaleriunitkerja2');
+
+        Route::post('/update-galeriunitkerja2/{id}', 'Admin3Controller@updategaleriunitkerja2')->name('update-galeriunitkerja2');
+        Route::get('/viewgaleriunitkerja2/{id}', 'Admin3Controller@viewgaleriunitkerja2');
+        Route::get('/destroygaleriunitkerja2/{id}', 'Admin3Controller@destroygaleriunitkerja2')->name('delete-galeriunitkerja2');
+
+
+        //NKK
+        Route::get('/inputnkk', 'Admin2Controller@inputnkk')->name('inputnkk');
+        Route::post('/simpan-nkk', 'Admin2Controller@storenkk')->name('simpan-nkk');
+        Route::get('/shownkk', 'Admin2Controller@shownkk')->name('shownkk');
+
+        Route::post('/update-nkk/{id}', 'Admin2Controller@updatenkk')->name('update-nkk');
+        Route::get('/destroynkk/{id}', 'Admin2Controller@destroynkk')->name('delete-nkk');
+        Route::get('/nkk', 'Admin2Controller@viewnkk');
+        Route::get('/viewnkk2/{id}', 'Admin2Controller@viewnkk2');
+        Route::get('/deletenkk/{id}', 'Admin2Controller@deletenkk');
+
+    });
+
+    Route::group(['middleware' => ['ceklogin:adminunit3']], function(){
+        //Unit kerja
+        Route::get('home4', 'Admin4Controller@home')->name('home4');
+        //Galeri Unit kerja
+        Route::get('/inputgaleriunitkerja3', 'Admin4Controller@inputgaleriunitkerja3')->name('inputgaleriunitkerja3');
+        Route::post('/simpan-galeriunitkerja3', 'Admin4Controller@storegaleriunitkerja3')->name('simpan-galeriunitkerja3');
+        Route::get('/showgaleriunitkerja3', 'Admin4Controller@showgaleriunitkerja3')->name('showgaleriunitkerja3');
+
+        Route::post('/update-galeriunitkerja3/{id}', 'Admin4Controller@updategaleriunitkerja3')->name('update-galeriunitkerja3');
+        Route::get('/viewgaleriunitkerja3/{id}', 'Admin4Controller@viewgaleriunitkerja3');
+        Route::get('/destroygaleriunitkerja3/{id}', 'Admin4Controller@destroygaleriunitkerja3')->name('delete-galeriunitkerja3');
+
+    });
+
+    Route::group(['middleware' => ['ceklogin:adminunit4']], function(){
+        //Unit kerja
+        Route::get('home5', 'Admin5Controller@home')->name('home5');
+        //Galeri Unit kerja
+        Route::get('/inputgaleriunitkerja4', 'Admin5Controller@inputgaleriunitkerja4')->name('inputgaleriunitkerja4');
+        Route::post('/simpan-galeriunitkerja4', 'Admin5Controller@storegaleriunitkerja4')->name('simpan-galeriunitkerja4');
+        Route::get('/showgaleriunitkerja4', 'Admin5Controller@showgaleriunitkerja4')->name('showgaleriunitkerja4');
+
+        Route::post('/update-galeriunitkerja4/{id}', 'Admin5Controller@updategaleriunitkerja4')->name('update-galeriunitkerja4');
+        Route::get('/viewgaleriunitkerja4/{id}', 'Admin5Controller@viewgaleriunitkerja4');
+        Route::get('/destroygaleriunitkerja4/{id}', 'Admin5Controller@destroygaleriunitkerja4')->name('delete-galeriunitkerja4');
+
+    });
+
 });

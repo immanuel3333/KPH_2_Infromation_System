@@ -1,10 +1,10 @@
-@include('layouts.headeradminunit1')
+@include('layouts.headeradminunit4')
 </div>
 
 <div class="content-page">
     <div class="container-fluid">
         <p class="text-center " style="font-size:39px;">Galeri UPT</p><br>
-        <form action="{{ route('simpan-galeriunitkerja')}}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('simpan-galeriunitkerja4')}}" method="post" enctype="multipart/form-data">
         @csrf
             <div class="row">
                 <div class="card col-md-12">
