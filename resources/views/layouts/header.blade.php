@@ -93,7 +93,7 @@
                         <img src="img/logo1.png" alt="" height="200" width="200">
                         </div>
                         <div class="col-md-10 col-sm-10">
-                        <p class="text-center pt-5" style="font-family:Balthazar; font-size:35px; padding-right:100px ;color:white;">UPT. KESATUAN PENGELOLAAN HUTAN WILAYAH-II</p> 
+                        <p class="text-center pt-5" style="font-family:Balthazar; font-size:35px; padding-right:100px ;color:white;">UPT. KESATUAN PENGELOLAAN HUTAN WILAYAH-II</p>
                         </div>
                     </div>
                     <nav class="navbar navbar-expand-lg navbar-light p-0">
@@ -154,7 +154,7 @@
                                 </a>
                                 <ol id="app" class="submenu collapse" data-parent="#mm-sidebar-toggle">
                                     <li class="">
-                                        <a href="#user" class="collapsed svg-icon">
+                                        <a href="{{ route('visimisi') }}" class="collapsed svg-icon">
                                             <i class="">
                                                 <img src="icon/visimisi.png" alt="icon" width="20">
                                             </i>
@@ -163,31 +163,31 @@
 
                                     </li>
                                     <li class="">
-                                        <a href="../app/chat.html" class="svg-icon">
+                                        <a href="{{ route('sejarah') }}" class="svg-icon">
                                             <i class="">
                                                 <img src="icon/sejarah.png" alt="icon" width="20">
                                             </i><span class="">Sejarah</span>
                                         </a>
                                     </li>
                                     <li class="">
-                                        <a href="#strukturorg" class="svg-icon">
+                                        <a href="{{ route('organisasi') }}" class="svg-icon">
                                             <i class="">
                                                 <img src="icon/struktur.png" alt="icon" width="20">
                                             </i><span class="">Struktur Organisasi</span>
                                         </a>
                                     </li>
                                     <li class="">
-                                        <a href="../app/todo.html" class="svg-icon">
+                                        <a href="{{ route('tugasfungsi') }}" class="svg-icon">
                                             <i class="">
                                                 <img src="icon/tugas dan fungsi.png" alt="icon" width="20">
                                             </i><span class="">Tugas dan Fungsi</span>
                                         </a>
                                     </li>
                                     <li class="">
-                                        <a href="#" class="svg-icon">
+                                        <a href="{{ route('galeriupt') }}" class="svg-icon">
                                             <i class="">
-                                                <img src="icon/data.png" alt="icon" width="20">
-                                            </i><span class="">Data SDM</span>
+                                                <img src="icon/galery.png" alt="icon" width="20">
+                                            </i><span class="">Galeri UPT</span>
                                         </a>
                                     </li>
                                 </ol>
@@ -214,7 +214,7 @@
                                         </a>
                                         <ul id="unit" class="submenu collapse" data-parent="#uker">
                                             <li class="">
-                                                <a href="../app/user-profile.html" class="svg-icon">
+                                                <a href="{{ route('bshow-dataumum') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Umum</span>
@@ -256,7 +256,7 @@
                                         </a>
                                         <ul id="unit2" class="submenu collapse" data-parent="#uker">
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{ route('bshow-dataumum2') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Umum</span>
@@ -297,7 +297,7 @@
                                         </a>
                                         <ul id="unit3" class="submenu collapse" data-parent="#uker">
                                             <li class="">
-                                                <a href="../app/user-profile.html" class="svg-icon">
+                                                <a href="{{ route('bshow-dataumum3') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Umum</span>
@@ -338,7 +338,7 @@
                                         </a>
                                         <ul id="unit4" class="submenu collapse" data-parent="#uker">
                                             <li class="">
-                                                <a href="../app/user-profile.html" class="svg-icon">
+                                                <a href="{{ route('bshow-dataumum4') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Umum</span>
@@ -370,20 +370,6 @@
 
                                 </ol>
                             </li>
-
-                            <li class="">
-                                <a href="#Dashboards" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
-                                    <i class="">
-                                        <img src="icon/sosial.png" alt="icon" width="20">
-                                    </i>
-
-                                    <span class="ml-2">Perhutanan Sosial</span>
-
-                                    <i class="las la-angle-right mm-arrow-right arrow-active"></i>
-                                    <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
-                                </a>
-                            </li>
-
 
                             <li class="">
                                 <a href="#Dashboards" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">

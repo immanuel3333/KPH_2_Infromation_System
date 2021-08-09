@@ -28,7 +28,7 @@ use App\Rphjp4;
 
 class DataUmumController extends Controller
 {
-    public function index()
+       public function index()
        {
            return view('dataumum.index');
        }
@@ -118,11 +118,7 @@ class DataUmumController extends Controller
 //akhir dataumum identitas
 
 //dataumum kepalakph
-    public function kepalakph()
-       {
-        $kkph = DB::table('kepalakph')->get();
-        return view('dataumum.kepalakph',compact('kkph'));
-       }
+
     public function inputkepalakph()
         {
          $kkph = Kepalakph::latest()->get();

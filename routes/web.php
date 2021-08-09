@@ -34,6 +34,40 @@ Route::get('/landingpage', 'HomeController@banner')->name('landingpage');
 Route::get('/profilpegawai', 'HomeController@profilpegawai');
 Route::get('/tes', 'PostController@index');
 Route::post('/comment', 'PostController@comment');
+Route::get('/visimisi', 'HomeController@showvisimisi')->name('visimisi');
+Route::get('/sejarah', 'HomeController@showsejarah')->name('sejarah');
+Route::get('/tugasfungsi', 'HomeController@showtugasfungsi')->name('tugasfungsi');
+Route::get('/organisasi', 'HomeController@showstruktur')->name('organisasi');
+Route::get('/galeriupt', 'HomeController@showgaleriupt')->name('galeriupt');
+
+        Route::get('/bidentitas', 'HomeController@identitas')->name('bidentitas');
+        Route::get('/bkepalakph', 'HomeController@kepalakph')->name('bkepalakph');
+        Route::get('/bfasilitas', 'HomeController@fasilitas')->name('bfasilitas');
+        Route::get('/blembaga', 'HomeController@lembaga')->name('blembaga');
+        Route::get('/brphjp', 'HomeController@rphjp')->name('brphjp');
+
+        Route::get('/bidentitas2', 'HomeController@identitas2')->name('bidentitas2');
+        Route::get('/bkepalakph2', 'HomeController@kepalakph2')->name('bkepalakph2');
+        Route::get('/bfasilitas2', 'HomeController@fasilitas2')->name('bfasilitas2');
+        Route::get('/blembaga2', 'HomeController@lembaga2')->name('blembaga2');
+        Route::get('/brphjp2', 'HomeController@rphjp2')->name('brphjp2');
+
+        Route::get('/bidentitas3', 'HomeController@identitas3')->name('bidentitas3');
+        Route::get('/bkepalakph3', 'HomeController@kepalakph3')->name('bkepalakph3');
+        Route::get('/bfasilitas3', 'HomeController@fasilitas3')->name('bfasilitas3');
+        Route::get('/blembaga3', 'HomeController@lembaga3')->name('blembaga3');
+        Route::get('/brphjp3', 'HomeController@rphjp3')->name('brphjp3');
+
+        Route::get('/bidentitas4', 'HomeController@identitas4')->name('bidentitas4');
+        Route::get('/bkepalakph4', 'HomeController@kepalakph4')->name('bkepalakph4');
+        Route::get('/bfasilitas4', 'HomeController@fasilitas4')->name('bfasilitas4');
+        Route::get('/blembaga4', 'HomeController@lembaga4')->name('blembaga4');
+        Route::get('/brphjp4', 'HomeController@rphjp4')->name('brphjp4');
+
+        Route::get('/bshow-dataumum', 'HomeController@index1')->name('bshow-dataumum');
+        Route::get('/bshow-dataumum2', 'HomeController@index2')->name('bshow-dataumum2');
+        Route::get('/bshow-dataumum3', 'HomeController@index3')->name('bshow-dataumum3');
+        Route::get('/bshow-dataumum4', 'HomeController@index4')->name('bshow-dataumum4');
 
 Route::group(['middleware' => ['auth']], function(){
     Route::group(['middleware' => ['ceklogin:adminupt']], function(){
