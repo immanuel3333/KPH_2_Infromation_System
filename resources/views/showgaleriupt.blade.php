@@ -1,14 +1,14 @@
 @include('layouts.headeradmin')
 </div>
 
-<div class="content-page"> 
+<div class="content-page">
     <div class="container-fluid">
        <!--==========================
                 Portfolio Section
         ============================-->
-                
+
                 <section id="portfolio"  class="section-bg" >
-                
+
                     <div class="row col-md-12 portfolio-container justify-content-center">
                     @foreach($gl as $gl)
                         <div class="col-lg-4 portfolio-item filter-app wow fadeInUp">
@@ -31,13 +31,13 @@
                     <div style="padding-right:100px;">
                         <br>
                         <a href="{{url('/inputgaleriupt')}}" >
-                            <button type="submit" class="btn" style="background-color: #99F07A; float:right;">Tambah</button>  
+                            <button type="submit" class="btn" style="background-color: #99F07A; float:right;">Tambah</button>
                         </a>
                     </div>
-                  
+
                 </section>
-             
-            
+
+
 
     </div>
 

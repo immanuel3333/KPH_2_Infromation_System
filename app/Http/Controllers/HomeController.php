@@ -231,5 +231,121 @@ class HomeController extends Controller
            return view('beranda.index4');
        }
 
+       public function showkeloladataekonomi1()
+       {
+           return view('beranda.indexdataekonomi1');
+       }
+
+       public function showkeloladataekonomi2()
+       {
+           return view('beranda.indexdataekonomi2');
+       }
+
+       public function showkeloladataekonomi3()
+       {
+           return view('beranda.indexdataekonomi3');
+       }
+
+       public function showkeloladataekonomi4()
+       {
+           return view('beranda.indexdataekonomi4');
+       }
+
+       public function showpotensiekonomi1(Request $request)
+        {
+            $pe = DB::table('potensiekonomi1')->get();
+            return view('beranda.showpotensiekonomi1', compact('pe'));
+        }
+
+        public function showpotensiekonomi2(Request $request)
+        {
+            $pe = DB::table('potensiekonomi2')->get();
+            return view('beranda.showpotensiekonomi2', compact('pe'));
+        }
+
+        public function showpotensiekonomi3(Request $request)
+        {
+            $pe = DB::table('potensiekonomi3')->get();
+            return view('beranda.showpotensiekonomi3', compact('pe'));
+        }
+
+        public function showpotensiekonomi4(Request $request)
+        {
+            $pe = DB::table('potensiekonomi4')->get();
+            return view('beranda.showpotensiekonomi4', compact('pe'));
+        }
+
+        public function showjasalingkungan1(){
+            $jl = DB::table('jasalingkungan1')->get();
+            return view('beranda.showjasalingkungan1',compact('jl'));
+
+        }
+
+        public function showjasalingkungan2(){
+            $jl = DB::table('jasalingkungan2')->get();
+            return view('beranda.showjasalingkungan2',compact('jl'));
+
+        }
+
+        public function showjasalingkungan3(){
+            $jl = DB::table('jasalingkungan3')->get();
+            return view('beranda.showjasalingkungan3',compact('jl'));
+
+        }
+
+        public function showjasalingkungan4(){
+            $jl = DB::table('jasalingkungan4')->get();
+            return view('beranda.showjasalingkungan4',compact('jl'));
+
+        }
+
+        public function showekologi(Request $request)
+        {
+            $pe = DB::table('ekologi')->get();
+            return view('beranda.showekologi', compact('pe'));
+        }
+
+        public function showekologi2(Request $request)
+        {
+            $pe = DB::table('ekologi2')->get();
+            return view('beranda.showekologi2', compact('pe'));
+        }
+
+        public function showekologi3(Request $request)
+        {
+            $pe = DB::table('ekologi3')->get();
+            return view('beranda.showekologi3', compact('pe'));
+        }
+
+        public function showekologi4(Request $request)
+        {
+            $pe = DB::table('ekologi4')->get();
+            return view('beranda.showekologi4', compact('pe'));
+        }
+
+        public function showsdm1(Request $request)
+        {
+            $pe = DB::table('sdm1')->get();
+            return view('beranda.showsdm1', compact('pe'));
+        }
+
+        public function showsdm2(Request $request)
+        {
+            $pe = DB::table('sdm2')->get();
+            return view('beranda.showsdm2', compact('pe'));
+        }
+
+        public function showsdm3(Request $request)
+        {
+            $pe = DB::table('sdm3')->get();
+            return view('beranda.showsdm3', compact('pe'));
+        }
+
+        public function showsdm4(Request $request)
+        {
+            $pe = DB::table('sdm4')->get();
+            return view('beranda.showsdm4', compact('pe'));
+        }
+
 
 }

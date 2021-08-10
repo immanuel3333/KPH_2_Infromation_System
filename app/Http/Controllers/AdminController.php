@@ -15,6 +15,9 @@ use App\Sejarah;
 use App\Galeriupt;
 use File;
 use App\SDM1;
+use App\SDM2;
+use App\SDM3;
+use App\SDM4;
 
 
 
@@ -142,7 +145,7 @@ class AdminController extends Controller
         $this->validate($request, [
             'tugas' => 'required|min:3',
             'fungsi' => 'required|min:3',
-        ]);        
+        ]);
         $tf=TugasFungsi::find($id);
         $up=substr($request->tugas, 3,-4);
         $down=substr($request->fungsi, 3,-4);
@@ -371,9 +374,221 @@ public function updatesdm1(Request $request, $id)
 
 }
 
-    
+//SDM2
 
+public function inputsdm2()
+{
+    $pe = SDM2::latest()->get();
+    return view('inputsdm2');
+}
 
+public function storesdm2(Request $request)
+{
+    // dd($request->all());
+    $pe = SDM2::create([
+        'kkph' => $request->kkph,
+        'kepala_seksi' => $request->kepala_seksi,
+        'tata_usaha' => $request->tata_usaha,
+        'kepala_resort' => $request->kepala_resort,
+        'staf_pns' => $request->staf_pns,
+        'staf_honorer' => $request->staf_honorer,
+        'tenaga_kontrak' => $request->tenaga_kontrak,
+        'tenaga_brigdalkarhutlapns' => $request->tenaga_brigdalkarhutlapns,
+        'tenaga_brigdalkarhutlanonpns' => $request->tenaga_brigdalkarhutlanonpns,
+        'pamhut' => $request->pamhut,
+        'sdm_pemda' => $request->sdm_pemda,
+        'bukti_rimbawa_sebelum_2015' => $request->bukti_rimbawa_sebelum_2015,
+        'bakti_rimbawa_2015' => $request->bakti_rimbawa_2015,
+        'bakti_rimbawa_2016' => $request->bakti_rimbawa_2016,
+        'bakti_rimbawa_2017' => $request->bakti_rimbawa_2017,
+        'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
+        'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
+    ]);
+
+    return redirect('showsdm2');
+}
+
+public function showsdm2(Request $request)
+{
+    $pe = DB::table('sdm2')->get();
+    return view('showsdm2', compact('pe'));
+}
+
+public function viewsdm2($id)
+{
+    $pe=SDM2::find($id);
+    return view('editsdm2',compact('pe'));
+}
+
+public function updatesdm2(Request $request, $id)
+{
+    $pe=SDM2::find($id);
+    $pe->update([
+        'kkph' => $request->kkph,
+        'kepala_seksi' => $request->kepala_seksi,
+        'tata_usaha' => $request->tata_usaha,
+        'kepala_resort' => $request->kepala_resort,
+        'staf_pns' => $request->staf_pns,
+        'staf_honorer' => $request->staf_honorer,
+        'tenaga_kontrak' => $request->tenaga_kontrak,
+        'tenaga_brigdalkarhutlapns' => $request->tenaga_brigdalkarhutlapns,
+        'tenaga_brigdalkarhutlanonpns' => $request->tenaga_brigdalkarhutlanonpns,
+        'pamhut' => $request->pamhut,
+        'sdm_pemda' => $request->sdm_pemda,
+        'bukti_rimbawa_sebelum_2015' => $request->bukti_rimbawa_sebelum_2015,
+        'bakti_rimbawa_2015' => $request->bakti_rimbawa_2015,
+        'bakti_rimbawa_2016' => $request->bakti_rimbawa_2016,
+        'bakti_rimbawa_2017' => $request->bakti_rimbawa_2017,
+        'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
+        'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
+    ]);
+    return redirect('showsdm2');
+
+}
+
+//SDM3
+
+public function inputsdm3()
+{
+    $pe = SDM3::latest()->get();
+    return view('inputsdm3');
+}
+
+public function storesdm3(Request $request)
+{
+    // dd($request->all());
+    $pe = SDM3::create([
+        'kkph' => $request->kkph,
+        'kepala_seksi' => $request->kepala_seksi,
+        'tata_usaha' => $request->tata_usaha,
+        'kepala_resort' => $request->kepala_resort,
+        'staf_pns' => $request->staf_pns,
+        'staf_honorer' => $request->staf_honorer,
+        'tenaga_kontrak' => $request->tenaga_kontrak,
+        'tenaga_brigdalkarhutlapns' => $request->tenaga_brigdalkarhutlapns,
+        'tenaga_brigdalkarhutlanonpns' => $request->tenaga_brigdalkarhutlanonpns,
+        'pamhut' => $request->pamhut,
+        'sdm_pemda' => $request->sdm_pemda,
+        'bukti_rimbawa_sebelum_2015' => $request->bukti_rimbawa_sebelum_2015,
+        'bakti_rimbawa_2015' => $request->bakti_rimbawa_2015,
+        'bakti_rimbawa_2016' => $request->bakti_rimbawa_2016,
+        'bakti_rimbawa_2017' => $request->bakti_rimbawa_2017,
+        'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
+        'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
+    ]);
+
+    return redirect('showsdm3');
+}
+
+public function showsdm3(Request $request)
+{
+    $pe = DB::table('sdm3')->get();
+    return view('showsdm3', compact('pe'));
+}
+
+public function viewsdm3($id)
+{
+    $pe=SDM3::find($id);
+    return view('editsdm3',compact('pe'));
+}
+
+public function updatesdm3(Request $request, $id)
+{
+    $pe=SDM3::find($id);
+    $pe->update([
+        'kkph' => $request->kkph,
+        'kepala_seksi' => $request->kepala_seksi,
+        'tata_usaha' => $request->tata_usaha,
+        'kepala_resort' => $request->kepala_resort,
+        'staf_pns' => $request->staf_pns,
+        'staf_honorer' => $request->staf_honorer,
+        'tenaga_kontrak' => $request->tenaga_kontrak,
+        'tenaga_brigdalkarhutlapns' => $request->tenaga_brigdalkarhutlapns,
+        'tenaga_brigdalkarhutlanonpns' => $request->tenaga_brigdalkarhutlanonpns,
+        'pamhut' => $request->pamhut,
+        'sdm_pemda' => $request->sdm_pemda,
+        'bukti_rimbawa_sebelum_2015' => $request->bukti_rimbawa_sebelum_2015,
+        'bakti_rimbawa_2015' => $request->bakti_rimbawa_2015,
+        'bakti_rimbawa_2016' => $request->bakti_rimbawa_2016,
+        'bakti_rimbawa_2017' => $request->bakti_rimbawa_2017,
+        'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
+        'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
+    ]);
+    return redirect('showsdm3');
+
+}
+
+//SDM4
+
+public function inputsdm4()
+{
+    $pe = SDM4::latest()->get();
+    return view('inputsdm4');
+}
+
+public function storesdm4(Request $request)
+{
+    // dd($request->all());
+    $pe = SDM4::create([
+        'kkph' => $request->kkph,
+        'kepala_seksi' => $request->kepala_seksi,
+        'tata_usaha' => $request->tata_usaha,
+        'kepala_resort' => $request->kepala_resort,
+        'staf_pns' => $request->staf_pns,
+        'staf_honorer' => $request->staf_honorer,
+        'tenaga_kontrak' => $request->tenaga_kontrak,
+        'tenaga_brigdalkarhutlapns' => $request->tenaga_brigdalkarhutlapns,
+        'tenaga_brigdalkarhutlanonpns' => $request->tenaga_brigdalkarhutlanonpns,
+        'pamhut' => $request->pamhut,
+        'sdm_pemda' => $request->sdm_pemda,
+        'bukti_rimbawa_sebelum_2015' => $request->bukti_rimbawa_sebelum_2015,
+        'bakti_rimbawa_2015' => $request->bakti_rimbawa_2015,
+        'bakti_rimbawa_2016' => $request->bakti_rimbawa_2016,
+        'bakti_rimbawa_2017' => $request->bakti_rimbawa_2017,
+        'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
+        'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
+    ]);
+
+    return redirect('showsdm4');
+}
+
+public function showsdm4(Request $request)
+{
+    $pe = DB::table('sdm4')->get();
+    return view('showsdm4', compact('pe'));
+}
+
+public function viewsdm4($id)
+{
+    $pe=SDM4::find($id);
+    return view('editsdm4',compact('pe'));
+}
+
+public function updatesdm4(Request $request, $id)
+{
+    $pe=SDM4::find($id);
+    $pe->update([
+        'kkph' => $request->kkph,
+        'kepala_seksi' => $request->kepala_seksi,
+        'tata_usaha' => $request->tata_usaha,
+        'kepala_resort' => $request->kepala_resort,
+        'staf_pns' => $request->staf_pns,
+        'staf_honorer' => $request->staf_honorer,
+        'tenaga_kontrak' => $request->tenaga_kontrak,
+        'tenaga_brigdalkarhutlapns' => $request->tenaga_brigdalkarhutlapns,
+        'tenaga_brigdalkarhutlanonpns' => $request->tenaga_brigdalkarhutlanonpns,
+        'pamhut' => $request->pamhut,
+        'sdm_pemda' => $request->sdm_pemda,
+        'bukti_rimbawa_sebelum_2015' => $request->bukti_rimbawa_sebelum_2015,
+        'bakti_rimbawa_2015' => $request->bakti_rimbawa_2015,
+        'bakti_rimbawa_2016' => $request->bakti_rimbawa_2016,
+        'bakti_rimbawa_2017' => $request->bakti_rimbawa_2017,
+        'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
+        'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
+    ]);
+    return redirect('showsdm4');
+
+}
 
 }
 

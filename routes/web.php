@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/',function(){
-    return redirect('login');
+    return redirect('landingpage');
 });
 
 Route::get('login', 'AuthController@index')->name('login');
@@ -68,6 +68,32 @@ Route::get('/galeriupt', 'HomeController@showgaleriupt')->name('galeriupt');
         Route::get('/bshow-dataumum2', 'HomeController@index2')->name('bshow-dataumum2');
         Route::get('/bshow-dataumum3', 'HomeController@index3')->name('bshow-dataumum3');
         Route::get('/bshow-dataumum4', 'HomeController@index4')->name('bshow-dataumum4');
+
+        Route::get('/bshowkeloladataekonomi1', 'HomeController@showkeloladataekonomi1')->name('bshowkeloladataekonomi1');
+        Route::get('/bshowkeloladataekonomi2', 'HomeController@showkeloladataekonomi2')->name('bshowkeloladataekonomi2');
+        Route::get('/bshowkeloladataekonomi3', 'HomeController@showkeloladataekonomi3')->name('bshowkeloladataekonomi3');
+        Route::get('/bshowkeloladataekonomi4', 'HomeController@showkeloladataekonomi4')->name('bshowkeloladataekonomi4');
+
+        Route::get('/bshowjasalingkungan1', 'HomeController@showjasalingkungan1')->name('bshowjasalingkungan1');
+        Route::get('/bshowjasalingkungan2', 'HomeController@showjasalingkungan2')->name('bshowjasalingkungan2');
+        Route::get('/bshowjasalingkungan3', 'HomeController@showjasalingkungan3')->name('bshowjasalingkungan3');
+        Route::get('/bshowjasalingkungan4', 'HomeController@showjasalingkungan4')->name('bshowjasalingkungan4');
+
+        Route::get('/bshowpotensiekonomi1', 'HomeController@showpotensiekonomi1')->name('bshowpotensiekonomi1');
+        Route::get('/bshowpotensiekonomi2', 'HomeController@showpotensiekonomi2')->name('bshowpotensiekonomi2');
+        Route::get('/bshowpotensiekonomi3', 'HomeController@showpotensiekonomi3')->name('bshowpotensiekonomi3');
+        Route::get('/bshowpotensiekonomi4', 'HomeController@showpotensiekonomi4')->name('bshowpotensiekonomi4');
+
+        Route::get('/bshowekologi', 'HomeController@showekologi')->name('bshowekologi');
+        Route::get('/bshowekologi2', 'HomeController@showekologi2')->name('bshowekologi2');
+        Route::get('/bshowekologi3', 'HomeController@showekologi3')->name('bshowekologi3');
+        Route::get('/bshowekologi4', 'HomeController@showekologi4')->name('bshowekologi4');
+
+        Route::get('/bshowsdm1', 'HomeController@showsdm1')->name('bshowsdm1');
+        Route::get('/bshowsdm2', 'HomeController@showsdm2')->name('bshowsdm2');
+        Route::get('/bshowsdm3', 'HomeController@showsdm3')->name('bshowsdm3');
+        Route::get('/bshowsdm4', 'HomeController@showsdm4')->name('bshowsdm4');
+
 
 Route::group(['middleware' => ['auth']], function(){
     Route::group(['middleware' => ['ceklogin:adminupt']], function(){
@@ -208,37 +234,65 @@ Route::group(['middleware' => ['auth']], function(){
         Route::post('/update-sdm1/{id}', 'AdminController@updatesdm1')->name('update-sdm1');
         Route::get('/viewsdm1/{id}', 'AdminController@viewsdm1');
 
-        //ekologi
-        Route::get('/inputekologi', 'AdminController@inputekologi')->name('inputekologi');
-        Route::post('/simpan-ekologi', 'AdminController@storeekologi')->name('simpan-ekologi');
-        Route::get('/showekologi', 'AdminController@showekologi')->name('showekologi');
+        //sdm2
+        Route::get('/inputsdm2', 'AdminController@inputsdm2')->name('inputsdm2');
+        Route::post('/simpan-sdm2', 'AdminController@storesdm2')->name('simpan-sdm2');
+        Route::get('/showsdm2', 'AdminController@showsdm2')->name('showsdm2');
+        Route::get('/ajaxekonomi2', 'AdminController@ajaxekonomi2')->name('ajaxekonomi2');
 
-        Route::post('/update-ekologi/{id}', 'AdminController@updateekologi')->name('update-ekologi');
-        Route::get('/viewekologi/{id}', 'AdminController@viewekologi');
+        Route::post('/update-sdm2/{id}', 'AdminController@updatesdm2')->name('update-sdm2');
+        Route::get('/viewsdm2/{id}', 'AdminController@viewsdm2');
+
+        //sdm3
+        Route::get('/inputsdm3', 'AdminController@inputsdm3')->name('inputsdm3');
+        Route::post('/simpan-sdm3', 'AdminController@storesdm3')->name('simpan-sdm3');
+        Route::get('/showsdm3', 'AdminController@showsdm3')->name('showsdm3');
+        Route::get('/ajaxekonomi3', 'AdminController@ajaxekonomi3')->name('ajaxekonomi3');
+
+        Route::post('/update-sdm3/{id}', 'AdminController@updatesdm3')->name('update-sdm3');
+        Route::get('/viewsdm3/{id}', 'AdminController@viewsdm3');
+
+        //sdm4
+        Route::get('/inputsdm4', 'AdminController@inputsdm4')->name('inputsdm4');
+        Route::post('/simpan-sdm4', 'AdminController@storesdm4')->name('simpan-sdm4');
+        Route::get('/showsdm4', 'AdminController@showsdm4')->name('showsdm4');
+        Route::get('/ajaxekonomi4', 'AdminController@ajaxekonomi4')->name('ajaxekonomi4');
+
+        Route::post('/update-sdm4/{id}', 'AdminController@updatesdm4')->name('update-sdm4');
+        Route::get('/viewsdm4/{id}', 'AdminController@viewsdm4');
+
+
+        //ekologi
+        Route::get('/inputekologi', 'EkologiController@inputekologi')->name('inputekologi');
+        Route::post('/simpan-ekologi', 'EkologiController@storeekologi')->name('simpan-ekologi');
+        Route::get('/showekologi', 'EkologiController@showekologi')->name('showekologi');
+
+        Route::post('/update-ekologi/{id}', 'EkologiController@updateekologi')->name('update-ekologi');
+        Route::get('/viewekologi/{id}', 'EkologiController@viewekologi');
 
         //ekologi2
-        Route::get('/inputekologi2', 'AdminController@inputekologi2')->name('inputekologi2');
-        Route::post('/simpan-ekologi2', 'AdminController@storeekologi2')->name('simpan-ekologi2');
-        Route::get('/showekologi2', 'AdminController@showekologi2')->name('showekologi2');
+        Route::get('/inputekologi2', 'EkologiController@inputekologi2')->name('inputekologi2');
+        Route::post('/simpan-ekologi2', 'EkologiController@storeekologi2')->name('simpan-ekologi2');
+        Route::get('/showekologi2', 'EkologiController@showekologi2')->name('showekologi2');
 
-        Route::post('/update-ekologi2/{id}', 'AdminController@updateekologi2')->name('update-ekologi2');
-        Route::get('/viewekologi2/{id}', 'AdminController@viewekologi2');
+        Route::post('/update-ekologi2/{id}', 'EkologiController@updateekologi2')->name('update-ekologi2');
+        Route::get('/viewekologi2/{id}', 'EkologiController@viewekologi2');
 
         //ekologi3
-        Route::get('/inputekologi3', 'AdminController@inputekologi3')->name('inputekologi3');
-        Route::post('/simpan-ekologi3', 'AdminController@storeekologi3')->name('simpan-ekologi3');
-        Route::get('/showekologi3', 'AdminController@showekologi3')->name('showekologi3');
+        Route::get('/inputekologi3', 'EkologiController@inputekologi3')->name('inputekologi3');
+        Route::post('/simpan-ekologi3', 'EkologiController@storeekologi3')->name('simpan-ekologi3');
+        Route::get('/showekologi3', 'EkologiController@showekologi3')->name('showekologi3');
 
-        Route::post('/update-ekologi3/{id}', 'AdminController@updateekologi3')->name('update-ekologi3');
-        Route::get('/viewekologi3/{id}', 'AdminController@viewekologi3');
+        Route::post('/update-ekologi3/{id}', 'EkologiController@updateekologi3')->name('update-ekologi3');
+        Route::get('/viewekologi3/{id}', 'EkologiController@viewekologi3');
 
         //ekologi4
-        Route::get('/inputekologi4', 'AdminController@inputekologi4')->name('inputekologi4');
-        Route::post('/simpan-ekologi4', 'AdminController@storeekologi4')->name('simpan-ekologi4');
-        Route::get('/showekologi4', 'AdminController@showekologi4')->name('showekologi4');
+        Route::get('/inputekologi4', 'EkologiController@inputekologi4')->name('inputekologi4');
+        Route::post('/simpan-ekologi4', 'EkologiController@storeekologi4')->name('simpan-ekologi4');
+        Route::get('/showekologi4', 'EkologiController@showekologi4')->name('showekologi4');
 
-        Route::post('/update-ekologi4/{id}', 'AdminController@updateekologi4')->name('update-ekologi4');
-        Route::get('/viewekologi4/{id}', 'AdminController@viewekologi4');
+        Route::post('/update-ekologi4/{id}', 'EkologiController@updateekologi4')->name('update-ekologi4');
+        Route::get('/viewekologi4/{id}', 'EkologiController@viewekologi4');
 
        //dataumum2
         Route::get('/inputidentitas2', 'DataUmumController@inputidentitas2')->name('inputidentitas2');

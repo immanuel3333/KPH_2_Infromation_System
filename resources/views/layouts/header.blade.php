@@ -221,21 +221,21 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{ route('bshowkeloladataekonomi1') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Ekonomi</span>
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{ route('bshowekologi') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Ekologi</span>
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{ route('bshowsdm1') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data SDM</span>
@@ -263,21 +263,21 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{ route('bshowkeloladataekonomi2') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Ekonomi</span>
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{ route('bshowekologi2') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Ekologi</span>
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{ route('bshowsdm2') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data SDM</span>
@@ -304,21 +304,21 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{ route('bshowkeloladataekonomi3') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Ekonomi</span>
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{ route('bshowekologi3') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Ekologi</span>
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{ route('bshowsdm3') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data SDM</span>
@@ -345,14 +345,14 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{ route('bshowkeloladataekonomi4') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Ekonomi</span>
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{ route('bshowekologi4') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data Ekologi</span>
@@ -360,7 +360,7 @@
                                             </li>
                                             <li class="">
                                                 <a href="#" class="svg-icon">
-                                                    <i class="">
+                                                    <i class="{{ route('bshowsdm4') }}">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data SDM</span>
                                                 </a>
