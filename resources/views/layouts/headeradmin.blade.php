@@ -123,7 +123,7 @@
 
             <div class="mm-sidebar sidebar-default" style="fixed-left">
                 <div class="mm-sidebar-logo d-flex align-items-center justify-content-between">
-                    <a href="{{ route('home2') }}" class="header-logo">
+                    <a href="{{ route('home') }}" class="header-logo">
                         <img src="{{ asset('img/newlogo.png') }}" class="img-fluid rounded-normal light-logo " alt="logo">
                         <img src="{{ asset('img/newlogo.png') }}" class="img-fluid rounded-normal darkmode-logo" alt="logo">
                     </a>
@@ -135,7 +135,7 @@
                     <nav class="mm-sidebar-menu">
                         <ul id="mm-sidebar-toggle" class="side-menu">
                             <li class="">
-                                <a href="{{ route('home2') }}" class="collapsed svg-icon">
+                                <a href="{{ route('home') }}" class="collapsed svg-icon">
                                     <i class="">
                                         <img src="{{ asset('icon/home.png') }}" alt="icon" width="20">
                                     </i>
