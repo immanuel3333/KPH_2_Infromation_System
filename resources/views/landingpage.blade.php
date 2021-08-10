@@ -1,55 +1,26 @@
 @include('layouts.header')
             <div class="content-page " >
-                <div class="container">
-                    <div class="myBanner">
-                        <div class="col align-self-center">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                            <div class="carousel-item active" style="height:300px">
-                                <a id="firsturl" href={{$firstUrl}}>
-                                <img id="firstimage" class="img-fluid d-block mx-auto" src="{{$firstImage}}" alt="..." style="width:1110px; height:500px;">
-                                </a>
-                                <div class="carousel-caption  d-md-block">
-                                <p class="title">{{$firstTitle}}</p>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item" style="height:300px">
-                                <a id="secondurl" href={{$secondUrl}}>
-                                <img id="secondimage" class="img-fluid d-block mx-auto" src="{{$secondImage}}" alt="..." style="width:1110px; height:500px;">
-                                </a>
-                                <div class="carousel-caption  d-md-block">
-                                <p class="title">{{$secondTitle}}</p>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item" style="height:300px">
-                                <a id="thirdurl" href={{$thirdUrl}}>
-                                <img id="thirdimage" class="img-fluid d-block mx-auto" src="{{$thirdImage}}" alt="..." style="width:1110px; height:500px;">
-                                </a>
-                                <div class="carousel-caption  d-md-block">
-                                <p class="title">{{$thirdTitle}}</p>
-                                </div>
-                            </div>
-                            </div>
-
-                            <a id="previous" class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a id="next" class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
+                
+                    <h1>Artikel Terbaru</h1>
+                    <div class="row">
+                    @foreach ($artikel as $a)
+                        <div class="col-md-6">
+                            <div class=" bg-secondary text-white">
+                                <img src="{{ asset($a->gambar) }}" class="card-img" alt="#" width="700" height="500">
+                                    <div class="card-img-overlay  d-flex align-items-end" style="padding-bottom:50px;">
+                                     <a href="{{ route('detail-artikel',$a->id) }}">
+                                        <h4 class="card-title text-white">{{$a->judul}}</h4>
+                                     </a>   
+                                    </div>
+                                    <div> 
+                                        <span style="color:black;">{{$a->created_at->diffForHumans()}}</span>
+                                    </div>
                             </div>
                         </div>
+                         @endforeach
                     </div>
-                </div>
+                   
+               
 
                 <!--==========================
                 Portfolio Section

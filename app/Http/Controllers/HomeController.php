@@ -11,6 +11,7 @@ use App\Identitas;
 use App\Identitas2;
 use App\Identitas3;
 use App\Identitas4;
+use App\Artikel;
 use DB;
 
 class HomeController extends Controller
@@ -33,26 +34,24 @@ class HomeController extends Controller
 
     public function banner()
     {
-        $url = "http://newsapi.org/v2/top-headlines?q=covid&country=id&category=health&sortBy=publishedAt&apiKey=1bc17eb57ac9417eafe4ba36eee8620d";
-        $curl = curl_init();
-        curl_setopt($curl, CURLOPT_URL, $url);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-        $response = curl_exec($curl);
-        curl_close($curl);
-        $result = json_decode($response);
-        $firstImage = $result->articles[0]->urlToImage;
-        $secondImage = $result->articles[1]->urlToImage;
-        $thirdImage = $result->articles[2]->urlToImage;
-        $firstUrl = $result->articles[0]->url;
-        $secondUrl= $result->articles[1]->url;
-        $thirdUrl = $result->articles[2]->url;
-        $firstTitle = $result->articles[0]->title;
-        $secondTitle= $result->articles[1]->title;
-        $thirdTitle = $result->articles[2]->title;
+        $artikel = Artikel::latest()->get()->random(2);
         $comments = Comment::where('approve','1')->get();
         $projects = counter::latest()->paginate(5);
         counter::increment('views');
-        return view('landingpage', compact('firstImage','secondImage','thirdImage','firstUrl','secondUrl','thirdUrl','firstTitle','secondTitle','thirdTitle','comments','projects'));
+        return view('landingpage', compact('comments','projects','artikel'));
+    }
+
+    public function showartikelid(Artikel $artikel)
+    {
+        $artikel_detail = $artikel;
+         return view('artikel.artikel-detail',compact('artikel_detail'));
+        // dd($artikel);
+    }
+
+    public function showartikel()
+    {
+        $artikelall = Artikel::latest()->get();
+        return view('artikel.showartikel', compact('artikelall'));
     }
 
     public function comment(Request $request)
@@ -63,6 +62,66 @@ class HomeController extends Controller
                 ]);
                 return redirect()->back()->with(['success' => 'Komentar Ditambahkan']);
        }
+    
+       public function article()
+       {
+           $art = DB::table('artikel')->get();
+           return view ('artikel.index', compact('art'));
+       }
+       public function inputartikel()
+            {
+                $art = Artikel::latest()->get();
+                return view('artikel.inputartikel');
+            }
+
+       public function storeartikel(Request $request)
+       {
+
+           $image = $request->gambar;
+           $new_image = time().$image->getClientOriginalName();
+           $up=substr($request->artikel, 3,-4);
+           $art = Artikel::create([
+               'judul' => $request->judul,
+               'artikel' => $up,
+               'gambar' => 'public/artikel/'.$new_image
+           ]);
+
+           $image->move('public/artikel/', $new_image);
+
+
+           return redirect('indexartikel');
+
+
+       }
+
+       public function updateartikel(Request $request, $id)
+       {
+           $art=Artikel::find($id);
+           $up=substr($request->artikel, 3,-4);
+           File::delete($art->image);
+           $file = $request->file('gambar');
+           $file->move('public/artikel/',$file->getClientOriginalName());
+           $art->update([
+               'judul' => $request->judul,
+               'artikel' => $up,
+               'gambar' => 'public/artikel/'.$file->getClientOriginalName(),
+           ]);
+           return redirect('indexartikel');
+
+       }
+
+       public function viewartikel($id)
+       {
+        $art=Artikel::find($id);
+        return view('artikel.editartikel',compact('art'));
+       }
+
+       public function deleteartikel($id)
+        {
+            $art=Artikel::find($id);
+            $art->delete();
+            return redirect('indexartikel');
+        }
 
     public function showvisimisi(Request $request)
     {

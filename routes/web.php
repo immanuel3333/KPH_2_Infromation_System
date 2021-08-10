@@ -25,10 +25,11 @@ Route::get('logout', 'AuthController@logout')->name('logout');
 Route::get('/inputartikel', 'HomeController@inputartikel')->name('inputartikel');
 Route::get('/indexartikel', 'HomeController@article')->name('indexartikel');
 Route::post('/simpan-artikel', 'HomeController@storeartikel')->name('simpan-artikel');
-Route::get('/showartikel/{id}', 'HomeController@showartikel');
-Route::get('/get-artikel/{id}', 'HomeController@getartikel')->name('get-artikel');
 Route::post('/update-artikel/{id}', 'HomeController@updateartikel')->name('update-artikel');
+Route::get('/deleteartikel/{id}', 'HomeController@deleteartikel');
 Route::get('/viewartikel/{id}', 'HomeController@viewartikel');
+ Route::get('/showartikel', 'HomeController@showartikel');
+Route::get('/showartikelid/{artikel}', 'HomeController@showartikelid')->name('detail-artikel');
 
 Route::get('/landingpage', 'HomeController@banner')->name('landingpage');
 Route::get('/profilpegawai', 'HomeController@profilpegawai');
