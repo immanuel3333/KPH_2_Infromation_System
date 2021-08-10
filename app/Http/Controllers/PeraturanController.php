@@ -22,9 +22,11 @@ class PeraturanController extends Controller
         $law = Peraturan::create([
             'judul' => $request->judul,
             'keterangan' => $request->keterangan,
-            'file' => $new_file
+            'file' => 'public/peraturan/'.$new_file,
 
         ]);
+
+        $file->move('public/peraturan/', $new_file);
         return redirect('peraturans');
     }
 
@@ -36,7 +38,7 @@ class PeraturanController extends Controller
         $law->update([
             'judul' => $request->judul,
             'keterangan' => $request->keterangan,
-            'file' => $file->getClientOriginalName()
+            'file'=>'public/peraturan/'.$file->getClientOriginalName(),
 
         ]);
         return redirect('peraturans');
