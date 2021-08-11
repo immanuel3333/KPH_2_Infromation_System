@@ -3,7 +3,7 @@
 <div class="content-page" style="background: url('{{ asset('img/backgroundadmin.png') }}');background-size:850px;background-repeat: repeat-y;background-position:center ;">
     <div class="container-fluid ">
                         <center>
-                        <a href="{{ route('strukturs.create') }}" class="btn btn-md btn-success mb-3">TAMBAH BLOG</a>
+                        <a href="{{ route('strukturs.create') }}" class="btn btn-md btn-success mb-3">TAMBAH SRUKTUR</a>
                         <p style="font-size:50px; font-family:balthazar;"><b> Struktur Organisasi </p><br>
                               @forelse ($blogs as $blog)
                                         <p><img src="{{ asset( $blog->image ) }}" width="592px" height="438px"></p><br>
@@ -16,7 +16,7 @@
                                         </form>
                               @empty
                                   <div class="alert alert-danger">
-                                      Data Blog belum Tersedia.
+                                      Data Struktur Belum Tersedia
                                   </div>
                               @endforelse
                           {{ $blogs->links() }}

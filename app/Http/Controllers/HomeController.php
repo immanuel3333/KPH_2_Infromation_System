@@ -62,7 +62,7 @@ class HomeController extends Controller
                 ]);
                 return redirect()->back()->with(['success' => 'Komentar Ditambahkan']);
        }
-    
+
        public function article()
        {
            $art = DB::table('artikel')->get();
@@ -405,6 +405,12 @@ class HomeController extends Controller
             $pe = DB::table('sdm4')->get();
             return view('beranda.showsdm4', compact('pe'));
         }
+
+        public function peraturan()
+       {
+           $law = DB::table('peraturan')->get();
+           return view('beranda.showperaturan',compact('law'));
+       }
 
 
 }

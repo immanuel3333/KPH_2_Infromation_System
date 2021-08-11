@@ -225,7 +225,7 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="{{ route('show-dataekonomi') }}" class="svg-icon">
+                                                <a href="{{ route('showkeloladataekonomi1') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src=" {{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data Ekonomi</span>
@@ -260,14 +260,14 @@
                                         </a>
                                         <ul id="unit2" class="submenu collapse" data-parent="#uker">
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{route('show-dataumum2')}}" class="svg-icon">
                                                     <i class="">
                                                         <img src="{{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data Umum</span>
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{route('showkeloladataekonomi2')}}" class="svg-icon">
                                                     <i class="">
                                                         <img src="{{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data Ekonomi</span>
@@ -281,7 +281,7 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{route('showsdm2')}}" class="svg-icon">
                                                     <i class="">
                                                         <img src="{{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data SDM</span>
@@ -301,14 +301,14 @@
                                         </a>
                                         <ul id="unit3" class="submenu collapse" data-parent="#uker">
                                             <li class="">
-                                                <a href="../app/user-profile.html" class="svg-icon">
+                                                <a href="{{route('show-dataumum3')}}" class="svg-icon">
                                                     <i class="">
                                                         <img src="{{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data Umum</span>
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{route('showkeloladataekonomi3')}}" class="svg-icon">
                                                     <i class="">
                                                         <img src="{{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data Ekonomi</span>
@@ -322,7 +322,7 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{route('showsdm3')}}" class="svg-icon">
                                                     <i class="">
                                                         <img src="{{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data SDM</span>
@@ -342,14 +342,14 @@
                                         </a>
                                         <ul id="unit4" class="submenu collapse" data-parent="#uker">
                                             <li class="">
-                                                <a href="../app/user-profile.html" class="svg-icon">
+                                                <a href="{{route('show-dataumum4')}}" class="svg-icon">
                                                     <i class="">
                                                         <img src="{{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data Umum</span>
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{route('showkeloladataekonomi4')}}" class="svg-icon">
                                                     <i class="">
                                                         <img src="{{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data Ekonomi</span>
@@ -363,7 +363,7 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
+                                                <a href="{{route('showsdm4')}}" class="svg-icon">
                                                     <i class="">
                                                         <img src="{{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data SDM</span>

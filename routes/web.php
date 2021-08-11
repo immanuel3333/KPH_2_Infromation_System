@@ -39,6 +39,7 @@ Route::get('/visimisi', 'HomeController@showvisimisi')->name('visimisi');
 Route::get('/sejarah', 'HomeController@showsejarah')->name('sejarah');
 Route::get('/tugasfungsi', 'HomeController@showtugasfungsi')->name('tugasfungsi');
 Route::get('/organisasi', 'HomeController@showstruktur')->name('organisasi');
+Route::get('/bperaturan', 'HomeController@peraturan')->name('bperaturan');
 Route::get('/galeriupt', 'HomeController@showgaleriupt')->name('galeriupt');
 
         Route::get('/bidentitas', 'HomeController@identitas')->name('bidentitas');
@@ -414,7 +415,7 @@ Route::group(['middleware' => ['auth']], function(){
         Route::post('/update-potensiekonomi1/{id}', 'EkonomiController@update5')->name('update-potensiekonomi1');
         Route::get('/view5/{id}', 'EkonomiController@view5');
         //gabungan potensiekonomi dan jasalingkungan
-        Route::get('/showkeloladataekonomi1', 'EkonomiController@showkeloladataekonomi1')->name('show-dataekonomi');
+        Route::get('/showkeloladataekonomi1', 'EkonomiController@showkeloladataekonomi1')->name('showkeloladataekonomi1');
 
         //Data Ekonomi 2
         Route::get('/inputpotensiekonomi2', 'EkonomiController@inputpotensiekonomi2')->name('inputpotensiekonomi2');
@@ -425,7 +426,7 @@ Route::group(['middleware' => ['auth']], function(){
         Route::post('/update-potensiekonomi2/{id}', 'EkonomiController@updatepotensiekonomi2')->name('update-potensiekonomi2');
         Route::get('/viewpotensiekonomi2/{id}', 'EkonomiController@viewpotensiekonomi2');
         //gabungan potensiekonomi dan jasalingkungan
-        Route::get('/showkeloladataekonomi2', 'EkonomiController@showkeloladataekonomi2')->name('show-dataekonomi');
+        Route::get('/showkeloladataekonomi2', 'EkonomiController@showkeloladataekonomi2')->name('showkeloladataekonomi2');
 
         //Data Ekonomi 3
         Route::get('/inputpotensiekonomi3', 'EkonomiController@inputpotensiekonomi3')->name('inputpotensiekonomi3');
@@ -436,7 +437,7 @@ Route::group(['middleware' => ['auth']], function(){
         Route::post('/update-potensiekonomi3/{id}', 'EkonomiController@updatepotensiekonomi3')->name('update-potensiekonomi3');
         Route::get('/viewpotensiekonomi3/{id}', 'EkonomiController@viewpotensiekonomi3');
         //gabungan potensiekonomi dan jasalingkungan
-        Route::get('/showkeloladataekonomi3', 'EkonomiController@showkeloladataekonomi3')->name('show-dataekonomi');
+        Route::get('/showkeloladataekonomi3', 'EkonomiController@showkeloladataekonomi3')->name('showkeloladataekonomi3');
 
         //Data Ekonomi 4
         Route::get('/inputpotensiekonomi4', 'EkonomiController@inputpotensiekonomi4')->name('inputpotensiekonomi4');
@@ -447,7 +448,7 @@ Route::group(['middleware' => ['auth']], function(){
         Route::post('/update-potensiekonomi4/{id}', 'EkonomiController@updatepotensiekonomi4')->name('update-potensiekonomi4');
         Route::get('/viewpotensiekonomi4/{id}', 'EkonomiController@viewpotensiekonomi4');
         //gabungan potensiekonomi dan jasalingkungan
-        Route::get('/showkeloladataekonomi4', 'EkonomiController@showkeloladataekonomi4')->name('show-dataekonomi');
+        Route::get('/showkeloladataekonomi4', 'EkonomiController@showkeloladataekonomi4')->name('showkeloladataekonomi4');
 
         Route::post('/toggle-approve', 'AdminController@approval');
 

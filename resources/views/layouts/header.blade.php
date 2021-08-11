@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>SimpleD | Responsive Bootstrap 4 Admin Dashboard Template</title>
+      <title>UPT KPH WILAYAH II Siantar</title>
 
       <!-- Favicon -->
       <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" />
@@ -119,7 +119,7 @@
 
             <div class="mm-sidebar sidebar-default" style="float:left; position:fixed;">
                 <div class="mm-sidebar-logo d-flex align-items-center justify-content-between">
-                    <a href="../backend/index.html" class="header-logo">
+                    <a href="{{ route('landingpage') }}" class="header-logo">
                     <img src="{{ asset('img/logokph.png') }}" class="img-fluid rounded-normal light-logo " alt="logo" width="500">
                         <img src="{{ asset('img/newlogo.png') }}" class="img-fluid rounded-normal darkmode-logo" alt="logo">
                     </a>
@@ -131,7 +131,7 @@
                     <nav class="mm-sidebar-menu">
                         <ul id="mm-sidebar-toggle" class="side-menu">
                             <li class="">
-                                <a href="{{ route('landingpage') }}" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
+                                <a href="{{ route('landingpage') }}" class="collapsed svg-icon" >
                                     <i class="">
                                         <img src="icon/home.png" alt="icon" width="20">
                                     </i>
@@ -359,8 +359,8 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="#" class="svg-icon">
-                                                    <i class="{{ route('bshowsdm4') }}">
+                                                <a href="{{ route('bshowsdm4') }}" class="svg-icon">
+                                                    <i class="">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data SDM</span>
                                                 </a>
@@ -372,7 +372,7 @@
                             </li>
 
                             <li class="">
-                                <a href="#Dashboards" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
+                                <a href="{{ route('bperaturan') }}" class="collapsed svg-icon" >
                                     <i class="">
                                         <img src="icon/peraturan.png" alt="icon" width="20">
                                     </i>
