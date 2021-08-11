@@ -131,7 +131,7 @@
                     <nav class="mm-sidebar-menu">
                         <ul id="mm-sidebar-toggle" class="side-menu">
                             <li class="">
-                                <a href="#Dashboards" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
+                                <a href="{{ route('landingpage') }}" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
                                     <i class="">
                                         <img src="icon/home.png" alt="icon" width="20">
                                     </i>

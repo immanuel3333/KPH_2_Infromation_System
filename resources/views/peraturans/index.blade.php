@@ -19,7 +19,9 @@
                 <td>{{ $no }}</td>
 				<td>{{ $hasil->judul }}</td>
                 <td>{{ $hasil->keterangan }}</td>
-                <td>{{ $hasil->file }}</td>
+                <td>
+                    <a href="{{ asset($hasil->file)}}" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview">{{ $hasil->file }}</a>
+                </td>
 				<td>
                     <a href="{{url('/viewperaturan12')}}/{{$hasil->id}}" class="btn btn-sm btn-primary pl-10">EDIT</a>
 				</td>
