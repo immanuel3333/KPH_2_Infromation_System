@@ -118,6 +118,11 @@ class DataUmumController extends Controller
 //akhir dataumum identitas
 
 //dataumum kepalakph
+public function kepalakph()
+    {
+    $kkph = DB::table('kepalakph')->get();
+    return view('dataumum.kepalakph',compact('kkph'));
+    }
 
     public function inputkepalakph()
         {
@@ -380,7 +385,7 @@ public function inputfasilitas()
         }
 
         return response()->json($fs,200);
-        // return dd($jl);
+        // return dd($fs);
 
     }
 
@@ -388,6 +393,13 @@ public function inputfasilitas()
        {
         $fs=Fasilitas::find($id);
         return view('dataumum.editfasilitas',compact('fs'));
+       }
+
+       public function delete($id)
+       {
+           $fs=Fasilitas::find($id);
+           $fs->delete();
+           return redirect('show-dataumum');
        }
 //akhir dataumum fasilitas
 
@@ -726,11 +738,11 @@ public function inputfasilitas2()
 
     public function viewfasilitas2()
     {
-        $fs=Fasilitas::all();
+        $fs=Fasilitas2::all();
         foreach($fs as $fs2)
         {
             $fs2->action='<a href="viewfasilitas122/'.$fs2->id.'" class="btn btn-warning btn-sm" id="update'.$fs2->id.'">Edit</a>
-            <a href="delete/'.$fs2->id.'" class="btn btn-danger btn-sm" id="'.$fs2->id.'" >Delete</a>';
+            <a href="delete2/'.$fs2->id.'" class="btn btn-danger btn-sm" id="'.$fs2->id.'" >Delete</a>';
         }
 
         return response()->json($fs,200);
@@ -740,8 +752,14 @@ public function inputfasilitas2()
 
     public function viewfasilitas122($id)
        {
-        $fs=Fasilitas::find($id);
+        $fs=Fasilitas2::find($id);
         return view('dataumum2.editfasilitas2',compact('fs'));
+       }
+       public function delete2($id)
+       {
+           $fs=Fasilitas2::find($id);
+           $fs->delete();
+           return redirect('show-dataumum2');
        }
 //akhir dataumum fasilitas2
 
@@ -1081,7 +1099,7 @@ public function inputfasilitas3()
         foreach($fs as $fs2)
         {
             $fs2->action='<a href="viewfasilitas123/'.$fs2->id.'" class="btn btn-warning btn-sm" id="update'.$fs2->id.'">Edit</a>
-            <a href="delete/'.$fs2->id.'" class="btn btn-danger btn-sm" id="'.$fs2->id.'" >Delete</a>';
+            <a href="delete3/'.$fs2->id.'" class="btn btn-danger btn-sm" id="'.$fs2->id.'" >Delete</a>';
         }
 
         return response()->json($fs,200);
@@ -1093,6 +1111,13 @@ public function inputfasilitas3()
        {
         $fs=Fasilitas3::find($id);
         return view('dataumum3.editfasilitas3',compact('fs'));
+       }
+
+       public function delete3($id)
+       {
+           $fs=Fasilitas3::find($id);
+           $fs->delete();
+           return redirect('show-dataumum3');
        }
 //akhir dataumum fasilitas3
 
@@ -1431,7 +1456,7 @@ public function inputfasilitas4()
         foreach($fs as $fs2)
         {
             $fs2->action='<a href="viewfasilitas124/'.$fs2->id.'" class="btn btn-warning btn-sm" id="update'.$fs2->id.'">Edit</a>
-            <a href="delete/'.$fs2->id.'" class="btn btn-danger btn-sm" id="'.$fs2->id.'" >Delete</a>';
+            <a href="delete4/'.$fs2->id.'" class="btn btn-danger btn-sm" id="'.$fs2->id.'" >Delete</a>';
         }
 
         return response()->json($fs,200);
@@ -1443,6 +1468,13 @@ public function inputfasilitas4()
        {
         $fs=Fasilitas4::find($id);
         return view('dataumum4.editfasilitas4',compact('fs'));
+       }
+
+       public function delete4($id)
+       {
+           $fs=Fasilitas4::find($id);
+           $fs->delete();
+           return redirect('show-dataumum4');
        }
 //akhir dataumum fasilitas4
 

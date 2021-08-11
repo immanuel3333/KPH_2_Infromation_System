@@ -44,7 +44,10 @@
     <tbody>
     @forelse($comments as $comment)
       <tr>
-        <td>{{$comment->comment}}</td>
+        <td>
+            <b>Pengirim:  {{$comment->username}} </b> <br>
+            <p>Pesan : {{$comment->comment}}</p>
+        </td>
         <td>
               <form action="{{url('/toggle-approve')}}" method="POST">
                   {{csrf_field()}}

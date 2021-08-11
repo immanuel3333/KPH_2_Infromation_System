@@ -3,7 +3,6 @@
     <table class="table table-striped table-hover" id="fasilitas-table">
         <thead>
             <tr>
-                <th>No</th>
                 <th>Aspek</th>
                 <th>Jumlah</th>
                 <th>Kondisi</th>
@@ -24,7 +23,7 @@
 $(document).ready(function(){
 		$('#fasilitas-table').DataTable({
             "ajax": {
-            "url": "{{url('/fasilitas')}}",
+            "url": "{{url('/viewfasilitas1')}}",
             "dataSrc": ""
         },
             dom: 'Bfrtip',
@@ -37,7 +36,6 @@ $(document).ready(function(){
                 }
             ],
 			columns: [
-                { data: 'id', name: 'id' },
 				{ data: 'aspek', name: 'aspek', orderable: false },
 				{ data: 'jumlah', name: 'jumlah', orderable: true },
 				{ data: 'kondisi', name: 'kondisi', orderable: false },

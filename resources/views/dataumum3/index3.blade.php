@@ -24,32 +24,32 @@
 		 <script type="text/javascript">
 
 			function klikhome(){
-                $.get("{{url('homes')}}", function(data) {
+                $.get("{{url('identitas3')}}", function(data) {
                 $("#konten").html(data);
                 });
             }
             function kepalakph(){
-                $.get("{{url('kepalakph')}}", function(data2) {
+                $.get("{{url('kepalakph3')}}", function(data2) {
                 $("#konten").html(data2);
                 });
             }
             function fasilitas(){
-                $.get("{{url('fasilitass')}}", function(data3) {
+                $.get("{{url('fasilitas3')}}", function(data3) {
                 $("#konten").html(data3);
                 });
             }
             function lembaga(){
-                $.get("{{url('lembagas')}}", function(data4) {
+                $.get("{{url('lembaga3')}}", function(data4) {
                 $("#konten").html(data4);
                 });
             }
             function rphjp(){
-                $.get("{{url('rphjps')}}", function(data5) {
+                $.get("{{url('rphjp3')}}", function(data5) {
                 $("#konten").html(data5);
                 });
             }
 
-            $('.konten').load("{{url('homes')}}");
+            $('.konten').load("{{url('identitas3')}}");
 
 
 		 </script>
