@@ -171,9 +171,10 @@ Route::group(['middleware' => ['auth']], function(){
         Route::get('/inputfasilitas', 'DataUmumController@inputfasilitas')->name('inputfasilitas');
         Route::post('/simpan-fasilitas', 'DataUmumController@storefasilitas')->name('simpan-fasilitas');
         Route::post('/update-fasilitas/{id}', 'DataUmumController@updatefasilitas')->name('update-fasilitas');
-        Route::get('/destroyfasilitas/{id}', 'DataUmumController@destroyfasilitas')->name('delete-fasilitas');
+        Route::get('/delete/{id}', 'DataUmumController@delete')->name('delete-fasilitas');
         Route::get('/fasilitas', 'DataUmumController@viewfasilitas1');
         Route::get('/viewfasilitas12/{id}', 'DataUmumController@viewfasilitas12');
+        Route::get('/viewfasilitas1', 'DataUmumController@viewfasilitas1');
 
         Route::get('/identitas', 'DataUmumController@identitas')->name('homes');
         Route::get('/kepalakph', 'DataUmumController@kepalakph')->name('kepalakph');
@@ -317,6 +318,14 @@ Route::group(['middleware' => ['auth']], function(){
         Route::post('/update-rphjp2/{id}', 'DataUmumController@updaterphjp2')->name('update-rphjp2');
         Route::get('/viewrphjp2/{id}', 'DataUmumController@viewrphjp2');
 
+        Route::get('/inputfasilitas2', 'DataUmumController@inputfasilitas2')->name('inputfasilitas');
+        Route::post('/simpan-fasilitas2', 'DataUmumController@storefasilitas2')->name('simpan-fasilitas2');
+        Route::post('/update-fasilitas2/{id}', 'DataUmumController@updatefasilitas2')->name('update-fasilitas2');
+        Route::get('/delete2/{id}', 'DataUmumController@delete2')->name('delete-fasilitas2');
+        Route::get('/fasilitas2', 'DataUmumController@viewfasilitas12');
+        Route::get('/viewfasilitas122/{id}', 'DataUmumController@viewfasilitas122');
+        Route::get('/viewfasilitas2', 'DataUmumController@viewfasilitas2');
+
         Route::get('/identitas2', 'DataUmumController@identitas2')->name('homes');
         Route::get('/kepalakph2', 'DataUmumController@kepalakph2')->name('kepalakph');
         Route::get('/fasilitas2', 'DataUmumController@fasilitas2')->name('fasilitass');
@@ -344,6 +353,14 @@ Route::group(['middleware' => ['auth']], function(){
         Route::post('/simpan-rphjp3', 'DataUmumController@storerphjp3')->name('simpan-rphjp3');
         Route::post('/update-rphjp3/{id}', 'DataUmumController@updaterphjp3')->name('update-rphjp3');
         Route::get('/viewrphjp3/{id}', 'DataUmumController@viewrphjp3');
+
+        Route::get('/inputfasilitas3', 'DataUmumController@inputfasilitas3')->name('inputfasilitas3');
+        Route::post('/simpan-fasilitas3', 'DataUmumController@storefasilitas3')->name('simpan-fasilitas3');
+        Route::post('/update-fasilitas3/{id}', 'DataUmumController@updatefasilitas3')->name('update-fasilitas3');
+        Route::get('/delete3/{id}', 'DataUmumController@delete3')->name('delete-fasilitas3');
+        Route::get('/fasilitas3', 'DataUmumController@viewfasilitas3');
+        Route::get('/viewfasilitas123/{id}', 'DataUmumController@viewfasilitas123');
+        Route::get('/viewfasilitas3', 'DataUmumController@viewfasilitas3');
 
         Route::get('/identitas3', 'DataUmumController@identitas3')->name('homes');
         Route::get('/kepalakph3', 'DataUmumController@kepalakph3')->name('kepalakph');
@@ -373,6 +390,20 @@ Route::group(['middleware' => ['auth']], function(){
         Route::post('/simpan-rphjp4', 'DataUmumController@storerphjp4')->name('simpan-rphjp4');
         Route::post('/update-rphjp4/{id}', 'DataUmumController@updaterphjp4')->name('update-rphjp4');
         Route::get('/viewrphjp4/{id}', 'DataUmumController@viewrphjp4');
+
+        Route::get('/inputfasilitas4', 'DataUmumController@inputfasilitas4')->name('inputfasilitas4');
+        Route::post('/simpan-fasilitas4', 'DataUmumController@storefasilitas4')->name('simpan-fasilitas4');
+        Route::post('/update-fasilitas4/{id}', 'DataUmumController@updatefasilitas4')->name('update-fasilitas4');
+        Route::get('/delete4/{id}', 'DataUmumController@delete4')->name('delete-fasilitas4');
+        Route::get('/fasilitas4', 'DataUmumController@viewfasilitas4');
+        Route::get('/viewfasilitas124/{id}', 'DataUmumController@viewfasilitas124');
+        Route::get('/viewfasilitas4', 'DataUmumController@viewfasilitas4');
+
+        Route::get('/identitas4', 'DataUmumController@identitas4')->name('home4');
+        Route::get('/kepalakph3', 'DataUmumController@kepalakph3')->name('kepalakph4');
+        Route::get('/fasilitas4', 'DataUmumController@fasilitas4')->name('fasilitas4');
+        Route::get('/lembaga4', 'DataUmumController@lembaga4')->name('lembaga4');
+        Route::get('/rphjp4', 'DataUmumController@rphjp4')->name('rphjp4');
 
         //Data Ekonomi
         Route::get('/inputpotensiekonomi1', 'EkonomiController@inputpotensiekonomi1')->name('inputpotensiekonomi1');

@@ -9,7 +9,7 @@
               <div class="card-header">
                 <p>Test</p>
               <div class="card-body">
-                  <form action="{{ route('simpan-kepalakph')}}" method="POST" enctype="multipart/form-data">
+                  <form action="{{ route('simpan-kepalakph2')}}" method="POST" enctype="multipart/form-data">
                       @csrf
                       <div class="row">
                         <div class="card col-md-12">

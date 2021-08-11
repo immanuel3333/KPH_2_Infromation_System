@@ -38,7 +38,7 @@
 
                             <div class="portfolio-info">
                                 <h4><a href="#">Galeri Unit 1</a></h4>
-                                <p>App</p>
+                                
                             </div>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
 
                             <div class="portfolio-info">
                                 <h4><a href="#">Galeri Unit 2</a></h4>
-                                <p>Web</p>
+                                
                             </div>
                             </div>
                         </div>
@@ -68,7 +68,7 @@
 
                             <div class="portfolio-info">
                                 <h4><a href="#">Galeri Unit 3</a></h4>
-                                <p>App</p>
+                                
                             </div>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
 
                             <div class="portfolio-info">
                                 <h4><a href="#">Galeri Unit 4</a></h4>
-                                <p>App</p>
+                                
                             </div>
                             </div>
                         </div>
@@ -91,8 +91,38 @@
 
 
                 </section><!-- #portfolio -->
-                <div class="card" id="mapid" style="width:100%;">
+
+               <div class="card-group">
+                    <div class="card col-md-8" id="mapid" style="width:100%;">
+                    
+                    </div>
+                    
+                    <section class="pl-4 card col-md-4 section-bg"  id="portfolio">
+                    <div class="portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="portfolio-wrap">
+                            <figure>
+                                <img src="img/contoh1.png" class="img-fluid" alt="">
+                                <a href="img/contoh1.png" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+                                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                            </figure>
+
+                            <div class="portfolio-info">
+                                <h4><a href="#">Galeri Foto KPH</a></h4>
+                                
+                            </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+
                 </div>
+            
+                    
+        
+                        
+                    
+                
 
 
                     <!-- Fungsi komentar -->
@@ -126,14 +156,26 @@
                                             <br>
                                             <h5>List of Comments</h5>
                                         <hr>
-                                        <ol>
-
+                        
+                                        <div class="col-md-6">
                                             @forelse($comments as $comment)
-                                                <li class="lead">{{$comment->comment}}</li>
+                                                <blockquote>
+                                                        <h6>{{ $comment->username }}</h6>
+                                                        <hr>
+                                                        <p>{{ $comment->comment }}</p><br>
+                                                </blockquote>
+
                                             @empty
                                                 <h4>No Comments</h4>
                                             @endforelse
-                                        </ol>
+                                        </div>
+
+
+
+
+
+
+
 
                                         </div>
                                     </div>
