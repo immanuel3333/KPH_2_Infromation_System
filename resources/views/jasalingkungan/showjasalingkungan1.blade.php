@@ -1,7 +1,7 @@
 
 
 <div class="container" style="padding-bottom:50px;">
-    <table class="table table-striped table-hover" id="jasalingkungan-table">
+    <table class="table table-striped table-hover ml-auto" id="jasalingkungan-table">
         <thead>
             <tr>
                 <th>Provinsi</th>
@@ -30,7 +30,7 @@ $(document).ready(function(){
 		$('#jasalingkungan-table').DataTable({
             "ajax": {
             "url": "{{url('/jasalingkungan1')}}",
-            "dataSrc": ""    
+            "dataSrc": ""
         },
             dom: 'Bfrtip',
             buttons: [
@@ -57,7 +57,7 @@ $(document).ready(function(){
 		});
 	});
 </script>
-    
+
 
 
 

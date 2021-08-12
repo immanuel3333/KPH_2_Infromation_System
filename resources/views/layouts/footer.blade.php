@@ -1,5 +1,5 @@
 </div>
-<div class="bg-light text-muted" style="position:bottom;">
+<div class="bg-light text-muted pt-5" style="position:bottom;">
             <section class="col-md-12 col-sm-12">
                 <div class="text-center" style="background-color:#0C3310;">
                     <div class="row">
@@ -49,7 +49,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md">
-                                    <p style="font-family:Balthazar; font-size:20px;color:white;">Jln. Gunung Simanuk-manuk No.9 Pematangsiantar 
+                                    <p style="font-family:Balthazar; font-size:20px;color:white;">Jln. Gunung Simanuk-manuk No.9 Pematangsiantar
 (dekat Siantar Zoo, depan Rumah Sakit Tentara Siantar) </p>
 
                                 </div>
@@ -64,7 +64,7 @@
 </div>
 
 
-   
+
 
 
 
@@ -324,21 +324,21 @@ L.marker([2.76875899525, 98.98531695260], {icon: greenIcon}).addTo(map).bindPopu
         } else {
             $('.halaman-menu').load(getCookie("halaman"));
         }
- 
+
         $('.nav-menu').click(function(){
             var menu = $(this).attr('id');
             setCookie("halaman", menu + ".php", 30);
             $('.halaman-menu').load(getCookie("halaman"));
         });
     });
- 
+
     function setCookie(cname,cvalue,exdays) {
       var d = new Date();
       d.setTime(d.getTime() + (30*24*60*60*1000));
       var expires = "expires=" + d.toGMTString();
       document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     }
- 
+
     function getCookie(cname) {
       var name = cname + "=";
       var decodedCookie = decodeURIComponent(document.cookie);
