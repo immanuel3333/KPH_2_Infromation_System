@@ -8,7 +8,7 @@ Password baru
             <div class="card">
                 <div class="card-body">
                     <div class="auth-logo align-items-center">
-                        <img src="{{ asset('img/kph.png') }}" class="img-fluid rounded-normal" alt="" style="width: 90px; height:90px;">
+                        <img src="{{ asset('img/kph2.png') }}" class="img-fluid rounded-normal" alt="" style="width: 90px; height:90px;">
                         <h4 class="pl-2 font-weight-bold text-center" style="font-size: 20px;">UPT. Kesatuan Pengelolaan Hutan Wilayah - II</h4>
                     </div>
                     <h5 class="mb-1  bold" style="font-size: 20px;">Silahkan Masukkan sandi anda</h2>

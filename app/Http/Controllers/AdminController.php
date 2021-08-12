@@ -14,10 +14,8 @@ use App\TugasFungsi;
 use App\Sejarah;
 use App\Galeriupt;
 use File;
-use App\SDM1;
-use App\SDM2;
-use App\SDM3;
-use App\SDM4;
+use App\Artikel;
+
 
 
 
@@ -302,293 +300,91 @@ class AdminController extends Controller
         return back();
     }
 
-//SDM1
+    //ARTIKEL
 
-public function inputsdm1()
-{
-    $pe = SDM1::latest()->get();
-    return view('inputsdm1');
-}
+    public function showartikelid(Artikel $artikel)
+    {
+        $artikel_detail = $artikel;
+         return view('artikel.artikel-detail',compact('artikel_detail'));
+        // dd($artikel);
+    }
 
-public function storesdm1(Request $request)
-{
-    // dd($request->all());
-    $pe = SDM1::create([
-        'kkph' => $request->kkph,
-        'kepala_seksi' => $request->kepala_seksi,
-        'tata_usaha' => $request->tata_usaha,
-        'kepala_resort' => $request->kepala_resort,
-        'staf_pns' => $request->staf_pns,
-        'staf_honorer' => $request->staf_honorer,
-        'tenaga_kontrak' => $request->tenaga_kontrak,
-        'tenaga_brigdalkarhutlapns' => $request->tenaga_brigdalkarhutlapns,
-        'tenaga_brigdalkarhutlanonpns' => $request->tenaga_brigdalkarhutlanonpns,
-        'pamhut' => $request->pamhut,
-        'sdm_pemda' => $request->sdm_pemda,
-        'bukti_rimbawa_sebelum_2015' => $request->bukti_rimbawa_sebelum_2015,
-        'bakti_rimbawa_2015' => $request->bakti_rimbawa_2015,
-        'bakti_rimbawa_2016' => $request->bakti_rimbawa_2016,
-        'bakti_rimbawa_2017' => $request->bakti_rimbawa_2017,
-        'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
-        'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
-    ]);
+    public function showartikel()
+    {
+        $artikelall = Artikel::latest()->get();
+        return view('artikel.showartikel', compact('artikelall'));
+    }
 
-    return redirect('showsdm1');
-}
+    public function comment(Request $request)
+        {
+                Comment::create([
+                    'username' => $request->username,
+                    'comment' => $request->comment
+                ]);
+                return redirect()->back()->with(['success' => 'Komentar Ditambahkan']);
+       }
 
-public function showsdm1(Request $request)
-{
-    $pe = DB::table('sdm1')->get();
-    return view('showsdm1', compact('pe'));
-}
+       public function article()
+       {
+           $art = DB::table('artikel')->get();
+           return view ('artikel.index', compact('art'));
+       }
+       public function inputartikel()
+            {
+                $art = Artikel::latest()->get();
+                return view('artikel.inputartikel');
+            }
 
-public function viewsdm1($id)
-{
-    $pe=SDM1::find($id);
-    return view('editsdm1',compact('pe'));
-}
+       public function storeartikel(Request $request)
+       {
 
-public function updatesdm1(Request $request, $id)
-{
-    $pe=SDM1::find($id);
-    $pe->update([
-        'kkph' => $request->kkph,
-        'kepala_seksi' => $request->kepala_seksi,
-        'tata_usaha' => $request->tata_usaha,
-        'kepala_resort' => $request->kepala_resort,
-        'staf_pns' => $request->staf_pns,
-        'staf_honorer' => $request->staf_honorer,
-        'tenaga_kontrak' => $request->tenaga_kontrak,
-        'tenaga_brigdalkarhutlapns' => $request->tenaga_brigdalkarhutlapns,
-        'tenaga_brigdalkarhutlanonpns' => $request->tenaga_brigdalkarhutlanonpns,
-        'pamhut' => $request->pamhut,
-        'sdm_pemda' => $request->sdm_pemda,
-        'bukti_rimbawa_sebelum_2015' => $request->bukti_rimbawa_sebelum_2015,
-        'bakti_rimbawa_2015' => $request->bakti_rimbawa_2015,
-        'bakti_rimbawa_2016' => $request->bakti_rimbawa_2016,
-        'bakti_rimbawa_2017' => $request->bakti_rimbawa_2017,
-        'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
-        'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
-    ]);
-    return redirect('showsdm1');
+           $image = $request->gambar;
+           $new_image = time().$image->getClientOriginalName();
+           $up=substr($request->artikel, 3,-4);
+           $art = Artikel::create([
+               'judul' => $request->judul,
+               'artikel' => $up,
+               'gambar' => 'public/artikel/'.$new_image
+           ]);
 
-}
+           $image->move('public/artikel/', $new_image);
 
-//SDM2
 
-public function inputsdm2()
-{
-    $pe = SDM2::latest()->get();
-    return view('inputsdm2');
-}
+           return redirect('indexartikel');
 
-public function storesdm2(Request $request)
-{
-    // dd($request->all());
-    $pe = SDM2::create([
-        'kkph' => $request->kkph,
-        'kepala_seksi' => $request->kepala_seksi,
-        'tata_usaha' => $request->tata_usaha,
-        'kepala_resort' => $request->kepala_resort,
-        'staf_pns' => $request->staf_pns,
-        'staf_honorer' => $request->staf_honorer,
-        'tenaga_kontrak' => $request->tenaga_kontrak,
-        'tenaga_brigdalkarhutlapns' => $request->tenaga_brigdalkarhutlapns,
-        'tenaga_brigdalkarhutlanonpns' => $request->tenaga_brigdalkarhutlanonpns,
-        'pamhut' => $request->pamhut,
-        'sdm_pemda' => $request->sdm_pemda,
-        'bukti_rimbawa_sebelum_2015' => $request->bukti_rimbawa_sebelum_2015,
-        'bakti_rimbawa_2015' => $request->bakti_rimbawa_2015,
-        'bakti_rimbawa_2016' => $request->bakti_rimbawa_2016,
-        'bakti_rimbawa_2017' => $request->bakti_rimbawa_2017,
-        'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
-        'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
-    ]);
 
-    return redirect('showsdm2');
-}
+       }
 
-public function showsdm2(Request $request)
-{
-    $pe = DB::table('sdm2')->get();
-    return view('showsdm2', compact('pe'));
-}
+       public function updateartikel(Request $request, $id)
+       {
+           $art=Artikel::find($id);
+           $up=substr($request->artikel, 3,-4);
+           File::delete($art->image);
+           $file = $request->file('gambar');
+           $file->move('public/artikel/',$file->getClientOriginalName());
+           $art->update([
+               'judul' => $request->judul,
+               'artikel' => $up,
+               'gambar' => 'public/artikel/'.$file->getClientOriginalName(),
+           ]);
+           return redirect('indexartikel');
 
-public function viewsdm2($id)
-{
-    $pe=SDM2::find($id);
-    return view('editsdm2',compact('pe'));
-}
+       }
 
-public function updatesdm2(Request $request, $id)
-{
-    $pe=SDM2::find($id);
-    $pe->update([
-        'kkph' => $request->kkph,
-        'kepala_seksi' => $request->kepala_seksi,
-        'tata_usaha' => $request->tata_usaha,
-        'kepala_resort' => $request->kepala_resort,
-        'staf_pns' => $request->staf_pns,
-        'staf_honorer' => $request->staf_honorer,
-        'tenaga_kontrak' => $request->tenaga_kontrak,
-        'tenaga_brigdalkarhutlapns' => $request->tenaga_brigdalkarhutlapns,
-        'tenaga_brigdalkarhutlanonpns' => $request->tenaga_brigdalkarhutlanonpns,
-        'pamhut' => $request->pamhut,
-        'sdm_pemda' => $request->sdm_pemda,
-        'bukti_rimbawa_sebelum_2015' => $request->bukti_rimbawa_sebelum_2015,
-        'bakti_rimbawa_2015' => $request->bakti_rimbawa_2015,
-        'bakti_rimbawa_2016' => $request->bakti_rimbawa_2016,
-        'bakti_rimbawa_2017' => $request->bakti_rimbawa_2017,
-        'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
-        'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
-    ]);
-    return redirect('showsdm2');
+       public function viewartikel($id)
+       {
+        $art=Artikel::find($id);
+        return view('artikel.editartikel',compact('art'));
+       }
 
-}
+       public function deleteartikel($id)
+        {
+            $art=Artikel::find($id);
+            $art->delete();
+            return redirect('indexartikel');
+        }
 
-//SDM3
 
-public function inputsdm3()
-{
-    $pe = SDM3::latest()->get();
-    return view('inputsdm3');
-}
-
-public function storesdm3(Request $request)
-{
-    // dd($request->all());
-    $pe = SDM3::create([
-        'kkph' => $request->kkph,
-        'kepala_seksi' => $request->kepala_seksi,
-        'tata_usaha' => $request->tata_usaha,
-        'kepala_resort' => $request->kepala_resort,
-        'staf_pns' => $request->staf_pns,
-        'staf_honorer' => $request->staf_honorer,
-        'tenaga_kontrak' => $request->tenaga_kontrak,
-        'tenaga_brigdalkarhutlapns' => $request->tenaga_brigdalkarhutlapns,
-        'tenaga_brigdalkarhutlanonpns' => $request->tenaga_brigdalkarhutlanonpns,
-        'pamhut' => $request->pamhut,
-        'sdm_pemda' => $request->sdm_pemda,
-        'bukti_rimbawa_sebelum_2015' => $request->bukti_rimbawa_sebelum_2015,
-        'bakti_rimbawa_2015' => $request->bakti_rimbawa_2015,
-        'bakti_rimbawa_2016' => $request->bakti_rimbawa_2016,
-        'bakti_rimbawa_2017' => $request->bakti_rimbawa_2017,
-        'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
-        'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
-    ]);
-
-    return redirect('showsdm3');
-}
-
-public function showsdm3(Request $request)
-{
-    $pe = DB::table('sdm3')->get();
-    return view('showsdm3', compact('pe'));
-}
-
-public function viewsdm3($id)
-{
-    $pe=SDM3::find($id);
-    return view('editsdm3',compact('pe'));
-}
-
-public function updatesdm3(Request $request, $id)
-{
-    $pe=SDM3::find($id);
-    $pe->update([
-        'kkph' => $request->kkph,
-        'kepala_seksi' => $request->kepala_seksi,
-        'tata_usaha' => $request->tata_usaha,
-        'kepala_resort' => $request->kepala_resort,
-        'staf_pns' => $request->staf_pns,
-        'staf_honorer' => $request->staf_honorer,
-        'tenaga_kontrak' => $request->tenaga_kontrak,
-        'tenaga_brigdalkarhutlapns' => $request->tenaga_brigdalkarhutlapns,
-        'tenaga_brigdalkarhutlanonpns' => $request->tenaga_brigdalkarhutlanonpns,
-        'pamhut' => $request->pamhut,
-        'sdm_pemda' => $request->sdm_pemda,
-        'bukti_rimbawa_sebelum_2015' => $request->bukti_rimbawa_sebelum_2015,
-        'bakti_rimbawa_2015' => $request->bakti_rimbawa_2015,
-        'bakti_rimbawa_2016' => $request->bakti_rimbawa_2016,
-        'bakti_rimbawa_2017' => $request->bakti_rimbawa_2017,
-        'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
-        'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
-    ]);
-    return redirect('showsdm3');
-
-}
-
-//SDM4
-
-public function inputsdm4()
-{
-    $pe = SDM4::latest()->get();
-    return view('inputsdm4');
-}
-
-public function storesdm4(Request $request)
-{
-    // dd($request->all());
-    $pe = SDM4::create([
-        'kkph' => $request->kkph,
-        'kepala_seksi' => $request->kepala_seksi,
-        'tata_usaha' => $request->tata_usaha,
-        'kepala_resort' => $request->kepala_resort,
-        'staf_pns' => $request->staf_pns,
-        'staf_honorer' => $request->staf_honorer,
-        'tenaga_kontrak' => $request->tenaga_kontrak,
-        'tenaga_brigdalkarhutlapns' => $request->tenaga_brigdalkarhutlapns,
-        'tenaga_brigdalkarhutlanonpns' => $request->tenaga_brigdalkarhutlanonpns,
-        'pamhut' => $request->pamhut,
-        'sdm_pemda' => $request->sdm_pemda,
-        'bukti_rimbawa_sebelum_2015' => $request->bukti_rimbawa_sebelum_2015,
-        'bakti_rimbawa_2015' => $request->bakti_rimbawa_2015,
-        'bakti_rimbawa_2016' => $request->bakti_rimbawa_2016,
-        'bakti_rimbawa_2017' => $request->bakti_rimbawa_2017,
-        'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
-        'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
-    ]);
-
-    return redirect('showsdm4');
-}
-
-public function showsdm4(Request $request)
-{
-    $pe = DB::table('sdm4')->get();
-    return view('showsdm4', compact('pe'));
-}
-
-public function viewsdm4($id)
-{
-    $pe=SDM4::find($id);
-    return view('editsdm4',compact('pe'));
-}
-
-public function updatesdm4(Request $request, $id)
-{
-    $pe=SDM4::find($id);
-    $pe->update([
-        'kkph' => $request->kkph,
-        'kepala_seksi' => $request->kepala_seksi,
-        'tata_usaha' => $request->tata_usaha,
-        'kepala_resort' => $request->kepala_resort,
-        'staf_pns' => $request->staf_pns,
-        'staf_honorer' => $request->staf_honorer,
-        'tenaga_kontrak' => $request->tenaga_kontrak,
-        'tenaga_brigdalkarhutlapns' => $request->tenaga_brigdalkarhutlapns,
-        'tenaga_brigdalkarhutlanonpns' => $request->tenaga_brigdalkarhutlanonpns,
-        'pamhut' => $request->pamhut,
-        'sdm_pemda' => $request->sdm_pemda,
-        'bukti_rimbawa_sebelum_2015' => $request->bukti_rimbawa_sebelum_2015,
-        'bakti_rimbawa_2015' => $request->bakti_rimbawa_2015,
-        'bakti_rimbawa_2016' => $request->bakti_rimbawa_2016,
-        'bakti_rimbawa_2017' => $request->bakti_rimbawa_2017,
-        'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
-        'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
-    ]);
-    return redirect('showsdm4');
-
-}
 
 }
 

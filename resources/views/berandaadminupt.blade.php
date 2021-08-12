@@ -51,7 +51,7 @@
         <td>
               <form action="{{url('/toggle-approve')}}" method="POST">
                   {{csrf_field()}}
-                  <input <?php if($comment->approve == 1){echo "checked";}?>  type="checkbox" name='approve'>
+                  <input <?php if($comment->approve == 1){echo "checked";}?>  type="checkbox" name='approve' style="width: 20px; height: 20px;" >
 
                      <input type="hidden" name="commentId" value="{{$comment->id}}">
                   <input class="btn btn-primary" type="submit" value="Done">

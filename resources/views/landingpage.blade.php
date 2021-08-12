@@ -131,7 +131,7 @@
                             <div class="col-md-12">
                                 <div class="card mt-3">
                                     <div class="card-body">
-                                        <h5>Komentar</h5>
+                                        <h5>Kritik dan Saran</h5>
                                         <div class="row auto">
                                             <div class="col-md-6">
                                                 <form action="{{ url('/comment') }}" method="post">
@@ -142,19 +142,15 @@
                                                         <input type="text" class="form-control" name="username">
                                                         <p class="text-danger">{{ $errors->first('username') }}</p>
                                                     </div>
-                                                    <div class="form-group" style="display: none" id="formReplyComment">
-                                                        <label for="">Balas Komentar</label>
-                                                        <input type="text" id="replyComment" class="form-control" readonly>
-                                                    </div>
                                                     <div class="form-group">
-                                                        <label for="">Masukkan Komentar</label>
+                                                        <label for="">Masukkan Kritik dan Saran</label>
                                                         <textarea name="comment" cols="30" rows="10" class="form-control"></textarea>
                                                     </div>
                                                     <button class="btn btn-primary btn-sm">Kirim</button>
                                                 </form>
                                             </div>
                                             <br>
-                                            <h5>List of Comments</h5>
+                                            <h5>Pesan dari Pengunjung</h5>
                                         <hr>
 
                                         <div class="col-md-6">

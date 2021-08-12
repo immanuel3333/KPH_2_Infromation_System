@@ -1,4 +1,4 @@
-@include('layouts.headeradmin')
+
 </div>
 <div class="content-page">
     <div class="container-fluid">
@@ -103,13 +103,13 @@
         </table>
         @endforeach
 
-    
-        <a href="{{url('/viewsdm1')}}/{{$pe->id}}" class="ml-auto">
-        <button type="submit" class="btn" style="background-color: #99F07A;">Edit</button>  
+
+        <a href="{{url('/viewsdm4')}}/{{$pe->id}}" class="ml-auto">
+        <button type="submit" class="btn" style="background-color: #99F07A;">Edit</button>
     </div>
 
-    
+
     </div>
 
-    @include('layouts.footer')
+  
 

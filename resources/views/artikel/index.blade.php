@@ -23,13 +23,13 @@
                 <td>{{ $no }}</td>
 				<td>{{ $art->judul }}</td>
                 <td><img src="{{ asset($art->gambar)}}" alt="" width=250px; height=250px; ></td>
-                <td>{{ $art->artikel }}</td>
+                <td>{!! $art->artikel !!}</td>
 				<td>
                     <a href="{{url('/viewartikel')}}/{{$art->id}}" class="btn btn-sm btn-primary pl-10">EDIT</a>
                     <a href="{{url('/deleteartikel')}}/{{$art->id}}" class="ml-auto">
                         <button type="submit" class="btn bg-danger">Hapus</button>
                     </a>
-					<a href="{{url('/showartikel')}}/{{$art->id}}" class="btn btn-sm btn-primary pl-10">Show</a>
+					<a href="{{ route('detail-artikel',$art->id) }}" class="btn btn-sm btn-primary pl-10">Show</a>
 				</td>
 			</tr>
 			@endforeach

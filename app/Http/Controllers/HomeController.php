@@ -12,6 +12,7 @@ use App\Identitas2;
 use App\Identitas3;
 use App\Identitas4;
 use App\Artikel;
+
 use DB;
 
 class HomeController extends Controller
@@ -41,87 +42,7 @@ class HomeController extends Controller
         return view('landingpage', compact('comments','projects','artikel'));
     }
 
-    public function showartikelid(Artikel $artikel)
-    {
-        $artikel_detail = $artikel;
-         return view('artikel.artikel-detail',compact('artikel_detail'));
-        // dd($artikel);
-    }
-
-    public function showartikel()
-    {
-        $artikelall = Artikel::latest()->get();
-        return view('artikel.showartikel', compact('artikelall'));
-    }
-
-    public function comment(Request $request)
-        {
-                Comment::create([
-                    'username' => $request->username,
-                    'comment' => $request->comment
-                ]);
-                return redirect()->back()->with(['success' => 'Komentar Ditambahkan']);
-       }
-
-       public function article()
-       {
-           $art = DB::table('artikel')->get();
-           return view ('artikel.index', compact('art'));
-       }
-       public function inputartikel()
-            {
-                $art = Artikel::latest()->get();
-                return view('artikel.inputartikel');
-            }
-
-       public function storeartikel(Request $request)
-       {
-
-           $image = $request->gambar;
-           $new_image = time().$image->getClientOriginalName();
-           $up=substr($request->artikel, 3,-4);
-           $art = Artikel::create([
-               'judul' => $request->judul,
-               'artikel' => $up,
-               'gambar' => 'public/artikel/'.$new_image
-           ]);
-
-           $image->move('public/artikel/', $new_image);
-
-
-           return redirect('indexartikel');
-
-
-       }
-
-       public function updateartikel(Request $request, $id)
-       {
-           $art=Artikel::find($id);
-           $up=substr($request->artikel, 3,-4);
-           File::delete($art->image);
-           $file = $request->file('gambar');
-           $file->move('public/artikel/',$file->getClientOriginalName());
-           $art->update([
-               'judul' => $request->judul,
-               'artikel' => $up,
-               'gambar' => 'public/artikel/'.$file->getClientOriginalName(),
-           ]);
-           return redirect('indexartikel');
-
-       }
-
-       public function viewartikel($id)
-       {
-        $art=Artikel::find($id);
-        return view('artikel.editartikel',compact('art'));
-       }
-
-       public function deleteartikel($id)
-        {
-            $art=Artikel::find($id);
-            $art->delete();
-            return redirect('indexartikel');
-        }
+    
 
     public function showvisimisi(Request $request)
     {

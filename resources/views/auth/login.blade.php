@@ -38,16 +38,12 @@ Login
 
                                     </div>
 
-                                    <div class="col-md-6">
-                                        <div class="custom-control custom-checkbox mb-3">
-                                            <input type="checkbox" class="custom-control-input" id="c-remember">
-                                            <label class="custom-control-label" for="c-remember">Ingat Saya</label>
-                                        </div>
-                                    </div>
+                                    @if (Route::has('password.request'))
+                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                                    </a>
+                                @endif
 
-                                    {{-- <div class="col-md-6">
-                                        <a href="{{ route('password.request') }}" class="text-primary float-right">Lupa kata sandi?</a>
-                                    </div> --}}
                                 </div>
 
 

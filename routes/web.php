@@ -12,31 +12,31 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+      
 
 
-Route::get('/',function(){
-    return redirect('landingpage');
-});
+        Route::get('/',function(){
+            return redirect('landingpage');
+        });
+        Auth::routes();
+        Route::get('login', 'AuthController@index')->name('login');
+        Route::post('proses_login', 'AuthController@proses_login')->name('proses_login');
+        Route::get('logout', 'AuthController@logout')->name('logout');
+        Route::get('/password', 'AuthController@edit')->name('password-edit');
+        Route::patch('/password', 'AuthController@update')->name('password-edit');
+        Route::patch('/password', 'AuthController@update2')->name('password-update');
 
-Route::get('login', 'AuthController@index')->name('login');
-Route::post('proses_login', 'AuthController@proses_login')->name('proses_login');
-Route::get('logout', 'AuthController@logout')->name('logout');
-Route::get('/password', 'AuthController@edit')->name('password-edit');
-Route::patch('/password', 'AuthController@update')->name('password-edit');
 
-
-
-
-Route::get('/landingpage', 'HomeController@banner')->name('landingpage');
-Route::get('/profilpegawai', 'HomeController@profilpegawai');
-Route::get('/tes', 'PostController@index');
-Route::post('/comment', 'PostController@comment');
-Route::get('/visimisi', 'HomeController@showvisimisi')->name('visimisi');
-Route::get('/sejarah', 'HomeController@showsejarah')->name('sejarah');
-Route::get('/tugasfungsi', 'HomeController@showtugasfungsi')->name('tugasfungsi');
-Route::get('/organisasi', 'HomeController@showstruktur')->name('organisasi');
-Route::get('/bperaturan', 'HomeController@peraturan')->name('bperaturan');
-Route::get('/galeriupt', 'HomeController@showgaleriupt')->name('galeriupt');
+        Route::get('/landingpage', 'HomeController@banner')->name('landingpage');
+        Route::get('/profilpegawai', 'HomeController@profilpegawai');
+        Route::get('/tes', 'PostController@index');
+        Route::post('/comment', 'PostController@comment');
+        Route::get('/visimisi', 'HomeController@showvisimisi')->name('visimisi');
+        Route::get('/sejarah', 'HomeController@showsejarah')->name('sejarah');
+        Route::get('/tugasfungsi', 'HomeController@showtugasfungsi')->name('tugasfungsi');
+        Route::get('/organisasi', 'HomeController@showstruktur')->name('organisasi');
+        Route::get('/bperaturan', 'HomeController@peraturan')->name('bperaturan');
+        Route::get('/galeriupt', 'HomeController@showgaleriupt')->name('galeriupt');
 
         Route::get('/bidentitas', 'HomeController@identitas')->name('bidentitas');
         Route::get('/bkepalakph', 'HomeController@kepalakph')->name('bkepalakph');
@@ -104,14 +104,14 @@ Route::group(['middleware' => ['auth']], function(){
         Route::get('/home/{id}/delete', 'AdminController@delete');
 
         //Artikel
-        Route::get('/inputartikel', 'HomeController@inputartikel')->name('inputartikel');
-        Route::get('/indexartikel', 'HomeController@article')->name('indexartikel');
-        Route::post('/simpan-artikel', 'HomeController@storeartikel')->name('simpan-artikel');
-        Route::post('/update-artikel/{id}', 'HomeController@updateartikel')->name('update-artikel');
-        Route::get('/deleteartikel/{id}', 'HomeController@deleteartikel');
-        Route::get('/viewartikel/{id}', 'HomeController@viewartikel');
-        Route::get('/showartikel', 'HomeController@showartikel');
-        Route::get('/showartikelid/{artikel}', 'HomeController@showartikelid')->name('detail-artikel');
+        Route::get('/inputartikel', 'AdminController@inputartikel')->name('inputartikel');
+        Route::get('/indexartikel', 'AdminController@article')->name('indexartikel');
+        Route::post('/simpan-artikel', 'AdminController@storeartikel')->name('simpan-artikel');
+        Route::post('/update-artikel/{id}', 'AdminController@updateartikel')->name('update-artikel');
+        Route::get('/deleteartikel/{id}', 'AdminController@deleteartikel');
+        Route::get('/viewartikel/{id}', 'AdminController@viewartikel');
+        Route::get('/showartikel', 'AdminController@showartikel');
+        Route::get('/showartikelid/{artikel}', 'AdminController@showartikelid')->name('detail-artikel');
 
         //VISIMISI
         Route::get('/inputvisimisi', 'AdminController@inputvisimisi')->name('inputvisimisi');
@@ -240,40 +240,75 @@ Route::group(['middleware' => ['auth']], function(){
         Route::get('/delete24/{id}', 'EkonomiController@delete24');
 
         //sdm1
-        Route::get('/inputsdm1', 'AdminController@inputsdm1')->name('inputsdm1');
-        Route::post('/simpan-sdm1', 'AdminController@storesdm1')->name('simpan-sdm1');
-        Route::get('/showsdm1', 'AdminController@showsdm1')->name('showsdm1');
-        Route::get('/ajaxekonomi1', 'AdminController@ajaxekonomi1')->name('ajaxekonomi1');
+        Route::get('/inputsdm1', 'SDMController@inputsdm1')->name('inputsdm1');
+        Route::post('/simpan-sdm1', 'SDMController@storesdm1')->name('simpan-sdm1');
+        Route::get('/showsdm1', 'SDMController@showsdm1')->name('showsdm1');
+        Route::get('/show-sdm1', 'SDMController@index1')->name('show-sdm1');
 
-        Route::post('/update-sdm1/{id}', 'AdminController@updatesdm1')->name('update-sdm1');
-        Route::get('/viewsdm1/{id}', 'AdminController@viewsdm1');
+        Route::post('/update-sdm1/{id}', 'SDMController@updatesdm1')->name('update-sdm1');
+        Route::get('/viewsdm1/{id}', 'SDMController@viewsdm1');
 
         //sdm2
-        Route::get('/inputsdm2', 'AdminController@inputsdm2')->name('inputsdm2');
-        Route::post('/simpan-sdm2', 'AdminController@storesdm2')->name('simpan-sdm2');
-        Route::get('/showsdm2', 'AdminController@showsdm2')->name('showsdm2');
-        Route::get('/ajaxekonomi2', 'AdminController@ajaxekonomi2')->name('ajaxekonomi2');
+        Route::get('/inputsdm2', 'SDMController@inputsdm2')->name('inputsdm2');
+        Route::post('/simpan-sdm2', 'SDMController@storesdm2')->name('simpan-sdm2');
+        Route::get('/showsdm2', 'SDMController@showsdm2')->name('showsdm2');
+        Route::get('/show-sdm2', 'SDMController@index2')->name('show-sdm2');
 
-        Route::post('/update-sdm2/{id}', 'AdminController@updatesdm2')->name('update-sdm2');
-        Route::get('/viewsdm2/{id}', 'AdminController@viewsdm2');
+        Route::post('/update-sdm2/{id}', 'SDMController@updatesdm2')->name('update-sdm2');
+        Route::get('/viewsdm2/{id}', 'SDMController@viewsdm2');
 
         //sdm3
-        Route::get('/inputsdm3', 'AdminController@inputsdm3')->name('inputsdm3');
-        Route::post('/simpan-sdm3', 'AdminController@storesdm3')->name('simpan-sdm3');
-        Route::get('/showsdm3', 'AdminController@showsdm3')->name('showsdm3');
-        Route::get('/ajaxekonomi3', 'AdminController@ajaxekonomi3')->name('ajaxekonomi3');
+        Route::get('/inputsdm3', 'SDMController@inputsdm3')->name('inputsdm3');
+        Route::post('/simpan-sdm3', 'SDMController@storesdm3')->name('simpan-sdm3');
+        Route::get('/showsdm3', 'SDMController@showsdm3')->name('showsdm3');
+        Route::get('/show-sdm3', 'SDMController@index3')->name('show-sdm3');
 
-        Route::post('/update-sdm3/{id}', 'AdminController@updatesdm3')->name('update-sdm3');
-        Route::get('/viewsdm3/{id}', 'AdminController@viewsdm3');
+        Route::post('/update-sdm3/{id}', 'SDMController@updatesdm3')->name('update-sdm3');
+        Route::get('/viewsdm3/{id}', 'SDMController@viewsdm3');
 
         //sdm4
-        Route::get('/inputsdm4', 'AdminController@inputsdm4')->name('inputsdm4');
-        Route::post('/simpan-sdm4', 'AdminController@storesdm4')->name('simpan-sdm4');
-        Route::get('/showsdm4', 'AdminController@showsdm4')->name('showsdm4');
-        Route::get('/ajaxekonomi4', 'AdminController@ajaxekonomi4')->name('ajaxekonomi4');
+        Route::get('/inputsdm4', 'SDMController@inputsdm4')->name('inputsdm4');
+        Route::post('/simpan-sdm4', 'SDMController@storesdm4')->name('simpan-sdm4');
+        Route::get('/showsdm4', 'SDMController@showsdm4')->name('showsdm4');
+        Route::get('/show-sdm4', 'SDMController@index4')->name('show-sdm4');
 
-        Route::post('/update-sdm4/{id}', 'AdminController@updatesdm4')->name('update-sdm4');
-        Route::get('/viewsdm4/{id}', 'AdminController@viewsdm4');
+        Route::post('/update-sdm4/{id}', 'SDMController@updatesdm4')->name('update-sdm4');
+        Route::get('/viewsdm4/{id}', 'SDMController@viewsdm4');
+
+        //pendidikan1
+        Route::get('/inputpendidikan1', 'SDMController@inputpendidikan1')->name('inputpendidikan1');
+        Route::post('/simpan-pendidikan1', 'SDMController@storependidikan1')->name('simpan-pendidikan1');
+        Route::get('/showpendidikan1', 'SDMController@showpendidikan1')->name('showpendidikan1');
+
+        Route::post('/update-pendidikan1/{id}', 'SDMController@updatependidikan1')->name('update-pendidikan1');
+        Route::get('/viewpendidikan1/{id}', 'SDMController@viewpendidikan1');
+
+         //pendidikan2
+         Route::get('/inputpendidikan2', 'SDMController@inputpendidikan2')->name('inputpendidikan2');
+         Route::post('/simpan-pendidikan2', 'SDMController@storependidikan2')->name('simpan-pendidikan2');
+         Route::get('/showpendidikan2', 'SDMController@showpendidikan2')->name('showpendidikan2');
+ 
+         Route::post('/update-pendidikan2/{id}', 'SDMController@updatependidikan2')->name('update-pendidikan2');
+         Route::get('/viewpendidikan2/{id}', 'SDMController@viewpendidikan2');
+
+          //pendidikan3
+          Route::get('/inputpendidikan3', 'SDMController@inputpendidikan3')->name('inputpendidikan3');
+          Route::post('/simpan-pendidikan3', 'SDMController@storependidikan3')->name('simpan-pendidikan3');
+          Route::get('/showpendidikan3', 'SDMController@showpendidikan3')->name('showpendidikan3');
+  
+          Route::post('/update-pendidikan3/{id}', 'SDMController@updatependidikan3')->name('update-pendidikan3');
+          Route::get('/viewpendidikan3/{id}', 'SDMController@viewpendidikan3');
+        
+           //pendidikan4
+           Route::get('/inputpendidikan4', 'SDMController@inputpendidikan4')->name('inputpendidikan4');
+           Route::post('/simpan-pendidikan4', 'SDMController@storependidikan4')->name('simpan-pendidikan4');
+           Route::get('/showpendidikan4', 'SDMController@showpendidikan4')->name('showpendidikan4');
+   
+           Route::post('/update-pendidikan4/{id}', 'SDMController@updatependidikan4')->name('update-pendidikan4');
+           Route::get('/viewpendidikan4/{id}', 'SDMController@viewpendidikan4');
+ 
+
+
 
 
         //ekologi
