@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <p class="text-center " style="font-size:39px;">Galeri Unit Kerja</p><br>
 
-        <form method="POST" action="{{ route('update-galeriunitkerja2', $gl->id) }}"  enctype="multipart/form-data">
+        <form method="POST" action="{{ route('update-galeriunitkerja2', $gl2->id) }}"  enctype="multipart/form-data">
         @csrf
 
 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Galeriunitkerja;
 use App\NKK;
 use DB;
+use File;
 
 class Admin2Controller extends Controller
 {

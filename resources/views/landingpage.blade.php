@@ -1,6 +1,6 @@
 @include('layouts.header')
             <div class="content-page " >
-                
+
                     <h1>Artikel Terbaru</h1>
                     <div class="row">
                     @foreach ($artikel as $a)
@@ -10,17 +10,17 @@
                                     <div class="card-img-overlay  d-flex align-items-end" style="padding-bottom:50px;">
                                      <a href="{{ route('detail-artikel',$a->id) }}">
                                         <h4 class="card-title text-white">{{$a->judul}}</h4>
-                                     </a>   
+                                     </a>
                                     </div>
-                                    <div> 
+                                    <div>
                                         <span style="color:black;">{{$a->created_at->diffForHumans()}}</span>
                                     </div>
                             </div>
                         </div>
                          @endforeach
                     </div>
-                   
-               
+
+
 
                 <!--==========================
                 Portfolio Section
@@ -37,8 +37,8 @@
                             </figure>
 
                             <div class="portfolio-info">
-                                <h4><a href="#">Galeri Unit 1</a></h4>
-                                
+                                <h4><a href="{{ route('bshowgaleriunitkerja') }}">Galeri Unit 1</a></h4>
+
                             </div>
                             </div>
                         </div>
@@ -52,8 +52,8 @@
                             </figure>
 
                             <div class="portfolio-info">
-                                <h4><a href="#">Galeri Unit 2</a></h4>
-                                
+                                <h4><a href="{{ route('bshowgaleriunitkerja2') }}">Galeri Unit 2</a></h4>
+
                             </div>
                             </div>
                         </div>
@@ -67,8 +67,8 @@
                             </figure>
 
                             <div class="portfolio-info">
-                                <h4><a href="#">Galeri Unit 3</a></h4>
-                                
+                                <h4><a href="{{ route('bshowgaleriunitkerja3') }}">Galeri Unit 3</a></h4>
+
                             </div>
                             </div>
                         </div>
@@ -82,8 +82,8 @@
                             </figure>
 
                             <div class="portfolio-info">
-                                <h4><a href="#">Galeri Unit 4</a></h4>
-                                
+                                <h4><a href="{{ route('bshowgaleriunitkerja4') }}">Galeri Unit 4</a></h4>
+
                             </div>
                             </div>
                         </div>
@@ -94,9 +94,9 @@
 
                <div class="card-group">
                     <div class="card col-md-8" id="mapid" style="width:100%;">
-                    
+
                     </div>
-                    
+
                     <section class="pl-4 card col-md-4 section-bg"  id="portfolio">
                     <div class="portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
                             <div class="portfolio-wrap">
@@ -108,7 +108,7 @@
 
                             <div class="portfolio-info">
                                 <h4><a href="#">Galeri Foto KPH</a></h4>
-                                
+
                             </div>
                             </div>
                         </div>
@@ -117,12 +117,12 @@
 
 
                 </div>
-            
-                    
-        
-                        
-                    
-                
+
+
+
+
+
+
 
 
                     <!-- Fungsi komentar -->
@@ -156,7 +156,7 @@
                                             <br>
                                             <h5>List of Comments</h5>
                                         <hr>
-                        
+
                                         <div class="col-md-6">
                                             @forelse($comments as $comment)
                                                 <blockquote>

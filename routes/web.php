@@ -24,14 +24,8 @@ Route::get('logout', 'AuthController@logout')->name('logout');
 Route::get('/password', 'AuthController@edit')->name('password-edit');
 Route::patch('/password', 'AuthController@update')->name('password-edit');
 
-Route::get('/inputartikel', 'HomeController@inputartikel')->name('inputartikel');
-Route::get('/indexartikel', 'HomeController@article')->name('indexartikel');
-Route::post('/simpan-artikel', 'HomeController@storeartikel')->name('simpan-artikel');
-Route::post('/update-artikel/{id}', 'HomeController@updateartikel')->name('update-artikel');
-Route::get('/deleteartikel/{id}', 'HomeController@deleteartikel');
-Route::get('/viewartikel/{id}', 'HomeController@viewartikel');
- Route::get('/showartikel', 'HomeController@showartikel');
-Route::get('/showartikelid/{artikel}', 'HomeController@showartikelid')->name('detail-artikel');
+
+
 
 Route::get('/landingpage', 'HomeController@banner')->name('landingpage');
 Route::get('/profilpegawai', 'HomeController@profilpegawai');
@@ -98,11 +92,26 @@ Route::get('/galeriupt', 'HomeController@showgaleriupt')->name('galeriupt');
         Route::get('/bshowsdm3', 'HomeController@showsdm3')->name('bshowsdm3');
         Route::get('/bshowsdm4', 'HomeController@showsdm4')->name('bshowsdm4');
 
+        Route::get('/bshowgaleriunitkerja', 'HomeController@showgaleriunitkerja')->name('bshowgaleriunitkerja');
+        Route::get('/bshowgaleriunitkerja2', 'HomeController@showgaleriunitkerja2')->name('bshowgaleriunitkerja2');
+        Route::get('/bshowgaleriunitkerja3', 'HomeController@showgaleriunitkerja3')->name('bshowgaleriunitkerja3');
+        Route::get('/bshowgaleriunitkerja4', 'HomeController@showgaleriunitkerja4')->name('bshowgaleriunitkerja4');
+
 
 Route::group(['middleware' => ['auth']], function(){
     Route::group(['middleware' => ['ceklogin:adminupt']], function(){
         Route::get('home', 'AdminController@home')->name('home');
         Route::get('/home/{id}/delete', 'AdminController@delete');
+
+        //Artikel
+        Route::get('/inputartikel', 'HomeController@inputartikel')->name('inputartikel');
+        Route::get('/indexartikel', 'HomeController@article')->name('indexartikel');
+        Route::post('/simpan-artikel', 'HomeController@storeartikel')->name('simpan-artikel');
+        Route::post('/update-artikel/{id}', 'HomeController@updateartikel')->name('update-artikel');
+        Route::get('/deleteartikel/{id}', 'HomeController@deleteartikel');
+        Route::get('/viewartikel/{id}', 'HomeController@viewartikel');
+        Route::get('/showartikel', 'HomeController@showartikel');
+        Route::get('/showartikelid/{artikel}', 'HomeController@showartikelid')->name('detail-artikel');
 
         //VISIMISI
         Route::get('/inputvisimisi', 'AdminController@inputvisimisi')->name('inputvisimisi');

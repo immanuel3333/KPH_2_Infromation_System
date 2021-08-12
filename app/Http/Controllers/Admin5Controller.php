@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Galeriunitkerja4;
 use Illuminate\Support\Facades\Auth;
 use DB;
+use File;
 class Admin5Controller extends Controller
 {
     public function home()
@@ -55,7 +56,7 @@ class Admin5Controller extends Controller
     {
         $gl4=Galeriunitkerja4::find($id);
         $up=substr($request->keterangan, 3,-4);
-        File::delete($gl->gambar);
+        File::delete($gl4->gambar);
         $file = $request->file('gambar');
         $file->move('public/galeriunit4/',$file->getClientOriginalName());
         $gl4->update([

@@ -407,10 +407,34 @@ class HomeController extends Controller
         }
 
         public function peraturan()
-       {
-           $law = DB::table('peraturan')->get();
-           return view('beranda.showperaturan',compact('law'));
-       }
+        {
+            $law = DB::table('peraturan')->get();
+            return view('beranda.showperaturan',compact('law'));
+        }
+
+       public function showgaleriunitkerja(Request $request)
+        {
+            $gl = DB::table('galeriunitkerja')->get();
+            return view('beranda.showgaleriunitkerja', compact('gl'));
+        }
+
+        public function showgaleriunitkerja2(Request $request)
+        {
+            $gl2 = DB::table('galeriunitkerja2')->get();
+            return view('beranda.showgaleriunitkerja2', compact('gl2'));
+        }
+
+        public function showgaleriunitkerja3(Request $request)
+        {
+            $gl3 = DB::table('galeriunitkerja3')->paginate(3);
+            return view('beranda.showgaleriunitkerja3', compact('gl3'));
+        }
+
+        public function showgaleriunitkerja4(Request $request)
+        {
+            $gl4 = DB::table('galeriunitkerja4')->get();
+            return view('beranda.showgaleriunitkerja4', compact('gl4'));
+        }
 
 
 }
