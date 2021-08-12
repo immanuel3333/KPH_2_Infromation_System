@@ -2,7 +2,7 @@
 </div>
 <div class="content-page">
     <div class="container-fluid">
-    <div class>
+    <div class="card">
     @foreach($pe as $pe)
         <table class="table">
             <thead class="bg-success">
@@ -103,13 +103,13 @@
         </table>
         @endforeach
 
-    
+
         <a href="{{url('/viewsdm1')}}/{{$pe->id}}" class="ml-auto">
-        <button type="submit" class="btn" style="background-color: #99F07A;">Edit</button>  
+        <button type="submit" class="btn" style="background-color: #99F07A;">Edit</button>
     </div>
 
-    
+
     </div>
 
-    
+
 

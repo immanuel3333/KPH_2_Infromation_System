@@ -235,7 +235,7 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="{{ route('bshowsdm1') }}" class="svg-icon">
+                                                <a href="{{ route('bshow-sdm1') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data SDM</span>
@@ -277,7 +277,7 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="{{ route('bshowsdm2') }}" class="svg-icon">
+                                                <a href="{{ route('bshow-sdm2') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data SDM</span>
@@ -318,7 +318,7 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="{{ route('bshowsdm3') }}" class="svg-icon">
+                                                <a href="{{ route('bshow-sdm3') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data SDM</span>
@@ -359,7 +359,7 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="{{ route('bshowsdm4') }}" class="svg-icon">
+                                                <a href="{{ route('bshow-sdm4') }}" class="svg-icon">
                                                     <i class="">
                                                         <img src="icon/data.png" alt="icon" width="20">
                                                     </i><span class="">Data SDM</span>

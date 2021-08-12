@@ -42,7 +42,7 @@ class HomeController extends Controller
         return view('landingpage', compact('comments','projects','artikel'));
     }
 
-    
+
 
     public function showvisimisi(Request $request)
     {
@@ -356,6 +356,47 @@ class HomeController extends Controller
             $gl4 = DB::table('galeriunitkerja4')->get();
             return view('beranda.showgaleriunitkerja4', compact('gl4'));
         }
+
+        public function index1sdm()
+       {
+           return view('beranda.index1sdm');
+       }
+       public function index2sdm()
+       {
+           return view('beranda.index2sdm');
+       }
+       public function index3sdm()
+       {
+           return view('beranda.index3sdm');
+       }
+       public function index4sdm()
+       {
+           return view('beranda.index4sdm');
+       }
+
+    public function showpendidikan1(Request $request)
+    {
+        $pe = DB::table('pendidikan1')->get();
+        return view('beranda.showpendidikan1', compact('pe'));
+    }
+
+    public function showpendidikan2(Request $request)
+    {
+        $pe = DB::table('pendidikan2')->get();
+        return view('beranda.showpendidikan2', compact('pe'));
+    }
+
+    public function showpendidikan3(Request $request)
+    {
+        $pe = DB::table('pendidikan3')->get();
+        return view('beranda.showpendidikan3', compact('pe'));
+    }
+
+    public function showpendidikan4(Request $request)
+    {
+        $pe = DB::table('pendidikan4')->get();
+        return view('beranda.showpendidikan4', compact('pe'));
+    }
 
 
 }

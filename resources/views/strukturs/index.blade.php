@@ -4,7 +4,7 @@
     <div class="container-fluid ">
         <div class="card">
                         <center>
-                        <p>Menambah Struktur</p>
+
                         <a href="{{ route('strukturs.create') }}" class="btn btn-md btn-success mb-3">TAMBAH BLOG</a>
                         <p style="font-size:50px; font-family:balthazar;"><b> Struktur Organisasi </p><br>
                               @forelse ($blogs as $blog)

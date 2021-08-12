@@ -1,8 +1,8 @@
-@include('layouts.header')
+
 </div>
 <div class="content-page">
     <div class="container-fluid">
-    <div class>
+        <div class="card">
     @foreach($pe as $pe)
         <table class="table">
             <thead class="bg-success">
@@ -104,11 +104,12 @@
         @endforeach
 
 
-
+        <a href="{{url('/viewsdm4')}}/{{$pe->id}}" class="ml-auto">
+        <button type="submit" class="btn" style="background-color: #99F07A;">Edit</button>
     </div>
 
 
     </div>
 
-    @include('layouts.footer')
+
 

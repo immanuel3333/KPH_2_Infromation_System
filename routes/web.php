@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-      
+
 
 
         Route::get('/',function(){
@@ -97,6 +97,18 @@ use Illuminate\Support\Facades\Route;
         Route::get('/bshowgaleriunitkerja3', 'HomeController@showgaleriunitkerja3')->name('bshowgaleriunitkerja3');
         Route::get('/bshowgaleriunitkerja4', 'HomeController@showgaleriunitkerja4')->name('bshowgaleriunitkerja4');
 
+        Route::get('/bshowsdm1', 'HomeController@showsdm1')->name('bshowsdm1');
+        Route::get('/bshow-sdm1', 'HomeController@index1sdm')->name('bshow-sdm1');
+        Route::get('/bshowpendidikan1', 'HomeController@showpendidikan1')->name('bshowpendidikan1');
+        Route::get('/bshowsdm2', 'HomeController@showsdm2')->name('bshowsdm2');
+        Route::get('/bshow-sdm2', 'HomeController@index2sdm')->name('bshow-sdm2');
+        Route::get('/bshowpendidikan1', 'HomeController@showpendidikan1')->name('bshowpendidikan1');
+        Route::get('/bshowsdm3', 'HomeController@showsdm3')->name('showsdm3');
+        Route::get('/bshow-sdm3', 'HomeController@index3sdm')->name('bshow-sdm3');
+        Route::get('/bshowpendidikan1', 'HomeController@showpendidikan1')->name('bshowpendidikan1');
+        Route::get('/bshowsdm4', 'HomeController@showsdm4')->name('bshowsdm4');
+        Route::get('/bshow-sdm4', 'HomeController@index4sdm')->name('bshow-sdm4');
+        Route::get('/bshowpendidikan1', 'HomeController@showpendidikan1')->name('bshowpendidikan1');
 
 Route::group(['middleware' => ['auth']], function(){
     Route::group(['middleware' => ['ceklogin:adminupt']], function(){
@@ -287,7 +299,7 @@ Route::group(['middleware' => ['auth']], function(){
          Route::get('/inputpendidikan2', 'SDMController@inputpendidikan2')->name('inputpendidikan2');
          Route::post('/simpan-pendidikan2', 'SDMController@storependidikan2')->name('simpan-pendidikan2');
          Route::get('/showpendidikan2', 'SDMController@showpendidikan2')->name('showpendidikan2');
- 
+
          Route::post('/update-pendidikan2/{id}', 'SDMController@updatependidikan2')->name('update-pendidikan2');
          Route::get('/viewpendidikan2/{id}', 'SDMController@viewpendidikan2');
 
@@ -295,18 +307,18 @@ Route::group(['middleware' => ['auth']], function(){
           Route::get('/inputpendidikan3', 'SDMController@inputpendidikan3')->name('inputpendidikan3');
           Route::post('/simpan-pendidikan3', 'SDMController@storependidikan3')->name('simpan-pendidikan3');
           Route::get('/showpendidikan3', 'SDMController@showpendidikan3')->name('showpendidikan3');
-  
+
           Route::post('/update-pendidikan3/{id}', 'SDMController@updatependidikan3')->name('update-pendidikan3');
           Route::get('/viewpendidikan3/{id}', 'SDMController@viewpendidikan3');
-        
+
            //pendidikan4
            Route::get('/inputpendidikan4', 'SDMController@inputpendidikan4')->name('inputpendidikan4');
            Route::post('/simpan-pendidikan4', 'SDMController@storependidikan4')->name('simpan-pendidikan4');
            Route::get('/showpendidikan4', 'SDMController@showpendidikan4')->name('showpendidikan4');
-   
+
            Route::post('/update-pendidikan4/{id}', 'SDMController@updatependidikan4')->name('update-pendidikan4');
            Route::get('/viewpendidikan4/{id}', 'SDMController@viewpendidikan4');
- 
+
 
 
 

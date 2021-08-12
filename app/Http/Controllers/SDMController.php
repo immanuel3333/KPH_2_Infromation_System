@@ -64,7 +64,7 @@ class SDMController extends Controller
             'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
         ]);
 
-        return redirect('showsdm1');
+        return redirect('show-sdm1');
     }
 
     public function showsdm1(Request $request)
@@ -101,7 +101,7 @@ class SDMController extends Controller
             'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
             'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
         ]);
-        return redirect('showsdm1');
+        return redirect('show-sdm1');
 
     }
 
@@ -136,7 +136,7 @@ class SDMController extends Controller
             'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
         ]);
 
-        return redirect('showsdm2');
+        return redirect('show-sdm2');
     }
 
     public function showsdm2(Request $request)
@@ -173,7 +173,7 @@ class SDMController extends Controller
             'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
             'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
         ]);
-        return redirect('showsdm2');
+        return redirect('show-sdm2');
 
     }
 
@@ -208,7 +208,7 @@ class SDMController extends Controller
             'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
         ]);
 
-        return redirect('showsdm3');
+        return redirect('show-sdm3');
     }
 
     public function showsdm3(Request $request)
@@ -245,7 +245,7 @@ class SDMController extends Controller
             'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
             'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
         ]);
-        return redirect('showsdm3');
+        return redirect('show-sdm3');
 
     }
 
@@ -280,7 +280,7 @@ class SDMController extends Controller
             'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
         ]);
 
-        return redirect('showsdm4');
+        return redirect('show-sdm4');
     }
 
     public function showsdm4(Request $request)
@@ -317,7 +317,7 @@ class SDMController extends Controller
             'bakti_rimbawa_2018' => $request->bakti_rimbawa_2018,
             'total_bakti_rimbawan' => $request->total_bakti_rimbawan,
         ]);
-        return redirect('showsdm4');
+        return redirect('show-sdm4');
 
     }
 
@@ -346,7 +346,7 @@ class SDMController extends Controller
             'lainnya' => $request->lainnya,
         ]);
 
-        return redirect('showpendidikan1');
+        return redirect('show-sdm1');
     }
 
     public function showpendidikan1(Request $request)
@@ -376,7 +376,7 @@ class SDMController extends Controller
             'teknis' => $request->teknis,
             'lainnya' => $request->lainnya,
         ]);
-        return redirect('showpendidikan1');
+        return redirect('show-sdm1');
 
     }
 
