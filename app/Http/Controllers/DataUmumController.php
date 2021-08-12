@@ -171,6 +171,20 @@ public function kepalakph()
 
     public function updatekepalakph(Request $request, $id)
     {
+        $this->validate($request, [
+            'namakph' => 'required',
+            'gender' => 'required',
+            'nip' => 'required',
+            'telepon' => 'required',
+            'email' => 'required',
+            'pangkat' => 'required',
+            'ujikompetensi' => 'required',
+            'diklat' => 'required',
+            'pendidikan' => 'required',
+            'tanggalmulai' => 'required',
+            'tanggalselesai' => 'required',
+            'gambar' => 'required'
+        ]);
         $kkph=Kepalakph::find($id);
         File::delete($kkph->image);
         $file = $request->file('gambar');
@@ -258,6 +272,22 @@ public function kepalakph()
 
     public function updatelembaga(Request $request, $id)
     {
+        $this->validate($request, [
+            'unit' => 'required',
+            'provinsi' => 'required',
+            'jenislembaga' => 'required',
+            'kepseksi' => 'required',
+            'petugaskph' => 'required',
+            'teleponpetugas' => 'required',
+            'emailpetugas' => 'required',
+            'sklembaga' => 'required',
+            'tglsklembaga' => 'required',
+            'doksklembaga' => 'required',
+            'statblud' => 'required',
+            'skblud' => 'required',
+            'dokskblud'=> 'required'
+        ]);
+        
         $lm = Lembaga::find($id);
             File::delete($lm->doksklembaga);
             File::delete($lm->dokskblud);
@@ -342,6 +372,14 @@ public function inputfasilitas()
 
     public function storefasilitas(Request $request)
     {
+        $this->validate($request, [
+            'aspek' =>'required',
+            'jumlah' =>'required',
+            'kondisi' =>'required',
+            'status' =>'required',
+            'sumberdana' => 'required',
+          
+        ]);
         // dd($request->all());
         $fs = Fasilitas::create([
             'aspek' => $request->aspek,
@@ -356,6 +394,14 @@ public function inputfasilitas()
 
     public function updatefasilitas(Request $request, $id)
     {
+        $this->validate($request, [
+            'aspek' =>'required',
+            'jumlah' =>'required',
+            'kondisi' =>'required',
+            'status' =>'required',
+            'sumberdana' => 'required',
+          
+        ]);
         $fs=Fasilitas::find($id);
         $fs->update([
             'aspek' => $request->aspek,
@@ -534,6 +580,20 @@ public function storekepalakph2(Request $request)
 
 public function updatekepalakph2(Request $request, $id)
 {
+    $this->validate($request, [
+        'namakph' => 'required',
+        'gender' => 'required',
+        'nip' => 'required',
+        'telepon' => 'required',
+        'email' => 'required',
+        'pangkat' => 'required',
+        'ujikompetensi' => 'required',
+        'diklat' => 'required',
+        'pendidikan' => 'required',
+        'tanggalmulai' => 'required',
+        'tanggalselesai' => 'required',
+        'gambar' => 'required'
+    ]);
  $kkph=Kepalakph2::find($id);
  File::delete($kkph->image);
  $file = $request->file('gambar');
@@ -620,6 +680,21 @@ public function storelembaga2(Request $request)
 
 public function updatelembaga2(Request $request, $id)
 {
+    $this->validate($request, [
+        'unit' => 'required',
+        'provinsi' => 'required',
+        'jenislembaga' => 'required',
+        'kepseksi' => 'required',
+        'petugaskph' => 'required',
+        'teleponpetugas' => 'required',
+        'emailpetugas' => 'required',
+        'sklembaga' => 'required',
+        'tglsklembaga' => 'required',
+        'doksklembaga' => 'required',
+        'statblud' => 'required',
+        'skblud' => 'required',
+        'dokskblud'=> 'required'
+    ]);
  $lm = Lembaga2::find($id);
      File::delete($lm->doksklembaga);
      File::delete($lm->dokskblud);
@@ -703,6 +778,14 @@ public function inputfasilitas2()
 
     public function storefasilitas2(Request $request)
     {
+        $this->validate($request, [
+            'aspek' =>'required',
+            'jumlah' =>'required',
+            'kondisi' =>'required',
+            'status' =>'required',
+            'sumberdana' => 'required',
+          
+        ]);
         // dd($request->all());
         $fs = Fasilitas2::create([
             'aspek' => $request->aspek,
@@ -717,6 +800,14 @@ public function inputfasilitas2()
 
     public function updatefasilitas2(Request $request, $id)
     {
+        $this->validate($request, [
+            'aspek' =>'required',
+            'jumlah' =>'required',
+            'kondisi' =>'required',
+            'status' =>'required',
+            'sumberdana' => 'required',
+          
+        ]);
         $fs=Fasilitas2::find($id);
         $fs->update([
             'aspek' => $request->aspek,
@@ -891,6 +982,20 @@ public function storekepalakph3(Request $request)
 
 public function updatekepalakph3(Request $request, $id)
 {
+    $this->validate($request, [
+        'namakph' => 'required',
+        'gender' => 'required',
+        'nip' => 'required',
+        'telepon' => 'required',
+        'email' => 'required',
+        'pangkat' => 'required',
+        'ujikompetensi' => 'required',
+        'diklat' => 'required',
+        'pendidikan' => 'required',
+        'tanggalmulai' => 'required',
+        'tanggalselesai' => 'required',
+        'gambar' => 'required'
+    ]);
  $kkph=Kepalakph3::find($id);
  File::delete($kkph->image);
  $file = $request->file('gambar');
@@ -977,6 +1082,21 @@ public function storelembaga3(Request $request)
 
 public function updatelembaga3(Request $request, $id)
 {
+    $this->validate($request, [
+        'unit' => 'required',
+        'provinsi' => 'required',
+        'jenislembaga' => 'required',
+        'kepseksi' => 'required',
+        'petugaskph' => 'required',
+        'teleponpetugas' => 'required',
+        'emailpetugas' => 'required',
+        'sklembaga' => 'required',
+        'tglsklembaga' => 'required',
+        'doksklembaga' => 'required',
+        'statblud' => 'required',
+        'skblud' => 'required',
+        'dokskblud'=> 'required'
+    ]);
  $lm = Lembaga3::find($id);
      File::delete($lm->doksklembaga);
      File::delete($lm->dokskblud);
@@ -1060,6 +1180,14 @@ public function inputfasilitas3()
 
     public function storefasilitas3(Request $request)
     {
+        $this->validate($request, [
+            'aspek' =>'required',
+            'jumlah' =>'required',
+            'kondisi' =>'required',
+            'status' =>'required',
+            'sumberdana' => 'required',
+          
+        ]);
         // dd($request->all());
         $fs = Fasilitas3::create([
             'aspek' => $request->aspek,
@@ -1074,6 +1202,14 @@ public function inputfasilitas3()
 
     public function updatefasilitas3(Request $request, $id)
     {
+        $this->validate($request, [
+            'aspek' =>'required',
+            'jumlah' =>'required',
+            'kondisi' =>'required',
+            'status' =>'required',
+            'sumberdana' => 'required',
+          
+        ]);
         $fs=Fasilitas3::find($id);
         $fs->update([
             'aspek' => $request->aspek,
@@ -1248,6 +1384,20 @@ public function storekepalakph4(Request $request)
 
 public function updatekepalakph4(Request $request, $id)
 {
+    $this->validate($request, [
+        'namakph' => 'required',
+        'gender' => 'required',
+        'nip' => 'required',
+        'telepon' => 'required',
+        'email' => 'required',
+        'pangkat' => 'required',
+        'ujikompetensi' => 'required',
+        'diklat' => 'required',
+        'pendidikan' => 'required',
+        'tanggalmulai' => 'required',
+        'tanggalselesai' => 'required',
+        'gambar' => 'required'
+    ]);
  $kkph=Kepalakph4::find($id);
  File::delete($kkph->image);
  $file = $request->file('gambar');
@@ -1334,6 +1484,21 @@ public function storelembaga4(Request $request)
 
 public function updatelembaga4(Request $request, $id)
 {
+    $this->validate($request, [
+        'unit' => 'required',
+        'provinsi' => 'required',
+        'jenislembaga' => 'required',
+        'kepseksi' => 'required',
+        'petugaskph' => 'required',
+        'teleponpetugas' => 'required',
+        'emailpetugas' => 'required',
+        'sklembaga' => 'required',
+        'tglsklembaga' => 'required',
+        'doksklembaga' => 'required',
+        'statblud' => 'required',
+        'skblud' => 'required',
+        'dokskblud'=> 'required'
+    ]);
  $lm = Lembaga4::find($id);
      File::delete($lm->doksklembaga);
      File::delete($lm->dokskblud);
@@ -1416,7 +1581,15 @@ public function inputfasilitas4()
     }
 
     public function storefasilitas4(Request $request)
-    {
+    { 
+        $this->validate($request, [
+        'aspek' =>'required',
+        'jumlah' =>'required',
+        'kondisi' =>'required',
+        'status' =>'required',
+        'sumberdana' => 'required',
+      
+    ]);
         // dd($request->all());
         $fs = Fasilitas4::create([
             'aspek' => $request->aspek,
@@ -1431,6 +1604,14 @@ public function inputfasilitas4()
 
     public function updatefasilitas4(Request $request, $id)
     {
+        $this->validate($request, [
+            'aspek' =>'required',
+            'jumlah' =>'required',
+            'kondisi' =>'required',
+            'status' =>'required',
+            'sumberdana' => 'required',
+          
+        ]);
         $fs=Fasilitas4::find($id);
         $fs->update([
             'aspek' => $request->aspek,

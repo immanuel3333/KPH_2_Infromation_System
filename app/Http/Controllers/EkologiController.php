@@ -22,6 +22,13 @@ public function inputekologi()
 
 public function storeekologi(Request $request)
 {
+    $this->validate($request, [
+    'jenis_tanah' => 'required',
+    'jenis_kayu' => 'required',
+    'fauna_satwa' => 'required',
+    'kelerengan' => 'required',
+    'DAS' => 'required',
+]);
     // dd($request->all());
     $up1=substr($request->jenis_tanah, 3,-4);
     $up2=substr($request->jenis_kayu, 3,-4);
@@ -53,6 +60,13 @@ public function viewekologi($id)
 
 public function updateekologi(Request $request, $id)
 {
+    $this->validate($request, [
+        'jenis_tanah' => 'required',
+        'jenis_kayu' => 'required',
+        'fauna_satwa' => 'required',
+        'kelerengan' => 'required',
+        'DAS' => 'required',
+    ]);
     $pe=Ekologi::find($id);
     $up1=substr($request->jenis_tanah, 3,-4);
     $up2=substr($request->jenis_kayu, 3,-4);
@@ -80,6 +94,13 @@ public function inputekologi2()
 
 public function storeekologi2(Request $request)
 {
+    $this->validate($request, [
+        'jenis_tanah' => 'required',
+        'jenis_kayu' => 'required',
+        'fauna_satwa' => 'required',
+        'kelerengan' => 'required',
+        'DAS' => 'required',
+    ]);
     // dd($request->all());
     $up1=substr($request->jenis_tanah, 3,-4);
     $up2=substr($request->jenis_kayu, 3,-4);
@@ -111,6 +132,13 @@ public function viewekologi2($id)
 
 public function updateekologi2(Request $request, $id)
 {
+    $this->validate($request, [
+        'jenis_tanah' => 'required',
+        'jenis_kayu' => 'required',
+        'fauna_satwa' => 'required',
+        'kelerengan' => 'required',
+        'DAS' => 'required',
+    ]);
     $pe=Ekologi2::find($id);
     $up1=substr($request->jenis_tanah, 3,-4);
     $up2=substr($request->jenis_kayu, 3,-4);
@@ -137,6 +165,13 @@ public function inputekologi3()
 
 public function storeekologi3(Request $request)
 {
+    $this->validate($request, [
+        'jenis_tanah' => 'required',
+        'jenis_kayu' => 'required',
+        'fauna_satwa' => 'required',
+        'kelerengan' => 'required',
+        'DAS' => 'required',
+    ]);
     // dd($request->all());
     $up1=substr($request->jenis_tanah, 3,-4);
     $up2=substr($request->jenis_kayu, 3,-4);
@@ -168,6 +203,13 @@ public function viewekologi3($id)
 
 public function updateekologi3(Request $request, $id)
 {
+    $this->validate($request, [
+        'jenis_tanah' => 'required',
+        'jenis_kayu' => 'required',
+        'fauna_satwa' => 'required',
+        'kelerengan' => 'required',
+        'DAS' => 'required',
+    ]);
     $pe=Ekologi3::find($id);
     $up1=substr($request->jenis_tanah, 3,-4);
     $up2=substr($request->jenis_kayu, 3,-4);
@@ -196,6 +238,13 @@ public function inputekologi4()
 
 public function storeekologi4(Request $request)
 {
+    $this->validate($request, [
+        'jenis_tanah' => 'required',
+        'jenis_kayu' => 'required',
+        'fauna_satwa' => 'required',
+        'kelerengan' => 'required',
+        'DAS' => 'required',
+    ]);
     // dd($request->all());
     $up1=substr($request->jenis_tanah, 3,-4);
     $up2=substr($request->jenis_kayu, 3,-4);
@@ -227,6 +276,13 @@ public function viewekologi4($id)
 
 public function updateekologi4(Request $request, $id)
 {
+    $this->validate($request, [
+        'jenis_tanah' => 'required',
+        'jenis_kayu' => 'required',
+        'fauna_satwa' => 'required',
+        'kelerengan' => 'required',
+        'DAS' => 'required',
+    ]);
     $pe=Ekologi4::find($id);
     $up1=substr($request->jenis_tanah, 3,-4);
     $up2=substr($request->jenis_kayu, 3,-4);

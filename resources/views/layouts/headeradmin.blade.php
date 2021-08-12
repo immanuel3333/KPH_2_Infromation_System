@@ -275,7 +275,7 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="{{route('showsdm1')}}" class="svg-icon">
+                                                <a href="{{route('show-sdm1')}}" class="svg-icon">
                                                     <i class="">
                                                         <img src="{{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data SDM</span>
@@ -317,7 +317,7 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="{{route('showsdm2')}}" class="svg-icon">
+                                                <a href="{{route('show-sdm2')}}" class="svg-icon">
                                                     <i class="">
                                                         <img src="{{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data SDM</span>
@@ -358,7 +358,7 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="{{route('showsdm3')}}" class="svg-icon">
+                                                <a href="{{route('show-sdm3')}}" class="svg-icon">
                                                     <i class="">
                                                         <img src="{{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data SDM</span>
@@ -399,7 +399,7 @@
                                                 </a>
                                             </li>
                                             <li class="">
-                                                <a href="{{route('showsdm4')}}" class="svg-icon">
+                                                <a href="{{route('show-sdm4')}}" class="svg-icon">
                                                     <i class="">
                                                         <img src="{{ asset('icon/data.png')}}" alt="icon" width="20">
                                                     </i><span class="">Data SDM</span>

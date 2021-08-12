@@ -22,12 +22,12 @@
                                     <div class="form-group pt-1">
                                         <p>Kendala</p>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="kendala" value="{{$rp->kendala}}">
+                                            <input type="text" class="form-control" name="kendala" value="{{$rp->kendala}}" required autofocus>
                                         </div>
                                     </div>
                                         <div class="form-group pt-1">
                                             <label>Progres</label>
-                                            <input class="form-control" type="text" name="progres" value="{{$rp->progres}}" >
+                                            <input class="form-control" type="text" name="progres" value="{{$rp->progres}}" required autofocus>
                                         </div>
                                     </div>
                               </div>

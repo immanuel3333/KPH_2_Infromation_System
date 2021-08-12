@@ -44,7 +44,7 @@
         @endforeach
 
     
-        <a href="{{url('/viewpotensiekonomi2')}}/{{$pe->id}}" class="ml-auto">
+        <a href="{{url('/viewpotensiekonomi2')}}/{{$pe->id}}" style="float:right;">
         <button type="submit" class="btn" style="background-color: #99F07A;">Edit</button>  
     </div>
    

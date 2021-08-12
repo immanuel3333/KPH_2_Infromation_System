@@ -107,7 +107,7 @@
                             </figure>
 
                             <div class="portfolio-info">
-                                <h4><a href="#">Galeri Foto KPH</a></h4>
+                                <h4><a href="{{ route('galeriupt') }}">Galeri Foto KPH</a></h4>
 
                             </div>
                             </div>

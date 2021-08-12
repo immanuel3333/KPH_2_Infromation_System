@@ -118,15 +118,15 @@ Route::group(['middleware' => ['auth']], function(){
         Route::post('/simpan-visimisi', 'AdminController@storevisimisi')->name('simpan-visimisi');
         Route::get('/showvisimisi', 'AdminController@showvisimisi')->name('showvisimisi');
 
-        Route::post('/update-visimisi/{id}', 'AdminController@update1')->name('update-visimisi');
+        Route::post('/update-visimisi/{id}', 'AdminController@updatevisimisi')->name('update-visimisi');
         Route::get('/view1/{id}', 'AdminController@view1');
 
         //TUGAS FUNGSI
         Route::get('/inputtugasfungsi', 'AdminController@inputtugasfungsi')->name('inputtugasfungsi');
-        Route::post('/simpan-tugasfungsi', 'AdminController@store2')->name('simpan-tugasfungsi');
+        Route::post('/simpan-tugasfungsi', 'AdminController@storetugasfungsi')->name('simpan-tugasfungsi');
         Route::get('/showtugasfungsi', 'AdminController@showtugasfungsi')->name('showtugasfungsi');
 
-        Route::post('/update-tugasfungsi/{id}', 'AdminController@update2')->name('update-tugasfungsi');
+        Route::post('/update-tugasfungsi/{id}', 'AdminController@updatetugasfungsi')->name('update-tugasfungsi');
         Route::get('/view2/{id}', 'AdminController@view2');
 
         //SEJARAH

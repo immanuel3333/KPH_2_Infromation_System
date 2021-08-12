@@ -80,11 +80,11 @@
 
     <!-- script leaflet -->
     <script>
-        var map = L.map('mapid').setView([2.951442, 99.057523], 25);
+        var map = L.map('mapid').setView([2.951442, 99.057523], 10);
 
         // L.esri.basemapLayer('ImageryFirefly').addTo(map);
                 googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
-            maxZoom: 8,
+            maxZoom: 30,
             subdomains:['mt0','mt1','mt2','mt3']
         }).addTo(map);
 
@@ -137,7 +137,7 @@ L.marker([2.9514596123305656, 99.05752741133092], {icon: greenIcon}).addTo(map).
 
 // Unit vi
 var greenIcon = L.icon({
-    iconUrl: 'img/kph2.png',
+    iconUrl: 'img/Unit VI mark.png',
     iconSize:     [50, 100], // size of the icon
     shadowSize:   [50, 64], // size of the shadow
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
@@ -149,7 +149,7 @@ L.marker([3.10527455742, 98.85584026240], {icon: greenIcon}).addTo(map);
 
 var LeafIcon = L.Icon.extend({
     options: {
-        shadowUrl: 'img/kph2.png',
+        shadowUrl: 'img/Unit VI mark.png',
         iconSize:     [38, 95],
         shadowSize:   [50, 64],
         iconAnchor:   [22, 94],
@@ -169,7 +169,7 @@ L.marker([3.10527455742, 98.85584026240], {icon: greenIcon}).addTo(map).bindPopu
 
 // Unit IX
 var greenIcon = L.icon({
-    iconUrl: 'img/kph2.png',
+    iconUrl: 'img/Unit IX mark.png',
     iconSize:     [50, 100], // size of the icon
     shadowSize:   [50, 64], // size of the shadow
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
@@ -181,7 +181,7 @@ L.marker([3.26607360391,98.97242370140], {icon: greenIcon}).addTo(map);
 
 var LeafIcon = L.Icon.extend({
     options: {
-        shadowUrl: 'img/kph2.png',
+        shadowUrl: 'img/Unit IX mark.png',
         iconSize:     [38, 95],
         shadowSize:   [50, 64],
         iconAnchor:   [22, 94],
@@ -201,7 +201,7 @@ L.marker([3.26607360391, 98.97242370140], {icon: greenIcon}).addTo(map).bindPopu
 
 // Unit X
 var greenIcon = L.icon({
-    iconUrl: 'img/kph2.png',
+    iconUrl: 'img/Unit X mark.png',
     iconSize:     [50, 100], // size of the icon
     shadowSize:   [50, 64], // size of the shadow
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
@@ -213,7 +213,7 @@ L.marker([3.22020055091, 99.63116603670], {icon: greenIcon}).addTo(map);
 
 var LeafIcon = L.Icon.extend({
     options: {
-        shadowUrl: 'img/kph2.png',
+        shadowUrl: 'img/Unit X mark.png',
         iconSize:     [38, 95],
         shadowSize:   [50, 64],
         iconAnchor:   [22, 94],
@@ -233,7 +233,7 @@ L.marker([3.22020055091, 99.63116603670], {icon: greenIcon}).addTo(map).bindPopu
 
 // Unit XII
 var greenIcon = L.icon({
-    iconUrl: 'img/kph2.png',
+    iconUrl: 'img/unit XII mark.png',
     iconSize:     [50, 100], // size of the icon
     shadowSize:   [50, 64], // size of the shadow
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
@@ -245,7 +245,7 @@ L.marker([2.76875899525, 98.98531695260], {icon: greenIcon}).addTo(map);
 
 var LeafIcon = L.Icon.extend({
     options: {
-        shadowUrl: 'img/kph2.png',
+        shadowUrl: 'img/unit XII mark.png',
         iconSize:     [38, 95],
         shadowSize:   [50, 64],
         iconAnchor:   [22, 94],

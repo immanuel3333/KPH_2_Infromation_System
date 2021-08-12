@@ -14,18 +14,18 @@
                             <div class="form-group pt-1">
                                 <p>Upaya</p>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="upaya" id="upaya" placeholder="Upaya...">
+                                    <input type="text" class="form-control" name="upaya" id="upaya" placeholder="Upaya..." required autofocus>
                                 </div>
                             </div>
                             <div class="form-group pt-1">
                                 <p>Kendala</p>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="kendala" id="kendala" placeholder="Kendala...">
+                                    <input type="text" class="form-control" name="kendala" id="kendala" placeholder="Kendala..." required autofocus>
                                 </div>
                             </div>
                             <div class="form-group pt-1">
                               <label>Progres</label>
-                              <input class="form-control" type="text" name="progres" id="progres" placeholder="Progres...">
+                              <input class="form-control" type="text" name="progres" id="progres" placeholder="Progres..." required autofocus>
                             </div>
                           </div>
                       </div>

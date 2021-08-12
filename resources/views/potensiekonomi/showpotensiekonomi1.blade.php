@@ -46,6 +46,9 @@
 
 
     </div>
+    <a href="{{url('/view5')}}/{{$pe->id}}" style="float:right;">
+        <button type="submit" class="btn" style="background-color: #99F07A;">Edit</button>  
+    </div>
 
 
     </div>

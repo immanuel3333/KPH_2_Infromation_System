@@ -25,6 +25,19 @@ public function inputjasalingkungan1()
 
 public function store6(Request $request)
 {
+    $this->validate($request, [
+        'provinsi' => 'required',
+        'jenis_jasa_lingkungan'  => 'required',
+        'satuan' => 'required',
+        'keunggulan' => 'required',
+        'lintang'  => 'required',
+        'bujur' => 'required',
+        'pengembangan' => 'required',
+        'tahapan' => 'required',
+        'periode' => 'required',
+        'hasil' => 'required',
+        
+    ]);
     // dd($request->all());
     $jl = JasaLingkungan1::create([
         'provinsi' => $request->provinsi,
@@ -45,6 +58,19 @@ public function store6(Request $request)
 
 public function update6(Request $request, $id)
 {
+    $this->validate($request, [
+        'provinsi' => 'required',
+        'jenis_jasa_lingkungan'  => 'required',
+        'satuan' => 'required',
+        'keunggulan' => 'required',
+        'lintang'  => 'required',
+        'bujur' => 'required',
+        'pengembangan' => 'required',
+        'tahapan' => 'required',
+        'periode' => 'required',
+        'hasil' => 'required',
+        
+    ]);
     $jl=JasaLingkungan1::find($id);
     $jl->update([
         'provinsi' => $request->provinsi,
@@ -105,6 +131,19 @@ public function inputjasalingkungan2()
 
 public function store62(Request $request)
 {
+    $this->validate($request, [
+        'provinsi' => 'required',
+        'jenis_jasa_lingkungan'  => 'required',
+        'satuan' => 'required',
+        'keunggulan' => 'required',
+        'lintang'  => 'required',
+        'bujur' => 'required',
+        'pengembangan' => 'required',
+        'tahapan' => 'required',
+        'periode' => 'required',
+        'hasil' => 'required',
+        
+    ]);
     // dd($request->all());
     $jl = JasaLingkungan2::create([
         'provinsi' => $request->provinsi,
@@ -125,6 +164,19 @@ public function store62(Request $request)
 
 public function update62(Request $request, $id)
 {
+    $this->validate($request, [
+        'provinsi' => 'required',
+        'jenis_jasa_lingkungan'  => 'required',
+        'satuan' => 'required',
+        'keunggulan' => 'required',
+        'lintang'  => 'required',
+        'bujur' => 'required',
+        'pengembangan' => 'required',
+        'tahapan' => 'required',
+        'periode' => 'required',
+        'hasil' => 'required',
+        
+    ]);
     $jl=JasaLingkungan2::find($id);
     $jl->update([
         'provinsi' => $request->provinsi,
@@ -187,6 +239,19 @@ public function inputjasalingkungan3()
 
 public function store63(Request $request)
 {
+    $this->validate($request, [
+        'provinsi' => 'required',
+        'jenis_jasa_lingkungan'  => 'required',
+        'satuan' => 'required',
+        'keunggulan' => 'required',
+        'lintang'  => 'required',
+        'bujur' => 'required',
+        'pengembangan' => 'required',
+        'tahapan' => 'required',
+        'periode' => 'required',
+        'hasil' => 'required',
+        
+    ]);
     // dd($request->all());
     $jl = JasaLingkungan3::create([
         'provinsi' => $request->provinsi,
@@ -207,6 +272,19 @@ public function store63(Request $request)
 
 public function update63(Request $request, $id)
 {
+    $this->validate($request, [
+        'provinsi' => 'required',
+        'jenis_jasa_lingkungan'  => 'required',
+        'satuan' => 'required',
+        'keunggulan' => 'required',
+        'lintang'  => 'required',
+        'bujur' => 'required',
+        'pengembangan' => 'required',
+        'tahapan' => 'required',
+        'periode' => 'required',
+        'hasil' => 'required',
+        
+    ]);
     $jl=JasaLingkungan3::find($id);
     $jl->update([
         'provinsi' => $request->provinsi,
@@ -268,6 +346,19 @@ public function inputjasalingkungan4()
 
 public function store64(Request $request)
 {
+    $this->validate($request, [
+        'provinsi' => 'required',
+        'jenis_jasa_lingkungan'  => 'required',
+        'satuan' => 'required',
+        'keunggulan' => 'required',
+        'lintang'  => 'required',
+        'bujur' => 'required',
+        'pengembangan' => 'required',
+        'tahapan' => 'required',
+        'periode' => 'required',
+        'hasil' => 'required',
+        
+    ]);
     // dd($request->all());
     $jl = JasaLingkungan4::create([
         'provinsi' => $request->provinsi,
@@ -288,6 +379,19 @@ public function store64(Request $request)
 
 public function update64(Request $request, $id)
 {
+    $this->validate($request, [
+        'provinsi' => 'required',
+        'jenis_jasa_lingkungan'  => 'required',
+        'satuan' => 'required',
+        'keunggulan' => 'required',
+        'lintang'  => 'required',
+        'bujur' => 'required',
+        'pengembangan' => 'required',
+        'tahapan' => 'required',
+        'periode' => 'required',
+        'hasil' => 'required',
+        
+    ]);
     $jl=JasaLingkungan4::find($id);
     $jl->update([
         'provinsi' => $request->provinsi,
@@ -348,6 +452,14 @@ public function delete24($id)
 
     public function store5(Request $request)
     {
+        $this->validate($request, [
+            'kayu' => 'required',
+            'nonkayu' => 'required',
+            'jasalingkungan' => 'required',
+            'bisnis' => 'required',
+            'donor' => 'required',
+            
+        ]);
         // dd($request->all());
         $up1=substr($request->kayu, 3,-4);
         $up2=substr($request->nonkayu, 3,-4);
@@ -379,6 +491,15 @@ public function delete24($id)
 
     public function update5(Request $request, $id)
     {
+        $this->validate($request, [
+            'kayu' => 'required',
+            'nonkayu' => 'required',
+            'jasalingkungan' => 'required',
+            'bisnis' => 'required',
+            'donor' => 'required',
+            
+        ]);
+        
         $pe=PotensiEkonomi1::find($id);
         $up1=substr($request->kayu, 3,-4);
         $up2=substr($request->nonkayu, 3,-4);
@@ -418,6 +539,14 @@ public function delete24($id)
 
     public function storepotensiekonomi2(Request $request)
     {
+        $this->validate($request, [
+            'kayu' => 'required',
+            'nonkayu' => 'required',
+            'jasalingkungan' => 'required',
+            'bisnis' => 'required',
+            'donor' => 'required',
+            
+        ]);
         // dd($request->all());
         $up1=substr($request->kayu, 3,-4);
         $up2=substr($request->nonkayu, 3,-4);
@@ -449,6 +578,14 @@ public function delete24($id)
 
     public function updatepotensiekonomi2(Request $request, $id)
     {
+        $this->validate($request, [
+            'kayu' => 'required',
+            'nonkayu' => 'required',
+            'jasalingkungan' => 'required',
+            'bisnis' => 'required',
+            'donor' => 'required',
+            
+        ]);
         $pe=PotensiEkonomi2::find($id);
         $up1=substr($request->kayu, 3,-4);
         $up2=substr($request->nonkayu, 3,-4);
@@ -484,6 +621,14 @@ public function inputpotensiekonomi3()
 
 public function storepotensiekonomi3(Request $request)
 {
+    $this->validate($request, [
+        'kayu' => 'required',
+        'nonkayu' => 'required',
+        'jasalingkungan' => 'required',
+        'bisnis' => 'required',
+        'donor' => 'required',
+        
+    ]);
     // dd($request->all());
     $up1=substr($request->kayu, 3,-4);
     $up2=substr($request->nonkayu, 3,-4);
@@ -515,6 +660,14 @@ public function viewpotensiekonomi3($id)
 
 public function updatepotensiekonomi3(Request $request, $id)
 {
+    $this->validate($request, [
+        'kayu' => 'required',
+        'nonkayu' => 'required',
+        'jasalingkungan' => 'required',
+        'bisnis' => 'required',
+        'donor' => 'required',
+        
+    ]);
     $pe=PotensiEkonomi3::find($id);
     $up1=substr($request->kayu, 3,-4);
     $up2=substr($request->nonkayu, 3,-4);
@@ -551,6 +704,14 @@ public function inputpotensiekonomi4()
 
 public function storepotensiekonomi4(Request $request)
 {
+    $this->validate($request, [
+        'kayu' => 'required',
+        'nonkayu' => 'required',
+        'jasalingkungan' => 'required',
+        'bisnis' => 'required',
+        'donor' => 'required',
+        
+    ]);
     // dd($request->all());
     $up1=substr($request->kayu, 3,-4);
     $up2=substr($request->nonkayu, 3,-4);
@@ -582,6 +743,14 @@ public function viewpotensiekonomi4($id)
 
 public function updatepotensiekonomi4(Request $request, $id)
 {
+    $this->validate($request, [
+        'kayu' => 'required',
+        'nonkayu' => 'required',
+        'jasalingkungan' => 'required',
+        'bisnis' => 'required',
+        'donor' => 'required',
+        
+    ]);
     $pe=PotensiEkonomi4::find($id);
     $up1=substr($request->kayu, 3,-4);
     $up2=substr($request->nonkayu, 3,-4);
