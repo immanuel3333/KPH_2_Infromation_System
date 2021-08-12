@@ -21,6 +21,8 @@ Route::get('/',function(){
 Route::get('login', 'AuthController@index')->name('login');
 Route::post('proses_login', 'AuthController@proses_login')->name('proses_login');
 Route::get('logout', 'AuthController@logout')->name('logout');
+Route::get('/password', 'AuthController@edit')->name('password-edit');
+Route::patch('/password', 'AuthController@update')->name('password-edit');
 
 Route::get('/inputartikel', 'HomeController@inputartikel')->name('inputartikel');
 Route::get('/indexartikel', 'HomeController@article')->name('indexartikel');

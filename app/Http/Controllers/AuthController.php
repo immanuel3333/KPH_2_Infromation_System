@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Hash;
 
 class AuthController extends Controller
 {
@@ -38,8 +39,11 @@ class AuthController extends Controller
                     return redirect()->intended('home5');
                 }
                 return redirect()->intended('/');
+
+                return redirect('login');
+            }else{
+                return back()->withErrors(['password' => 'Password salah']);
             }
-            return redirect('login');
     }
 
     public function logout(Request $request)
@@ -48,4 +52,31 @@ class AuthController extends Controller
         Auth::logout();
         return redirect('landingpage');
     }
+
+    public function edit()
+    {
+        return view('auth.edit');
+    }
+
+    public function update()
+    {
+        request()->validate([
+            'old_password' => 'required',
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
+
+        $currentPassword = auth()->user()->password;
+        $old_password = request('old_password');
+
+        if(Hash::check($old_password, $currentPassword)){
+            auth()->user()->update([
+                'password' => bcrypt(request('password')),
+            ]);
+            return back()->with('success','Password telah diganti');
+
+        } else {
+            return back()->withErrors(['old_password' => 'Pastikan password sesuai']);
+        }
+    }
+
 }

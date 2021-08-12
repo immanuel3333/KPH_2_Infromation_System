@@ -117,6 +117,45 @@
                         <div class="mm-navbar-logo d-flex align-items-center justify-content-between">
                             <i class="ri-menu-line wrapper-menu"></i>
                         </div>
+
+                        <div class="ml-auto">
+                            <div id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto navbar-list align-items-center">
+                                    <!-- Login Button -->
+                                    <li class="nav-item nav-icon dropdown">
+                                        <a href="#" class="nav-item nav-icon dropdown-toggle pr-2 search-toggle"
+                                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <img src="{{ asset('img/change.png') }}" class="img-fluid avatar-rounded"
+                                                alt="user">
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                            <li class="dropdown-item d-flex svg-icon">
+                                                <svg class="svg-icon mr-0 text-primary" id="h-01-p" width="20"
+                                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                                <a href="{{ route('password-edit') }}">Ganti Password</a>
+                                            </li>
+                                            <li class="dropdown-item  d-flex svg-icon border-top">
+                                                <svg class="svg-icon mr-0 text-primary" id="h-05-p" width="20"
+                                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                                                </svg>
+                                                <a href="{{ route('logout') }}">Keluar</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+
                     </nav>
                 </div>
             </div>
@@ -157,12 +196,6 @@
 
                                     <i class="las la-angle-right mm-arrow-right arrow-active"></i>
                                     <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
-                                </a>
-                            </li>
-
-                            <li class="">
-                                <a href="{{ route('logout') }}" >
-                                    <span class="ml-2">Logout </span>
                                 </a>
                             </li>
                         </ul>

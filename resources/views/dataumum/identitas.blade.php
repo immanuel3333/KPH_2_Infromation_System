@@ -1,5 +1,5 @@
 <center>
-    <div class="col-md-9 ">
+    <div class="col-md">
         <table class="table table-bordered-2">
             <thead class="thead-black">
               <tr style="background-color: lightgreen">
