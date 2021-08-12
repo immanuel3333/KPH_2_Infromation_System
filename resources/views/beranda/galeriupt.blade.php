@@ -21,8 +21,7 @@
                                 <div class="portfolio-info">
                                     <p style="padding-left:350px;">{{$gl->tanggal}}</p>
                                     <h4><a href="#">{{$gl->keterangan}}</a></h4>
-                                    <a href="{{ url('view4',$gl->id)}}"><i class="fas fa-edit"></i></a>
-                                    <a href="{{ url('destroy4',$gl->id)}}"><i class="fas fa-trash-alt" style="color:red;"></i></a>
+
                                 </div>
                             </div>
                         </div>
