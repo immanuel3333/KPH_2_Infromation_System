@@ -1,39 +1,46 @@
 @include('layouts.headeradmin')
-<div class="container" style="padding-bottom:50px;">
-    <table class="table table-striped table-hover table-sm table-bordered">
-		<thead>
-			<tr>
-                <th>No</th>
-				<th>Judul</th>
-				<th>Keterangan</th>
-				<th>File</th>
-				<th>Action</th>
-			</tr>
-		</thead>
-		<tbody>
-            <?php $no = 0;?>
-                @foreach ($law as $hasil)
-            <?php $no++ ;?>
+</div>
+<div class="content-page" style="background: url('{{ asset('img/backgroundadmin.png') }}');background-size:850px;background-repeat: repeat-y;background-position:center ;">
+    <div class="container-fluid ">
+        <div class="card">
+                        <center>
+                        <p>Menambah Struktur</p>
+                        <a href="{{ route('strukturs.create') }}" class="btn btn-md btn-success mb-3">TAMBAH BLOG</a>
+                        <p style="font-size:50px; font-family:balthazar;"><b> Struktur Organisasi </p><br>
+                              @forelse ($blogs as $blog)
+                                        <p><img src="{{ asset( $blog->image ) }}" width="592px" height="438px"></p><br>
+                                        <p><img src="{{ asset( $blog->image2 ) }}" width="592px" height="391px"></p><br>
+                                        <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('strukturs.destroy', $blog->id) }}" method="POST">
+                                            <a href="{{ route('strukturs.edit', $blog->id) }}" class="btn btn-sm btn-primary">EDIT</a>
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
+                                        </form>
+                              @empty
+                                  <div class="alert alert-danger">
+                                      Data Struktur belum Tersedia.
+                                  </div>
+                              @endforelse
 
-			<tr>
-                <td>{{ $no }}</td>
-				<td>{{ $hasil->judul }}</td>
-                <td>{{ $hasil->keterangan }}</td>
-                <td>
-                    <a href="{{ asset($hasil->file)}}" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview">{{ $hasil->file }}</a>
-                </td>
-				<td>
+                        </center>
+        </div>
+                    </div>
+                </div>
 
-                    <form action="{{url('/destroyperaturan')}}/{{$hasil->id}}" method="POST">
-                        @csrf
-                    <a href="{{url('/viewperaturan12')}}/{{$hasil->id}}" class="btn btn-primary btn-sm">Edit</a>
-                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                    </form>
-				</td>
-			</tr>
-			@endforeach
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-		</tbody>
-	</table>
-@include('layouts.footeradmin')
+    <script>
+        //message with toastr
+        @if(session()-> has('success'))
 
+            toastr.success('{{ session('success') }}', 'BERHASIL!');
+        @elseif(session()-> has('error'))
+            toastr.error('{{ session('error') }}', 'GAGAL!');
+
+        @endif
+    </script>
+
+
+@include('layouts.footer')

@@ -1,17 +1,18 @@
 @include('layouts.headeradmin')
 </div>
-    <div class="container mt-5 mb-5">
+    <div class="container mt-5 mb-5 ">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 pl-5">
                 <div class="card border-0 shadow rounded" >
                     <div class="card-body" >
-                    @foreach($strukturs as $st)
+                        <p><strong>Edit Struktur</strong></p>
+                    @foreach($blogs as $st)
                         <form action="{{ route('strukturs.update', $st->id) }}" method="POST" enctype="multipart/form-data">
 
                             @csrf
                             @method('PUT')
                     @endforeach
-                            <div class="form-group">
+                            <div class="form-group pr-3">
                                 <label class="font-weight-bold">GAMBAR</label>
                                 <input type="file" class="form-control" name="image">
                             </div>

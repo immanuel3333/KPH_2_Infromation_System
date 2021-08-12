@@ -14,8 +14,8 @@
                                       Data Blog belum Tersedia.
                                   </div>
                               @endforelse
-                          {{ $blogs->links() }}
-                        <p>Keterangan Struktur Organisasi</p><br></b>
+
+
                         </center>
                     </div>
                 </div>

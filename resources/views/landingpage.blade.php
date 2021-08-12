@@ -37,7 +37,7 @@
                             </figure>
 
                             <div class="portfolio-info">
-                                <h4><a href="{{ route('bshowgaleriunitkerja') }}">Galeri Unit 1</a></h4>
+                                <h5><a href="{{ route('bshowgaleriunitkerja') }}">Galeri Unit VI Simalungun </a></h5>
 
                             </div>
                             </div>
@@ -52,7 +52,7 @@
                             </figure>
 
                             <div class="portfolio-info">
-                                <h4><a href="{{ route('bshowgaleriunitkerja2') }}">Galeri Unit 2</a></h4>
+                                <h5><a href="{{ route('bshowgaleriunitkerja2') }}">Galeri Unit IX Sergai</a></h5>
 
                             </div>
                             </div>
@@ -67,7 +67,7 @@
                             </figure>
 
                             <div class="portfolio-info">
-                                <h4><a href="{{ route('bshowgaleriunitkerja3') }}">Galeri Unit 3</a></h4>
+                                <h5><a href="{{ route('bshowgaleriunitkerja3') }}">Galeri Unit X Batubara</a></h5>
 
                             </div>
                             </div>
@@ -82,7 +82,7 @@
                             </figure>
 
                             <div class="portfolio-info">
-                                <h4><a href="{{ route('bshowgaleriunitkerja4') }}">Galeri Unit 4</a></h4>
+                                <h5><a href="{{ route('bshowgaleriunitkerja4') }}">Galeri Unit XII Simalungun</a></h5>
 
                             </div>
                             </div>

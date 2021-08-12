@@ -1,12 +1,13 @@
 @include('layouts.headeradmin')
 </div>
     <div class="container mt-5 mb-5">
-        <div class="row">
-            <div class="col-md-12">
+        <div class="row pr-5">
+            <div class="col-md-12 ">
+                <center>
                 <div class="card border-0 shadow rounded">
-                    <div class="card-body">
+                    <div class="card-body pl-4">
                         <form action="{{ route('strukturs.store') }}" method="POST" enctype="multipart/form-data">
-
+                            <p><strong>Menambah Struktur</strong></p>
                             @csrf
 
                             <div class="form-group">
@@ -38,6 +39,7 @@
                         </form>
                     </div>
                 </div>
+            </center>
             </div>
         </div>
     </div>
