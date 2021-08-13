@@ -1,22 +1,22 @@
 @include('layouts.header')
 </div>
-<div class="content-page">
+<div class="content-page" style="background: url('{{ asset('img/backgroundadmin.png') }}');background-size:850px;background-repeat: repeat-y;background-position:center ;">
     <div class="container-fluid ">
-        <div class="card ml-4">
+        <div class="card">
                         <center>
-                        <p><b> Struktur Organisasi </p><br>
+                        <p style="font-size:50px; font-family:balthazar;"><b> Struktur Organisasi </p><br>
                               @forelse ($blogs as $blog)
-                                        <p><img src="{{ asset( $blog->image ) }}"></p><br>
-                                        <p><img src="{{ asset( $blog->image2 ) }}"></p><br>
-
+                                        <p><img src="{{ asset( $blog->image ) }}" width="592px" height="438px"></p><br>
+                                        <p><img src="{{ asset( $blog->image2 ) }}" width="592px" height="391px"></p><br>
+                            
                               @empty
                                   <div class="alert alert-danger">
-                                      Data Blog belum Tersedia.
+                                      Data Struktur belum Tersedia.
                                   </div>
                               @endforelse
 
-
                         </center>
+        </div>
                     </div>
                 </div>
 
