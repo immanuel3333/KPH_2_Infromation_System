@@ -29,7 +29,7 @@
               @endforeach
             </tbody>
           </table>
-          <a href="{{url('/viewrphjp')}}/{{$rp->id}}" class="btn btn-sm btn-primary pl-10">EDIT</a>
+          <a href="{{url('/viewrphjp2')}}/{{$rp->id}}" class="btn btn-sm btn-primary pl-10">EDIT</a>
     </div>
 </center><br>
 

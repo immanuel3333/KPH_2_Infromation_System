@@ -84,7 +84,7 @@
               <tr>
                 <th scope="row">15</th>
                 <td>Latitude</td>
-                <td>{{$idn->longitude}}</td>
+                <td>{{$idn->latitude}}</td>
               </tr>
               @endforeach
             </tbody>

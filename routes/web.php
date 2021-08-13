@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Route;
         Route::patch('/password', 'AuthController@update')->name('password-edit');
         Route::patch('/password', 'AuthController@update2')->name('password-update');
 
-
+        Route::get('/showartikelid/{artikel}', 'HomeController@showartikelid')->name('detail-artikel');
         Route::get('/landingpage', 'HomeController@banner')->name('landingpage');
         Route::get('/profilpegawai', 'HomeController@profilpegawai');
         Route::get('/tes', 'PostController@index');
@@ -123,7 +123,7 @@ Route::group(['middleware' => ['auth']], function(){
         Route::get('/deleteartikel/{id}', 'AdminController@deleteartikel');
         Route::get('/viewartikel/{id}', 'AdminController@viewartikel');
         Route::get('/showartikel', 'AdminController@showartikel');
-        Route::get('/showartikelid/{artikel}', 'AdminController@showartikelid')->name('detail-artikel');
+      
 
         //VISIMISI
         Route::get('/inputvisimisi', 'AdminController@inputvisimisi')->name('inputvisimisi');
@@ -131,7 +131,7 @@ Route::group(['middleware' => ['auth']], function(){
         Route::get('/showvisimisi', 'AdminController@showvisimisi')->name('showvisimisi');
 
         Route::post('/update-visimisi/{id}', 'AdminController@updatevisimisi')->name('update-visimisi');
-        Route::get('/view1/{id}', 'AdminController@view1');
+        Route::get('/viewvisimisi/{id}', 'AdminController@viewvisimisi');
 
         //TUGAS FUNGSI
         Route::get('/inputtugasfungsi', 'AdminController@inputtugasfungsi')->name('inputtugasfungsi');

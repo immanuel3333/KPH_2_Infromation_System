@@ -72,7 +72,7 @@
             </tbody>
           </table>
 
-          <a href="{{url('/viewkepalakph')}}/{{$kkph->id}}" class="btn btn-sm btn-primary pl-10">EDIT</a>
+          <a href="{{url('/viewkepalakph3')}}/{{$kkph->id}}" class="btn btn-sm btn-primary pl-10">EDIT</a>
     </div>
 </center><br>
 

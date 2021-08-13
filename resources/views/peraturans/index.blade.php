@@ -1,4 +1,4 @@
-@include('layouts.header')
+@include('layouts.headeradmin')
 <div class="container" style="padding-bottom:50px;">
     <div class="card-body">
 
@@ -8,7 +8,8 @@
                 <th>No</th>
 				<th>Judul</th>
 				<th>Keterangan</th>
-				<th>Download File</th>
+				<th>File</th>
+                <th>Aksi</th>
                </tr>
             </thead>
             <tbody>
@@ -24,6 +25,7 @@
                     <td>{{ $n }}</td>
                     <td>{{ $hasil->judul }}</td>
                 <td>{{ $hasil->keterangan }}</td>
+                <td><a href="{{ asset($hasil->file)}}" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview">{{ $hasil->file }}</a></td>
                 <td>
                     <form action="{{url('/destroyperaturan')}}/{{$hasil->id}}" method="POST">
                         @csrf

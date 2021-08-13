@@ -415,7 +415,7 @@
                                 <a href="{{ route('peraturans') }}" class="collapsed svg-icon">
                                     <i class="">
                                         <img src="{{ asset('icon/peraturan.png')}}" alt="icon" width="20">
-                                    </i>
+                                    </i>    
 
                                     <span class="ml-2">Kelola Peraturan </span>
 

@@ -437,8 +437,6 @@ class SDMController extends Controller
         return redirect('showpendidikan2');
 
     }
-
-
     //PENDIDIKAN3
 
     public function inputpendidikan3()
@@ -463,7 +461,7 @@ class SDMController extends Controller
             'lainnya' => $request->lainnya,
         ]);
 
-        return redirect('showpendidikan3');
+        return redirect('show-sdm3');
     }
 
     public function showpendidikan3(Request $request)

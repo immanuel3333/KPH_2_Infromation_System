@@ -1,73 +1,53 @@
-</div>
-<div class="bg-light text-muted pt-5" style="position:bottom;">
-            <section class="col-md-12 col-sm-12">
-                <div class="text-center" style="background-color:#0C3310;">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <img src="{{ asset('img/logo1.png')}}" style="padding-top:50px; padding-leftpx:10px;" alt="" height="200" width="200">
-                        </div>
-                        <div class="col-md-3" style="text-align:left;">
-                            <div class="row">
-                                <div class="col-md">
-                                    <p style="font-family:Balthazar; font-size:25px; color:white;">Kontak Kami</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md" style="line-height:1px;">
-                                    <p style="font-family:Balthazar; font-size:20px; color:#878181;">Nomor Telepon </p>
-                                    <p style="font-family:Balthazar; font-size:15px; color:white;">+62 0622-21216 </p>
-
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md" style="line-height:0.5px;">
-                                    <p style="font-family:Balthazar; font-size:20px; color:#878181;">Email </p>
-                                    <p style="font-family:Balthazar; font-size:15px; color:white; height:auto;">uptkphwilayah2siantar@gmail.com </p>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3" style="text-align:left;">
-                            <div class="row">
-                                <div class="col-md">
-                                    <p style="font-family:Balthazar; font-size:25px;color:white;">Media Sosial</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md">
-                                    <img src="img/fb.png" style="padding-left:50px;" alt="">
-                                    <br>
-                                    <p class="pl-4" style="font-family:Balthazar; font-size:18px; color:white; padding-top:25px;">Kph Pematangsiantar</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3" style="text-align:left;">
-                            <div class="row">
-                                <div class="col-md">
-                                    <p style="font-family:Balthazar; font-size:25px;color:white;">Lokasi</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md">
-                                    <p style="font-family:Balthazar; font-size:20px;color:white;">Jln. Gunung Simanuk-manuk No.9 Pematangsiantar
-(dekat Siantar Zoo, depan Rumah Sakit Tentara Siantar) </p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<div class="mm-footer">
+    <div class="text-center" style="background-color:#0C3310;">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <img style="width: 10em; height: auto;" src="img/Logo3.png">
+                    <hr class="light">
+                    <p class="">Nomor Telepon</p>
+                    <p>+62 0622-21216 </p>
+                    <p>Email</p>
+                    <p>uptkphwilayah2siantar@gmail.com</p>
                 </div>
-            </section>
-            <div class="text-center border border-white" style="background-color: #0C3310;">
-                © 2021 Copyright:
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5>Media Social</h5>
+                    <hr class="light">
+                    <div class="social ">    
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p>KPH Pematangsiantar</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5>Lokasi</h5>
+                    <hr class="light">
+                    <p>Jln. Gunung Simanuk-manuk No.9, Pematangsiantar 
+                        (dekat Siantar Zoo, Depan Rumah Sakit Tentara Siantar) </p>
+                    <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
+                    <!-- Histats.com  START  (aync)-->
+                    <script type="text/javascript">var _Hasync= _Hasync|| [];
+                    _Hasync.push(['Histats.start', '1,4575688,4,321,112,62,00011001']);
+                    _Hasync.push(['Histats.fasi', '1']);
+                    _Hasync.push(['Histats.track_hits', '']);
+                    (function() {
+                    var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+                    hs.src = ('//s10.histats.com/js15_as.js');
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+                    })();</script>
+                    <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4575688&101" alt="html hit counter" border="0"></a></noscript>
+                    <!-- Histats.com  END  -->
+                </div>
+                <div class="col-12">
+                    <hr class="light-100">
+                    <h5>Copyright &copy; 2021</h5>
+                </div>
             </div>
+        </div>
+    </div>
 </div>
-
-
-
-
-
-
     <!-- script komentar -->
     <script>
         function balasKomentar(id, title) {
@@ -107,7 +87,7 @@
 // kph2
 var greenIcon = L.icon({
     iconUrl: 'img/kph2.png',
-    iconSize:     [50, 100], // size of the icon
+    iconSize:     [50, 75], // size of the icon
     shadowSize:   [50, 64], // size of the shadow
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
     shadowAnchor: [4, 62],  // the same for the shadow
@@ -138,7 +118,7 @@ L.marker([2.9514596123305656, 99.05752741133092], {icon: greenIcon}).addTo(map).
 // Unit vi
 var greenIcon = L.icon({
     iconUrl: 'img/Unit VI mark.png',
-    iconSize:     [50, 100], // size of the icon
+    iconSize:     [50, 75], // size of the icon
     shadowSize:   [50, 64], // size of the shadow
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
     shadowAnchor: [4, 62],  // the same for the shadow
@@ -170,7 +150,7 @@ L.marker([3.10527455742, 98.85584026240], {icon: greenIcon}).addTo(map).bindPopu
 // Unit IX
 var greenIcon = L.icon({
     iconUrl: 'img/Unit IX mark.png',
-    iconSize:     [50, 100], // size of the icon
+    iconSize:     [50, 75], // size of the icon
     shadowSize:   [50, 64], // size of the shadow
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
     shadowAnchor: [4, 62],  // the same for the shadow
@@ -202,7 +182,7 @@ L.marker([3.26607360391, 98.97242370140], {icon: greenIcon}).addTo(map).bindPopu
 // Unit X
 var greenIcon = L.icon({
     iconUrl: 'img/Unit X mark.png',
-    iconSize:     [50, 100], // size of the icon
+    iconSize:     [50, 75], // size of the icon
     shadowSize:   [50, 64], // size of the shadow
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
     shadowAnchor: [4, 62],  // the same for the shadow
@@ -234,7 +214,7 @@ L.marker([3.22020055091, 99.63116603670], {icon: greenIcon}).addTo(map).bindPopu
 // Unit XII
 var greenIcon = L.icon({
     iconUrl: 'img/unit XII mark.png',
-    iconSize:     [50, 100], // size of the icon
+    iconSize:     [50, 75], // size of the icon
     shadowSize:   [50, 64], // size of the shadow
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
     shadowAnchor: [4, 62],  // the same for the shadow

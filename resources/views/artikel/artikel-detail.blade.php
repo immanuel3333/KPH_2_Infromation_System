@@ -1,4 +1,4 @@
-@include('layouts.headeradmin')
+@include('layouts.header')
 </div>
 
 <div class="content-page" style="background: url('{{ asset('img/backgroundadmin.png') }}');background-size:850px;background-repeat: repeat-y;background-position:center ;">

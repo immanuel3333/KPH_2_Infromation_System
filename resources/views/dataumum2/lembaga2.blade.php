@@ -81,7 +81,7 @@
             </tbody>
           </table>
 
-          <a href="{{url('/viewlembaga')}}/{{$lm->id}}" class="btn btn-sm btn-primary pl-10">EDIT</a>
+          <a href="{{url('/viewlembaga2')}}/{{$lm->id}}" class="btn btn-sm btn-primary pl-10">EDIT</a>
     </div>
 </center><br>
 

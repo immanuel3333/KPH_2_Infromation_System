@@ -12,6 +12,7 @@
       {{ Session('success') }}
 	</div> 
   @endif
+  
 </div>
 
 <div class="content-page"> 
@@ -42,9 +43,6 @@
                 <button type="submit" class="btn btn-success ml-auto">Simpan</button>
             </div>
         </form>
-
-      
-
     </div>
 
     @include('layouts.footer')

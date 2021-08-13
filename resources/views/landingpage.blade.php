@@ -1,27 +1,78 @@
 @include('layouts.header')
-            <div class="content-page " >
-
-                    <h1>Artikel Terbaru</h1>
-                    <div class="row">
-                    @foreach ($artikel as $a)
-                        <div class="col-md-6">
-                            <div class=" bg-secondary text-white">
-                                <img src="{{ asset($a->gambar) }}" class="card-img" alt="#" width="700" height="500">
-                                    <div class="card-img-overlay  d-flex align-items-end" style="padding-bottom:50px;">
-                                     <a href="{{ route('detail-artikel',$a->id) }}">
-                                        <h4 class="card-title text-white">{{$a->judul}}</h4>
-                                     </a>
-                                    </div>
-                                    <div>
-                                        <span style="color:black;">{{$a->created_at->diffForHumans()}}</span>
-                                    </div>
+        <div class="content-page">
+            <div class="container-fluid padding">                  
+            <h1 class="col-12 text-center">Artikel Terbaru</h1>
+            
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    @foreach($artikel as $a)
+                        <li data-target="#carouselExampleIndicators" data-slide-to="{{ $loop->index }}" class="{{ $loop->first ? 'active' : '' }}"></li>
+                    @endforeach
+                </ol>
+                <div class="carousel-inner">
+                    @foreach( $artikel as $a )
+                    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                        <img src="{{ is_null($a->gambar) ? asset('public/artikel/No image.png') : $a->gambar }}" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                        <a href="{{ route('detail-artikel',$a->id) }}">
+                            <h5 class="display-5 font-weight-bold">{{$a->judul}}</h5>
+                        </a>
+                        </div>
+                    </div>
+                    @endforeach  
+                     <!-- <div class="carousel-item active">
+                        <img class="d-block w-100" src="..." alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>...</h5>
+                            <p>...</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="..." alt="Second slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>...</h5>
+                            <p>...</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="..." alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>...</h5>
+                                <p>...</p>
                             </div>
                         </div>
-                         @endforeach
+                    </div> -->
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="fas fa-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="fas fa-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+                
+            <!-- <div class="row">
+            @foreach ($artikel as $a)
+                <div class="col-md-6">
+                    <div class=" bg-secondary text-white">
+                        <img src="{{ asset($a->gambar) }}" class="card-img" alt="#" width="700" height="500">
+                            <div class="card-img-overlay  d-flex align-items-end" style="padding-bottom:50px;">
+                                <a href="{{ route('detail-artikel',$a->id) }}">
+                                <h4 class="card-title text-white">{{$a->judul}}</h4>
+                                </a>
+                            </div>
+                            <div>
+                                <span style="color:black;">{{$a->created_at->diffForHumans()}}</span>
+                            </div>
                     </div>
+                </div>
+                    @endforeach
+            </div> -->
 
 
-
+    
                 <!--==========================
                 Portfolio Section
                 ============================-->
@@ -92,31 +143,26 @@
 
                 </section><!-- #portfolio -->
 
-               <div class="card-group">
-                    <div class="card col-md-8" id="mapid" style="width:100%;">
-
-                    </div>
-
-                    <section class="pl-4 card col-md-4 section-bg"  id="portfolio">
-                    <div class="portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="portfolio-wrap">
-                            <figure>
-                                <img src="img/contoh1.png" class="img-fluid" alt="">
-                                <a href="img/contoh1.png" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
-                                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                            </figure>
-
-                            <div class="portfolio-info">
-                                <h4><a href="{{ route('galeriupt') }}">Galeri Foto KPH</a></h4>
-
-                            </div>
-                            </div>
+               <div class="">
+                <div class="card-group portfolio-wrap">
+                        <div class="portfolio-item card col-md-8" id="mapid" style="width:100%;">
                         </div>
-
-                    </section>
-
-
-                </div>
+                        <section class="pl-4 card col-md-4"  id="portfolio">
+                        <div class="portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="">
+                                    <figure>
+                                        <img src="img/contoh1.png" class="img-fluid" alt="">
+                                        <a href="img/contoh1.png" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+                                        <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                                    </figure>
+                                    <div class="portfolio-info">
+                                        <h4><a href="{{ route('galeriupt') }}">Galeri Foto KPH</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+               </div>
 
 
 
@@ -165,14 +211,6 @@
                                                 <h4>No Comments</h4>
                                             @endforelse
                                         </div>
-
-
-
-
-
-
-
-
                                         </div>
                                     </div>
                                 </div>
@@ -181,6 +219,11 @@
                     </div>
                 </div>
 
+  
+
+
+
 
             </div>
+        </div>
 @include('layouts.footer')

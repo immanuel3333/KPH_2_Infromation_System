@@ -254,7 +254,7 @@ class AdminController extends Controller
 
     public function showgaleriupt(Request $request)
     {
-        $gl = DB::table('galeriupt')->get();
+        $gl = Galeriupt::latest()->get();
         return view('showgaleriupt', compact('gl'));
     }
 
@@ -302,18 +302,13 @@ class AdminController extends Controller
 
     //ARTIKEL
 
-    public function showartikelid(Artikel $artikel)
-    {
-        $artikel_detail = $artikel;
-         return view('artikel.artikel-detail',compact('artikel_detail'));
-        // dd($artikel);
-    }
-
+   
     public function showartikel()
     {
         $artikelall = Artikel::latest()->get();
         return view('artikel.showartikel', compact('artikelall'));
     }
+    
 
     public function comment(Request $request)
         {

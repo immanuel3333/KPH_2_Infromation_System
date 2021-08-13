@@ -89,7 +89,7 @@
               @endforeach
             </tbody>
           </table>
-          <a href="{{url('/viewidentitas2')}}/{{$idn->id}}" class="btn btn-sm btn-primary pl-10">EDIT</a>
+          <a href="{{url('/viewidentitas4')}}/{{$idn->id}}" class="btn btn-sm btn-primary pl-10">EDIT</a>
     </div>
 </center><br>
 

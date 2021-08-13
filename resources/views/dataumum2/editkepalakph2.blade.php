@@ -19,7 +19,7 @@
       <div class="row">
         <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
               <div class="card-body">
-                <form method="POST" action="{{ route('update-kepalakph', $kkph->id) }}" enctype="multipart/form-data">
+                <form method="POST" action="{{ route('update-kepalakph2', $kkph->id) }}" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
                         <div class="card col-md-12">
@@ -66,16 +66,16 @@
                               <input class="form-control" type="text" name="diklat" value="{{$kkph->diklat}}" >
                                 </div>
                                 <div class="form-group pt-1">
-                                    <p>Pendidikan</p>
+                                    <p>Jenis Pendidikan</p>
                                     <select name='pendidikan'>
                                         <option selected='selected'>--Pilih Pendidikan--</option>
                                         <option value='SD'>SD</option>
                                         <option value='SMP'>SMP</option>
-                                        <option value='SMP'>SMA</option>
-                                        <option value='SMP'>D3</option>
-                                        <option value='SMP'>S1</option>
-                                        <option value='SMP'>S2</option>
-                                        <option value='SMP'>S3</option>
+                                        <option value='SMA'>SMA</option>
+                                        <option value='D3'>D3</option>
+                                        <option value='S1'>S1</option>
+                                        <option value='S2'>S2</option>
+                                        <option value='S3'>S3</option>
                                     </select>
                                 </div>
                                 <div class="form-group pt-1">
