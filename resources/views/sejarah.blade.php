@@ -1,59 +1,41 @@
-@include('layouts.header')
+@include('layouts.headeradmin')
+</div>
+<div class="content-page pt-5" style="background: url('{{ asset('img/backgroundadmin.png') }}');background-size:850px;background-repeat: repeat-y;background-position:center ;">
+    <div class="container-fluid ">
+        <div class="card">
+<p style="font-size: 28px font-family:Balthazar"><strong>Sejarah</strong></p>
 
-<div class="content-page">
-                
-                <div class="row">
-                <div class="pl-2">
-                    <div class="card-deck">
-                        <div class="card col-md-3">
-                            <img class="card-img-top" src="..." alt="Card image cap">
-                            <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <div class="row">
+                                <!-- Post content -->
+                                <div class="col-md-12">
+                                    @foreach($sj as $sj)
+                                    <div class="section-row sticky-container">
+                                        <div class="text-center">
+
+                                            <figure class="figure-img">
+                                                <img class="img-responsive" src="{{ asset($sj->gambar)}}"
+                                                    width="600px" height="300px" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="text-justify">
+                                            {!! $sj->sejarah !!}
+                                        </div>
+
+                                        <br>
+                                        <a href="{{url('/view3')}}/{{$sj->id}}" class="ml-auto">
+                                        <button type="submit" class="btn" style="background-color: #99F07A;">Edit</button>
+                                        </a>
+                                    </div>
+                                    @endforeach
+
+
+                                </div>
+
                             </div>
-                        </div>
-                        <div class="card col-md-3">
-                            <img class="card-img-top" src="..." alt="Card image cap">
-                            <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                        <div class="card col-md-3">
-                            <img class="card-img-top" src="..." alt="Card image cap">
-                            <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                        <div class="card col-md-3">
-                            <img class="card-img-top" src="..." alt="Card image cap">
-                            <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
 
-                        <div class="row">
-                            <div class=" card col-md-12">
-                                <div id="mapid" style=width:100%;></div>
-                            </div>
-                        </div>
-                </div>
-                    
-                    <!-- <div class="container">
-                        <img src="img/kph2.png" class="center card" style="border-radius: 50%;">                    
-                    </div> -->
+        </div>
+    </div>
+    </div>
 
 
-                
-                </div>
-
-
-            </div>
-@include('layouts.footer')
+    @include('layouts.footer')
