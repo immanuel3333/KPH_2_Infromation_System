@@ -113,7 +113,7 @@ L.icon = function (options) {
     return new L.Icon(options);
 };
 
-L.marker([2.9514596123305656, 99.05752741133092], {icon: greenIcon}).addTo(map).bindPopup("Kantor dinas kehutanan");
+L.marker([2.9514596123305656, 99.05752741133092], {icon: greenIcon}).addTo(map).bindPopup("UPT.KPH2 Pematangsiantar, Jln. Gunung Simanuk-manuk No.9 Pematangsiantar (dekat Siantar Zoo, depan Rumah Sakit Tentara Siantar)");
 
 // Unit vi
 var greenIcon = L.icon({
@@ -144,7 +144,7 @@ L.icon = function (options) {
     return new L.Icon(options);
 };
 
-L.marker([3.10527455742, 98.85584026240], {icon: greenIcon}).addTo(map).bindPopup("Unit VI Simalungun");
+L.marker([3.10527455742, 98.85584026240], {icon: greenIcon}).addTo(map).bindPopup("KPHP Unit VI Simalungun, Jln. Sutomo No.01 Kel. Sondi Raya Kec. Raya Kab.SImalungun");
 
 
 // Unit IX
@@ -176,7 +176,7 @@ L.icon = function (options) {
     return new L.Icon(options);
 };
 
-L.marker([3.26607360391, 98.97242370140], {icon: greenIcon}).addTo(map).bindPopup("Unit IX");
+L.marker([3.26607360391, 98.97242370140], {icon: greenIcon}).addTo(map).bindPopup("KPHL Unit IX Serdang Bedagai, Jln. Kartini No. 57 Kota Tebing Tinggi Provinsi Sumatera Utara");
 
 
 // Unit X
@@ -208,7 +208,7 @@ L.icon = function (options) {
     return new L.Icon(options);
 };
 
-L.marker([3.22020055091, 99.63116603670], {icon: greenIcon}).addTo(map).bindPopup("Unit X");
+L.marker([3.22020055091, 99.63116603670], {icon: greenIcon}).addTo(map).bindPopup("KPHL Unit X Batu Bara, Jln. Lintas Sumatera Desa Petatal Kecamatan Talawi Kabupaten Batu Bara Provinsi Sumatera Utara");
 
 
 // Unit XII
@@ -240,7 +240,7 @@ L.icon = function (options) {
     return new L.Icon(options);
 };
 
-L.marker([2.76875899525, 98.98531695260], {icon: greenIcon}).addTo(map).bindPopup("Unit XII");
+L.marker([2.76875899525, 98.98531695260], {icon: greenIcon}).addTo(map).bindPopup("KPHP Unit XII Simalungun, Jln. Gunung Simanuk-manuk No.9 Pematangsiantar (dekat Siantar Zoo, depan Rumah Sakit Tentara Siantar)");
 
 
 
