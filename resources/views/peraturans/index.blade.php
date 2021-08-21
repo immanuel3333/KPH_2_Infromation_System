@@ -1,6 +1,9 @@
-@include('layouts.headeradmin')
+@include('layouts.header')
 <div class="container" style="padding-bottom:50px;">
     <div class="card-body">
+        <a href="{{url('/inputperaturan')}}" >
+            <button type="submit" class="btn" style="background-color: #99F07A; float:right;">Tambah</button>
+        </a>
 
         <table id="datatable" class="table data-table table-striped table-bordered" >
             <thead>
@@ -8,7 +11,7 @@
                 <th>No</th>
 				<th>Judul</th>
 				<th>Keterangan</th>
-				<th>File</th>
+				<th>Download File</th>
                 <th>Aksi</th>
                </tr>
             </thead>
@@ -25,7 +28,7 @@
                     <td>{{ $n }}</td>
                     <td>{{ $hasil->judul }}</td>
                 <td>{{ $hasil->keterangan }}</td>
-                <td><a href="{{ asset($hasil->file)}}" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview">{{ $hasil->file }}</a></td>
+                <td>{{ $hasil->file }}</td>
                 <td>
                     <form action="{{url('/destroyperaturan')}}/{{$hasil->id}}" method="POST">
                         @csrf
