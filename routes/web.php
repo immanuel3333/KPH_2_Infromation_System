@@ -41,6 +41,7 @@ use Illuminate\Support\Facades\Route;
         Route::get('/bidentitas', 'HomeController@identitas')->name('bidentitas');
         Route::get('/bkepalakph', 'HomeController@kepalakph')->name('bkepalakph');
         Route::get('/bfasilitas', 'HomeController@fasilitas')->name('bfasilitas');
+        Route::get('/viewfasilitas1', 'HomeController@viewfasilitas1');
         Route::get('/blembaga', 'HomeController@lembaga')->name('blembaga');
         Route::get('/brphjp', 'HomeController@rphjp')->name('brphjp');
 

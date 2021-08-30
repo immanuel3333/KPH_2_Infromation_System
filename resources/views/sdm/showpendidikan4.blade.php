@@ -1,5 +1,5 @@
-
 </div>
+<h1 class="text-center">Kelola Pendidikan SDM</h1>
 <div class="content-page">
     <div class="container-fluid">
         <div class="card">

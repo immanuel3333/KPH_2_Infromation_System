@@ -61,9 +61,8 @@
             {{-- Sidebar --}}
             <div class="mm-sidebar sidebar-default" style="fixed-left">
                 <div class="mm-sidebar-logo d-flex align-items-center justify-content-between">
-                    <a href="{{ route('home2') }}" class="header-logo">
-                        <img src="{{ asset('img/newlogo.png') }}" class="img-fluid rounded-normal light-logo " alt="logo">
-                        <img src="{{ asset('img/newlogo.png') }}" class="img-fluid rounded-normal darkmode-logo" alt="logo">
+                    <a href="{{ route('home5') }}" class="header-logo">
+                            <img src="{{ asset('img/logokph.png') }}" class="img-fluid rounded-normal light-logo " alt="logo">  
                     </a>
                     <div class="side-menu-bt-sidebar">
                         <i class="las la-bars wrapper-menu"></i>

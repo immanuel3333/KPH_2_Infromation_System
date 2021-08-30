@@ -1,5 +1,6 @@
 @include('layouts.headeradmin')
 </div>
+<h1 class="text-center">Kelola Ekologi</h1>
 <div class="content-page">
     <div class="container-fluid">
     <div class>

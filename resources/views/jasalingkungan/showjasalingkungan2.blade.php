@@ -1,5 +1,4 @@
-
-
+<h1 class="text-center">Kelola Jasa Lingkungan</h1>
 <div class="container" style="padding-bottom:50px;">
     <table class="table table-striped table-hover" id="jasalingkungan-table">
         <thead>

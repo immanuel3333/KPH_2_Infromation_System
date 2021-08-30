@@ -1,4 +1,4 @@
-@include('layouts.header')
+@include('layouts.headeradmin')
 <div class="container" style="padding-bottom:50px;">
     <div class="card-body">
         <a href="{{url('/inputperaturan')}}" >

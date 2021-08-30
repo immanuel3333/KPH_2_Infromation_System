@@ -69,8 +69,7 @@
         @endforeach
 
 
-        <a href="{{url('/viewpendidikan2')}}/{{$pe->id}}" class="ml-auto">
-        <button type="submit" class="btn" style="background-color: #99F07A;">Edit</button>
+
     </div>
 
 

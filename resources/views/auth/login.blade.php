@@ -40,16 +40,15 @@ Login
 
                                     @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
+                                        {{ __('Lupa Kata Sandi?') }}
                                     </a>
                                 @endif
 
                                 </div>
 
 
-
                                 <div class="d-flex justify-content-between align-items-center mt-5 mb-2">
-                                    <span><!--Belum punya akun? Ayo <a href="" class="text-primary">Daftar--></a></span>
+                                     <a href="{{ route('landingpage') }}" class="btn btn-sm btn-primary">Kembali</a>
                                     <button type="submit" class="btn btn-sm btn-primary">Masuk</button>
                                 </div>
 

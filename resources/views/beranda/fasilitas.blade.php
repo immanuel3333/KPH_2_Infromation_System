@@ -3,49 +3,36 @@
     <table class="table table-striped table-hover" id="fasilitas-table">
         <thead>
             <tr>
+                <th>No</th>
                 <th>Aspek</th>
                 <th>Jumlah</th>
                 <th>Kondisi</th>
                 <th>Status</th>
                 <th>Sumber Dana</th>
-                <th>Action</th>
-
             </tr>
          </thead>
+
+         <tbody>
+            <?php $no = 0;?>
+                @foreach ($fs as $fs)
+            <?php $no++ ;?>
+
+			<tr>
+                <td>{{$no}}</td>
+                <td>{{$fs->aspek}}</td>
+                <td>{{$fs->jumlah}}</td>
+                <td>{{$fs->kondisi}}</td>
+                <td>{{$fs->status}}</td>
+                <td>{{$fs->sumberdana}}</td>
+			</tr>
+			@endforeach
+
+		</tbody>
+
     </table>
 </div>
 
-<script src="{{asset('js/jquery-3.5.1.min.js')}}" ></script>
-<script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js" ></script>
-<script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js" defer ></script>
-<!-- defer itu untuk menjalankan secara asinkronus -->
-<script>
-$(document).ready(function(){
-		$('#fasilitas-table').DataTable({
-            "ajax": {
-            "url": "{{url('/viewfasilitas1')}}",
-            "dataSrc": ""
-        },
-            dom: 'Bfrtip',
-            buttons: [
-                {
-                    text: 'Create',
-                    action: function ( e, dt, node, config ) {
-                        window.location = "{{url('/inputfasilitas')}}";
-                    }
-                }
-            ],
-			columns: [
-				{ data: 'aspek', name: 'aspek', orderable: false },
-				{ data: 'jumlah', name: 'jumlah', orderable: true },
-				{ data: 'kondisi', name: 'kondisi', orderable: false },
-				{ data: 'status', name: 'status', orderable: false },
-                { data: 'sumberdana', name: 'sumberdana', orderable: false },
-                { data: 'action', name: 'action', orderable: false }
-			]
-		});
-	});
-</script>
+
 
 
 
