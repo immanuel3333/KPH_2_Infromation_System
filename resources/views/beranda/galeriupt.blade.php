@@ -7,7 +7,7 @@
                 Portfolio Section
         ============================-->
 
-        <<h1>Galeri Unit</h1>
+        <h1 class="text-center">Galeri UPT</h1>
                         <div class="card-group">
                             <div class="row">  
                                 @foreach($gl as $gl)

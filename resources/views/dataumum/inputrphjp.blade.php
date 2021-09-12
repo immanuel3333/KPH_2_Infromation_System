@@ -4,8 +4,8 @@
 <div class="container-fluid">
     <div class="animated fadeIn">
       <div class="row">
-        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
-          <div class="card">
+        <div class="col-md-12">
+          
               <div class="card-body">
                   <form action="{{ route('simpan-rphjp')}}" method="POST" enctype="multipart/form-data">
                       @csrf
@@ -33,10 +33,13 @@
                       <div class="col-md-12">
                         <button type="submit" class="btn btn-success ml-auto">Simpan</button>
                   </form>
-              </div>
+         
           </div>
         </div>
     </div>
   </div>
+</div>
+</div>
+</div>
 
   @include('layouts.footer')

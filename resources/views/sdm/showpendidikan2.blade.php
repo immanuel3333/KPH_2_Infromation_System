@@ -1,9 +1,5 @@
 </div>
-<h1 class="text-center">Kelola Pendidikan SDM</h1>
-<div class="content-page">
-    <div class="container-fluid">
-        <div class="card">
-    @foreach($pe as $pe)
+<div>
         <table class="table">
             <thead class="bg-success">
                 <tr>
@@ -12,6 +8,7 @@
                 <th scope="col">Isi</th>
                 </tr>
             </thead>
+            @foreach($pe as $pe)
             <tbody>
                 <tr>
                     <th scope="row">1</th>

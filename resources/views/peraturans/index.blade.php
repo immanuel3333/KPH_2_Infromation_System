@@ -1,6 +1,8 @@
 @include('layouts.headeradmin')
-<div class="container" style="padding-bottom:50px;">
-    <div class="card-body">
+<div class="content-page" style="background: url('{{ asset('img/backgroundadmin.png') }}');background-size:850px;background-repeat: repeat-y;background-position:center ;">
+    <div class="container-fluid " style="margin-top: -110px">
+    <div class="card" style="padding-top:100px;">
+        <p class="text-center " style="font-size:39px;">Kelola Peraturan</p><br>
         <a href="{{url('/inputperaturan')}}" >
             <button type="submit" class="btn" style="background-color: #99F07A; float:right;">Tambah</button>
         </a>
@@ -28,7 +30,9 @@
                     <td>{{ $n }}</td>
                     <td>{{ $hasil->judul }}</td>
                 <td>{{ $hasil->keterangan }}</td>
-                <td>{{ $hasil->file }}</td>
+                <td>
+                    <a href="{{ asset($hasil->file)}}" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview">{{ $hasil->file }}</a>
+                </td>
                 <td>
                     <form action="{{url('/destroyperaturan')}}/{{$hasil->id}}" method="POST">
                         @csrf

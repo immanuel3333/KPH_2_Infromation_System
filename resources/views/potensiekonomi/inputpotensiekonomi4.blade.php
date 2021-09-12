@@ -1,4 +1,5 @@
-@include('layouts.headeradmin')\@if(count($errors)>0)
+@include('layouts.headeradmin')
+@if(count($errors)>0)
   	@foreach($errors->all() as $error)
   	<div class="alert alert-danger" style="padding-left:100px;" role="alert">
       {{ $error }}
@@ -20,39 +21,39 @@
             <div class="row">
                 <div class="card col-md-12">
 
-                    <div class="form-group pt-4">
+                <div class="form-group pt-1">
                         <p>Potensi Kayu</p>
-                        <textarea name="kayu" id="kayu" cols="150" rows="20">
-                        </textarea>
-                        <script>CKEDITOR.replace('kayu');</script>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="kayu" id="kayu"  required autofocus>                        
+                        </div>
                     </div>
 
-                    <div class="form-group pt-4">
+                    <div class="form-group pt-1">
                         <p>Potensi Non-Kayu</p>
-                        <textarea name="nonkayu" id="nonkayu" cols="150" rows="20">
-                        </textarea>
-                        <script>CKEDITOR.replace('nonkayu');</script>
+                        <div class="form-group" >
+                        <input type="text" class="form-control" name="nonkayu" id="nonkayu"  required autofocus>                        
+                    </div>
                     </div>
 
-                    <div class="form-group pt-4">
-                        <p>Potensi Jasa Lingkungan	</p>
-                        <textarea name="jasalingkungan" id="jasalingkungan" cols="150" rows="20">
-                        </textarea>
-                        <script>CKEDITOR.replace('jasalingkungan');</script>
+                    <div class="form-group pt-1">
+                        <p>Potensi Jasa Lingkungan</p>
+                        <div class="form-group" >
+                        <input type="text" class="form-control" name="jasalingkungan" id="jasalingkungan"  required autofocus>                       
+                     </div>
                     </div>
 
-                    <div class="form-group pt-4">
+                    <div class="form-group pt-1">
                         <p>Rencana Bisnis</p>
-                        <textarea name="bisnis" id="bisnis" cols="150" rows="20">
-                        </textarea>
-                        <script>CKEDITOR.replace('bisnis');</script>
+                        <div class="form-group" >
+                        <input type="text" class="form-control" name="bisnis" id="bisnis"  required autofocus>                        
+                    </div>
                     </div>
 
-                    <div class="form-group pt-4">
+                    <div class="form-group pt-1">
                         <p>Dukungan Donor</p>
-                        <textarea name="donor" id="donor" cols="150" rows="20">
-                        </textarea>
-                        <script>CKEDITOR.replace('donor');</script>
+                        <div class="form-group" id="only-number">
+                        <input type="number" class="form-control" name="donor" id="donor" required autofocus>                        
+                    </div>
                     </div>
                    
                 </div> 
@@ -61,7 +62,7 @@
         </form>
 
       
-
+        </div>
     </div>
 
     @include('layouts.footer')

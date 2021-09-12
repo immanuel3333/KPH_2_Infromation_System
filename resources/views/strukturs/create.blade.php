@@ -43,8 +43,9 @@
             </div>
         </div>
     </div>
+    </div>
 
 <script>
     CKEDITOR.replace( 'content' );
 </script>
-@include('layouts.footeradmin')
+@include('layouts.footer')

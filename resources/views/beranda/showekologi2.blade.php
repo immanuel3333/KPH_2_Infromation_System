@@ -1,8 +1,9 @@
 @include('layouts.header')
 </div>
-<div class="content-page">
-    <div class="container-fluid">
-    <div class>
+<div class="content-page" style="background: url('{{ asset('img/backgroundadmin.png') }}');background-size:850px;background-repeat: repeat-y;background-position:center ;">
+<div class="container-fluid " style="margin-top: -110px">
+<div class="card" style="padding-top:100px;">
+<p class="text-center " style="font-size:39px;"> Data Ekologi</p><br>
     @foreach($pe as $pe)
         <table class="table">
             <thead class="bg-success">
@@ -47,7 +48,7 @@
 
     </div>
 
-
+    </div>
 
     </div>
 

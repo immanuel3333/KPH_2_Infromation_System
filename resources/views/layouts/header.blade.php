@@ -76,7 +76,8 @@
                             <li class="">
                                 <a href="{{ route('landingpage') }}" class="collapsed svg-icon" >
                                     <i class="">
-                                        <img src="icon/home.png" class="icon"  >
+                                   
+                                        <img src=" {{ asset('icon/home.png') }}" class="icon"  >
                                     </i>
 
                                     <span class="ml-2">Beranda</span>
@@ -89,7 +90,7 @@
                             <li class="">
                                 <a href="#app" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
                                     <i>
-                                        <img src="icon/profil.png" class="icon"  >
+                                        <img src="{{ asset('icon/profil.png') }}" class="icon"  >
                                     </i>
                                     <span class="ml-2">Profil UPT. KPH-II</span>
                                     <i class="las la-angle-right mm-arrow-right arrow-active"></i>
@@ -99,7 +100,7 @@
                                     <li class="">
                                         <a href="{{ route('visimisi') }}" class="collapsed svg-icon">
                                             <i class="">
-                                                <img src="icon/visimisi.png" class="icon"  >
+                                                <img src="{{ asset('icon/visimisi.png') }}" class="icon"  >
                                             </i>
                                             <span class="">Visi dan Misi</span>
                                         </a>
@@ -108,28 +109,28 @@
                                     <li class="">
                                         <a href="{{ route('sejarah') }}" class="svg-icon">
                                             <i class="">
-                                                <img src="icon/sejarah.png" class="icon"  >
+                                                <img src="{{ asset('icon/sejarah.png') }}" class="icon"  >
                                             </i><span class="">Sejarah</span>
                                         </a>
                                     </li>
                                     <li class="">
                                         <a href="{{ route('organisasi') }}" class="svg-icon">
                                             <i class="">
-                                                <img src="icon/struktur.png" class="icon"  >
+                                                <img src="{{ asset('icon/struktur.png')}}" class="icon"  >
                                             </i><span class="">Struktur Organisasi</span>
                                         </a>
                                     </li>
                                     <li class="">
                                         <a href="{{ route('tugasfungsi') }}" class="svg-icon">
                                             <i class="">
-                                                <img src="icon/tugas dan fungsi.png"  class="icon"  >
+                                                <img src="{{ asset('icon/tugas dan fungsi.png')}}"  class="icon"  >
                                             </i><span class="">Tugas dan Fungsi</span>
                                         </a>
                                     </li>
                                     <li class="">
                                         <a href="{{ route('galeriupt') }}" class="svg-icon">
                                             <i class="">
-                                                <img src="icon/galery.png"  class="icon"  >
+                                                <img src="{{ asset('icon/galery.png')}}"  class="icon"  >
                                             </i><span class="">Galeri UPT</span>
                                         </a>
                                     </li>
@@ -139,7 +140,7 @@
                             <li class="">
                                 <a href="#uker" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
                                     <i>
-                                        <img src="icon/uker.png"  class="icon"  >
+                                        <img src="{{ asset('icon/uker.png')}}"  class="icon"  >
                                     </i>
                                     <span class="ml-2">Unit Kerja</span>
                                     <i class="las la-angle-right mm-arrow-right arrow-active"></i>
@@ -149,7 +150,7 @@
                                     <li class="">
                                         <a href="#unit" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
                                             <i class="">
-                                                <img src="icon/unit.png"  class="icon"  >
+                                                <img src="{{ asset('icon/unit.png')}}"  class="icon"  >
                                             </i>
                                             <span class="">Unit VI Simalungun</span>
                                             <i class="las la-angle-right mm-arrow-right arrow-active"></i>
@@ -159,28 +160,28 @@
                                             <li class="">
                                                 <a href="{{ route('bshow-dataumum') }}" class="svg-icon">
                                                     <i class="">
-                                                        <img src="icon/data.png"  class="icon"  >
+                                                        <img src="{{ asset('icon/data.png')}}"  class="icon"  >
                                                     </i><span class="">Data Umum</span>
                                                 </a>
                                             </li>
                                             <li class="">
                                                 <a href="{{ route('bshowkeloladataekonomi1') }}" class="svg-icon">
                                                     <i class="">
-                                                        <img src="icon/data.png"  class="icon"  >
+                                                        <img src="{{ asset('icon/data.png')}}"  class="icon"  >
                                                     </i><span class="">Data Ekonomi</span>
                                                 </a>
                                             </li>
                                             <li class="">
                                                 <a href="{{ route('bshowekologi') }}" class="svg-icon">
                                                     <i class="">
-                                                        <img src="icon/data.png"  class="icon"  >
+                                                        <img src="{{ asset('icon/data.png')}}"  class="icon"  >
                                                     </i><span class="">Data Ekologi</span>
                                                 </a>
                                             </li>
                                             <li class="">
                                                 <a href="{{ route('bshow-sdm1') }}" class="svg-icon">
                                                     <i class="">
-                                                        <img src="icon/data.png"  class="icon"  >
+                                                        <img src="{{ asset('icon/data.png')}}"  class="icon"  >
                                                     </i><span class="">Data SDM</span>
                                                 </a>
                                             </li>
@@ -191,7 +192,7 @@
                                     <li class="">
                                         <a href="#unit2" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
                                             <i class="">
-                                                <img src="icon/unit.png"  class="icon">
+                                                <img src="{{ asset('icon/unit.png')}}"  class="icon">
                                             </i>
                                             <span class="">Unit IX Sergai</span>
                                             <i class="las la-angle-right mm-arrow-right arrow-active"></i>
@@ -201,28 +202,28 @@
                                             <li class="">
                                                 <a href="{{ route('bshow-dataumum2') }}" class="svg-icon">
                                                     <i class="">
-                                                        <img src="icon/data.png"  class="icon">
+                                                        <img src="{{ asset('icon/data.png')}}"  class="icon">
                                                     </i><span class="">Data Umum</span>
                                                 </a>
                                             </li>
                                             <li class="">
                                                 <a href="{{ route('bshowkeloladataekonomi2') }}" class="svg-icon">
                                                     <i class="">
-                                                        <img src="icon/data.png"  class="icon">
+                                                        <img src="{{ asset('icon/data.png')}}"  class="icon">
                                                     </i><span class="">Data Ekonomi</span>
                                                 </a>
                                             </li>
                                             <li class="">
                                                 <a href="{{ route('bshowekologi2') }}" class="svg-icon">
                                                     <i class="">
-                                                        <img src="icon/data.png"  class="icon">
+                                                        <img src="{{ asset('icon/data.png')}}"  class="icon">
                                                     </i><span class="">Data Ekologi</span>
                                                 </a>
                                             </li>
                                             <li class="">
                                                 <a href="{{ route('bshow-sdm2') }}" class="svg-icon">
                                                     <i class="">
-                                                        <img src="icon/data.png"  class="icon">
+                                                        <img src="{{ asset('icon/data.png')}}"  class="icon">
                                                     </i><span class="">Data SDM</span>
                                                 </a>
                                             </li>
@@ -232,7 +233,7 @@
                                     <li class="">
                                         <a href="#unit3" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
                                             <i class="">
-                                                <img src="icon/unit.png"  class="icon">
+                                                <img src="{{ asset('icon/unit.png')}}"  class="icon">
                                             </i>
                                             <span class="">Unit X Batubara</span>
                                             <i class="las la-angle-right mm-arrow-right arrow-active"></i>
@@ -242,28 +243,28 @@
                                             <li class="">
                                                 <a href="{{ route('bshow-dataumum3') }}" class="svg-icon">
                                                     <i class="">
-                                                        <img src="icon/data.png"  class="icon">
+                                                        <img src="{{ asset('icon/data.png')}}"  class="icon">
                                                     </i><span class="">Data Umum</span>
                                                 </a>
                                             </li>
                                             <li class="">
                                                 <a href="{{ route('bshowkeloladataekonomi3') }}" class="svg-icon">
                                                     <i class="">
-                                                        <img src="icon/data.png"  class="icon">
+                                                        <img src="{{ asset('icon/data.png')}}"  class="icon">
                                                     </i><span class="">Data Ekonomi</span>
                                                 </a>
                                             </li>
                                             <li class="">
                                                 <a href="{{ route('bshowekologi3') }}" class="svg-icon">
                                                     <i class="">
-                                                        <img src="icon/data.png"  class="icon">
+                                                        <img src="{{ asset('icon/data.png')}}"  class="icon">
                                                     </i><span class="">Data Ekologi</span>
                                                 </a>
                                             </li>
                                             <li class="">
                                                 <a href="{{ route('bshow-sdm3') }}" class="svg-icon">
                                                     <i class="">
-                                                        <img src="icon/data.png"  class="icon">
+                                                        <img src="{{ asset('icon/data.png')}}"  class="icon">
                                                     </i><span class="">Data SDM</span>
                                                 </a>
                                             </li>
@@ -273,7 +274,7 @@
                                     <li class="">
                                         <a href="#unit4" class="collapsed svg-icon" data-toggle="collapse" aria-expanded="false">
                                             <i class="">
-                                                <img src="icon/unit.png"  class="icon">
+                                                <img src="{{ asset('icon/unit.png')}}"  class="icon">
                                             </i>
                                             <span class="">Unit XII Simalungun</span>
                                             <i class="las la-angle-right mm-arrow-right arrow-active"></i>
@@ -283,28 +284,28 @@
                                             <li class="">
                                                 <a href="{{ route('bshow-dataumum4') }}" class="svg-icon">
                                                     <i class="">
-                                                        <img src="icon/data.png"  class="icon">
+                                                        <img src="{{ asset('icon/data.png')}}"  class="icon">
                                                     </i><span class="">Data Umum</span>
                                                 </a>
                                             </li>
                                             <li class="">
                                                 <a href="{{ route('bshowkeloladataekonomi4') }}" class="svg-icon">
                                                     <i class="">
-                                                        <img src="icon/data.png"  class="icon" >
+                                                        <img src="{{ asset('icon/data.png')}}"  class="icon" >
                                                     </i><span class="">Data Ekonomi</span>
                                                 </a>
                                             </li>
                                             <li class="">
                                                 <a href="{{ route('bshowekologi4') }}" class="svg-icon">
                                                     <i class="">
-                                                        <img src="icon/data.png"  class="icon" width="20">
+                                                        <img src="{{ asset('icon/data.png')}}"  class="icon" width="20">
                                                     </i><span class="">Data Ekologi</span>
                                                 </a>
                                             </li>
                                             <li class="">
                                                 <a href="#" class="svg-icon">
                                                     <i class="{{ route('bshowsdm4') }}">
-                                                        <img src="icon/data.png"  class="icon"  >
+                                                        <img src="{{ asset('icon/data.png')}}"  class="icon"  >
                                                     </i><span class="">Data SDM</span>
                                                 </a>
                                             </li>
@@ -317,7 +318,7 @@
                             <li class="">
                                 <a href="{{ route('bperaturan') }}" class="collapsed svg-icon" >
                                     <i class="">
-                                        <img src="icon/peraturan.png"  class="icon"  >
+                                        <img src="{{ asset('icon/peraturan.png')}}"  class="icon"  >
                                     </i>
 
                                     <span class="ml-2">Peraturan Perundangan</span>
@@ -338,7 +339,7 @@
                     <nav class="navbar navbar-expand-lg p-0 ">
                         <div class="row align-items-center justify-content-between">
                             <div  class="col-xs-12 col-sm-2 col-md-2 navbar-text">
-                                <img src="img/Logo3.png" class="img-fluid rounded-normal">
+                                <img src="{{ asset('img/Logo3.png') }}"  class="img-fluid rounded-normal">
                             </div>
                             <div class="col-xs-12 col-sm-10 col-md-10 ">
                                 <h4>UPT. KESATUAN PENGELOLAAN HUTAN WILAYAH-II

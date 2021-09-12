@@ -14,7 +14,7 @@
        <!--==========================
                 Portfolio Section
         ============================-->
-<h1>Galeri UPT</h1>
+<h1 class="text-center">Galeri UPT</h1>
 
             <div class="card-group">
                 <div class="row">  
@@ -27,8 +27,8 @@
                                         <div class="card-body">
                                             <p class="card-text">{{$gl->keterangan}}</p>
                                             <p class="card-text"><small class="text-muted">{{$gl->tanggal}}</small></p>
-                                            <a href="{{ url('viewgaleriunitkerja',$gl->id)}}"><i class="fas fa-edit"></i></a>
-                                            <a href="{{ url('destroygaleriunitkerja',$gl->id)}}"><i class="fas fa-trash-alt" style="color:red;"></i></a>
+                                            <a href="{{ url('viewgaleriupt',$gl->id)}}"><i class="fas fa-edit"></i></a>
+                                            <a href="{{ url('destroygaleriupt',$gl->id)}}"><i class="fas fa-trash-alt" style="color:red;"></i></a>
                                         </div>
                                     </div>
     

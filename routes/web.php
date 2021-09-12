@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Route;
         Route::get('logout', 'AuthController@logout')->name('logout');
         Route::get('/password', 'AuthController@edit')->name('password-edit');
         Route::patch('/password', 'AuthController@update')->name('password-edit');
-        Route::patch('/password', 'AuthController@update2')->name('password-update');
+        // Route::patch('/password2', 'AuthController@update2')->name('password-update');
 
         Route::get('/showartikelid/{artikel}', 'HomeController@showartikelid')->name('detail-artikel');
         Route::get('/landingpage', 'HomeController@banner')->name('landingpage');
@@ -159,8 +159,8 @@ Route::group(['middleware' => ['auth']], function(){
         Route::get('/showgaleriupt', 'AdminController@showgaleriupt')->name('showgaleriupt');
 
         Route::post('/update-galeriupt/{id}', 'AdminController@update4')->name('update-galeriupt');
-        Route::get('/view4/{id}', 'AdminController@view4');
-        Route::get('/destroy4/{id}', 'AdminController@destroy4')->name('delete-galeriupt');
+        Route::get('/viewgaleriupt/{id}', 'AdminController@viewgaleriupt');
+        Route::get('/destroygaleriupt/{id}', 'AdminController@destroygaleriupt')->name('delete-galeriupt');
 
 
         Route::get('/inputperaturan', 'PeraturanController@inputperaturan')->name('inputperaturan');

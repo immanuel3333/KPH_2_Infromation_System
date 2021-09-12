@@ -1,6 +1,5 @@
 @include('layouts.headeradmin')
 </div>
-
 <div class="content-page"> 
     <div class="container-fluid">
         <form action="{{ route('simpan-sdm1')}}" method="post" enctype="multipart/form-data">
@@ -100,7 +99,7 @@
         </form>
 
       
-
+</div>
     </div>
 
     @include('layouts.footer')

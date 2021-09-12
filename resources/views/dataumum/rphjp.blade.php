@@ -1,5 +1,4 @@
 <center>
-<h1 class="text-center">Kelola RPHJP</h1>
     <div class="col-md-9 ">
         <table class="table table-bordered-2">
             <thead class="thead-black">

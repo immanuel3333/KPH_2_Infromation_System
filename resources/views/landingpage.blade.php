@@ -83,8 +83,6 @@
                             <div class="portfolio-wrap">
                             <figure>
                                 <img src="img/contoh1.png" style="" class="img-fluid" alt="">
-                                <a href="img/contoh1.png" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                             </figure>
 
                             <div class="portfolio-info">
@@ -98,8 +96,6 @@
                             <div class="portfolio-wrap">
                             <figure>
                                 <img src="img/contoh1.png" class="img-fluid" alt="">
-                                <a href="img/contoh1.png" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
-                                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                             </figure>
 
                             <div class="portfolio-info">
@@ -113,8 +109,6 @@
                             <div class="portfolio-wrap">
                             <figure>
                                 <img src="img/contoh1.png" class="img-fluid" alt="">
-                                <a href="img/contoh1.png" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
-                                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                             </figure>
 
                             <div class="portfolio-info">
@@ -128,9 +122,7 @@
                             <div class="portfolio-wrap">
                             <figure>
                                 <img src="img/contoh1.png" class="img-fluid" alt="">
-                                <a href="img/contoh1.png" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
-                                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                            </figure>
+                           </figure>
 
                             <div class="portfolio-info">
                                 <h5><a href="{{ route('bshowgaleriunitkerja4') }}">Galeri Unit XII Simalungun</a></h5>
@@ -143,23 +135,21 @@
 
                 </section><!-- #portfolio -->
 
-               <div class="">
+               <div class>
                 <div class="card-group portfolio-wrap">
-                        <div class="portfolio-item card col-md-8" id="mapid" style="width:100%;">
+                        <div class="portfolio-item card col-md-8" id="mapid" style="width:100%; height:500px;">
                         </div>
                         <section class="pl-4 card col-md-4"  id="portfolio">
                         <div class="portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="">
+                                <div>
                                     <figure>
                                         <img src="img/contoh1.png" class="img-fluid" alt="">
-                                        <a href="img/contoh1.png" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
-                                        <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                                     </figure>
                                     <div class="portfolio-info">
                                         <h4><a href="{{ route('galeriupt') }}">Galeri Foto KPH</a></h4>
                                     </div>
                                 </div>
-                            </div>
+                        </div>
                         </section>
                     </div>
                </div>

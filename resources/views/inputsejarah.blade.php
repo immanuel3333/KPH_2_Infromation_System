@@ -37,6 +37,7 @@
        </form>
      </div>
     </div>
+    </div>
  
 
     @include('layouts.footer')

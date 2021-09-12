@@ -339,7 +339,7 @@
                     <nav class="navbar navbar-expand-lg p-0 ">
                         <div class="row align-items-center justify-content-between">
                             <div  class="col-xs-12 col-sm-2 col-md-2 navbar-text">
-                                <img src="img/Logo3.png" class="img-fluid rounded-normal">
+                                <img src="{{ asset('img/Logo3.png')}}" class="img-fluid rounded-normal">
                             </div>
                             <div class="col-xs-12 col-sm-10 col-md-10 ">
                                 <h4>UPT. KESATUAN PENGELOLAAN HUTAN WILAYAH-II

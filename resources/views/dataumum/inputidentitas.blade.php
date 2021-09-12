@@ -4,7 +4,7 @@
 <div class="container-fluid">
     <div class="animated fadeIn">
       <div class="row">
-        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+        <div class="col-md-12">
           <div class="card">
               <div class="card-header">
                 <p>Test</p>
@@ -68,6 +68,9 @@
         </div>
       </div>
     </div>
+  </div>
+  </div>
+  </div>
   </div>
 
   @include('layouts.footer')

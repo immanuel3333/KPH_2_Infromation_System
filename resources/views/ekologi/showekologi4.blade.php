@@ -1,9 +1,9 @@
 @include('layouts.headeradmin')
 </div>
-<h1 class="text-center">Kelola Ekologi</h1>
-<div class="content-page">
-    <div class="container-fluid">
-    <div class>
+<div class="content-page" style="background: url('{{ asset('img/backgroundadmin.png') }}');background-size:850px;background-repeat: repeat-y;background-position:center ;">
+<div class="container-fluid " style="margin-top: -110px">
+<div class="card" style="padding-top:100px;">
+<p class="text-center " style="font-size:39px;">Kelola Data Ekologi</p><br>
     @foreach($pe as $pe)
         <table class="table">
             <thead class="bg-success">
@@ -47,10 +47,9 @@
     
         <a href="{{url('/viewekologi4')}}/{{$pe->id}}" class="ml-auto">
         <button type="submit" class="btn" style="background-color: #99F07A;">Edit</button>  
+        </a>
     </div>
-    
-   
-    
+    </div>
     </div>
 
     @include('layouts.footer')

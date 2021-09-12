@@ -1,5 +1,4 @@
 <center>
-    <h1>Kelola Identitas</h1>
     <div class="col-md">
         <table class="table table-bordered-2">
             <thead class="thead-black">

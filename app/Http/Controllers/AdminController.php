@@ -258,7 +258,7 @@ class AdminController extends Controller
         return view('showgaleriupt', compact('gl'));
     }
 
-    public function view4($id)
+    public function viewgaleriupt($id)
     {
         $gl=Galeriupt::find($id);
         return view('editgaleriupt',compact('gl'));
@@ -286,7 +286,7 @@ class AdminController extends Controller
     }
 
 
-    public function destroy4($id)
+    public function destroygaleriupt($id)
     {
         // dd($id);
         $hapus = Galeriupt::findorfail($id);

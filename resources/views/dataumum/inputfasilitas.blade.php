@@ -55,10 +55,8 @@
                 <button type="submit" class="btn btn-success ml-auto">Simpan</button>
             </div>
         </form>
-
-
-
-    </div>
+</div>
+</div>
 
     @include('layouts.footer')
 

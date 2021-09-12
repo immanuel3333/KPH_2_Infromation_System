@@ -1,53 +1,65 @@
 @extends('layouts.login')
 
 @section('title')
-Password baru
+Login
 @endsection
 
 @section('content')
-            <div class="card">
-                <div class="card-body">
-                    <div class="auth-logo align-items-center">
-                        <img src="{{ asset('img/kph2.png') }}" class="img-fluid rounded-normal" alt="" style="width: 90px; height:90px;">
-                        <h4 class="pl-2 font-weight-bold text-center" style="font-size: 20px;">UPT. Kesatuan Pengelolaan Hutan Wilayah - II</h4>
-                    </div>
-                    <h5 class="mb-1  bold" style="font-size: 20px;">Silahkan Masukkan sandi anda</h2>
-                    <form class="mx-2" method="POST" action="{{ route('password.update') }}">
-                        @csrf
 
-                        <input type="hidden" name="token" value="{{ $token }}">
+        <div class="card">
+            <div class="card-body">
+            <div class="auth-logo align-items-center">
+                <img src="{{ asset('img/kph2.png') }}" class="img-fluid rounded-normal" alt="" style="width: 90px; height:90px;">
+                <h4 class="pl-2 font-weight-bold text-center" style="font-size: 20px;">UPT. Kesatuan Pengelolaan Hutan Wilayah - II</h4>
+            </div>
+                            <form class="mx-2" method="POST" action="{{ route('password-edit') }}" id="logForm">
+                                @csrf
+                                @method("PATCH")
 
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label class="mb-0">Kata Sandi Baru</label>
-                                <input id="password" type="password" class="form-control form-control-sm @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                           <label for="old-password">Password Lama</label>
+                                           <input type="password" name="old_password" id="old_password" class="form-control">
+                                        </div>
+                                        @error('old_password')
+                                            <div class="text-danger mt-2">{{$message}}</div>
+                                        @enderror
+                                    </div>
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>    
-                        </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="password">Password Baru</label>
+                                            <input type="password" name="password" id="password" class="form-control">
+                                            @error('password')
+                                            <div class="text-danger mt-2">{{$message}}</div>
+                                            @enderror
+                                        </div>
+                                    </div>
 
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label class="mb-0">Konfirmasi Kata Sandi</label>
-                                <input id="password-confirm" type="password" class="form-control form-control-sm" name="password_confirmation" required autocomplete="new-password">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="password_confirmation">Konfirmasi Password</label>
+                                           <input type="password" name="password_confirmation" id="password_confirmation" class="form-control">
+                                           @error('password_confirmation')
+                                            <div class="text-danger mt-2">{{$message}}</div>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-sm btn-primary" style="float:right">Ganti Password</button>
+                                </div>
+                            </form>
+                            <div>
+                                <a href="{{url('/home')}}" >
+                                    <button type="submit" class="btn btn-sm bg-warning mr-4" style="float:right">Kembali</button>
+                                </a>
                             </div>
+                               
                         </div>
                     </div>
-                        
-                        <div class="form-group row mb-0">
-                            <div class="ml-auto pr-3">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Reset Password') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
-   
+        </div>
 @endsection

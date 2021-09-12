@@ -61,7 +61,7 @@ class AuthController extends Controller
     public function update()
     {
         request()->validate([
-            'old_password' => 'required',
+            'old_password' => ['required'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
@@ -79,20 +79,5 @@ class AuthController extends Controller
         }
     }
 
-    public function update2()
-    {
-        request()->validate([
-            'new_password' => 'required',
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
-
-        $new_password = request('new_password');
-
-            auth()->user()->update([
-                'password' => bcrypt(request('password')),
-            ]);
-            return back()->with('success','Password telah diganti');
-        
-    }
 
 }

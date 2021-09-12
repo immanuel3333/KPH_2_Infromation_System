@@ -5,11 +5,16 @@
         <div class="card">
                         <center>
 
-                        <a href="{{ route('strukturs.create') }}" class="btn btn-md btn-success mb-3">TAMBAH BLOG</a>
+                        <a href="{{ route('strukturs.create') }}" class="btn btn-md btn-success mb-3">TAMBAH </a>
                         <p style="font-size:50px; font-family:balthazar;"><b> Struktur Organisasi </p><br>
                               @forelse ($blogs as $blog)
-                                        <p><img src="{{ asset( $blog->image ) }}" width="592px" height="438px"></p><br>
-                                        <p><img src="{{ asset( $blog->image2 ) }}" width="592px" height="391px"></p><br>
+                              <div class="row card">
+                                 <img style="width: 100%; height:100%" src="{{ asset( $blog->image ) }}">
+                              </div>
+                              <div class="row card">
+                                 <img style="width: 100%; height:100%" src="{{ asset( $blog->image2 ) }}">   
+                              </div>
+                                       
                                         <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('strukturs.destroy', $blog->id) }}" method="POST">
                                             <a href="{{ route('strukturs.edit', $blog->id) }}" class="btn btn-sm btn-primary">EDIT</a>
                                             @csrf

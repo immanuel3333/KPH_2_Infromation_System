@@ -21,40 +21,40 @@
             <div class="row">
                 <div class="card col-md-12">
 
-                    <div class="form-group pt-4">
-                        <p>Jenis Tanah</p>
-                        <textarea name="jenis_tanah" id="jenis_tanah" cols="150" rows="20">
-                        </textarea>
-                        <script>CKEDITOR.replace('jenis_tanah');</script>
-                    </div>
+                            <div class="form-group pt-1">
+                                <p>Jenis Tanah</p>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="jenis_tanah" id="jenis_tanah" placeholder="jenis tanah..." required autofocus>
+                                </div>
+                            </div>
 
-                    <div class="form-group pt-4">
-                        <p>Jenis Kayu</p>
-                        <textarea name="jenis_kayu" id="jenis_kayu" cols="150" rows="20">
-                        </textarea>
-                        <script>CKEDITOR.replace('jenis_kayu');</script>
-                    </div>
+                            <div class="form-group pt-1">
+                                <p>Jenis Kayu</p>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="jenis_kayu" id="jenis_kayu" placeholder="jenis kayu..." required autofocus>
+                                </div>
+                            </div>
 
-                    <div class="form-group pt-4">
-                        <p>Fauna/Satwa</p>
-                        <textarea name="fauna_satwa" id="fauna_satwa" cols="150" rows="20">
-                        </textarea>
-                        <script>CKEDITOR.replace('fauna_satwa');</script>
-                    </div>
+                            <div class="form-group pt-1">
+                                <p>Fauna/Satwa</p>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="fauna_satwa" id="fauna_satwa" placeholder="fauna/satwa..." required autofocus>
+                                </div>
+                            </div>
 
-                    <div class="form-group pt-4">
-                        <p>Kelerengan</p>
-                        <textarea name="kelerengan" id="kelerengan" cols="150" rows="20">
-                        </textarea>
-                        <script>CKEDITOR.replace('kelerengan');</script>
-                    </div>
+                            <div class="form-group pt-1">
+                                <p>Kelerengan</p>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="kelerengan" id="kelerengan" placeholder="kelerengan..." required autofocus>
+                                </div>
+                            </div>
 
-                    <div class="form-group pt-4">
-                        <p>DAS</p>
-                        <textarea name="DAS" id="DAS" cols="150" rows="20">
-                        </textarea>
-                        <script>CKEDITOR.replace('DAS');</script>
-                    </div>
+                            <div class="form-group pt-1">
+                                <p>Kelerengan</p>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="DAS" id="DAS" placeholder="DAS..." required autofocus>
+                                </div>
+                            </div>
                    
                 </div> 
                 <button type="submit" class="btn btn-success ml-auto">Simpan</button>
@@ -62,7 +62,8 @@
         </form>
 
       
-
+</div>
+</div>
     </div>
 
     @include('layouts.footer')

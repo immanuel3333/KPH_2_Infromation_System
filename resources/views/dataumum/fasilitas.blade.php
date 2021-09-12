@@ -1,4 +1,3 @@
-<h1 class="text-center">Kelola Fasilitas</h1>
 <div class="container" style="padding-bottom:50px;">
     <table class="table table-striped table-hover" id="fasilitas-table">
         <thead>

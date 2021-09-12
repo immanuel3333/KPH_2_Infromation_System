@@ -1,8 +1,8 @@
-@include('layouts.headeradmin')
+@include('layouts.header')
 </div>
 <div class="content-page pt-5" style="background: url('{{ asset('img/backgroundadmin.png') }}');background-size:850px;background-repeat: repeat-y;background-position:center ;">
     <div class="container-fluid ">
-        <div class="card">
+    <div class="card" style="padding-top:100px;">
 <p style="font-size: 28px"><strong>Baca Artikel</strong></p>
 
                             <div class="row">
@@ -34,4 +34,4 @@
 
 
 
-@include('layouts.footeradmin')
+@include('layouts.footer')

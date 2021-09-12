@@ -6,8 +6,12 @@
                         <center>
                         <p style="font-size:50px; font-family:balthazar;"><b> Struktur Organisasi </p><br>
                               @forelse ($blogs as $blog)
-                                        <p><img src="{{ asset( $blog->image ) }}" width="592px" height="438px"></p><br>
-                                        <p><img src="{{ asset( $blog->image2 ) }}" width="592px" height="391px"></p><br>
+                              <div class="row card">
+                                 <img style="width: 100%; height:100%" src="{{ asset( $blog->image ) }}">
+                              </div>
+                              <div class="row card">
+                                 <img style="width: 100%; height:100%" src="{{ asset( $blog->image2 ) }}">   
+                              </div>
                             
                               @empty
                                   <div class="alert alert-danger">

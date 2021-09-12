@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row text-center">
                 <div class="col-md-4">
-                    <img style="width: 10em; height: auto;" src="img/Logo3.png">
+                    <img style="width: 10em; height: auto;" src="{{ asset('img/Logo3.png')}}">
                     <hr class="light">
                     <p class="">Nomor Telepon</p>
                     <p>+62 0622-21216 </p>
