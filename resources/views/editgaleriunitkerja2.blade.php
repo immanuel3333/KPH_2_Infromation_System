@@ -3,7 +3,7 @@
 
 <div class="content-page">
     <div class="container-fluid">
-        <p class="text-center " style="font-size:39px;">Galeri Unit Kerja</p><br>
+        <h1 class="text-center" style="font-size:36px; font-family:Poppins;">Galeri Unit Kerja</h1><br>
 
         <form method="POST" action="{{ route('update-galeriunitkerja2', $gl2->id) }}"  enctype="multipart/form-data">
         @csrf

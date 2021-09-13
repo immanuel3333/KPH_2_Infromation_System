@@ -1,6 +1,6 @@
 @include('layouts.header')
 <div class="content-page" style="background: url('{{ asset('img/backgroundadmin.png') }}');background-size:850px;background-repeat: repeat-y;background-position:center ;">
-    <div class="container-fluid " style="margin-top: -110px">
+    <div class="container-fluid col-md-12" style="margin-top: -110px">
     <div class="card" style="padding-top:100px;">
         <p class="text-center " style="font-size:39px;">Peraturan</p><br>
 

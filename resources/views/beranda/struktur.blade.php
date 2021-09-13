@@ -4,15 +4,15 @@
     <div class="container-fluid ">
         <div class="card">
                         <center>
-                        <p style="font-size:50px; font-family:balthazar;"><b> Struktur Organisasi </p><br>
+                            <h1 class="text-center" style="font-size:36px; font-family:Poppins;"> Struktur Organisasi </h1><br>
                               @forelse ($blogs as $blog)
                               <div class="row card">
                                  <img style="width: 100%; height:100%" src="{{ asset( $blog->image ) }}">
                               </div>
                               <div class="row card">
-                                 <img style="width: 100%; height:100%" src="{{ asset( $blog->image2 ) }}">   
+                                 <img style="width: 100%; height:100%" src="{{ asset( $blog->image2 ) }}">
                               </div>
-                            
+
                               @empty
                                   <div class="alert alert-danger">
                                       Data Struktur belum Tersedia.

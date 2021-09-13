@@ -3,7 +3,7 @@
 <div class="content-page pt-5" style="background: url('{{ asset('img/backgroundadmin.png') }}');background-size:850px;background-repeat: repeat-y;background-position:center ;">
     <div class="container-fluid ">
         <div class="card">
-<p style="font-size: 28px font-family:Balthazar"><strong>Sejarah</strong></p>
+            <h1 class="text-center" style="font-size:36px; font-family:Poppins;"><strong>Sejarah</strong></h1>
 
                             <div class="row">
                                 <!-- Post content -->

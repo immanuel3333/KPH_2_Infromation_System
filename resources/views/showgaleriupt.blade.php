@@ -14,16 +14,16 @@
        <!--==========================
                 Portfolio Section
         ============================-->
-<h1 class="text-center">Galeri UPT</h1>
+        <h1 class="text-center" style="font-size:36px; font-family:Poppins;">Galeri UPT</h1>
 
             <div class="card-group">
-                <div class="row">  
+                <div class="row">
                     @foreach($gl as $gl)
                                 <div class="col-md-4 mt-4">
                                     <div class="card" style="width:20rem">
                                         <a href="{{ asset($gl->gambar)}}" class="fancybox" data-fancybox = "galery1">
                                             <img class="card-img-top" src="{{ asset($gl->gambar)}}" style="width:100%">
-                                        </a> 
+                                        </a>
                                         <div class="card-body">
                                             <p class="card-text">{{$gl->keterangan}}</p>
                                             <p class="card-text"><small class="text-muted">{{$gl->tanggal}}</small></p>
@@ -31,17 +31,17 @@
                                             <a href="{{ url('destroygaleriupt',$gl->id)}}"><i class="fas fa-trash-alt" style="color:red;"></i></a>
                                         </div>
                                     </div>
-    
+
                                 </div>
                     @endforeach
                 </div>
-            </div>      
-                    
+            </div>
+
                         <br>
                         <a href="{{url('/inputgaleriupt')}}" >
                             <button type="submit" class="btn" style="background-color: #99F07A; float:right;">Tambah</button>
                         </a>
-                  
+
     </div>
 </div>
 

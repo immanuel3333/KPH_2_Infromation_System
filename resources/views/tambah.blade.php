@@ -11,7 +11,7 @@
         @foreach($visimisi as $vm)
         <form action="/visimisi/store" method="post">
             {{ csrf_field() }}
-            <p ><b> Visi dan Misi </p><br>
+            <h1 class="text-center" style="font-size:36px; font-family:Poppins;"><b> Visi dan Misi </h1><br>
                 <input type="hidden" name="id" value="{{ $vm->id }}"> <br/>
                 <label>VISI :</label>
                 <textarea required="required" id="visi" name="visi">{{ $vm->visi }}</textarea><br>

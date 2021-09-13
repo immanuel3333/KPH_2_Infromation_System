@@ -1,8 +1,8 @@
 @include('layouts.header')
         <div class="content-page">
-            <div class="container-fluid padding">                  
-            <h1 class="col-12 text-center">Artikel Terbaru</h1>
-            
+            <div class="container-fluid padding">
+                <h1 class="col-12 text-center" style="font-size:36px; font-family:Poppins;">Artikel Terbaru</h1>
+
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     @foreach($artikel as $a)
@@ -19,7 +19,7 @@
                         </a>
                         </div>
                     </div>
-                    @endforeach  
+                    @endforeach
                      <!-- <div class="carousel-item active">
                         <img class="d-block w-100" src="..." alt="First slide">
                         <div class="carousel-caption d-none d-md-block">
@@ -52,7 +52,7 @@
                 </a>
             </div>
 
-                
+
             <!-- <div class="row">
             @foreach ($artikel as $a)
                 <div class="col-md-6">
@@ -72,7 +72,7 @@
             </div> -->
 
 
-    
+
                 <!--==========================
                 Portfolio Section
                 ============================-->
@@ -209,7 +209,7 @@
                     </div>
                 </div>
 
-  
+
 
 
 

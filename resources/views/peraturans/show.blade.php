@@ -3,7 +3,7 @@
 <div class="content-page" style="background: url('{{ asset('img/backgroundadmin.png') }}');background-size:850px;background-repeat: repeat-y;background-position:center ;">
     <div class="container-fluid ">
 
-
+        <h1 class="text-center" style="font-size:36px; font-family:Poppins;">Peraturan</h1><br>
         <table class="table table-striped table-hover table-sm table-bordered">
             <thead>
                 <tr>

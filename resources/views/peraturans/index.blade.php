@@ -2,7 +2,7 @@
 <div class="content-page" style="background: url('{{ asset('img/backgroundadmin.png') }}');background-size:850px;background-repeat: repeat-y;background-position:center ;">
     <div class="container-fluid " style="margin-top: -110px">
     <div class="card" style="padding-top:100px;">
-        <p class="text-center " style="font-size:39px;">Kelola Peraturan</p><br>
+        <h1 class="text-center" style="font-size:36px; font-family:Poppins;">Kelola Peraturan</h1><br>
         <a href="{{url('/inputperaturan')}}" >
             <button type="submit" class="btn" style="background-color: #99F07A; float:right;">Tambah</button>
         </a>

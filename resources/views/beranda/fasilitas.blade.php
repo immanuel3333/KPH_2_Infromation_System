@@ -1,5 +1,5 @@
 
-<div class="container" style="padding-bottom:50px;">
+<div class="container col-md-12" style="padding-bottom:50px;">
     <table class="table table-striped table-hover" id="fasilitas-table">
         <thead>
             <tr>

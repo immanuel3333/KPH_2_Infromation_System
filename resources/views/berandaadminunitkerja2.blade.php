@@ -1,7 +1,7 @@
 
 @include('layouts.headeradminunit2')
 <div class="content-page " >
-    <h1>Selamat Datang di Halaman Pengaturan</h1>
+    <h1 class="text-center" style="font-size:36px; font-family:Poppins;">Selamat Datang di Halaman Pengaturan</h1>
     <center>
     <div class="container card-deck">
             <div class="card border border-dark col-md-12" style="width:600px; height:600px;">
@@ -13,7 +13,7 @@
             </div>
         </div>
     </center>
-        
+
 
     </div>
 @include('layouts.footer')

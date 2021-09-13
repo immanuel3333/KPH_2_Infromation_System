@@ -5,16 +5,15 @@
         <div class="card">
                         <center>
 
-                        <a href="{{ route('strukturs.create') }}" class="btn btn-md btn-success mb-3">TAMBAH </a>
-                        <p style="font-size:50px; font-family:balthazar;"><b> Struktur Organisasi </p><br>
+                        <h1 class="text-center" style="font-size:36px; font-family:Poppins;"> Struktur Organisasi </h1><br>
                               @forelse ($blogs as $blog)
                               <div class="row card">
                                  <img style="width: 100%; height:100%" src="{{ asset( $blog->image ) }}">
                               </div>
                               <div class="row card">
-                                 <img style="width: 100%; height:100%" src="{{ asset( $blog->image2 ) }}">   
+                                 <img style="width: 100%; height:100%" src="{{ asset( $blog->image2 ) }}">
                               </div>
-                                       
+
                                         <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('strukturs.destroy', $blog->id) }}" method="POST">
                                             <a href="{{ route('strukturs.edit', $blog->id) }}" class="btn btn-sm btn-primary">EDIT</a>
                                             @csrf
@@ -33,7 +32,7 @@
                 </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
- 
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
     <script>

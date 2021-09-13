@@ -1,13 +1,11 @@
 @include('layouts.headeradmin')
 </div>
-    <div class="container mt-5 mb-5">
-        <div class="row pr-5">
-            <div class="col-md-12 ">
-                <center>
-                <div class="card border-0 shadow rounded">
-                    <div class="card-body pl-4">
+<div class="content-page" style="background: url('{{ asset('img/backgroundadmin.png') }}');background-size:850px;background-repeat: repeat-y;background-position:center ;">
+    <div class="container-fluid ">
+        <div class="card">
+                        <center>
                         <form action="{{ route('strukturs.store') }}" method="POST" enctype="multipart/form-data">
-                            <p><strong>Menambah Struktur</strong></p>
+                            <h1 class="text-center" style="font-size:36px; font-family:Poppins;">Menambah Struktur</h1>
                             @csrf
 
                             <div class="form-group">
