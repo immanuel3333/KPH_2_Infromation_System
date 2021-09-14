@@ -3,7 +3,7 @@
 <div class="content-page" style="background: url('{{ asset('img/backgroundadmin.png') }}');background-size:850px;background-repeat: repeat-y;background-position:center ;">
     <div class="container-fluid " style="margin-top: -110px">
     <div class="card" style="padding-top:100px;">
-        <p class="text-center " style="font-size:39px;">Data Ekonomi</p><br>
+        <p class="text-center " style="font-size:36px; font-family:Poppins;">Data Ekonomi</p><br>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -17,7 +17,7 @@
 
 		</div>
       </div>
-		
+
     </div>
     </div>
 		 <script type="text/javascript">

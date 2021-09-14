@@ -26,6 +26,7 @@ use Illuminate\Support\Facades\Route;
         Route::patch('/password', 'AuthController@update')->name('password-edit');
         // Route::patch('/password2', 'AuthController@update2')->name('password-update');
 
+
         Route::get('/showartikelid/{artikel}', 'HomeController@showartikelid')->name('detail-artikel');
         Route::get('/landingpage', 'HomeController@banner')->name('landingpage');
         Route::get('/profilpegawai', 'HomeController@profilpegawai');
@@ -124,7 +125,7 @@ Route::group(['middleware' => ['auth']], function(){
         Route::get('/deleteartikel/{id}', 'AdminController@deleteartikel');
         Route::get('/viewartikel/{id}', 'AdminController@viewartikel');
         Route::get('/showartikel', 'AdminController@showartikel');
-      
+
 
         //VISIMISI
         Route::get('/inputvisimisi', 'AdminController@inputvisimisi')->name('inputvisimisi');

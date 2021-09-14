@@ -1,9 +1,11 @@
 @include('layouts.headeradmin')
-<div class="container" style="padding-bottom:50px;">
-<a href="{{url('/inputartikel')}}" >
-    <button type="submit" class="btn" style="background-color: #99F07A; float:right;">Tambah</button>  
-</a>
-
+<div class="content-page" style="background: url('{{ asset('img/backgroundadmin.png') }}');background-size:850px;background-repeat: repeat-y;background-position:center ;">
+<div class="container-fluid " style="margin-top: -110px">
+    <div class="card" style="padding-top:100px;">
+        <h1 class="text-center" style="font-size:36px; font-family:Poppins;">Kelola Artikel</h1><br>
+        <a href="{{url('/inputartikel')}}" >
+            <button type="submit" class="btn" style="background-color: #99F07A; float:right;">Tambah</button>
+        </a>
     <table class="table table-striped table-hover table-sm table-bordered">
 		<thead>
 			<tr>
@@ -18,7 +20,7 @@
             <?php $no = 0;?>
                 @foreach ($art as $art)
             <?php $no++ ;?>
-			
+
 			<tr>
                 <td>{{ $no }}</td>
 				<td>{{ $art->judul }}</td>
@@ -36,6 +38,8 @@
 
 		</tbody>
 	</table>
+    </div>
+</div>
 @include('layouts.footeradmin')
 
 

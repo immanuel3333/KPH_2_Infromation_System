@@ -36,14 +36,16 @@ class HomeController extends Controller
     public function banner()
     {
         $artikel = Artikel::latest()->get()->random(2);
+        $artikels = Artikel::latest()->paginate(5);
         $comments = Comment::where('approve','1')->get();
         $projects = counter::latest()->paginate(5);
         counter::increment('views');
-        return view('landingpage', compact('comments','projects','artikel'));
+        return view('landingpage', compact('comments','projects','artikel','artikels'));
     }
-    public function showartikelid(Artikel $artikel)
+    public function showartikelid(Artikel $artikel,$artikels)
     {
         $artikel_detail = $artikel;
+        $artikel_details = $artikels;
          return view('artikel.artikel-detail',compact('artikel_detail'));
         // dd($artikel);
     }

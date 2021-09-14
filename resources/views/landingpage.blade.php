@@ -139,7 +139,7 @@
                 <div class="card-group portfolio-wrap">
                         <div class="portfolio-item card col-md-8" id="mapid" style="width:100%; height:500px;">
                         </div>
-                        <section class="pl-4 card col-md-4"  id="portfolio">
+                        <section class="pl-4 pr-4 card col-md-4"  id="portfolio">
                         <div class="portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
                                 <div>
                                     <figure>
@@ -164,12 +164,12 @@
                     <!-- Fungsi komentar -->
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="card mt-3">
+                            <div class="col-md-6 pt-3">
+                                <div class="card mt-3 mb-20">
                                     <div class="card-body">
                                         <h5>Kritik dan Saran</h5>
                                         <div class="row auto">
-                                            <div class="col-md-6">
+                                            <div class="col-md">
                                                 <form action="{{ url('/comment') }}" method="post">
                                                     @csrf
 
@@ -187,25 +187,60 @@
                                             </div>
                                             <br>
                                             <h5>Pesan dari Pengunjung</h5>
-                                        <hr>
+                                            <hr>
 
-                                        <div class="col-md-6">
-                                            @forelse($comments as $comment)
+                                            <div class="col-md">
+                                                @forelse($comments as $comment)
                                                 <blockquote>
                                                         <h6>{{ $comment->username }}</h6>
                                                         <hr>
                                                         <p>{{ $comment->comment }}</p><br>
                                                 </blockquote>
 
-                                            @empty
+                                                @empty
                                                 <h4>No Comments</h4>
-                                            @endforelse
-                                        </div>
+                                                @endforelse
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="col-md-6 mt-10 pt-3">
+
+                                <div class="card mt-3 mb-20">
+                                    <div class="card-body">
+
+                                        <h5>Berita dan Artikel</h5>
+                                        <div class="row auto">
+                                        @foreach($artikels as $a)
+
+                                            <div class="col-md-4 mt-4">
+                                                <div class="card" style="width:35rem">
+                                                    <img src="{{ is_null($a->gambar) ? asset('public/artikel/No image.png') : $a->gambar }}" class="d-block w-100">
+                                                    <a href="{{ route('detail-artikel',$a->id) }}">
+                                                        <h5 class="display-5 font-weight-bold">{{$a->judul}}</h5>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+
+                                        @endforeach
+
+                                            {{ $artikels->links() }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <br>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 

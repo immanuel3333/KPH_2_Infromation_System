@@ -8,7 +8,8 @@ Reset
 <div class="container">
     <div class="row justify-content-center">
             <div class="card" style="width: 1000px;height: 360px;">
-                <div class="card-body">
+             <div class="card-body">
+
                 <div class="auth-logo align-items-center">
                         <img src="{{ asset('img/kph2.png') }}" class="img-fluid rounded-normal" alt="" style="width: 90px; height:90px;">
                         <h4 class="pl-2 font-weight-bold text-center" style="font-size: 20px;">UPT. Kesatuan Pengelolaan Hutan Wilayah - II</h4>
@@ -27,15 +28,22 @@ Reset
                                     </span>
                                 @enderror
                         </div>
-
-                        <div class="form-group row mb-0">
+                        <div class="d-flex justify-content-between align-items-center mt-1 mb-2">
+                            <a href="{{ route('login') }}" class="btn btn-sm btn-primary">Kembali</a>
                             <div class=" ml-auto">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-sm btn-primary">
                                     {{ __('Kirim') }}
                                 </button>
                             </div>
-                        </div>
+
+                       </div>
+                       @if (session('status'))
+                       <div class="alert alert-success" role="alert">
+                           {{ session('status') }}
+                       </div>
+                       @endif
                     </form>
+             </div>
                 </div>
             </div>
     </div>
