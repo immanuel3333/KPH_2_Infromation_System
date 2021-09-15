@@ -17,7 +17,7 @@
 <div class="container-fluid">
     <div class="animated fadeIn">
       <div class="row">
-        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+        <div class="col-md-12">
               <div class="card-body">
                 <form method="POST" action="{{ route('update-lembaga3', $lm->id) }}" enctype="multipart/form-data">
                     @csrf
@@ -101,14 +101,20 @@
                                 <input type="file" class="form-control" name="dokskblud" value="">
                             </div>
                         </div>
+                        <div>
+                        <button type="submit" style="float:right;" class="btn btn-success">Simpan</button>
+                        </div>
                         </div>
                       <br>
-                      <div class="col-md-12">
-                        <button type="submit" class="btn btn-success ml-auto">Simpan</button>
+                      
                   </form>
               </div>
       </div>
     </div>
+  </div>
+  </div>
+  </div>
+  </div>
   </div>
 
   @include('layouts.footer')

@@ -4,7 +4,7 @@
 <div class="container-fluid">
     <div class="animated fadeIn">
       <div class="row">
-        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+        <div class="col-md-12">
           <div class="card">
               <div class="card-header">
                 <p>Test</p>
@@ -60,15 +60,17 @@
                               <input class="form-control" type="text" name="latitude" value="{{$idn->latitude}}" required autofocus>
                           </div>
                       </div>
-                      <div class="col-md-12">
-                        <button type="submit" class="btn btn-success ml-auto">Simpan</button>
-                      </div>
+                      <br>
+                        <button type="submit" style="float:right;" class="btn btn-success ml-auto">Simpan</button>
+                     
                   </form>
               </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  </div>
   </div>
 
   @include('layouts.footer')

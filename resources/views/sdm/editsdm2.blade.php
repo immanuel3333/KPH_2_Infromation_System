@@ -95,14 +95,14 @@
                         <input type="text" class="form-control" name="total_bakti_rimbawan" id="total_bakti_rimbawan" placeholder="Input only number" required autofocus  value="{{$pe->total_bakti_rimbawan}}">                        </div>
                     </div>
 
-                   
+                    <button type="submit" class="btn btn-success ml-auto">Simpan</button>
                 </div> 
-                <button type="submit" class="btn btn-success ml-auto">Simpan</button>
+               
             </div>
         </form>
 
       
-
+        </div>
     </div>
 
     @include('layouts.footer')

@@ -40,7 +40,8 @@
 	</table>
     </div>
 </div>
-@include('layouts.footeradmin')
+</div>
+@include('layouts.footer')
 
 
 

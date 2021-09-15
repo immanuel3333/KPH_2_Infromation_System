@@ -55,13 +55,13 @@
                         </textarea>
                         <script>CKEDITOR.replace('DAS');</script>
                     </div>
-                   
+                    <button type="submit" class="btn btn-success ml-auto">Simpan</button>
                 </div> 
-                <button type="submit" class="btn btn-success ml-auto">Simpan</button>
+                
             </div>
         </form>
 
-      
+        </div>
 
     </div>
 
