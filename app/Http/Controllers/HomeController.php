@@ -42,13 +42,13 @@ class HomeController extends Controller
         counter::increment('views');
         return view('landingpage', compact('comments','projects','artikel','artikels'));
     }
-    public function showartikelid(Artikel $artikel,$artikels)
+    public function showartikelid(Artikel $artikel)
     {
         $artikel_detail = $artikel;
-        $artikel_details = $artikels;
          return view('artikel.artikel-detail',compact('artikel_detail'));
         // dd($artikel);
     }
+
 
 
 

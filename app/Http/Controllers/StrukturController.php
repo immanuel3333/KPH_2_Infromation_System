@@ -93,6 +93,10 @@ class StrukturController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'image'     => 'required',
+            'image2'     => 'required'
+        ]);
         // get data Blog by ID
             $blogs = Struktur::find($id);
             File::delete($blogs->image);

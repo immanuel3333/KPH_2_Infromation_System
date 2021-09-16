@@ -1,4 +1,21 @@
 @include('layouts.headeradmin')
+@if(count($errors)>0)
+<br> <br> <br> <br>
+  	@foreach($errors->all() as $error) 
+        <div class="alert alert-danger" style="padding-left:100px;" role="alert">
+        {{ $error }}
+	
+      </div>
+  	
+  	@endforeach
+  @endif
+
+  @if(Session::has('success'))
+  	<div class="alert alert-success" role="alert">
+      {{ Session('success') }}
+	</div>
+
+  @endif
 </div>
     <div class="container mt-5 mb-5">
         <div class="row">
@@ -36,4 +53,4 @@
     CKEDITOR.replace( 'content' );
 </script>
 
-@include('layouts.footeradmin')
+@include('layouts.footer')

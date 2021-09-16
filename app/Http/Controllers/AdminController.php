@@ -324,6 +324,8 @@ class AdminController extends Controller
            $art = DB::table('artikel')->get();
            return view ('artikel.index', compact('art'));
        }
+
+       
        public function inputartikel()
             {
                 $art = Artikel::latest()->get();
@@ -332,6 +334,11 @@ class AdminController extends Controller
 
        public function storeartikel(Request $request)
        {
+            $this->validate($request, [
+                'judul' => 'required',
+                'artikel' => 'required',
+                'gambar' => 'required',
+            ]);
 
            $image = $request->gambar;
            $new_image = time().$image->getClientOriginalName();
@@ -352,6 +359,11 @@ class AdminController extends Controller
 
        public function updateartikel(Request $request, $id)
        {
+        $this->validate($request, [
+            'judul' => 'required',
+            'artikel' => 'required',
+            'gambar' => 'required',
+        ]);
            $art=Artikel::find($id);
            $up=substr($request->artikel, 3,-4);
            File::delete($art->image);

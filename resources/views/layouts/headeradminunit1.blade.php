@@ -91,7 +91,7 @@
                                         <img src="{{ asset('icon/galery.png') }}" alt="icon" width="20">
                                     </i>
 
-                                    <span class="ml-2">Kelola Galeri UPT</span>
+                                    <span class="ml-2">Kelola Galeri Unit</span>
 
                                     <i class="las la-angle-right mm-arrow-right arrow-active"></i>
                                     <i class="las la-angle-down mm-arrow-right arrow-hover"></i>

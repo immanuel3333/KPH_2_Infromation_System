@@ -16,6 +16,11 @@ class PeraturanController extends Controller
 
     public function storeperaturan(Request $request)
     {
+        $this->validate($request, [
+            'judul' => 'required',
+            'keterangan' => 'required',
+            'file' => 'required'
+        ]);
         // dd($request->all());
         $file = $request->file;
         $new_file = time().$file->getClientOriginalName();
@@ -32,6 +37,11 @@ class PeraturanController extends Controller
 
     public function updateperaturan(Request $request, $id)
     {
+        $this->validate($request, [
+            'judul' => 'required',
+            'keterangan' => 'required',
+            'file' => 'required'
+        ]);
         $law=Peraturan::find($id);
         File::delete($law->file);
         $file = $request->file('file');

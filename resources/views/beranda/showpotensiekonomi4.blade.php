@@ -1,9 +1,5 @@
-
 </div>
-<div class="content-page">
-    <div class="container-fluid">
     <div class>
-    @foreach($pe as $pe)
         <table class="table">
             <thead class="bg-success">
                 <tr>
@@ -13,6 +9,7 @@
                 </tr>
             </thead>
             <tbody>
+            @foreach($pe as $pe)
                 <tr>
                     <th scope="row">1</th>
                     <td>Potensi Kayu</td>
@@ -46,7 +43,7 @@
 
 
     </div>
+    </div>
 
 
     </div>
-

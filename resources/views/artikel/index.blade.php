@@ -31,7 +31,6 @@
                     <a href="{{url('/deleteartikel')}}/{{$art->id}}" class="ml-auto">
                         <button type="submit" class="btn bg-danger">Hapus</button>
                     </a>
-					<a href="{{ route('detail-artikel',$art->id) }}" class="btn btn-sm btn-primary pl-10">Show</a>
 				</td>
 			</tr>
 			@endforeach

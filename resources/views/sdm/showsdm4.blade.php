@@ -101,7 +101,7 @@
         @endforeach
 
 
-        <a href="{{url('/viewsdm4')}}/{{$pe->id}}" class="ml-auto">
+        <a href="{{url('/viewsdm1')}}/{{$pe->id}}" style="float:right">
         <button type="submit" class="btn" style="background-color: #99F07A;">Edit</button>
     </div>
 
