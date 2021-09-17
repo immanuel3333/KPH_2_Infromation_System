@@ -16,8 +16,7 @@
         ============================-->
         <h1 class="text-center" style="font-size:36px; font-family:Poppins;">Galeri UPT</h1>
 
-            <div class="card-group">
-                <div class="row">
+            <div class="card-deck">
                     @foreach($gl as $gl)
                                 <div class="col-md-4 mt-4">
                                     <div class="card" style="width:20rem">

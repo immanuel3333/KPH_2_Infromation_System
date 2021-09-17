@@ -37,7 +37,7 @@
                     <form action="{{url('/destroyperaturan')}}/{{$hasil->id}}" method="POST">
                         @csrf
                     <a href="{{url('/viewperaturan12')}}/{{$hasil->id}}" class="btn btn-primary btn-sm">Edit</a>
-                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
                     </form>
                 </td>
                 </tr>

@@ -101,7 +101,7 @@ public function view6()
     foreach($jl as $jl2)
     {
         $jl2->action='<a href="view65/'.$jl2->id.'" class="btn btn-warning btn-sm" id="update'.$jl2->id.'">Edit</a>
-        <a href="delete2/'.$jl2->id.'" class="btn btn-danger btn-sm" id="'.$jl2->id.'" >Delete</a>';
+        <a href="delete2/'.$jl2->id.'" class="btn btn-danger btn-sm" id="'.$jl2->id.'" >Hapus</a>';
     }
 
     return response()->json($jl,200);
@@ -207,7 +207,7 @@ public function view62()
     foreach($jl as $jl2)
     {
         $jl2->action='<a href="view652/'.$jl2->id.'" class="btn btn-warning btn-sm" id="update'.$jl2->id.'">Edit</a>
-        <a href="delete22/'.$jl2->id.'" class="btn btn-danger btn-sm" id="'.$jl2->id.'" >Delete</a>';
+        <a href="delete22/'.$jl2->id.'" class="btn btn-danger btn-sm" id="'.$jl2->id.'" >Hapus</a>';
     }
 
     return response()->json($jl,200);
@@ -315,7 +315,7 @@ public function view63()
     foreach($jl as $jl2)
     {
         $jl2->action='<a href="view653/'.$jl2->id.'" class="btn btn-warning btn-sm" id="update'.$jl2->id.'">Edit</a>
-        <a href="delete23/'.$jl2->id.'" class="btn btn-danger btn-sm" id="'.$jl2->id.'" >Delete</a>';
+        <a href="delete23/'.$jl2->id.'" class="btn btn-danger btn-sm" id="'.$jl2->id.'" >Hapus</a>';
     }
 
     return response()->json($jl,200);
@@ -422,7 +422,7 @@ public function view64()
     foreach($jl as $jl2)
     {
         $jl2->action='<a href="view654/'.$jl2->id.'" class="btn btn-warning btn-sm" id="update'.$jl2->id.'">Edit</a>
-        <a href="delete24/'.$jl2->id.'" class="btn btn-danger btn-sm" id="'.$jl2->id.'" >Delete</a>';
+        <a href="delete24/'.$jl2->id.'" class="btn btn-danger btn-sm" id="'.$jl2->id.'" >Hapus</a>';
     }
 
     return response()->json($jl,200);

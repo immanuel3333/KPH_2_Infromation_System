@@ -335,7 +335,7 @@
             </div>
             {{-- EndofSideBar --}}
 
-            <div class="mm-top-navbar" style="background-color:#0C3310; " >
+            <div class="mm-top-navbar" style="background: url('{{ asset('img/Polosan.png') }}" >
                 <div class="mm-navbar-custom">
                     <nav class="navbar navbar-expand-lg p-0 ">
                         <div class="row align-items-center justify-content-between">

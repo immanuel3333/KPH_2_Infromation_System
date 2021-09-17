@@ -427,7 +427,7 @@ public function inputfasilitas()
         foreach($fs as $fs2)
         {
             $fs2->action='<a href="viewfasilitas12/'.$fs2->id.'" class="btn btn-warning btn-sm" id="update'.$fs2->id.'">Edit</a>
-            <a href="delete/'.$fs2->id.'" class="btn btn-danger btn-sm" id="'.$fs2->id.'" >Delete</a>';
+            <a href="delete/'.$fs2->id.'" class="btn btn-danger btn-sm" id="'.$fs2->id.'" >Hapus</a>';
         }
 
         return response()->json($fs,200);
@@ -833,7 +833,7 @@ public function inputfasilitas2()
         foreach($fs as $fs2)
         {
             $fs2->action='<a href="viewfasilitas122/'.$fs2->id.'" class="btn btn-warning btn-sm" id="update'.$fs2->id.'">Edit</a>
-            <a href="delete2/'.$fs2->id.'" class="btn btn-danger btn-sm" id="'.$fs2->id.'" >Delete</a>';
+            <a href="delete2/'.$fs2->id.'" class="btn btn-danger btn-sm" id="'.$fs2->id.'" >Hapus</a>';
         }
 
         return response()->json($fs,200);
@@ -1235,7 +1235,7 @@ public function inputfasilitas3()
         foreach($fs as $fs2)
         {
             $fs2->action='<a href="viewfasilitas123/'.$fs2->id.'" class="btn btn-warning btn-sm" id="update'.$fs2->id.'">Edit</a>
-            <a href="delete3/'.$fs2->id.'" class="btn btn-danger btn-sm" id="'.$fs2->id.'" >Delete</a>';
+            <a href="delete3/'.$fs2->id.'" class="btn btn-danger btn-sm" id="'.$fs2->id.'" >Hapus</a>';
         }
 
         return response()->json($fs,200);
@@ -1637,7 +1637,7 @@ public function inputfasilitas4()
         foreach($fs as $fs2)
         {
             $fs2->action='<a href="viewfasilitas124/'.$fs2->id.'" class="btn btn-warning btn-sm" id="update'.$fs2->id.'">Edit</a>
-            <a href="delete4/'.$fs2->id.'" class="btn btn-danger btn-sm" id="'.$fs2->id.'" >Delete</a>';
+            <a href="delete4/'.$fs2->id.'" class="btn btn-danger btn-sm" id="'.$fs2->id.'" >Hapus</a>';
         }
 
         return response()->json($fs,200);
