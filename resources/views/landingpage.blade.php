@@ -11,8 +11,8 @@
                 </ol>
                 <div class="carousel-inner">
                     @foreach( $artikel as $a )
-                    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                        <img src="{{ is_null($a->gambar) ? asset('public/artikel/No image.png') : $a->gambar }}" class="d-block w-100">
+                    <div class="carousel-item  {{ $loop->first ? 'active' : '' }}">
+                        <img src="{{ is_null($a->gambar) ? asset('public/artikel/No image.png') : $a->gambar }}" class="img-fluid d-block mx-auto" >
                         <div class="carousel-caption d-none d-md-block">
                         <a href="{{ route('detail-artikel',$a->id) }}">
                             <h5 class="display-5 font-weight-bold">{{$a->judul}}</h5>
@@ -82,7 +82,7 @@
                         <div class="col-lg-3 col-md-6 portfolio-item filter-app wow fadeInUp">
                             <div class="portfolio-wrap">
                             <figure>
-                                <img src="img/contoh1.png" style="" class="img-fluid" alt="">
+                                <img src="img/galeri.png" style="" class="img-fluid" alt="">
                             </figure>
 
                             <div class="portfolio-info">
@@ -95,7 +95,7 @@
                         <div class="col-lg-3 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
                             <div class="portfolio-wrap">
                             <figure>
-                                <img src="img/contoh1.png" class="img-fluid" alt="">
+                                <img src="img/galeri.png" class="img-fluid" alt="">
                             </figure>
 
                             <div class="portfolio-info">
@@ -108,7 +108,7 @@
                         <div class="col-lg-3 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
                             <div class="portfolio-wrap">
                             <figure>
-                                <img src="img/contoh1.png" class="img-fluid" alt="">
+                                <img src="img/galeri.png" class="img-fluid" alt="">
                             </figure>
 
                             <div class="portfolio-info">
@@ -121,7 +121,7 @@
                         <div class="col-lg-3 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
                             <div class="portfolio-wrap">
                             <figure>
-                                <img src="img/contoh1.png" class="img-fluid" alt="">
+                                <img src="img/galeri.png" class="img-fluid" alt="">
                            </figure>
 
                             <div class="portfolio-info">
@@ -136,17 +136,17 @@
                 </section><!-- #portfolio -->
 
                <div class>
-                <div class="card-group portfolio-wrap">
-                        <div class="portfolio-item card col-md-8" id="mapid" style="width:100%; height:500px;">
+                <div class="card-group portfolio-item">
+                        <div class="portfolio-wrap card col-md-8" id="mapid" style="width:100%; height:400px;">
                         </div>
-                        <section class="pl-4 pr-4 card col-md-4"  id="portfolio">
-                        <div class="portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+                        <section class="pl-4 pr-4 card col-md-4" id="portfolio">
+                        <div class="portfolio-wrap filter-app wow fadeInUp"  data-wow-delay="0.2s">
                                 <div>
                                     <figure>
-                                        <img src="img/contoh1.png" class="img-fluid" alt="">
+                                        <img src="img/galeri.png" class="img-fluid" alt="">
                                     </figure>
                                     <div class="portfolio-info">
-                                        <h4><a href="{{ route('galeriupt') }}">Galeri Foto KPH</a></h4>
+                                        <h5 class="text-center"><a href="{{ route('galeriupt') }}">Galeri Foto KPH</a></h5>
                                     </div>
                                 </div>
                         </div>

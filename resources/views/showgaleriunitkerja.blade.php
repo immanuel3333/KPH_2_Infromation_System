@@ -26,8 +26,8 @@
                                         <div class="card-body">
                                             <p class="card-text">{{$gl->keterangan}}</p>
                                             <p class="card-text"><small class="text-muted">{{$gl->tanggal}}</small></p>
-                                            <a href="{{ url('viewgaleriupt',$gl->id)}}"><i class="fas fa-edit"></i></a>
-                                            <a href="{{ url('destroygaleriupt',$gl->id)}}"><i class="fas fa-trash-alt" style="color:red;"></i></a>
+                                            <a href="{{ url('viewgaleriunitkerja',$gl->id)}}"><i class="fas fa-edit"></i></a>
+                                            <a href="{{ url('destroygaleriunitkerja',$gl->id)}}"><i class="fas fa-trash-alt" style="color:red;"></i></a>
                                         </div>
                                     </div>
 

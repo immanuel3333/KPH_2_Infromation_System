@@ -17,7 +17,7 @@
         <h1 class="text-center" style="font-size:36px; font-family:Poppins;">Galeri Unit </h1>
 
             <div class="card-deck">
-                    @foreach($gl as $gl)
+                    @foreach($gl2 as $gl)
                                 <div class="col-md-4 mt-4">
                                     <div class="card" style="width:20rem">
                                         <a href="{{ asset($gl->gambar)}}" class="fancybox" data-fancybox = "galery1">
@@ -26,8 +26,8 @@
                                         <div class="card-body">
                                             <p class="card-text">{{$gl->keterangan}}</p>
                                             <p class="card-text"><small class="text-muted">{{$gl->tanggal}}</small></p>
-                                            <a href="{{ url('viewgaleriupt',$gl->id)}}"><i class="fas fa-edit"></i></a>
-                                            <a href="{{ url('destroygaleriupt',$gl->id)}}"><i class="fas fa-trash-alt" style="color:red;"></i></a>
+                                            <a href="{{ url('viewgaleriunitkerja2',$gl->id)}}"><i class="fas fa-edit"></i></a>
+                                            <a href="{{ url('destroygaleriunitkerja2',$gl->id)}}"><i class="fas fa-trash-alt" style="color:red;"></i></a>
                                         </div>
                                     </div>
 

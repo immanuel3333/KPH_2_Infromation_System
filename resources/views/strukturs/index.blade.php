@@ -13,9 +13,13 @@
                               <div class="row card">
                                  <img style="width: 100%; height:100%" src="{{ asset( $blog->image2 ) }}">
                               </div>
+                              </center>
 
                                         <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('strukturs.destroy', $blog->id) }}" method="POST">
-                                            <a href="{{ route('strukturs.edit', $blog->id) }}" class="btn btn-sm btn-primary">EDIT</a>
+            
+                                            <a href="{{ route('strukturs.edit', $blog->id) }}" class="ml-auto">
+                                            <button type="submit" class="btn" style="background-color: #99F07A;">Edit</button>
+                                            </a>
                                             @csrf
                                         </form>
                               @empty
@@ -24,7 +28,7 @@
                                   </div>
                               @endforelse
 
-                        </center>
+                       
         </div>
                     </div>
                 </div>
