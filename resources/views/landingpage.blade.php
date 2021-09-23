@@ -134,7 +134,7 @@
 
 
                 </section><!-- #portfolio -->
-
+ 
                <div class>
                 <div class="card-group portfolio-item">
                         <div class="portfolio-wrap card col-md-8" id="mapid" style="width:100%; height:400px;">
@@ -142,9 +142,9 @@
                         <section class="pl-4 pr-4 card col-md-4" id="portfolio">
                         <div class="portfolio-wrap filter-app wow fadeInUp"  data-wow-delay="0.2s">
                                 <div>
-                                    <figure>
+                                   
                                         <img src="img/galeri.png" class="img-fluid" alt="">
-                                    </figure>
+                                    
                                     <div class="portfolio-info">
                                         <h5 class="text-center"><a href="{{ route('galeriupt') }}">Galeri Foto KPH</a></h5>
                                     </div>
@@ -168,7 +168,7 @@
                                 <div class="card mt-3 mb-20">
                                     <div class="card-body">
                                         <h5>Kritik dan Saran</h5>
-                                        <div class="row auto">
+                                        <div class="row">
                                             <div class="col-md">
                                                 <form action="{{ url('/comment') }}" method="post">
                                                     @csrf
@@ -185,11 +185,15 @@
                                                     <button class="btn btn-primary btn-sm">Kirim</button>
                                                 </form>
                                             </div>
-                                            <br>
+                                        
+                                        </div>
+                                        <br>
+
+                                        <div class="row">
                                             <h5>Pesan dari Pengunjung</h5>
                                             <hr>
 
-                                            <div class="col-md">
+                                            <div class="col-md-12">
                                                 @forelse($comments as $comment)
                                                 <blockquote>
                                                         <h6>{{ $comment->username }}</h6>
@@ -202,6 +206,7 @@
                                                 @endforelse
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -212,18 +217,19 @@
                                     <div class="card-body">
 
                                         <h5>Berita dan Artikel</h5>
-                                        <div class="row auto">
                                         @foreach($artikels as $a)
-
-                                            <div class="col-md-4 mt-4">
-                                                <div class="card" style="width:35rem">
-                                                    <img src="{{ is_null($a->gambar) ? asset('public/artikel/No image.png') : $a->gambar }}" class="d-block w-100">
-                                                    <a href="{{ route('detail-artikel',$a->id) }}">
-                                                        <h5 class="display-5 font-weight-bold">{{$a->judul}}</h5>
-                                                    </a>
-                                                </div>
-
+                                        <div class="row ">
+                                            <div class="col-md-5 mt-4">
+                                                    <img src="{{ is_null($a->gambar) ? asset('public/artikel/No image.png') : $a->gambar }}">
                                             </div>
+                                            <div class="col-md-7 mt-4">
+                                                <a href="{{ route('detail-artikel',$a->id) }}">
+                                                <p class="font-weight-bold" style="font-size:16px;">{{$a->judul}}</p>
+                                                </a>
+                                                <p style="font-size:12px; overflow:hidden; display: -webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical;">{{$a->artikel}}</p>
+                                            </div>
+
+                                        </div>
 
                                         @endforeach
 
@@ -243,6 +249,8 @@
 
                     </div>
                 </div>
+</div>
+</div>
 
 
 
