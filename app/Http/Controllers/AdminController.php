@@ -392,6 +392,74 @@ class AdminController extends Controller
         }
 
 
+        //AKUN
+        public function showakun()
+    {
+        $akun = DB::table('users')->get();
+        return view ('showakun', compact('akun'));
+    }
+      
+       public function inputakun()
+            {
+                $akun = User::latest()->get();
+                return view('inputakun');
+            }
+
+       public function storeakun(Request $request)
+       {
+            $this->validate($request, [
+                'name' => 'required',
+                'email' => 'required',
+                'password' => 'required',
+                'level' => 'required',
+            ]);
+           $akun = User::create([
+               'name' => $request->name,
+               'email' => $request->email,
+               'password' => bcrypt($request->password),
+               'level' => $request->level,
+               
+           ]);
+
+           return redirect('showakun');
+
+
+       }
+
+       public function updateakun(Request $request, $id)
+       {
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'level' => 'required',
+        ]);
+           $akun=User::find($id);
+           $akun->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'level' => $request->level,
+           ]);
+           return redirect('showakun')->with('success', 'Akun berhasil diubah!');
+
+       }
+
+
+       public function viewakun($id)
+       {
+        $akun=User::find($id);
+        return view('editakun',compact('akun'));
+       }
+
+       public function deleteakun($id)
+        {
+            $akun=User::find($id);
+            $akun->delete();
+            return redirect('showakun');
+        }
+
+
 
 }
 

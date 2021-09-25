@@ -82,7 +82,7 @@
                         <div class="col-lg-3 col-md-6 portfolio-item filter-app wow fadeInUp">
                             <div class="portfolio-wrap">
                             <figure>
-                                <img src="img/galeri.png" style="" class="img-fluid" alt="">
+                                <img src="img/galeriunit6.png" style="" class="img-fluid" alt="">
                             </figure>
 
                             <div class="portfolio-info">
@@ -95,7 +95,7 @@
                         <div class="col-lg-3 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
                             <div class="portfolio-wrap">
                             <figure>
-                                <img src="img/galeri.png" class="img-fluid" alt="">
+                                <img src="img/galeriunit9.png" class="img-fluid" alt="">
                             </figure>
 
                             <div class="portfolio-info">
@@ -108,7 +108,7 @@
                         <div class="col-lg-3 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
                             <div class="portfolio-wrap">
                             <figure>
-                                <img src="img/galeri.png" class="img-fluid" alt="">
+                                <img src="img/galeriunit10.png" class="img-fluid" alt="">
                             </figure>
 
                             <div class="portfolio-info">
@@ -121,7 +121,7 @@
                         <div class="col-lg-3 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
                             <div class="portfolio-wrap">
                             <figure>
-                                <img src="img/galeri.png" class="img-fluid" alt="">
+                                <img src="img/galeriunit12.png" class="img-fluid" alt="">
                            </figure>
 
                             <div class="portfolio-info">

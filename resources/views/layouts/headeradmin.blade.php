@@ -339,6 +339,19 @@
                                 </a>
                             </li>
 
+                            <li class="">
+                                <a href="{{ route('showakun') }}" class="collapsed svg-icon">
+                                    <i class="">
+                                        <img src="{{ asset('icon/akun.png')}}" alt="icon" width="20">
+                                    </i>
+
+                                    <span class="ml-2">Kelola Akun </span>
+
+                                    <i class="las la-angle-right mm-arrow-right arrow-active"></i>
+                                    <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
+                                </a>
+                            </li>
+
                         </ul>
 
 

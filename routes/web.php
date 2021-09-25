@@ -126,6 +126,14 @@ Route::group(['middleware' => ['auth']], function(){
         Route::get('/viewartikel/{id}', 'AdminController@viewartikel');
         Route::get('/showartikel', 'AdminController@showartikel');
 
+        //Akun
+        Route::get('/inputakun', 'AdminController@inputakun')->name('inputakun');
+        Route::post('/simpan-akun', 'AdminController@storeakun')->name('simpan-akun');
+        Route::post('/update-akun/{id}', 'AdminController@updateakun')->name('update-akun');
+        Route::get('/deleteakun/{id}', 'AdminController@deleteakun');
+        Route::get('/viewakun/{id}', 'AdminController@viewakun');
+        Route::get('/showakun', 'AdminController@showakun')->name('showakun');
+
 
         //VISIMISI
         Route::get('/inputvisimisi', 'AdminController@inputvisimisi')->name('inputvisimisi');
