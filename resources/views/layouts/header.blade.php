@@ -23,7 +23,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-     
+
       <link rel="stylesheet" href="{{ asset('styles/main.css')}}">
       <link rel="stylesheet" href="{{ asset('styles/style.css')}}">
       <link rel="stylesheet" href="{{ asset('styles/animate.min.css')}}">
@@ -55,7 +55,7 @@
             </div>
         </div>
         <!-- loader END -->
-        
+
             <!-- Wrapper Start -->
 
         <div class="wrapper">
@@ -77,7 +77,7 @@
                             <li class="">
                                 <a href="{{ route('landingpage') }}" class="collapsed svg-icon" >
                                     <i class="">
-                                   
+
                                         <img src=" {{ asset('icon/home.png') }}" class="icon"  >
                                     </i>
 
@@ -323,6 +323,19 @@
                                     </i>
 
                                     <span class="ml-2">Peraturan Perundangan</span>
+
+                                    <i class="las la-angle-right mm-arrow-right arrow-active"></i>
+                                    <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
+                                </a>
+                            </li>
+
+                            <li class="">
+                                <a href="{{ route('search') }}" class="collapsed svg-icon" >
+                                    <i class="">
+                                        <img src="{{ asset('icon/artikel.png')}}"  class="icon"  >
+                                    </i>
+
+                                    <span class="ml-2">Artikel</span>
 
                                     <i class="las la-angle-right mm-arrow-right arrow-active"></i>
                                     <i class="las la-angle-down mm-arrow-right arrow-hover"></i>
