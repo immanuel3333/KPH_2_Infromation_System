@@ -2,7 +2,7 @@
         <div class="content-page">
             <div class="container-fluid padding">
                 <h1 class="col-12 text-center" style="font-size:36px; font-family:Poppins;">Artikel
-                    <a href="{{ route('search') }}"><button class="btn btn-primary mb-1">Cari</button></a></h1>
+                    </h1>
 
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
