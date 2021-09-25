@@ -49,6 +49,12 @@ class HomeController extends Controller
         // dd($artikel);
     }
 
+    public function search(Request $request){
+        $keyword = $request->search;
+        $artikels = Artikel::where('judul', 'like', "%" . $keyword . "%")->paginate(5);
+        return view('artikel.showartikel', compact('artikels'))->with('i', (request()->input('page', 1) - 1) * 5);
+    }
+
 
 
 

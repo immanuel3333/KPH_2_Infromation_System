@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Route;
         Route::patch('/password', 'AuthController@update')->name('password-edit');
         // Route::patch('/password2', 'AuthController@update2')->name('password-update');
 
-
+        Route::get('/search', 'HomeController@search')->name('search');
         Route::get('/showartikelid/{artikel}', 'HomeController@showartikelid')->name('detail-artikel');
         Route::get('/landingpage', 'HomeController@banner')->name('landingpage');
         Route::get('/profilpegawai', 'HomeController@profilpegawai');

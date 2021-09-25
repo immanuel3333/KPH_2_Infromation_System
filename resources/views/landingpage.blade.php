@@ -1,7 +1,8 @@
 @include('layouts.header')
         <div class="content-page">
             <div class="container-fluid padding">
-                <h1 class="col-12 text-center" style="font-size:36px; font-family:Poppins;">Artikel Terbaru</h1>
+                <h1 class="col-12 text-center" style="font-size:36px; font-family:Poppins;">Artikel
+                    <a href="{{ route('search') }}"><button class="btn btn-primary mb-1">Cari</button></a></h1>
 
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -134,7 +135,7 @@
 
 
                 </section><!-- #portfolio -->
- 
+
                <div class>
                 <div class="card-group portfolio-item">
                         <div class="portfolio-wrap card col-md-8" id="mapid" style="width:100%; height:400px;">
@@ -142,9 +143,9 @@
                         <section class="pl-4 pr-4 card col-md-4" id="portfolio">
                         <div class="portfolio-wrap filter-app wow fadeInUp"  data-wow-delay="0.2s">
                                 <div>
-                                   
+
                                         <img src="img/galeri.png" class="img-fluid" alt="">
-                                    
+
                                     <div class="portfolio-info">
                                         <h5 class="text-center"><a href="{{ route('galeriupt') }}">Galeri Foto KPH</a></h5>
                                     </div>
@@ -185,7 +186,7 @@
                                                     <button class="btn btn-primary btn-sm">Kirim</button>
                                                 </form>
                                             </div>
-                                        
+
                                         </div>
                                         <br>
 
