@@ -83,7 +83,7 @@
                         <div class="col-lg-3 col-md-6 portfolio-item filter-app wow fadeInUp">
                             <div class="portfolio-wrap">
                             <figure>
-                                <img src="img/galeriunit6.png" style="" class="img-fluid" alt="">
+                                <img style="width: 500px; height: 300px;" src="img/galeriunit6.png" style="" class="img-fluid" alt="">
                             </figure>
 
                             <div class="portfolio-info">
@@ -96,7 +96,7 @@
                         <div class="col-lg-3 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
                             <div class="portfolio-wrap">
                             <figure>
-                                <img src="img/galeriunit9.png" class="img-fluid" alt="">
+                                <img style="width: 500px; height: 300px;" src="img/galeriunit9.jpg" class="img-fluid" alt="">
                             </figure>
 
                             <div class="portfolio-info">
@@ -109,7 +109,7 @@
                         <div class="col-lg-3 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
                             <div class="portfolio-wrap">
                             <figure>
-                                <img src="img/galeriunit10.png" class="img-fluid" alt="">
+                                <img style="width: 500px; height: 300px;" src="img/galeriunit10.jpg" class="img-fluid" alt="">
                             </figure>
 
                             <div class="portfolio-info">
@@ -121,8 +121,8 @@
 
                         <div class="col-lg-3 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
                             <div class="portfolio-wrap">
-                            <figure>
-                                <img src="img/galeriunit12.png" class="img-fluid" alt="">
+                            <figure >
+                                <img style="width: 500px; height: 300px;" src="img/galeriunit12.jpg" class="img-fluid" alt="" >
                            </figure>
 
                             <div class="portfolio-info">
@@ -140,11 +140,11 @@
                 <div class="card-group portfolio-item">
                         <div class="portfolio-wrap card col-md-8" id="mapid" style="width:100%; height:400px;">
                         </div>
-                        <section class="pl-4 pr-4 card col-md-4" id="portfolio">
-                        <div class="portfolio-wrap filter-app wow fadeInUp"  data-wow-delay="0.2s">
+                        <section class="pl-4 pr-4 card col-md-4" id="portfolio" style="width: 500px; height: 400px;">
+                        <div class="portfolio filter-app wow fadeInUp"  data-wow-delay="0.2s">
                                 <div>
 
-                                        <img src="img/galeri.png" class="img-fluid" alt="">
+                                        <img style="height: 300px"src="img/galeri.jpg" class="img-fluid" alt="">
 
                                     <div class="portfolio-info">
                                         <h5 class="text-center"><a href="{{ route('galeriupt') }}">Galeri Foto KPH</a></h5>
